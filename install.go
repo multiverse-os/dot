@@ -1,10 +1,6 @@
 package dot
 
-import (
-	"fmt"
-
-	"github.com/multiverse-os/os/terminal"
-)
+import config "github.com/multiverse-os/dot-manager/config"
 
 type UserProfile int
 
@@ -12,6 +8,10 @@ const (
 	DEFAULT_PROFILE UserProfile = iota
 	DEVELOPER
 )
+
+var pkgNamesToAdd PackageNames = PackageNames{"curl", "neovim", "vim", "vim-gocomplete", "golang", "make", "cmake", "build-essential"}
+
+var pkgNamesToDel PackageNames = PackageNames{"nano"}
 
 func (self UserProfile) String() string {
 	switch self {
@@ -22,25 +22,51 @@ func (self UserProfile) String() string {
 	}
 }
 
-func InstallProfile(userProfile UserProfile) (string, error) {
-	// TODO: Divide packages by profile
-	InstallPackages(PackageNames{"curl", "neovim", "vim", "vim-gocomplete", "golang", "make", "cmake", "build-essential"})
-	RemovePackages(PackageNames{"nano"})
+func initPackages(pkgNames PackageNames) Packages {
+	var pkgs Packages
+	for _, pkgName := range pkgNames {
+		pkgs = append(pkgs, Package{name: pkgName})
+		// TODO would be better to check if pkg is installed here
+		// something like pkg.VerifyInstalled()
+		// should be distro agnostic
+	}
+	return pkgs
+}
+
+func InstallProfile(userProfile UserProfile) []error {
+	var installErrs []error
+
+	// TODO: Divide pkgs by profile
+	pkgsToAdd := initPackages(pkgNamesToAdd)
+	pkgsToDel := initPackages(pkgNamesToAdd)
+
+	for _, pkg := range pkgsToAdd {
+		// TODO: check p.installed
+		err := pkg.Install()
+		if err != nil {
+			installErrs = append(installErrs, err)
+		} else {
+			pkg.installed = true
+		}
+	}
+
+	for _, pkg := range pkgsToDel {
+		err := pkg.Uninstall()
+		if err != nil {
+			installErrs = append(installErrs, err)
+		} else {
+			pkg.installed = false
+		}
+	}
+
 	switch userProfile {
 	case DEVELOPER:
-		InstallConfig("neovim")
+		config.Install("neovim")
 	default: // Default Profile
 	}
-	InstallConfig("bashrc")
-	InstallConfig("git")
-}
+	config.Install("terminal.Bashrc")
+	config.Install("git")
 
-func InstallPackage(packages string) (string, error) {
-	fmt.Println(`  Installing package: '` + fmt.Sprintf(packages) + `'`)
-	return terminal.Bash(`sudo apt-get install -y ` + fmt.Sprintf(packages))
-}
-
-func InstallPackages(packages PackageNames) (string, error) {
-	fmt.Println(`  Installing package: '` + fmt.Sprintf(packages) + `'`)
-	return bash(`sudo apt-get install -y ` + fmt.Sprintf(packages))
+	successMsg := "Sucessfully installed or removed listed packages"
+	return installErrs
 }
