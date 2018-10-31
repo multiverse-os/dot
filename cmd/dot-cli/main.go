@@ -6,14 +6,13 @@ import (
 	"os"
 	"strings"
 
-	"github.com/multiverse-os/cli/text"
 	dot "github.com/multiverse-os/dot-manager"
 	"github.com/multiverse-os/log"
 	"github.com/multiverse-os/os/terminal"
 )
 
 func main() {
-	text.PrintBanner((text.Light("[DOT:") + text.White("User Settings Manager") + text.Light("]")), (text.Light(" v") + text.Bold("0.1.0")))
+	terminal.PrintBanner((terminal.Light("[DOT:") + terminal.White("User Settings Manager") + terminal.Light("]")), (terminal.Light(" v") + terminal.Bold("0.1.0")))
 
 	var profileArgument string
 	if len(os.Args) > 1 {

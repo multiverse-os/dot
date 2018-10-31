@@ -1,30 +1,31 @@
-package dot
+package config
 
 type neovim struct {
 	application string
-	filename string
-	path string
-	template string
+	filename    string
+	path        string
+	template    string
 }
 
 func (self Neovim) String() string { return Render(self.template, self.settings) }
-func (self Neovim) Path() string { return (path + filename) }
+func (self Neovim) Path() string   { return (path + filename) }
 
 func Init(values Settings) Configuration {
-	// TODO: Load config templates from file 
-	return  Configuration{
-	application: "neovim",
-	configFiles: []ConfigFile{
-		ConfigFile{
-			filename: "init.vim",
-			path: "~/.config/nvim/",
-			template: initvimTemplate(),
+	// TODO: Load config templates from file
+	return Configuration{
+		application: "neovim",
+		configFiles: []ConfigFile{
+			ConfigFile{
+				filename: "init.vim",
+				path:     "~/.config/nvim/",
+				template: initvimTemplate(),
+			},
 		},
 	}
 }
 
 func initvimTemplate() string {
-		return `" Vim Configuration
+	return `" Vim Configuration
 "==============================================================================
 " Neovim: ~/.local/share/nvim/plugged
 call plug#begin()
@@ -155,5 +156,5 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
-`}
+`
 }
