@@ -1,32 +1,41 @@
-package dot
+package config
 
 import (
-	"fmt"
-
-	"github.com/multiverse-os/os/terminal"
+	"errors"
+	"io/ioutil"
 )
 
-type Packages []Package
-type PackageNames []string
+type Settings map[string]string
+type ConfigFiles []ConfigFiles
 
-type Package struct {
-	name      string
-	installed bool
+type Config interface {
+	InstallDependencies() error
+	RemoveDependencies() error
+	Install() error
+	Uninstall() error
+	Installed() bool
 }
 
-func (self Package) Install() error {
-	fmt.Println(`  Installing package: '` + self.name + `'`)
-	_, err := terminal.Bash(`sudo apt install -y ` + self.name)
-	return err
+type ConfigFile struct {
+	application string
+	settings    Settings
+	path        string
+	filename    string
 }
 
-func (self Package) Uninstall() error {
-	fmt.Println("  Removing package: '" + self.name + "'")
-	_, err := terminal.Bash("sudo apt -y remove" + self.name)
-	return err
-}
+func (self ConfigFile) String() string { return (self.template + self.settings) }
+func (self ConfigFile) Path() string   { return (self.path + self.filename) }
+func (self ConfigFile) Install() error { return ioutil.WriteFile(self.Path, self.String(), 0660) }
 
-func (self Package) VerifyInstalled() (bool, error) {
-	// TODO: distro agnostic method of checking if a package is installed
-	return false, nil
+func Install(name string, settings Settings) (Config, error) {
+	switch {
+	case "neovim":
+		return neovim(settings), nil
+	case "bash":
+		return bash(settings), nil
+	case "git":
+		return git(setting), nil
+	default:
+		return nil, errors.New("configuration not supported")
+	}
 }

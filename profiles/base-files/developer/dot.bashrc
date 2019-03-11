@@ -1,55 +1,4 @@
-package config
-
-import (
-	"fmt"
-	"io/ioutil"
-)
-
-// Implements 'Config interface
-type Bash struct {
-	application  string
-	dependencies PackageNames
-	configFiles  []ConfigFile
-	configFiles  ConfigFiles
-	installed    bool
-}
-
-func bashrcInstallScript() (string, error) {
-	bashConfig := Configuration{
-		name:     "bashrc",
-		path:     "~/.bashrc",
-		template: neovimTemplate(),
-	}
-	fmt.Println("==[ bashrc ", bashConfig)
-	fmt.Println("==[ Configuring bashrc to assign aliases and PATH settings]")
-	fmt.Println("  [ Copying 'dot-files/bashrc' to '~/.bashrc']")
-	// bash(`cp dot-files/bashrc ~/.bashrc`)
-	// TODO: Create from template
-	//os.SymLink(`dot-files/bashrc`, `~/.bashrc`)
-}
-
-func configureNeovimScript() (string, error) {
-	neovimPath = "~/.config/nvim"
-	fmt.Println("==[ Neovim Configuration ]")
-	fmt.Println("  [ Creating 'Neovim' config folder '~/.config/nvim' ]")
-	os.MkdirAll(neovimPath, 0770)
-	fmt.Println("  [ Using Neovim configuration template to initialize config file ]")
-	ioutil.WriteFile(" ~/.config/nvim/init.vim", neovimTemplate(), 0660)
-	fmt.Println("  [ Overlaying neovim onto default vim ]")
-	fmt.Println("  [ Removing default '~/.vimrc' ]")
-	os.Remote("~/.vimrc")
-	fmt.Println("  [ Creating a symbolic link from '~/.config/nvim/init.vim' to ~/.vimrc' ]")
-	os.SymLink("~/.config/nvim/init.vim", "~/.vimrc")
-	fmt.Println("  [ Installing vim plugin manager 'plug.vim' ]")
-	return bashScript(`curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`)
-}
-
-func bashrc(settings Settings) Config {
-	return Config{
-		application: "bash",
-		filename:    ".bashrc",
-		path:        "~/",
-		template: `# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -163,12 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export GOPATH="/home/user/Go"
 
-# Aliases
 alias vim="nvim"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-export GOPATH=/home/user/GoDevelopment
-export PATH=$PATH:/usr/local/bin/`}
-}
