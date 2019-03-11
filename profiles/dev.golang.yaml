@@ -1,8 +1,9 @@
 env:
+  os: "debian"
+  version: "9.7"
   - profile:
     type: "development"
     subtype: "golang"
-    os: "debian"
     packages:
       install:
         - "build-essential"

@@ -24,39 +24,15 @@ func (self ProfileType) String() string {
 	}
 }
 
-type Language int
-
-const (
-	C Language = iota // Default
-	Go
-	Rust
-	Ruby
-	Python
-)
-
-func (self Language) String() string {
-	switch self {
-	case Go:
-		return "Go"
-	case Rust:
-		return "Rust"
-	case Ruby:
-		return "Ruby"
-	case Python:
-		return "Python"
-	default:
-		return "C"
-	}
-}
-
 type Environment struct {
+	OS       string    `yaml:"os"`
+	Version  Version   `yaml:"version"`
 	Profiles []Profile `yaml:"env"`
 }
 
 type Profile struct {
 	Type                string                 `yaml:"type"`
 	Subtype             string                 `yaml:"subtype"`
-	OS                  string                 `yaml:"os"`
 	Packages            ProfilePackages        `yaml:"packages"`
 	ConfigFiles         []ProfileConfigInstall `yaml:"configurations"`
 	PostInstallCommands []string               `yaml:"commands"`
@@ -74,10 +50,11 @@ type ProfileConfigInstall struct {
 
 func DefaultConfig() Environment {
 	return Environment{
+		OS:      "debian",
+		Version: Version{Major: 9, Minor: 7, Patch: 0},
 		Profiles: []Profile{
 			Profile{
 				Type: "default",
-				OS:   "debian",
 				Packages: ProfilePackages{
 					Install: []string{"curl", "git", "vim"},
 					Remove:  []string{"nano"},
