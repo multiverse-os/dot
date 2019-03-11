@@ -26,8 +26,8 @@ func (self ProfileType) String() string {
 
 type Environment struct {
 	OS       string    `yaml:"os"`
-	Version  Version   `yaml:"version"`
-	Profiles []Profile `yaml:"env"`
+	Version  string    `yaml:"version"`
+	Profiles []Profile `yaml:"profiles"`
 }
 
 type Profile struct {
@@ -51,7 +51,7 @@ type ProfileConfigInstall struct {
 func DefaultConfig() Environment {
 	return Environment{
 		OS:      "debian",
-		Version: Version{Major: 9, Minor: 7, Patch: 0},
+		Version: Version{Major: 9, Minor: 7, Patch: 0}.String(),
 		Profiles: []Profile{
 			Profile{
 				Type: "default",
@@ -75,7 +75,7 @@ func DefaultConfig() Environment {
 	}
 }
 
-func LoadConfig(path string) (env *Environment, err error) {
+func LoadEnvironment(path string) (env *Environment, err error) {
 	yamlFile, err := ioutil.ReadFile(path)
 	if err != nil {
 		return nil, err
