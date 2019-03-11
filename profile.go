@@ -12,39 +12,59 @@ type ProfileType int
 
 const (
 	DefaultProfile ProfileType = iota
-	DeveloperProfile
+	DevelopmentProfile
 )
 
-type DeveloperSubtype int
+func (self ProfileType) String() string {
+	switch self {
+	case DevelopmentProfile:
+		return "developer"
+	default:
+		return "default"
+	}
+}
+
+type Language int
 
 const (
-	CLanguage DeveloperSubtype = iota // Default
-	GoLanguage
-	RustLanguage
-	RubyLanguage
-	PythonLanguage
+	C Language = iota // Default
+	Go
+	Rust
+	Ruby
+	Python
 )
 
+func (self Language) String() string {
+	switch self {
+	case Go:
+		return "Go"
+	case Rust:
+		return "Rust"
+	case Ruby:
+		return "Ruby"
+	case Python:
+		return "Python"
+	default:
+		return "C"
+	}
+}
+
+type Environment struct {
+	Profiles []Profile `yaml:"env"`
+}
+
 type Profile struct {
-	Type     ProfileType
-	Language DeveloperSubtype
-	Filename string
-}
-
-type EnvironmentFile struct {
-	Profiles []ProfileConfiguration `yaml:"env"`
-}
-
-type ProfileConfig struct {
-	Type            string `yaml:"type"`
-	Subtype         string `yaml:"subtype"`
-	OperatingSystem string `yaml:"os"`
-	ProfilePackages struct {
-		Install []string `yaml:"install"`
-		Remove  []string `yaml:"remove"`
-	} `yaml:"packages"`
-	ProfileConfigFiles  []ProfileConfigInstall `yaml:"configurations"`
+	Type                string                 `yaml:"type"`
+	Subtype             string                 `yaml:"subtype"`
+	OS                  string                 `yaml:"os"`
+	Packages            ProfilePackages        `yaml:"packages"`
+	ConfigFiles         []ProfileConfigInstall `yaml:"configurations"`
 	PostInstallCommands []string               `yaml:"commands"`
+}
+
+type ProfilePackages struct {
+	Install []string `yaml:"install"`
+	Remove  []string `yaml:"remove"`
 }
 
 type ProfileConfigInstall struct {
@@ -52,17 +72,17 @@ type ProfileConfigInstall struct {
 	To   string `yaml:"to"`
 }
 
-func DefaultConfig() Config {
-	return EnvironmentFile{
-		Profiles: []ProfileConfig{
-			ProfileConfiguration{
-				Type:            "default",
-				OperatingSystem: "debian",
-				ProfilePackages: {
+func DefaultConfig() Environment {
+	return Environment{
+		Profiles: []Profile{
+			Profile{
+				Type: "default",
+				OS:   "debian",
+				Packages: ProfilePackages{
 					Install: []string{"curl", "git", "vim"},
 					Remove:  []string{"nano"},
 				},
-				ProfileConfigurationFiles: {
+				ConfigFiles: []ProfileConfigInstall{
 					ProfileConfigInstall{
 						From: "dot.bashrc",
 						To:   "~/.bashrc",
@@ -78,19 +98,19 @@ func DefaultConfig() Config {
 	}
 }
 
-func LoadConfig(path string) (config *Config, err error) {
+func LoadConfig(path string) (env *Environment, err error) {
 	yamlFile, err := ioutil.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}
-	err = yaml.Unmarshal(yamlFile, &config)
+	err = yaml.Unmarshal(yamlFile, &env)
 	if err != nil {
 		return nil, err
 	}
-	return config, nil
+	return env, nil
 }
 
-func (self *Config) Save(path string) error {
+func (self *Environment) Save(path string) error {
 	configPath, _ := filepath.Split(path)
 	if _, err := os.Stat(configPath); os.IsNotExist(err) {
 		return err

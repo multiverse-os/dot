@@ -1,0 +1,27 @@
+env:
+  - profile:
+    type: "development"
+    subtype: "golang"
+    os: "debian"
+    packages:
+      install:
+        - "build-essential"
+        - "cmake"
+        - "curl"
+        - "git"
+        - "golang"
+        - "neovim"
+        - "vim-gocomplete"
+      remove:
+        - "nano"
+    configurations:
+      #- application:
+      #  - from:
+      #  - to:
+      #
+      - from: "dot.config/nvim/init.vim" # source, destination?
+        to: "~/.config/nvim/init.vim"
+      - from: "dot.bashrc"
+        to: "~/.bashrc"
+    commands:
+      - "cd ~/ && ln -s ~/.config/nvim/init.vim ~/.vimrc"

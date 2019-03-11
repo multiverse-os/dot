@@ -6,13 +6,13 @@ import (
 	"os"
 	"strings"
 
-	dot "github.com/multiverse-os/dot-manager"
+	dot "github.com/multiverse-os/dot-config"
 	log "github.com/multiverse-os/log"
 	terminal "github.com/multiverse-os/os/terminal"
 )
 
 func main() {
-	terminal.PrintBanner((terminal.Light("[dot.config:") + terminal.White("basic provisioning system") + terminal.Light("]")), (terminal.Light(" v") + terminal.Bold("0.1.0")))
+	terminal.PrintBanner(terminal.White("[")+terminal.Blue("Multiverse OS")+terminal.White(": ")+terminal.White("dot.config")+terminal.White("]  ")+terminal.Light("basic system provisioning/config management"), terminal.Bold("0.1.0"))
 
 	var profileArgument string
 	if len(os.Args) > 1 {
@@ -25,7 +25,7 @@ func main() {
 
 	switch profileArgument {
 	case dot.DefaultProfile.String():
-	case dot.DeveloperProfile.String(), Othervalue, OtherValue:
+	case dot.DevelopmentProfile.String():
 	default:
 		log.FatalError(errors.New("Invalid profile [available profiles: default, developer]"))
 		fmt.Println("    " + terminal.Strong("USAGE") + " dot.config developer")

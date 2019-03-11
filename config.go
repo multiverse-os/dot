@@ -1,4 +1,4 @@
-package main
+package dot
 
 import (
 	"io/ioutil"
@@ -6,18 +6,23 @@ import (
 
 type Settings map[string]string
 
-type ConfigurationFile struct {
+type ConfigFile struct {
 	Application    string
 	CustomSettings Settings
 	Path           string
 	Filename       string
+	Template       string
 }
 
-func (self Configuration) String() string { return (self.Template + self.Settings) }
-func (self Configuration) Path() string   { return (self.Path + self.Filename) }
-func (self Configuration) Install() error { return ioutil.WriteFile(self.Path, self.String(), 0660) }
+// TODO: Render template by taking settings and putting them inline into the
+// template
+//func (self ConfigFile) String() string   { return self.Template }
+func (self ConfigFile) FullPath() string { return (self.Path + self.Filename) }
+func (self ConfigFile) Install() error {
+	return ioutil.WriteFile(self.FullPath(), []byte(self.Template), 0660)
+}
 
-func Install(name string, settings Settings) (Config, error) {
+func Install(name string, settings Settings) (ConfigFile, error) {
 	//switch {
 	//case "neovim":
 	//	return neovim(settings), nil
@@ -28,4 +33,5 @@ func Install(name string, settings Settings) (Config, error) {
 	//default:
 	//	return nil, errors.New("configuration not supported")
 	//}
+	return ConfigFile{}, nil
 }
