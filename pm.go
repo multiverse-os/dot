@@ -30,7 +30,7 @@ func (self PackageManager) Install() string {
 	}
 }
 
-func (self PackageManager) Uninstall() string {
+func (self PackageManager) Remove() string {
 	switch self {
 	case Apt:
 		return "DEBIAN_FRONTEND=noninteractive apt-get remove -y"
