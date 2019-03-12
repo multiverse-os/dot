@@ -22,11 +22,11 @@ const (
 )
 
 func Usage() {
-	fmt.Println(terminal.Strong(" Usage:\n") + terminal.White("   dotconfig install default") + terminal.White("\n   dotconfig install ./profiles/dev.golang.yaml"))
+	fmt.Println(terminal.Strong(" Usage:\n") + terminal.White("   dot install default") + terminal.White("\n   dot install ./profiles/dev.golang.yaml"))
 }
 
 func Title() string {
-	return (terminal.White("[") + terminal.Blue("Multiverse OS") + terminal.White(": ") + terminal.White("dot.config") + terminal.White("]  ") + terminal.Light("basic system provisioning/config management"))
+	return (terminal.White("[") + terminal.Blue("Multiverse OS") + terminal.White(": ") + terminal.White("dot(config)") + terminal.White("] ") + terminal.Light("basic system provisioning/config management"))
 }
 
 func main() {
@@ -48,10 +48,16 @@ func main() {
 					log.FatalError(errors.New(" " + INVALID_CONFIG))
 				} else {
 					if len(env.Profiles) > 0 {
-						fmt.Println("number of profiles in env [", len(env.Profiles), "] ")
-						fmt.Println("First profile type is: ", env.Profiles[0].Type)
-						errors := env.Provision()
-						fmt.Println("Encountered [", len(errors), "] while attempting to provision with the configuration.")
+						errs := env.Provision()
+						if len(errs) > 0 {
+							fmt.Println("\n[ Encountered [", len(errs), "] error(s) when running the provisioning configuration ]:")
+							for _, err := range errs {
+								fmt.Println("  [error] provision config failuire: ", err)
+							}
+							fmt.Printf("\n")
+						}
+						fmt.Println("===================== Provisioning Completed Successfully ======================")
+						os.Exit(0)
 					} else {
 						log.FatalError(errors.New(" " + PROFILE_NOT_FOUND))
 					}

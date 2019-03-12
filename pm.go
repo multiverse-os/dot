@@ -1,5 +1,7 @@
 package dot
 
+import "strings"
+
 type PackageManager int
 
 const (
@@ -30,12 +32,20 @@ func (self PackageManager) Install() string {
 	}
 }
 
-func (self PackageManager) InstallPackage(pkg string) {
-	terminal(self.Install() + ` ` + pkg)
+func (self PackageManager) InstallPackage(pkg string) error {
+	return terminal(self.Install() + ` ` + pkg)
 }
 
-func (self PackageManager) InstallPackages(pkgs []string) {
-	terminal(self.Install() + ` ` + pkg)
+func (self PackageManager) SudoInstallPackage(pkg string) error {
+	return terminal(`sudo ` + self.Install() + ` ` + pkg)
+}
+
+func (self PackageManager) InstallPackages(pkgs []string) error {
+	return terminal(self.Install() + ` ` + strings.Join(pkgs, " "))
+}
+
+func (self PackageManager) SudoInstallPackages(pkgs []string) error {
+	return terminal(`sudo ` + self.Install() + ` ` + strings.Join(pkgs, " "))
 }
 
 func (self PackageManager) Remove() string {
@@ -47,6 +57,22 @@ func (self PackageManager) Remove() string {
 	default: // Apt
 		return "DEBIAN_FRONTEND=noninteractive apt-get remove -y"
 	}
+}
+
+func (self PackageManager) RemovePackage(pkg string) error {
+	return terminal(self.Remove() + ` ` + pkg)
+}
+
+func (self PackageManager) SudoRemovePackage(pkg string) error {
+	return terminal(`sudo ` + self.Remove() + ` ` + pkg)
+}
+
+func (self PackageManager) RemovePackages(pkgs []string) error {
+	return terminal(self.Remove() + ` ` + strings.Join(pkgs, " "))
+}
+
+func (self PackageManager) SudoRemovePackages(pkgs []string) error {
+	return terminal(`sudo ` + self.Remove() + ` ` + strings.Join(pkgs, " "))
 }
 
 func (self PackageManager) Installed() string {

@@ -24,7 +24,7 @@ func (self OperatingSystem) String() string {
 	}
 }
 
-func MarshallOS(os string) OperatingSystem {
+func MarshalOS(os string) OperatingSystem {
 	switch os {
 	case Alpine.String():
 		return Alpine

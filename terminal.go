@@ -3,25 +3,21 @@ package dot
 import (
 	"bytes"
 	"fmt"
-	"log"
 	"os"
 	"os/exec"
 	"unicode"
 	"unicode/utf8"
 )
 
-func terminal(command string) {
+func terminal(command string) error {
 	cmd, err := ExecuteCommand(command)
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-
-	if err := cmd.Run(); err != nil {
-		log.Fatal(err)
-	}
+	return cmd.Run()
 }
 
 // Command parses line using a shell-like syntax and returns
@@ -30,6 +26,8 @@ func ExecuteCommand(line string) (*exec.Cmd, error) {
 	p := parser{s: line, getenv: os.Getenv}
 	c := p.parseLine()
 	if p.err != nil {
+
+		fmt.Println("[error] terminal parse line failure, must use double quotes around path")
 		return nil, p.err
 	}
 	cmd := exec.Command(c.cmd, c.args...)
@@ -167,14 +165,17 @@ func (p *parser) parseField() {
 		case '\\':
 			esc = true
 			continue
+		case '~':
+			p.backup()
+			p.buf.WriteString("\\")
 		case '$':
 			p.parseVarExpr()
 			p.backup()
 			continue
-		case '|', '&', ';', '<', '>', '(', ')', '`',
+		case '|', ';', '(', ')', '`',
 			// Forbid these characters as they may need to be
 			// quoted under certain circumstances.
-			'*', '?', '[', '#', '~':
+			'*', '?', '[', '#': // '~', '&', '<', '>':
 			p.errorf("unsupported character: %c", r)
 		default:
 			p.buf.WriteRune(r)
