@@ -14,6 +14,49 @@ profile option. Each applicaiton configuration will have a package,
 dependencies, configurations (supporting custom configuration values), and post
 installation commands. 
 
+The dot configurations repository allows the user to define the repository
+source the configurations. By default `dot-config` will look for the
+`base-files`, or `profiles/base-files`. The `base-files` path is expected to
+contain folders corresponding to the `type`. Each of these `type` named folders
+should be all the required files relative to the `~/` path.
+
+
+````
+os: "debian"
+git: "github.com/multiverse-os/dot-configs"
+version: "9.7"
+profiles:
+- type: "development"
+  subtype: "golang"
+  packages:
+    install:
+    - "build-essential"
+    - "cmake"
+    - "curl"
+    - "git"
+    - "golang"
+    - "neovim"
+    - "vim-gocomplete"
+    remove:
+    - "nano"
+  configurations:
+  - from: "dot.config/nvim/init.vim"
+    to: "~/.config/nvim/init.vim"
+  - from: "dot.bashrc"
+    to: "~/.bashrc"
+  commands:
+  - "cd ~/ && ln -s ~/.config/nvim/init.vim ~/.vimrc"
+````
+
+For example, `base-files/development/` will contain `../development/dot.gitconfig`
+that will be installed in the local user's home folder. This enables users to
+store their own dot config files in a git repository, and store config files for
+several machines or break up config files into modules that can be mixed and
+matched for maximum customability with the simplest interface possible. 
+
+The subtype allows further organization by having a subfolder within the type
+folder, for example the `base-files` for the above type "development" and
+subtype "golang" would be `~/base-files/development/golang/*`.
 
 
 *API is still under heavy development (this project is entirely experimental,
@@ -33,5 +76,5 @@ echo "set undofile" >> ~/.vimrc
 echo "undodir=~/.config/nvim/undo" >> ~/.vimrc
 echo "backupdir=~/.config/nvim/backup" >> ~/.vimrc
 echo "directory=~/.config/nvim/tmp" >> ~/.vimrc
-```
+````
 

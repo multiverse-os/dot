@@ -14,56 +14,54 @@ import (
 // TODO: Fix `multiverse-os/log` so that space is not required before the
 // message
 
-func main() {
-	terminal.PrintBanner(terminal.White("[")+terminal.Blue("Multiverse OS")+terminal.White(": ")+terminal.White("dot.config")+terminal.White("]  ")+terminal.Light("basic system provisioning/config management"), terminal.White("0.1.0"))
+const (
+	COMMAND_NOT_FOUND = "Must specify one of the available actions: [\"install\"]"
+	CONFIG_NOT_FOUND  = "Failed to incldude provisioning configuration YAML file containing profiles"
+	INVALID_CONFIG    = "Provision configuration parse failed, verify YAML is valid and try again"
+	PROFILE_NOT_FOUND = "Provision configuration parse failed, must have at least one profile"
+)
 
+func Usage() {
+	fmt.Println(terminal.Strong(" Usage:\n") + terminal.White("   dotconfig install default") + terminal.White("\n   dotconfig install ./profiles/dev.golang.yaml"))
+}
+
+func Title() string {
+	return (terminal.White("[") + terminal.Blue("Multiverse OS") + terminal.White(": ") + terminal.White("dot.config") + terminal.White("]  ") + terminal.Light("basic system provisioning/config management"))
+}
+
+func main() {
+	terminal.PrintBanner(Title(), terminal.White("0.1.0"))
 	var profileArgument string
 	if len(os.Args) > 1 {
 		profileArgument = strings.ToLower(os.Args[1])
-	} else {
-		log.FatalError(errors.New(" Profile argument required (e.g. default, dev)"))
-		fmt.Println(terminal.Strong(" Usage:\n") + terminal.White("   dotconfig default") + terminal.White("\n   dotconfig dev ./profiles/dev.golang.yaml"))
-		os.Exit(0)
 	}
-
 	switch profileArgument {
-	case dot.DefaultProfile.String():
-		env := dot.DefaultConfig()
-		fmt.Println("Loading default profile, an environment with a single profile, more profiles could be merged into it...")
-		fmt.Println("Number of profiles: ", len(env.Profiles))
-		fmt.Println("First profile type is: ", env.Profiles[0].Type)
-
-	case dot.DevelopmentProfile.String(), "dev":
+	case "install", "i":
 		if len(os.Args) > 2 && len(os.Args[1]) > 1 {
 			envPath := os.Args[2]
 			fmt.Println("Checking if [", envPath, "] exists...")
 			if _, err := os.Stat(envPath); os.IsNotExist(err) {
-				log.FatalError(errors.New(" Development provision configuration profile not found"))
-				fmt.Println(terminal.Strong(" Usage:") + terminal.White("\n   dotconfig dev profiles/dev.golang.yaml"))
-				os.Exit(0)
+				log.FatalError(errors.New(" " + CONFIG_NOT_FOUND))
 			} else {
 				env, err := dot.LoadEnvironment(envPath)
 				if err != nil {
-					log.FatalError(errors.New(" Failed to parse provision configuration, verify profile YAML and try again"))
+					log.FatalError(errors.New(" " + INVALID_CONFIG))
 				} else {
 					if len(env.Profiles) > 0 {
 						fmt.Println("number of profiles in env [", len(env.Profiles), "] ")
-						fmt.Println("Successfully loaded the configuration, now just neeed to iterate through each profile and provision based on it: ", env)
-						fmt.Println("Loading default profile, an environment with a single profile, more profiles could be merged into it...")
-						fmt.Println("Number of profiles: ", len(env.Profiles))
 						fmt.Println("First profile type is: ", env.Profiles[0].Type)
+						errors := env.Provision()
+						fmt.Println("Encountered [", len(errors), "] while attempting to provision with the configuration.")
 					} else {
-						log.FatalError(errors.New(" Failed to parse provision configuration, must have at least one profile"))
+						log.FatalError(errors.New(" " + PROFILE_NOT_FOUND))
 					}
 				}
 			}
 		} else {
-			log.FatalError(errors.New(" Must include developer provision configuration path"))
-			fmt.Println(terminal.Strong(" Usage:") + terminal.White("\n   dotconfig dev profiles/dev.golang.yaml"))
+			log.FatalError(errors.New(" " + COMMAND_NOT_FOUND))
 		}
 	default:
-		log.FatalError(errors.New(" Invalid profile [available profiles: default, dev]"))
-		fmt.Println(terminal.Strong(" Usage:\n") + terminal.White("   dotconfig default") + terminal.White("\n   dotconfig dev ./profiles/dev.golang.yaml"))
-		os.Exit(0)
+		log.FatalError(errors.New(" " + COMMAND_NOT_FOUND))
 	}
+	Usage()
 }

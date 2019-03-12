@@ -25,9 +25,10 @@ func (self ProfileType) String() string {
 }
 
 type Environment struct {
-	OS       string    `yaml:"os"`
-	Version  string    `yaml:"version"`
-	Profiles []Profile `yaml:"profiles"`
+	OS         string    `yaml:"os"`
+	Repository string    `yaml:"git"`
+	Version    string    `yaml:"version"`
+	Profiles   []Profile `yaml:"profiles"`
 }
 
 type Profile struct {
@@ -75,14 +76,14 @@ func DefaultConfig() Environment {
 	}
 }
 
-func LoadEnvironment(path string) (env *Environment, err error) {
+func LoadEnvironment(path string) (env Environment, err error) {
 	yamlFile, err := ioutil.ReadFile(path)
 	if err != nil {
-		return nil, err
+		return Environment{}, err
 	}
 	err = yaml.Unmarshal(yamlFile, &env)
 	if err != nil {
-		return nil, err
+		return Environment{}, err
 	}
 	return env, nil
 }

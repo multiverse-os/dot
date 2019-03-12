@@ -5,22 +5,35 @@ package dot
 type OperatingSystem int
 
 const (
-	Debian OperatingSystem = iota
-	Alpine
-	Ubuntu
+	Alpine OperatingSystem = iota
+	Debian
 	Fedora
+	Ubuntu
 )
 
 func (self OperatingSystem) String() string {
 	switch self {
 	case Alpine:
 		return "alpine"
-	case Ubuntu:
-		return "ubuntu"
 	case Fedora:
 		return "fedora"
+	case Ubuntu:
+		return "ubuntu"
 	default: // Debian
 		return "debian"
+	}
+}
+
+func MarshallOS(os string) OperatingSystem {
+	switch os {
+	case Alpine.String():
+		return Alpine
+	case Fedora.String():
+		return Fedora
+	case Ubuntu.String():
+		return Ubuntu
+	default:
+		return Debian
 	}
 }
 

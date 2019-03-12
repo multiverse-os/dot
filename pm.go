@@ -30,6 +30,14 @@ func (self PackageManager) Install() string {
 	}
 }
 
+func (self PackageManager) InstallPackage(pkg string) {
+	terminal(self.Install() + ` ` + pkg)
+}
+
+func (self PackageManager) InstallPackages(pkgs []string) {
+	terminal(self.Install() + ` ` + pkg)
+}
+
 func (self PackageManager) Remove() string {
 	switch self {
 	case Apk:
@@ -39,6 +47,23 @@ func (self PackageManager) Remove() string {
 	default: // Apt
 		return "DEBIAN_FRONTEND=noninteractive apt-get remove -y"
 	}
+}
+
+func (self PackageManager) Installed() string {
+	switch self {
+	case Apk:
+		return "apk list"
+	case Dnf:
+		return "dnf list installed"
+	default: // Apt
+		return "apt list --installed"
+	}
+}
+
+func (self PackageManager) AddRepository() {
+	// TODO: Add lines to repository
+	// TODO: Edit repository line
+	// TODO: Reset repository to default
 }
 
 func (self PackageManager) Update() string {
@@ -69,16 +94,5 @@ func (self PackageManager) DistUpgrade() string {
 		return "dnf distro-sync"
 	default: // Apt
 		return "DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew -y"
-	}
-}
-
-func (self PackageManager) Installed() string {
-	switch self {
-	case Apk:
-		return "apk list"
-	case Dnf:
-		return "dnf list installed"
-	default: // Apt
-		return "apt list --installed"
 	}
 }
