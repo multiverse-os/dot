@@ -23,7 +23,7 @@ should be all the required files relative to the `~/` path.
 
 ````
 os: "debian"
-git: "github.com/multiverse-os/dot-configs"
+git: "github.com/multiverse-os/dot-files"
 version: "9.7"
 profiles:
 - type: "development"
@@ -40,10 +40,12 @@ profiles:
     remove:
     - "nano"
   configurations:
-  - from: "dot.config/nvim/init.vim"
-    to: "~/.config/nvim/init.vim"
-  - from: "dot.bashrc"
-    to: "~/.bashrc"
+  - command: "copy"
+    from: "~/Go/src/github.com/multiverse-os/dot-config/profiles/dev.golang.yml"
+    to: "~/test.yml"
+  - command: "link"
+    from: "~/Go/src/github.com/multiverse-os/dot-config/profiles/dev.ruby.yml"
+    to: "~/test2.yml"
   commands:
   - "cd ~/ && ln -s ~/.config/nvim/init.vim ~/.vimrc"
 ````
@@ -83,7 +85,7 @@ organized into categories and subcategories.
 
 ````
 dot install dev.golang.yml
-dot install https://remote.com/path/to.yml 
+dot install https://remote.com/path/to.yml  # not yet implemented
 ````
 -------------------------------------------------------------------------------
 ### Development
