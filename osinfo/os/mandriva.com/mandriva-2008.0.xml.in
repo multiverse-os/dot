@@ -1,0 +1,17 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://mandriva.com/mandriva/2008.0">
+    <short-id>mandriva2008.0</short-id>
+    <_name>Mandriva Linux 2008</_name>
+    <_vendor>Mandriva</_vendor>
+    <family>linux</family>
+    <distro>mandriva</distro>
+    <version>2008.0</version>
+    <upgrades id="http://mandriva.com/mandriva/2007.1"/>
+    <derives-from id="http://mandriva.com/mandriva/2007.1"/>
+
+    <release-date>2007-10-09</release-date>
+    <eol-date>2010-10-09</eol-date>
+  </os>
+</libosinfo>

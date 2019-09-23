@@ -1,0 +1,31 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <install-script id='http://microsoft.com/windows/reg/desktop'>
+    <profile>desktop</profile>
+    <path-format>dos</path-format>
+    <expected-filename>windows.reg</expected-filename>
+    <config>
+      <param name="admin-password" policy="optional"/>
+      <param name="user-realname" policy="required"/>
+    </config>
+    <injection-method>floppy</injection-method>
+    <template>
+      <xsl:stylesheet
+        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+        version="1.0">
+
+        <xsl:output method="text"/>
+
+        <xsl:template match="/install-script-config">
+Windows Registry Editor Version 5.00.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+"DefaultUserName"="<xsl:value-of select="config/user-realname"/>"
+"DefaultPassword"="<xsl:value-of select="config/admin-password"/>"
+"AutoAdminLogon"="1"
+        </xsl:template>
+      </xsl:stylesheet>
+    </template>
+  </install-script>
+</libosinfo>

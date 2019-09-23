@@ -2,6 +2,8 @@ package dot
 
 import (
 	"io/ioutil"
+
+	config "github.com/multiverse-os/dot/config"
 )
 
 type Settings map[string]string
@@ -31,13 +33,13 @@ func (self ConfigFile) Install() error {
 }
 
 func Install(name string, settings Settings) (ConfigFile, error) {
-	switch {
-	case "neovim":
-		return neovim(settings), nil
+	switch name {
+	case "neovim", "vim":
+		return config.Neovim(settings), nil
 	case "bash":
-		return bash(settings), nil
+		return config.Bash(settings), nil
 	case "git":
-		return git(setting), nil
+		return config.Git(setting), nil
 	default:
 		return nil, errors.New("configuration not supported")
 	}

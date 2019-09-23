@@ -1,0 +1,22 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://mandriva.com/mes/5.1">
+    <short-id>mes5.1</short-id>
+    <_name>Mandriva Enterprise Server 5.1</_name>
+    <version>5.1</version>
+    <_vendor>Mandriva</_vendor>
+    <family>linux</family>
+    <distro>mes</distro>
+    <upgrades id="http://mandriva.com/mes/5.0"/>
+    <derives-from id="http://mandriva.com/mes/5.0"/>
+
+    <release-date>2010-03-15</release-date>
+    <eol-date>2014-06-16</eol-date>
+
+    <devices>
+      <device id="http://pcisig.com/pci/1af4/1000"/> <!-- virtio-net -->
+      <device id="http://pcisig.com/pci/1af4/1001"/> <!-- virtio-block -->
+    </devices>
+  </os>
+</libosinfo>

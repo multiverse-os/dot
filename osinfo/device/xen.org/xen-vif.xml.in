@@ -1,0 +1,11 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <device id="http://xen.org/xen/vif">
+    <class>net</class>
+    <bus-type>xen</bus-type>
+    <product>Virtual Interface</product>
+    <product-id>vif</product-id>
+    <name>xen-vif</name>
+  </device>
+</libosinfo>

@@ -1,0 +1,285 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <install-script id='http://fedoraproject.org/fedora/kickstart/desktop'>
+    <profile>desktop</profile>
+    <expected-filename>fedora.ks</expected-filename>
+    <config>
+        <param name="l10n-keyboard" policy="optional" value-map="http://x.org/x11-keyboard"/>
+        <param name="l10n-language" policy="optional"/>
+        <param name="l10n-timezone" policy="optional"/>
+        <param name="hostname" policy="optional"/>
+        <param name="user-login" policy="required"/>
+        <param name="user-password" policy="optional"/>
+        <param name="admin-password" policy="optional"/>
+        <param name="avatar-location" policy="optional"/>
+        <param name="avatar-disk" policy="optional"/>
+        <param name="target-disk" policy="optional"/>
+        <param name="script-disk" policy="optional"/>
+    </config>
+    <injection-method>cdrom</injection-method>
+    <injection-method>disk</injection-method>
+    <injection-method>floppy</injection-method>
+    <injection-method>initrd</injection-method>
+    <avatar-format>
+      <mime-type>image/png</mime-type>
+    </avatar-format>
+    <template>
+      <xsl:stylesheet
+        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+        version="1.0">
+
+        <xsl:output method="text"/>
+
+        <xsl:template name="target-disk">
+          <xsl:choose>
+            <xsl:when test="config/target-disk != ''">
+              <xsl:value-of select="config/target-disk"/>
+            </xsl:when>
+            <xsl:when test="os/version &gt; 9">
+              <!-- virtio -->
+              <xsl:text>/dev/vda</xsl:text>
+            </xsl:when>
+            <xsl:when test="os/version &gt; 6">
+              <!-- libata IDE -->
+              <xsl:text>/dev/sda</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+              <!-- IDE -->
+              <xsl:text>/dev/hda</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:template>
+
+        <xsl:template name="script-disk">
+          <xsl:variable name="script-disk">
+            <xsl:choose>
+              <xsl:when test="config/script-disk != ''">
+                <xsl:value-of select="config/script-disk"/>
+              </xsl:when>
+              <xsl:when test="os/version &gt; 9">
+                <xsl:text>/dev/sda</xsl:text>
+              </xsl:when>
+              <xsl:when test="os/version &gt; 6">
+                <xsl:text>/dev/sdb</xsl:text>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:text>/dev/hdb</xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:value-of select="substring-after($script-disk, '/dev/')"/>
+        </xsl:template>
+
+        <!-- The default values of avatar-disk consider the avatar is stored
+             in the same disk as the installation scripts. -->
+        <xsl:template name="avatar-disk">
+          <xsl:choose>
+            <xsl:when test="config/avatar-disk != ''">
+              <xsl:value-of select="config/avatar-disk"/>
+            </xsl:when>
+            <xsl:when test="os/version &gt; 9">
+              <xsl:text>/dev/sda</xsl:text>
+            </xsl:when>
+            <xsl:when test="os/version &gt; 6">
+              <xsl:text>/dev/sdb</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:text>/dev/hdb</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:template>
+
+        <xsl:template name="keyboard">
+          <xsl:choose>
+            <xsl:when test="os/version &gt; 17">
+              <xsl:value-of select="config/l10n-keyboard"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <!-- FIXME: F17 and older required keyboard layout to be a console
+                   layout so we'll need a different datamap for those but
+                   currently we only support one datamap per config param per
+                   script. -->
+              <xsl:text>us</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:template>
+
+        <xsl:template match="/command-line">
+          <xsl:text>ks=</xsl:text>
+          <xsl:choose>
+            <xsl:when test="script/preferred-injection-method = 'initrd'">
+              <xsl:text>file:/</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:text>hd:</xsl:text>
+              <xsl:call-template name="script-disk"/>
+              <xsl:text>:/</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose>
+          <xsl:value-of select="script/expected-filename"/>
+          <xsl:if test="script/installation-source = 'network'">
+            <xsl:choose>
+              <xsl:when test="os/version &lt; 19">
+                <xsl:text> method=</xsl:text>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:text> inst.repo=</xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
+            <xsl:call-template name="installation-url"/>
+          </xsl:if>
+        </xsl:template>
+
+        <xsl:template name="installation-url">
+          <xsl:choose>
+            <xsl:when test="config/installation-url != ''">
+              <xsl:value-of select="config/installation-url"/>
+            </xsl:when>
+            <xsl:when test="tree/url != ''">
+              <xsl:value-of select="tree/url"/>
+            </xsl:when>
+          </xsl:choose>
+        </xsl:template>
+
+        <xsl:template name="url-or-mirrorlist">
+          <xsl:choose>
+            <xsl:when test="config/installation-url != '' or tree/url != ''">
+              <xsl:text> --url=</xsl:text>
+              <xsl:call-template name="installation-url"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:text> --mirrorlist=</xsl:text>
+              <xsl:text>https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;arch=$basearch</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:template>
+
+        <xsl:template match="/install-script-config">
+# Install script for <xsl:value-of select="os/short-id"/> profile <xsl:value-of select="script/profile"/>
+<xsl:if test="script/installation-source = 'media' and (count(media/variant) = 0 or not(contains(media/variant, 'netinst')))">
+  <xsl:if test="os/version &lt; 29">
+install
+  </xsl:if>
+cdrom
+</xsl:if>
+keyboard '<xsl:call-template name="keyboard"/>'
+lang <xsl:value-of select="config/l10n-language"/>
+network --onboot yes --bootproto dhcp --noipv6 --hostname=<xsl:value-of select="config/hostname"/>
+rootpw dummyPa55w0rd # Actual password set (or unset) in %post below
+firewall --disabled
+<xsl:choose>
+  <xsl:when test="os/version &lt; 28">
+authconfig --enableshadow --enablemd5
+  </xsl:when>
+  <xsl:otherwise>
+authselect select sssd
+  </xsl:otherwise>
+</xsl:choose>
+timezone --utc <xsl:value-of select="config/l10n-timezone"/>
+bootloader --location=mbr
+zerombr
+
+clearpart --all --drives=<xsl:call-template name="target-disk"/>
+
+firstboot --disable
+
+autopart
+reboot
+
+<xsl:if test="script/installation-source = 'network' or contains(media/variant, 'netinst')">
+repo --name=fedora --mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;arch=$basearch
+repo --name=updates --mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&amp;arch=$basearch
+url <xsl:call-template name="url-or-mirrorlist"/>
+</xsl:if>
+
+%packages
+<xsl:choose>
+  <xsl:when test="os/version &lt; 18">
+@base
+@graphical-internet
+@sound-and-video
+  </xsl:when>
+  <xsl:otherwise>
+@standard
+@epiphany
+@firefox
+@multimedia
+  </xsl:otherwise>
+</xsl:choose>
+@core
+@hardware-support
+@base-x
+@gnome-desktop
+
+# QXL driver and SPICE vdagent
+xorg-x11-drv-qxl
+spice-vdagent
+
+<xsl:if test="os/version &gt; 19">
+spice-webdavd
+</xsl:if>
+
+<xsl:choose>
+  <xsl:when test="os/version &gt; 15">
+qemu-guest-agent
+  </xsl:when>
+</xsl:choose>
+
+%end
+
+%post --erroronfail
+
+useradd -G wheel <xsl:value-of select="config/user-login"/> # Add user
+if test -z '<xsl:value-of select="config/user-password"/>'; then
+    passwd -d <xsl:value-of select="config/user-login"/> # Make user account passwordless
+else
+    echo '<xsl:value-of select="config/user-password"/>' |passwd --stdin <xsl:value-of select="config/user-login"/>
+fi
+
+if test -z '<xsl:value-of select="config/admin-password"/>'; then
+    passwd -d root # Make root account passwordless
+else
+    echo '<xsl:value-of select="config/admin-password"/>' |passwd --stdin root
+fi
+
+# Set user avatar
+if test -n '<xsl:value-of select="config/avatar-location"/>'; then
+mkdir /mnt/unattended-media
+mount <xsl:call-template name="avatar-disk"/> /mnt/unattended-media
+cp /mnt/unattended-media<xsl:value-of select="config/avatar-location"/> /var/lib/AccountsService/icons/<xsl:value-of select="config/user-login"/>
+umount /mnt/unattended-media
+fi
+
+echo "
+[User]
+Language=
+XSession=
+Icon=/var/lib/AccountsService/icons/<xsl:value-of select="config/user-login"/>
+" >> /var/lib/AccountsService/users/<xsl:value-of select="config/user-login"/>
+
+# Enable autologin
+echo "[daemon]
+AutomaticLoginEnable=true
+AutomaticLogin=<xsl:value-of select="config/user-login"/>
+
+[security]
+
+[xdmcp]
+
+[greeter]
+
+[chooser]
+
+[debug]
+" > /etc/gdm/custom.conf
+
+# Create an osinfo-install-successful file in /root
+touch /root/osinfo-install-successful
+
+%end
+        </xsl:template>
+      </xsl:stylesheet>
+    </template>
+  </install-script>
+</libosinfo>

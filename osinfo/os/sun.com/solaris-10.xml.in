@@ -1,0 +1,19 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://sun.com/solaris/10">
+    <short-id>solaris10</short-id>
+    <_name>Solaris 10</_name>
+    <version>10</version>
+    <_vendor>Sun</_vendor>
+    <family>solaris</family>
+    <distro>solaris</distro>
+    <upgrades id="http://sun.com/solaris/9"/>
+
+    <release-date>2005-01-31</release-date>
+
+    <devices>
+      <device id="http://usb.org/usb/80ee/0021"/> <!-- tablet -->
+    </devices>
+  </os>
+</libosinfo>

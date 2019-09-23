@@ -16,6 +16,7 @@ type ProfileType int
 
 const (
 	DefaultProfile ProfileType = iota
+	MultiverseProfile
 	DevelopmentProfile
 )
 
@@ -23,24 +24,43 @@ func (self ProfileType) String() string {
 	switch self {
 	case DevelopmentProfile:
 		return "developer"
+	case MultiverseProfile:
+		return "multiverse"
 	default:
 		return "default"
 	}
 }
 
+// NOTE: Profiles contain configs, and environments contain profiles.
+// This allows for mixing and matching configs, or collections of configs
+// (profiles), to make up (environment) collections of profiles. An environment
+// can be defined by a git repository, or files on the system.
 type Environment struct {
 	OS         string    `yaml:"os"`
+	Version    Version   `yaml:"version"`
 	Repository string    `yaml:"git"`
-	Version    string    `yaml:"version"`
 	Profiles   []Profile `yaml:"profiles"`
 }
 
+// NOTE: Profile is a collection of configurations. These can be mixed and
+// matched using Environment. They can be deifned in a git repository, or on the
+// local disk. They have a category, type and optional subtype. This enables
+// 		Category: Development
+//    Type:     (Ruby|Golang|Rust|Python)
+//    Subtype:  (Production|Development|...)
+// The profile should include everything needed to reverse the installation
+// process.
+// If the uninstall require similar to post install, post uninstall commands
 type Profile struct {
+	Category            string                 `yaml:"category"`
 	Type                string                 `yaml:"type"`
 	Subtype             string                 `yaml:"subtype"`
 	Packages            ProfilePackages        `yaml:"packages"`
 	ConfigFiles         []ProfileConfigInstall `yaml:"configurations"`
 	PostInstallCommands []string               `yaml:"commands"`
+	Repository          string                 `yaml:"repository"`
+	UninstallCommands   []string               `yaml:"uninstall"`
+	Installed           bool
 }
 
 type ProfilePackages struct {
@@ -51,34 +71,64 @@ type ProfilePackages struct {
 type CommandType int
 
 const (
-	CopyCommand CommandType = iota
-	LinkCommand
+	Copy CommandType = iota
+	Link
+	Remove
+	Move
+	MakeDirectory
+)
+
+// Aliases
+const (
+	Cp    = Copy
+	Ln    = Link
+	Rm    = Remove
+	Mv    = Move
+	MkDir = MakeDirectory
 )
 
 func (self CommandType) Name() string {
 	switch self {
-	case LinkCommand:
-		return "link"
+	case Link:
+		return "ln"
+	case Remove:
+		return "rm"
+	case Move:
+		return "mv"
+	case MakeDirectory:
+		return "mkdir"
 	default: // CopyCommand
-		return "copy"
+		return "cp"
 	}
 }
 
-func (self CommandType) StringWithFlags() string {
+func (self CommandType) Command() string {
 	switch self {
-	case LinkCommand:
+	case Link:
 		return "ln -s"
-	default: // CopyCommand
+	case Remove:
+		return "rm -rf"
+	case Move:
+		return "mv"
+	case MakeDirectory:
+		return "mkdir -p"
+	default: // Copy
 		return "cp -rf"
 	}
 }
 
 func MarshalCommand(cmd string) CommandType {
 	switch cmd {
-	case LinkCommand.Name():
-		return LinkCommand
+	case Link.Name():
+		return Link
+	case Remove.Name():
+		return Remove
+	case Move.Name():
+		return Move
+	case MakeDirectory.Name():
+		return MakeDirectory
 	default: // CopyCommand.String()
-		return CopyCommand
+		return Copy
 	}
 }
 
@@ -102,7 +152,7 @@ func ExpandPath(path string) (string, error) {
 	}
 }
 
-func (self Profile) CopyOrLinkConfigFiles() (errs []error) {
+func (self Profile) ConfigFiles() (errs []error) {
 	for _, configFile := range self.ConfigFiles {
 		from, err := ExpandPath(configFile.From)
 		if err != nil {
@@ -151,7 +201,7 @@ func (self Profile) ExecutePostInstallCommands() (errs []error) {
 	return nil
 }
 
-func DefaultConfig() Environment {
+func DefaultEnvironment() Environment {
 	return Environment{
 		OS:      "debian",
 		Version: Version{Major: 10, Minor: 0, Patch: 1}.String(),
@@ -164,11 +214,12 @@ func DefaultConfig() Environment {
 				},
 				ConfigFiles: []ProfileConfigInstall{
 					ProfileConfigInstall{
-						From: "dot.bashrc",
-						To:   "~/.bashrc",
+						Command: "cp",
+						From:    "dot.bashrc",
+						To:      "~/.bashrc",
 					},
 					ProfileConfigInstall{
-						Command: "copy",
+						Command: CopyCommand,
 						From:    "dot.gitconfig",
 						To:      "~/.gitconfig",
 					},

@@ -1,0 +1,36 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://opensuse.org/opensuse/11.1">
+    <short-id>opensuse11.1</short-id>
+    <_name>openSUSE 11.1</_name>
+    <version>11.1</version>
+    <_vendor>openSUSE</_vendor>
+    <family>linux</family>
+    <distro>opensuse</distro>
+    <upgrades id="http://opensuse.org/opensuse/11.0" />
+    <derives-from id="http://opensuse.org/opensuse/11.0" />
+
+    <release-date>2008-12-18</release-date>
+    <eol-date>2011-01-14</eol-date>
+
+    <devices>
+      <device id="http://pcisig.com/pci/8086/2415"/> <!-- ac97 -->
+      <device id="http://pcisig.com/pci/8086/2668"/> <!-- ich6 -->
+    </devices>
+
+    <resources arch="all">
+      <minimum>
+        <cpu>500000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>268435456</ram>
+        <storage>524288000</storage>
+      </minimum>
+      <recommended>
+        <cpu>2400000000</cpu>
+        <ram>536870912</ram>
+        <storage>8589934592</storage>
+      </recommended>
+    </resources>
+  </os>
+</libosinfo>

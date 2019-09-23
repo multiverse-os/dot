@@ -1,0 +1,65 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://openbsd.org/openbsd/4.9">
+    <short-id>openbsd4.9</short-id>
+    <_name>OpenBSD 4.9</_name>
+    <version>4.9</version>
+    <family>openbsd</family>
+    <distro>openbsd</distro>
+    <_vendor>OpenBSD Project</_vendor>
+    <upgrades id='http://openbsd.org/openbsd/4.8'/>
+    <derives-from id='http://openbsd.org/openbsd/4.8'/>
+
+    <release-date>2011-05-01</release-date>
+    <eol-date>2012-05-01</eol-date>
+
+    <variant id="netinst">
+      <_name>OpenBSD 4.9</_name>
+    </variant>
+
+    <devices>
+      <device id="http://pcisig.com/pci/1022/2000"/> <!-- pcnet -->
+    </devices>
+
+    <media arch="i686">
+      <iso>
+        <publisher-id>Copyright \(c\) 2011 Theo de Raadt, The OpenBSD project</publisher-id>
+        <system-id>OpenBSD</system-id>
+        <volume-id>OpenBSD/i386    4.9 Install CD</volume-id>
+        <application-id>OpenBSD 4.9 i386 Install CD</application-id>
+      </iso>
+    </media>
+
+    <media arch="x86_64">
+      <iso>
+        <publisher-id>Copyright \(c\) 2011 Theo de Raadt, The OpenBSD project</publisher-id>
+        <system-id>OpenBSD</system-id>
+        <volume-id>OpenBSD/amd64   4.9 Install CD</volume-id>
+        <application-id>OpenBSD 4.9 amd64 Install CD</application-id>
+      </iso>
+    </media>
+
+    <media arch="i686">
+      <variant id="netinst"/>
+      <url>https://cloudflare.cdn.openbsd.org/pub/OpenBSD/4.9/i386/cd49.iso</url>
+      <iso>
+        <publisher-id>Copyright \(c\) 2011 Theo de Raadt, The OpenBSD project</publisher-id>
+        <volume-id>OpenBSD/i386    4\.9 boot-only CD</volume-id>
+        <system-id>OpenBSD</system-id>
+        <application-id>OpenBSD 4\.9 i386 bootonly CD</application-id>
+      </iso>
+    </media>
+
+    <media arch="x86_64">
+      <variant id="netinst"/>
+      <url>https://cloudflare.cdn.openbsd.org/pub/OpenBSD/4.9/amd64/cd49.iso</url>
+      <iso>
+        <publisher-id>Copyright \(c\) 2011 Theo de Raadt, The OpenBSD project</publisher-id>
+        <volume-id>OpenBSD/amd64   4\.9 boot-only CD</volume-id>
+        <system-id>OpenBSD</system-id>
+        <application-id>OpenBSD 4\.9 amd64 bootonly CD</application-id>
+      </iso>
+    </media>
+  </os>
+</libosinfo>

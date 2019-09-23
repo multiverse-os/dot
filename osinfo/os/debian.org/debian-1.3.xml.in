@@ -1,0 +1,18 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://debian.org/debian/1.3">
+    <short-id>debian1.3</short-id>
+    <short-id>debianbo</short-id>
+    <_name>Debian GNU/Linux 1.3</_name>
+    <version>1.3</version>
+    <_vendor>Debian Project</_vendor>
+    <family>linux</family>
+    <distro>debian</distro>
+    <codename>bo</codename>
+    <upgrades id="http://debian.org/debian/1.2"/>
+    <derives-from id="http://debian.org/debian/1.2"/>
+
+    <release-date>1997-06-05</release-date>
+  </os>
+</libosinfo>

@@ -1,0 +1,33 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://opensuse.org/opensuse/10.2">
+    <short-id>opensuse10.2</short-id>
+    <_name>openSUSE 10.2</_name>
+    <version>10.2</version>
+    <_vendor>openSUSE</_vendor>
+    <family>linux</family>
+    <distro>opensuse</distro>
+
+    <release-date>2006-12-07</release-date>
+    <eol-date>2008-11-30</eol-date>
+
+    <devices>
+      <device id="http://usb.org/usb/80ee/0021"/> <!-- tablet -->
+    </devices>
+
+    <resources arch="all">
+      <minimum>
+        <cpu>500000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>268435456</ram>
+        <storage>524288000</storage>
+      </minimum>
+      <recommended>
+        <cpu>2400000000</cpu>
+        <ram>536870912</ram>
+        <storage>3221225472</storage>
+      </recommended>
+    </resources>
+  </os>
+</libosinfo>

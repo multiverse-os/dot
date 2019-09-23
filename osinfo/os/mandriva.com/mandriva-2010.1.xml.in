@@ -1,0 +1,17 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://mandriva.com/mandriva/2010.1">
+    <short-id>mandriva2010.1</short-id>
+    <_name>Mandriva Linux 2010 Spring</_name>
+    <_vendor>Mandriva</_vendor>
+    <family>linux</family>
+    <distro>mandriva</distro>
+    <version>2010.1</version>
+    <upgrades id="http://mandriva.com/mandriva/2010.0"/>
+    <derives-from id="http://mandriva.com/mandriva/2010.0"/>
+
+    <release-date>2010-07-08</release-date>
+    <eol-date>2012-07-08</eol-date>
+  </os>
+</libosinfo>

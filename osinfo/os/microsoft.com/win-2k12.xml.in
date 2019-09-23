@@ -1,0 +1,88 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://microsoft.com/win/2k12">
+    <short-id>win2k12</short-id>
+    <_name>Microsoft Windows Server 2012</_name>
+    <version>6.3</version>
+    <_vendor>Microsoft Corporation</_vendor>
+    <family>winnt</family>
+    <distro>win</distro>
+    <derives-from id="http://microsoft.com/win/2k8r2"/>
+    <upgrades id="http://microsoft.com/win/2k8r2"/>
+
+    <release-date>2012-09-04</release-date>
+
+    <devices>
+      <device id="http://pcisig.com/pci/1033/0194"/> <!-- nec-xhci -->
+      <device id="http://pcisig.com/pci/1b36/0004"/> <!-- qemu-xhci -->
+    </devices>
+
+    <variant id="storage">
+      <_name>Windows Server 2012 Storage</_name>
+    </variant>
+    <variant id="hyperv">
+      <_name>Windows Server 2012 for HyperV</_name>
+    </variant>
+    <variant id="essentials">
+      <_name>Windows Server 2012 Essentials</_name>
+    </variant>
+    <variant id="volume-license">
+      <_name>Windows Server 2012 Volume License</_name>
+    </variant>
+
+    <media arch="x86_64">
+      <iso>
+        <volume-id>(HRM_SSS_X64CHK|HRM_SSS_X64FREE?)_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/7/l10n-language">[A-Z0-9]*_([A-Z]*)</l10n-language>
+      </iso>
+    </media>
+
+    <media arch="x86_64">
+      <variant id="essentials"/>
+      <iso>
+        <volume-id>(HRM_SSSO_X64FREE?)_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/7/l10n-language">[A-Z0-9]*_([A-Z]*)</l10n-language>
+      </iso>
+    </media>
+    <media arch="x86_64">
+      <variant id="hyperv"/>
+      <iso>
+        <volume-id>(HRM_SHV_X64CHK|HRM_SHV_X64FREE?)_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/7/l10n-language">[A-Z0-9]*_([A-Z]*)</l10n-language>
+      </iso>
+    </media>
+    <media arch="x86_64">
+      <variant id="storage"/>
+      <iso>
+        <volume-id>(HRM_SFST_X64FREO)_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/7/l10n-language">[A-Z0-9]*_([A-Z]*)</l10n-language>
+      </iso>
+    </media>
+    <media arch="x86_64">
+      <variant id="volume-license"/>
+      <iso>
+        <volume-id>(HRM_SSS_X64FREV)_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/7/l10n-language">[A-Z0-9]*_([A-Z]*)</l10n-language>
+      </iso>
+    </media>
+
+    <resources arch="x86_64">
+      <minimum>
+        <cpu>1400000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>536870912</ram>
+        <storage>34359738368</storage>
+      </minimum>
+
+      <maximum>
+        <ram>4398046511104</ram>
+      </maximum>
+    </resources>
+  </os>
+</libosinfo>

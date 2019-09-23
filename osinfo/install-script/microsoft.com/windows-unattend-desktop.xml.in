@@ -1,0 +1,306 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <install-script id='http://microsoft.com/windows/unattend/desktop'>
+   <profile>desktop</profile>
+   <path-format>dos</path-format>
+   <product-key-format>$$$$$-$$$$$-$$$$$-$$$$$-$$$$$</product-key-format>
+   <expected-filename>autounattend.xml</expected-filename>
+   <can-pre-install-drivers/>
+   <config>
+    <param name="admin-password" policy="optional"/>
+    <param name="hardware-arch" policy="required"/>
+    <param name="l10n-language" policy="optional" value-map="http://microsoft.com/win/8/l10n-language-reverse"/>
+    <param name="user-login" policy="optional"/>
+    <param name="user-password" policy="optional"/>
+    <param name="user-realname" policy="optional"/>
+    <param name="hostname" policy="required"/>
+    <param name="reg-product-key" policy="required"/>
+    <param name="target-disk" policy="optional"/>
+    <param name="pre-install-drivers-disk" policy="optional"/>
+    <param name="pre-install-drivers-location" policy="optional"/>
+    <param name="script-disk" policy="optional"/>
+   </config>
+    <injection-method>cdrom</injection-method>
+    <injection-method>floppy</injection-method>
+    <template>
+     <xsl:stylesheet
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+      version="1.0">
+
+      <xsl:output method="xml" indent="yes"/>
+
+      <xsl:template name="target-disk">
+        <xsl:choose>
+          <xsl:when test="config/target-disk != ''">
+            <xsl:value-of select="config/target-disk"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>C</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:template>
+
+      <xsl:template name="script-disk">
+        <xsl:choose>
+          <xsl:when test="config/script-disk != ''">
+            <xsl:value-of select="config/script-disk"/>
+          </xsl:when>
+          <xsl:when test="script/preferred-injection-method = 'cdrom'">
+            <xsl:text>E</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>A</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:template>
+
+      <xsl:template name="arch">
+       <xsl:choose>
+        <xsl:when test="config/hardware-arch = 'x86_64'">
+         <xsl:text>amd64</xsl:text>
+        </xsl:when>
+        <xsl:when test="config/hardware-arch = 'i386'">
+         <xsl:text>x86</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+         <xsl:text>x86</xsl:text>
+        </xsl:otherwise>
+       </xsl:choose>
+     </xsl:template>
+
+     <xsl:template name="pre-install-drivers-disk">
+       <xsl:choose>
+         <xsl:when test="config/pre-install-drivers-disk != ''">
+           <xsl:value-of select="config/pre-install-drivers-disk"/>
+         </xsl:when>
+         <xsl:when test="script/preferred-injection-method = 'cdrom'">
+           <xsl:text>E</xsl:text>
+         </xsl:when>
+         <xsl:otherwise>
+           <xsl:text>A</xsl:text>
+         </xsl:otherwise>
+       </xsl:choose>
+     </xsl:template>
+
+     <xsl:template name="pre-install-drivers-location">
+       <xsl:choose>
+         <xsl:when test="config/pre-install-drivers-location != ''">
+           <xsl:value-of select="config/pre-install-drivers-location"/>
+         </xsl:when>
+         <xsl:otherwise>
+           <xsl:text>\</xsl:text>
+         </xsl:otherwise>
+       </xsl:choose>
+     </xsl:template>
+
+     <xsl:template name="ui-language">
+       <xsl:choose>
+         <xsl:when test="config/l10n-language = 'EN-GB'">
+           <xsl:text>EN-US</xsl:text>
+         </xsl:when>
+         <xsl:otherwise>
+           <xsl:value-of select="config/l10n-language"/>
+         </xsl:otherwise>
+       </xsl:choose>
+     </xsl:template>
+
+     <xsl:template match="/install-script-config">
+      <unattend xmlns="urn:schemas-microsoft-com:unattend">
+       <settings pass="windowsPE">
+         <component name="Microsoft-Windows-PnpCustomizationsWinPE" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+           <xsl:attribute name="processorArchitecture">
+             <xsl:call-template name="arch"/>
+           </xsl:attribute>
+           <DriverPaths>
+             <PathAndCredentials wcm:keyValue="1" wcm:action="add">
+               <Path><xsl:call-template name="pre-install-drivers-disk"/>:<xsl:call-template name="pre-install-drivers-location"/></Path>
+             </PathAndCredentials>
+           </DriverPaths>
+        </component>
+        <component name="Microsoft-Windows-Setup" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <xsl:attribute name="processorArchitecture">
+          <xsl:call-template name="arch"/>
+         </xsl:attribute>
+         <DiskConfiguration>
+          <WillShowUI>OnError</WillShowUI>
+          <Disk>
+           <CreatePartitions>
+            <CreatePartition>
+             <Order>1</Order>
+             <Size>1</Size>
+             <Type>Primary</Type>
+            </CreatePartition>
+           </CreatePartitions>
+           <DiskID>0</DiskID>
+           <WillWipeDisk>true</WillWipeDisk>
+           <ModifyPartitions>
+            <ModifyPartition>
+             <Active>true</Active>
+             <Extend>true</Extend>
+             <Format>NTFS</Format>
+             <Label><xsl:call-template name="target-disk"/> drive</Label>
+             <Letter><xsl:call-template name="target-disk"/></Letter>
+             <Order>1</Order>
+             <PartitionID>1</PartitionID>
+            </ModifyPartition>
+           </ModifyPartitions>
+          </Disk>
+         </DiskConfiguration>
+         <ImageInstall>
+          <OSImage>
+           <InstallTo>
+            <DiskID>0</DiskID>
+            <PartitionID>1</PartitionID>
+           </InstallTo>
+           <WillShowUI>OnError</WillShowUI>
+          </OSImage>
+         </ImageInstall>
+         <UserData>
+          <AcceptEula>true</AcceptEula>
+          <xsl:choose>
+            <xsl:when test="os/version = 6.2 or os/version = 6.3"> <!-- Windows 8 and Windows 8.1 -->
+              <xsl:choose>
+                <xsl:when test="count(media/variant) != 0 and (contains(media/variant, 'enterprise') or contains(media/variant, 'professional'))">
+                  <!-- Skip the ProductKey during this phase of the script for the following variants: Enterprise, Enterprise Debug and Professional -->
+                </xsl:when>
+                <xsl:otherwise>
+                  <ProductKey>
+                    <Key><xsl:value-of select="config/reg-product-key"/></Key>
+                  </ProductKey>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+              <ProductKey>
+                <Key><xsl:value-of select="config/reg-product-key"/></Key>
+              </ProductKey>
+            </xsl:otherwise>
+          </xsl:choose>
+         </UserData>
+        </component>
+        <component name="Microsoft-Windows-International-Core-WinPE" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <xsl:attribute name="processorArchitecture">
+          <xsl:call-template name="arch"/>
+         </xsl:attribute>
+         <SetupUILanguage>
+          <xsl:choose>
+           <xsl:when test="os/version = 6.1">
+            <UILanguage><xsl:call-template name="ui-language"/></UILanguage>
+           </xsl:when>
+           <xsl:otherwise>
+            <UILanguage><xsl:value-of select="config/l10n-language"/></UILanguage>
+           </xsl:otherwise>
+          </xsl:choose>
+         </SetupUILanguage>
+         <SystemLocale><xsl:value-of select="config/l10n-language"/></SystemLocale>
+         <xsl:choose>
+          <xsl:when test="os/version = 6.1">
+           <UILanguage><xsl:call-template name="ui-language"/></UILanguage>
+          </xsl:when>
+          <xsl:otherwise>
+           <UILanguage><xsl:value-of select="config/l10n-language"/></UILanguage>
+          </xsl:otherwise>
+         </xsl:choose>
+         <UserLocale><xsl:value-of select="config/l10n-language"/></UserLocale>
+        </component>
+       </settings>
+       <xsl:if test="os/version &gt; 6.0">
+        <settings pass="specialize">
+         <component name="Microsoft-Windows-Shell-Setup" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <xsl:attribute name="processorArchitecture">
+           <xsl:call-template name="arch"/>
+          </xsl:attribute>
+          <ComputerName><xsl:value-of select="config/hostname"/></ComputerName>
+         </component>
+         <component name="Microsoft-Windows-Deployment" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <xsl:attribute name="processorArchitecture">
+           <xsl:call-template name="arch"/>
+          </xsl:attribute>
+          <RunSynchronous  wcm:action="add">
+           <RunSynchronousCommand>
+            <Order>1</Order>
+            <Path>cmd /C <xsl:call-template name="script-disk"/>:\windows.cmd  ><xsl:call-template name="target-disk"/>:\windows\osinfo.log 2>&amp;1</Path>
+            <Description>Post installation setup</Description>
+           </RunSynchronousCommand>
+          </RunSynchronous>
+         </component>
+        </settings>
+       </xsl:if>
+       <settings pass="oobeSystem">
+        <component name="Microsoft-Windows-Shell-Setup" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <xsl:attribute name="processorArchitecture">
+          <xsl:call-template name="arch"/>
+         </xsl:attribute>
+         <UserAccounts>
+          <AdministratorPassword>
+           <Value><xsl:value-of select="config/admin-password"/></Value>
+           <PlainText>true</PlainText>
+          </AdministratorPassword>
+          <xsl:if test="count(config/user-login) &gt; 0">
+           <LocalAccounts>
+            <LocalAccount wcm:action="add">
+             <Password>
+              <Value><xsl:value-of select="config/user-password"/></Value>
+              <PlainText>true</PlainText>
+             </Password>
+             <Description><xsl:value-of select="config/user-realname"/></Description>
+             <DisplayName><xsl:value-of select="config/user-realname"/></DisplayName>
+             <Group>Administrators;Power Users</Group>
+             <Name><xsl:value-of select="config/user-login"/></Name>
+            </LocalAccount>
+           </LocalAccounts>
+         </xsl:if>
+         </UserAccounts>
+         <xsl:if test="count(config/user-login) &gt; 0">
+          <AutoLogon>
+           <Password>
+            <Value><xsl:value-of select="config/user-password"/></Value>
+            <PlainText>true</PlainText>
+           </Password>
+           <Enabled>true</Enabled>
+           <LogonCount>5</LogonCount>
+           <Username><xsl:value-of select="config/user-login"/></Username>
+          </AutoLogon>
+         </xsl:if>
+         <OOBE>
+          <xsl:if test="os/version &gt; 6.0">
+           <NetworkLocation>Work</NetworkLocation>
+           <SkipMachineOOBE>true</SkipMachineOOBE>
+           <SkipUserOOBE>true</SkipUserOOBE>
+          </xsl:if>
+          <HideEULAPage>true</HideEULAPage>
+          <ProtectYourPC>3</ProtectYourPC>
+         </OOBE>
+         <xsl:if test="os/version &gt; 6.0">
+          <FirstLogonCommands>
+           <SynchronousCommand wcm:action="add">
+            <Order>1</Order>
+            <Description>Turn Off Network Selection pop-up</Description>
+            <CommandLine>cmd /c reg add "HKLM\SYSTEM\CurrentControlSet\Control\Network\NewNetworkWindowOff"</CommandLine>
+           </SynchronousCommand>
+           <xsl:if test="os/version = 6.3">
+            <SynchronousCommand wcm:action="add">
+             <Order>2</Order>
+             <Description>Force windows activation</Description>
+             <CommandLine>cmd /c cscript.exe slmgr.vbs /ipk <xsl:value-of select="config/reg-product-key"/> /ato</CommandLine>
+            </SynchronousCommand>
+           </xsl:if>
+          </FirstLogonCommands>
+         </xsl:if>
+        </component>
+       </settings>
+       <settings pass="specialize">
+        <component name="Microsoft-Windows-Shell-Setup" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <xsl:attribute name="processorArchitecture">
+          <xsl:call-template name="arch"/>
+         </xsl:attribute>
+         <ProductKey><xsl:value-of select="config/reg-product-key"/></ProductKey>
+        </component>
+       </settings>
+      </unattend>
+     </xsl:template>
+    </xsl:stylesheet>
+   </template>
+  </install-script>
+</libosinfo>

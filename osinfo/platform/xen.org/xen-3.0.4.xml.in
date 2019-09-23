@@ -1,0 +1,15 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <platform id="http://xen.org/xen/3.0.4">
+    <short-id>xen-3.0.4</short-id>
+    <_name>Xen 3.0.4</_name>
+    <_vendor>Citrix Systems, Inc.</_vendor>
+    <version>3.0.4</version>
+    <upgrades id="http://xen.org/xen/3.0.3"/>
+
+    <devices>
+      <device id="http://xen.org/xen/vfb"/> <!-- xen-vfb -->
+    </devices>
+  </platform>
+</libosinfo>

@@ -1,0 +1,227 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://endlessos.com/eos/3.1">
+    <short-id>eos3.1</short-id>
+    <_name>Endless OS 3.1</_name>
+    <version>3.1</version>
+    <_vendor>Endless Mobile, Inc</_vendor>
+    <family>linux</family>
+    <distro>eos</distro>
+
+    <release-date>2017-01-17</release-date>
+
+    <eol-date>2017-07-18</eol-date>
+
+
+
+    <variant id="ar">
+      <_name>Endless OS Arabic</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="ar"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/ar/eos-eos3.1-amd64-amd64.170520-060632.ar.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-ar$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="base">
+      <_name>Endless OS Basic</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="base"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/base/eos-eos3.1-amd64-amd64.170520-055517.base.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-base$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="bn">
+      <_name>Endless OS Bengali</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="bn"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/bn/eos-eos3.1-amd64-amd64.170520-060733.bn.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-bn$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="en">
+      <_name>Endless OS English</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="en"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/en/eos-eos3.1-amd64-amd64.170520-071933.en.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-en$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="es">
+      <_name>Endless OS Spanish</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="es"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/es/eos-eos3.1-amd64-amd64.170520-061122.es.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-es$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="es_GT">
+      <_name>Endless OS Spanish (Guatemala)</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="es_GT"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/es_GT/eos-eos3.1-amd64-amd64.170520-061652.es_GT.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-es_GT$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="es_MX">
+      <_name>Endless OS Spanish (Mexico)</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="es_MX"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/es_MX/eos-eos3.1-amd64-amd64.170520-082741.es_MX.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-es_MX$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="fr">
+      <_name>Endless OS French</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="fr"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/fr/eos-eos3.1-amd64-amd64.170521-045821.fr.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-fr$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="id">
+      <_name>Endless OS Indonesian</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="id"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/id/eos-eos3.1-amd64-amd64.170521-050143.id.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-id$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="pt_BR">
+      <_name>Endless OS Portuguese (Brazil)</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="pt_BR"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/pt_BR/eos-eos3.1-amd64-amd64.170520-101852.pt_BR.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-pt_BR$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="th">
+      <_name>Endless OS Thai</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="th"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/th/eos-eos3.1-amd64-amd64.170521-050122.th.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-th$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="vi">
+      <_name>Endless OS Vietnamese</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="vi"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/vi/eos-eos3.1-amd64-amd64.170520-090541.vi.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-vi$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="zh_CN">
+      <_name>Endless OS Chinese (China)</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="zh_CN"/>
+      <url>https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/zh_CN/eos-eos3.1-amd64-amd64.170520-083345.zh_CN.iso</url>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-zh_CN$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+
+    <variant id="sea">
+      <_name>Endless OS Southeast Asia</_name>
+    </variant>
+
+    <media arch="x86_64" live="true">
+      <variant id="sea"/>
+      <iso>
+        <volume-id>Endless-OS-3-1-\d+-sea$</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <variant id="other">
+      <_name>Endless OS (other)</_name>
+    </variant>
+
+    <media arch="all" live="true">
+      <variant id="other"/>
+      <iso>
+        <volume-id>\D+-3-1-\d+</volume-id>
+        <publisher-id>ENDLESS COMPUTERS</publisher-id>
+      </iso>
+    </media>
+
+    <resources arch="all">
+      <minimum>
+        <n-cpus>1</n-cpus>
+        <cpu>1000000000</cpu>
+        <ram>2147483648</ram>
+        <storage>21474836480</storage>
+      </minimum>
+
+      <recommended>
+        <ram>2147483648</ram>
+        <storage>42949672960</storage>
+      </recommended>
+    </resources>
+
+  </os>
+</libosinfo>

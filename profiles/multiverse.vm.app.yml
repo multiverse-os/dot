@@ -1,0 +1,160 @@
+os: "debian"
+profiles:
+- profile:
+  type: "multiverse"
+  subtype: "app.vm"
+  users:
+    - name: "user"
+      authorized_keys:
+        - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG9ZZEPytQrgMDEHC641p1W/Wt84dG7Xte9meKbGUAk6 user@host"
+      gpg:
+        public_keys:
+          - import: "wade-welles"
+      gitconfig:
+        - name: "Your Name"
+          email: "you@example.com"
+      bashrc:
+        - aliases:
+          - from: "vim"
+            to: "nvim"
+          - from: "ls"
+            to: "ls -A"
+  paths:
+    remove:
+      - "/home/user/Videos"
+      - "/home/user/Templates"
+      - "/home/user/Downloads"
+      - "/home/user/Music"
+      - "/home/user/Public"
+      - "/home/user/Pictures"
+      - "/home/user/Documents"
+    link:
+      from: "/media/user/Downloads"
+      to: "/home/user/Downloads"
+  packages:
+    install:
+      - "curl"
+      - "wget"
+      - "git"
+      - "neovim"
+      - "vim"
+      - "tor"
+      - "openssh-server"
+    remove:
+      - "nano"
+      - "apache-bin"
+      - "baobab"
+      - "bluez"
+      - "bluez-obexd"
+      - "brasero-cdrkit"
+      - "brasero-common"
+      - "bubblewrap"
+      - "busybox"
+      - "calf-plugins"
+      - "cdrdao"
+      - "crda"
+      - "cheese-common"
+      - "cups-pk-helper"
+      - "cracklib-runtime"
+      - "dvdauthor"
+      - "dh-python"
+      - "docbook-xml"
+      - "debian-faq"
+      - "emacsen-common"
+      - "enchant"
+      - "flac"
+      - "genisoimage"
+      - "gnome-sushi"
+      - "ghostscript"
+      - "javascript-common"
+      - "lame"
+      - "poppler-data"
+      - "samba-libs"
+      - "telnet"
+      - "wireless-regdb"
+      - "wpasupplicant"
+      - "wodim"
+      - "zeitgeist-core"
+  configurations:
+    - from: "dot.config/nvim/init.vim"
+      to: "~/.config/nvim/init.vim"
+    - from: "dot.bashrc"
+      to: "~/.bashrc"
+  commands:
+    - "cd ~/ && ln -s ~/.config/nvim/init.vim ~/.vimrc"
+  ssh:
+    port: 22
+    users:
+      - name: "user"
+        authorized_keys:
+          - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG9ZZEPytQrgMDEHC641p1W/Wt84dG7Xte9meKbGUAk6 user@host"
+  ports:
+    forward:
+      - from:
+        - host: "remote.host"
+          port: 80
+      - to:
+        - host: "localhost"
+          port: 8080
+    allow:
+      - 22
+  etc:
+    sysctl:
+      - "net.ipv4.conf.all.send_redirects = 0"
+    crontab:
+      - "25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )"
+    hostname: "host"
+    issue: "Multiverse App Server [Debian GNU/Linux]"
+    motd: ""
+    network:
+      interfaces:
+        - device: "ens3"
+          ip4:
+            method: "static"
+            ip: "10.200.200.125"
+            netmask: "255.255.255.0"
+            gateway: "10.200.200.1"
+            dns:
+              - "212.82.226.212"
+              - "8.8.4.4"
+    resolvconf:
+      namesevers:
+        - "212.82.226.212"
+        - "8.8.4.4"
+    apt:
+      conf:
+        - 'APT::Get::Install-Recommends "false";'
+        - 'APT::Get::Install-Suggests "false";'
+      repositories:
+        main:
+          - "deb http://ftp.no.debian.org/debian/ bullseye main"
+          - "deb-src http://ftp.no.debian.org/debian/ bullseye main"
+        security:
+          - "deb http://security.debian.org/debian-security buster/updates main"
+          - "deb-src http://security.debian.org/debian-security buster/updates main"
+        updates:
+          - "deb http://ftp.no.debian.org/debian/ buster-updates main"
+          - "deb-src http://ftp.no.debian.org/debian/ buster-updates main"
+    modules:
+      - "9p"
+      - "9pnet"
+      - "9pnet_virtio"
+    fstab:
+      disks:
+        - filesystem: "Downloads"
+          mount: "/media/user/Downloads"
+          type: "9p"
+          options: "trans=virtio,9p2000.L,rw,cache=none,nofail"
+          dump: 0
+          pass: 0
+    hosts:
+      - ip: "10.200.200.200"
+        hostnames:
+          - "dev.server1"
+          - "dev1"
+          - "d1"
+      - ip: "10.200.200.201"
+        hostnames:
+          - "dev.server2"
+          - "dev2"
+          - "d2"

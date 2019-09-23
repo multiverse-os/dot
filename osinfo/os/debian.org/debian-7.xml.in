@@ -1,0 +1,67 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://debian.org/debian/7">
+    <short-id>debian7</short-id>
+    <short-id>debianwheezy</short-id>
+    <_name>Debian 7</_name>
+    <version>7</version>
+    <_vendor>Debian Project</_vendor>
+    <family>linux</family>
+    <distro>debian</distro>
+    <codename>wheezy</codename>
+    <upgrades id="http://debian.org/debian/6"/>
+    <derives-from id="http://debian.org/debian/6"/>
+
+    <release-date>2013-05-04</release-date>
+    <eol-date>2018-05-31</eol-date>
+
+    <devices>
+      <device id="http://pcisig.com/pci/8086/2415"/> <!-- ac97 -->
+      <device id="http://pcisig.com/pci/8086/2668"/> <!-- ich6 -->
+      <device id="http://pcisig.com/pci/1af4/1002"/> <!-- virtio-balloon -->
+      <device id="http://pcisig.com/pci/1af4/1003"/> <!-- virtio-console -->
+      <device id="http://pcisig.com/pci/1af4/1004"/> <!-- virtio-scsi -->
+      <device id="http://pcisig.com/pci/1af4/1009"/> <!-- virtio-9p -->
+      <device id="http://pcisig.com/pci/1b36/0100"/> <!-- qxl -->
+      <device id="http://pcisig.com/pci/1033/0194"/> <!-- nec-xhci -->
+      <device id="http://pcisig.com/pci/1b36/0004"/> <!-- qemu-xhci -->
+    </devices>
+
+    <resources arch="all">
+      <minimum>
+        <cpu>1000000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>134217728</ram>
+        <storage>5368709120</storage>
+      </minimum>
+      <recommended>
+        <cpu>1000000000</cpu>
+        <ram>1073741824</ram>
+        <storage>21474836480</storage>
+      </recommended>
+    </resources>
+
+    <media arch="i686">
+      <url>http://cdimage.debian.org/mirror/cdimage/archive/7.11.0/i386/iso-dvd/debian-7.11.0-i386-DVD-1.iso</url>
+      <iso>
+        <volume-id>Debian 7.\d.\d i386 1</volume-id>
+      </iso>
+      <kernel>install.386/vmlinuz</kernel>
+      <initrd>install.386/initrd.gz</initrd>
+    </media>
+    <media arch="x86_64">
+      <url>http://cdimage.debian.org/mirror/cdimage/archive/7.11.0/amd64/iso-dvd/debian-7.11.0-amd64-DVD-1.iso</url>
+      <iso>
+        <volume-id>Debian 7.\d.\d amd64 1</volume-id>
+      </iso>
+      <kernel>install.amd/vmlinuz</kernel>
+      <initrd>install.amd/initrd.gz</initrd>
+    </media>
+
+    <installer>
+      <script id='http://debian.org/debian/preseed/jeos'/>
+      <script id='http://debian.org/debian/preseed/desktop'/>
+    </installer>
+  </os>
+</libosinfo>

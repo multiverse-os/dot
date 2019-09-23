@@ -1,0 +1,158 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <install-script id='http://fedoraproject.org/silverblue/kickstart/desktop'>
+    <profile>desktop</profile>
+    <expected-filename>silverblue.ks</expected-filename>
+    <config>
+        <param name="l10n-keyboard" policy="optional" value-map="http://x.org/x11-keyboard"/>
+        <param name="l10n-language" policy="optional"/>
+        <param name="l10n-timezone" policy="optional"/>
+        <param name="hostname" policy="optional"/>
+        <param name="user-login" policy="required"/>
+        <param name="user-password" policy="optional"/>
+        <param name="admin-password" policy="optional"/>
+        <param name="target-disk" policy="optional"/>
+        <param name="script-disk" policy="optional"/>
+    </config>
+    <injection-method>cdrom</injection-method>
+    <injection-method>disk</injection-method>
+    <injection-method>floppy</injection-method>
+    <injection-method>initrd</injection-method>
+    <template>
+      <xsl:stylesheet
+        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+        version="1.0">
+
+        <xsl:output method="text"/>
+
+        <xsl:template name="target-disk">
+          <xsl:choose>
+            <xsl:when test="config/target-disk != ''">
+              <xsl:value-of select="config/target-disk"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <!-- virtio -->
+              <xsl:text>/dev/vda</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:template>
+
+        <xsl:template name="script-disk">
+          <xsl:variable name="script-disk">
+            <xsl:choose>
+              <xsl:when test="config/script-disk != ''">
+                <xsl:value-of select="config/script-disk"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:text>/dev/sda</xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:value-of select="substring-after($script-disk, '/dev/')"/>
+        </xsl:template>
+
+        <xsl:template match="/command-line">
+          <xsl:text>ks=</xsl:text>
+          <xsl:choose>
+            <xsl:when test="script/preferred-injection-method = 'initrd'">
+              <xsl:text>file:/</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:text>hd:</xsl:text>
+              <xsl:call-template name="script-disk"/>
+              <xsl:text>:/</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose>
+          <xsl:value-of select="script/expected-filename"/>
+          <xsl:if test="script/installation-source = 'network'">
+            <xsl:text> inst.repo=</xsl:text>
+            <xsl:call-template name="installation-url"/>
+          </xsl:if>
+        </xsl:template>
+
+        <xsl:template name="installation-url">
+          <xsl:choose>
+            <xsl:when test="config/installation-url != ''">
+              <xsl:value-of select="config/installation-url"/>
+            </xsl:when>
+            <xsl:when test="tree/url != ''">
+              <xsl:value-of select="tree/url"/>
+            </xsl:when>
+          </xsl:choose>
+        </xsl:template>
+
+        <xsl:template match="/install-script-config">
+# Install script for <xsl:value-of select="os/short-id"/> profile <xsl:value-of select="script/profile"/>
+<xsl:if test="os/version &lt; 29">
+install
+</xsl:if>
+keyboard '<xsl:value-of select="config/l10n-keyboard"/>'
+lang <xsl:value-of select="config/l10n-language"/>
+network --onboot yes --bootproto dhcp --noipv6 --hostname=<xsl:value-of select="config/hostname"/>
+rootpw dummyPa55w0rd # Actual password set (or unset) in %post below
+firewall --disabled
+timezone --utc <xsl:value-of select="config/l10n-timezone"/>
+bootloader --location=mbr
+zerombr
+
+clearpart --all --drives=<xsl:call-template name="target-disk"/>
+
+firstboot --disable
+
+autopart
+
+<xsl:choose>
+  <xsl:when test="os/version &lt; 29">
+ostreesetup --osname="fedora-workstation" --remote="fedora-<xsl:value-of select="os/version"/>" --url="file:///ostree/repo" --ref="fedora/<xsl:value-of select="os/version"/>/<xsl:value-of select="config/hardware-arch"/>/workstation" --nogpg
+  </xsl:when>
+  <xsl:otherwise>
+ostreesetup --osname="fedora-silverblue" --remote="fedora-<xsl:value-of select="os/version"/>" --url="file:///ostree/repo" --ref="fedora/<xsl:value-of select="os/version"/>/<xsl:value-of select="config/hardware-arch"/>/silverblue" --nogpg
+  </xsl:otherwise>
+</xsl:choose>
+graphical
+reboot
+
+%post --erroronfail
+
+useradd -G wheel <xsl:value-of select="config/user-login"/> # Add user
+if test -z '<xsl:value-of select="config/user-password"/>'; then
+    passwd -d <xsl:value-of select="config/user-login"/> # Make user account passwordless
+else
+    echo '<xsl:value-of select="config/user-password"/>' |passwd --stdin <xsl:value-of select="config/user-login"/>
+fi
+
+if test -z '<xsl:value-of select="config/admin-password"/>'; then
+    passwd -d root # Make root account passwordless
+else
+    echo '<xsl:value-of select="config/admin-password"/>' |passwd --stdin root
+fi
+
+# Enable autologin
+echo "[daemon]
+AutomaticLoginEnable=true
+AutomaticLogin=<xsl:value-of select="config/user-login"/>
+
+[security]
+
+[xdmcp]
+
+[greeter]
+
+[chooser]
+
+[debug]
+" > /etc/gdm/custom.conf
+
+rm -f /etc/ostree/remotes.d/fedora-'<xsl:value-of select="os/version"/>'.conf
+ostree remote add --if-not-exists --set=gpgkeypath=/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-<xsl:value-of select="os/version"/>-primary fedora-<xsl:value-of select="os/version"/> 'https://dl.fedoraproject.org/atomic/repo/'
+
+# Create an osinfo-install-successful file in /root
+touch /root/osinfo-install-successful
+
+%end
+        </xsl:template>
+      </xsl:stylesheet>
+    </template>
+  </install-script>
+</libosinfo>

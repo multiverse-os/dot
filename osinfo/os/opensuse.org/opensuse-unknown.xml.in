@@ -1,0 +1,45 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://opensuse.org/opensuse/unknown">
+    <short-id>opensuse-unknown</short-id>
+    <_name>openSUSE</_name>
+    <version>unknown</version>
+    <_vendor>openSUSE</_vendor>
+    <family>linux</family>
+    <distro>opensuse</distro>
+    <upgrades id="http://opensuse.org/opensuse/15.1"/>
+    <derives-from id="http://opensuse.org/opensuse/15.1"/>
+    <release-status>prerelease</release-status>
+
+    <media arch="x86_64">
+      <iso>
+        <volume-id>openSUSE-Leap-(15\.[2-9]|(1[6-9]|[23]|[5-9])[0-9]\.[0-9]|4[3-9]\.[0-9])-(DVD|NET|Kubic)-x86_64*</volume-id>
+        <system-id>LINUX</system-id>
+        <publisher-id>SUSE LINUX GmbH</publisher-id>
+      </iso>
+      <kernel>boot/x86_64/loader/linux</kernel>
+      <initrd>boot/x86_64/loader/initrd</initrd>
+    </media>
+
+    <installer>
+      <script id='http://opensuse.org/opensuse/autoyast/jeos'/>
+      <script id='http://opensuse.org/opensuse/autoyast/desktop'/>
+    </installer>
+
+    <resources arch="all">
+    <!-- http://en.opensuse.org/Hardware_requirements -->
+      <minimum>
+        <cpu>500000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>536870912</ram>
+        <storage>3221225472</storage>
+      </minimum>
+      <recommended>
+        <cpu>2400000000</cpu>
+        <ram>2147483648</ram>
+        <storage>21474836480</storage>
+      </recommended>
+    </resources>
+  </os>
+</libosinfo>

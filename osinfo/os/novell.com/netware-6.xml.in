@@ -1,0 +1,14 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://novell.com/netware/6">
+    <short-id>netware6</short-id>
+    <_name>Novell Netware 6</_name>
+    <_vendor>Novell</_vendor>
+    <family>netware</family>
+    <distro>netware</distro>
+    <version>6</version>
+
+    <release-date>2001-10-01</release-date>
+  </os>
+</libosinfo>

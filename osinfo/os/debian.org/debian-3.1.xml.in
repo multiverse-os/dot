@@ -1,0 +1,19 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://debian.org/debian/3.1">
+    <short-id>debian3.1</short-id>
+    <short-id>debiansarge</short-id>
+    <_name>Debian GNU/Linux 3.1</_name>
+    <version>3.1</version>
+    <_vendor>Debian Project</_vendor>
+    <family>linux</family>
+    <distro>debian</distro>
+    <codename>sarge</codename>
+    <upgrades id="http://debian.org/debian/3"/>
+    <derives-from id="http://debian.org/debian/3"/>
+
+    <release-date>2005-06-06</release-date>
+    <eol-date>2008-03-31</eol-date>
+  </os>
+</libosinfo>
