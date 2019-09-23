@@ -154,7 +154,7 @@ func (self Profile) ExecutePostInstallCommands() (errs []error) {
 func DefaultConfig() Environment {
 	return Environment{
 		OS:      "debian",
-		Version: Version{Major: 9, Minor: 7, Patch: 0}.String(),
+		Version: Version{Major: 10, Minor: 0, Patch: 1}.String(),
 		Profiles: []Profile{
 			Profile{
 				Type: "default",

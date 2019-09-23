@@ -16,10 +16,10 @@ profiles:
     remove:
     - "nano"
   configurations:
-  - command: "copy"
+  - command: "cp"
     from: "~/Go/src/github.com/multiverse-os/dot-config/profiles/dev.golang.yml"
     to: "~/test.yml"
-  - command: "link"
+  - command: "ln -s"
     from: "~/Go/src/github.com/multiverse-os/dot-config/profiles/dev.ruby.yml"
     to: "~/test2.yml"
   commands:

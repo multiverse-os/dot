@@ -31,15 +31,15 @@ func (self ConfigFile) Install() error {
 }
 
 func Install(name string, settings Settings) (ConfigFile, error) {
-	//switch {
-	//case "neovim":
-	//	return neovim(settings), nil
-	//case "bash":
-	//	return bash(settings), nil
-	//case "git":
-	//	return git(setting), nil
-	//default:
-	//	return nil, errors.New("configuration not supported")
-	//}
+	switch {
+	case "neovim":
+		return neovim(settings), nil
+	case "bash":
+		return bash(settings), nil
+	case "git":
+		return git(setting), nil
+	default:
+		return nil, errors.New("configuration not supported")
+	}
 	return ConfigFile{}, nil
 }
