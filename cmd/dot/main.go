@@ -25,9 +25,8 @@ func main() {
 				Aliases: []string{"p"},
 				Usage:   "provision using specified configuration",
 				Action: func(c *cli.Context) error {
-					config := dot.DefaultConfig()
-
-					fmt.Println("config:", config)
+					environment := dot.DefaultEnvironment()
+					fmt.Println("config:", environment)
 
 					osInfo := dot.LoadOSInfo("debian")
 					fmt.Println("osInfo:", osInfo)

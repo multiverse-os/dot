@@ -1,6 +1,21 @@
 package dot
 
-import "strings"
+import (
+	"strings"
+)
+
+//type PackageManager interface {
+//	Install() (bool, error)
+//	Uninstall() (bool, error)
+//	Package() string
+//	Dependencies() []string
+//	InstallDependencies() (bool, error)
+//	Configs() ([]string, error)
+//	InstallConfigs() (bool, error)
+//	PostInstallCommands() []string
+//	RunPostInstallCommands() (bool, error)
+//	Installed() bool
+//}
 
 type PackageManager int
 
@@ -28,7 +43,7 @@ func (self PackageManager) Install() string {
 	case Dnf:
 		return "dnf install"
 	default: // Apt
-		return "DEBIAN_FRONTEND=noninteractive apt-get install -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew -y"
+		return "DEBIAN_FRONTEND=noninteractive apt-get install -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew -y --no-install-recommends1"
 	}
 }
 

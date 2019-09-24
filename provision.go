@@ -3,7 +3,7 @@ package dot
 import "fmt"
 
 func (self Environment) Provision() (errs []error) {
-	pm := MarshalOS(self.OS).PackageManager()
+	pm := self.Distribution.PackageManager
 	for _, profile := range self.Profiles {
 		// Profile; 3 layers of custom provisioning
 		// Layer 1: Individual Package Install/Remove
@@ -16,10 +16,10 @@ func (self Environment) Provision() (errs []error) {
 			errs = append(errs, err)
 		}
 		// Layer 2: Individual Config Action From/To
-		configFileErrs := profile.CopyOrLinkConfigFiles()
-		if len(configFileErrs) > 0 {
+		configErrs := profile.InstallConfigFiles()
+		if len(configErrs) > 0 {
 			fmt.Println("[error] config file copy or link error")
-			errs = append(errs, configFileErrs...)
+			errs = append(errs, configErrs...)
 		}
 		// Layer 3: Post Install Commands
 		postInstallCommandErrs := profile.ExecutePostInstallCommands()

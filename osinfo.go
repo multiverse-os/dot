@@ -1,5 +1,13 @@
 package dot
 
+import (
+	"encoding/xml"
+	"fmt"
+	"io/ioutil"
+)
+
+var OSInfoDBRepository = "https://gitlab.com/libosinfo/osinfo-db"
+
 // TODO: Build a script to determine newest version and recreate this map
 var distributionInfo = map[string]string{
 	"Debian":   "osinfo/os/debian.org/debian-9.xml.in",
@@ -15,8 +23,8 @@ var distributionInfo = map[string]string{
 }
 
 func LoadOSInfo(distributionName string) (os OS) {
-	xmlBytes := ioutil.ReadAll(distributionInfo[distributionName])
-	err := xml.Unmarshal(xmlBytes, os)
+	xmlBytes, err := ioutil.ReadFile(distributionInfo[distributionName])
+	err = xml.Unmarshal(xmlBytes, os)
 	if err != nil {
 		panic(err)
 	}

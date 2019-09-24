@@ -42,13 +42,12 @@ type cmd struct {
 }
 
 type parser struct {
-	buf    bytes.Buffer
-	s      string
-	last   rune
-	peeked *rune
-	getenv func(key string) string
-	err    error
-
+	buf      bytes.Buffer
+	s        string
+	last     rune
+	peeked   *rune
+	getenv   func(key string) string
+	err      error
 	identBuf bytes.Buffer
 }
 
