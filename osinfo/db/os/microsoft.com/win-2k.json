@@ -1,0 +1,54 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://microsoft.com/win/2k",
+            "short-id": "win2k",
+            "_name": "Microsoft Windows 2000",
+            "family": "winnt",
+            "release-date": "2000-02-17",
+            "resources": {
+                "minimum": {
+                    "cpu": "133000000",
+                    "n-cpus": "1",
+                    "ram": "33554432",
+                    "storage": "335544320"
+                },
+                "recommended": {
+                    "cpu": "350000000",
+                    "ram": "100663296",
+                    "storage": "1073741824"
+                },
+                "-arch": "i686"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://microsoft.com/windows/sif/jeos"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/sif/desktop"
+                    }
+                ]
+            },
+            "version": "5.0",
+            "_vendor": "Microsoft Corporation",
+            "distro": "win",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/me"
+            },
+            "eol-date": "2010-07-13",
+            "media": {
+                "-arch": "i686",
+                "iso": {
+                    "volume-id": "(W2AFPP|SP1AFPP|SP2AFPP|YRMAFPP|ZRMAFPP|W2AOEM|SP1AOEM|SP2AOEM|YRMAOEM|ZRMAOEM|W2ASEL|SP2ASEL|W2SFPP|SP1SFPP|SP2SFPP|YRMSFPP|ZRMSFPP|W2SOEM|W2SOEM|SP1SOEM|SP2SOEM|YRMSOEM|ZRMSOEM|W2SSEL|SP2SSEL|W2PFPP|SP1PFPP|SP2PFPP|YRMPFPP|ZRMPFPP|W2POEM|SP1POEM|SP2POEM|YRMPOEM|ZRMPOEM|W2PSEL|SP2PSEL|W2PCCP|WIN2000|W2K_SP4)",
+                    "l10n-language": {
+                        "#content": "[A-Z0-9]*_([A-Z]*)",
+                        "-regex": "true",
+                        "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://redhat.com/rhel/6.5",
+            "_name": "Red Hat Enterprise Linux 6.5",
+            "version": "6.5",
+            "_vendor": "Red Hat, Inc",
+            "codename": "Santiago",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/6.4"
+            },
+            "eol-date": "2023-11-30",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "rhel6.5",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": ".*RHEL_6.5 i386.*",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL_6.5 x86_64.*"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "distro": "rhel",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/6.4"
+            },
+            "release-date": "2013-11-21",
+            "tree": [
+                {
+                    "-arch": "ppc64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.5$",
+                        "arch": "ppc64"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.5$",
+                        "arch": "s390x"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.5$",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "treeinfo": {
+                        "arch": "x86_64",
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.5$"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                },
+                "maximum": {
+                    "ram": "3298534883328"
+                }
+            }
+        }
+    }
+}

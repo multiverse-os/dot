@@ -1,0 +1,95 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "Ubuntu 14.10",
+            "version": "14.10",
+            "_vendor": "Canonical Ltd",
+            "eol-date": "2015-07-23",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "storage": "5368709120",
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "16106127360"
+                }
+            },
+            "short-id": [
+                "ubuntu14.10",
+                "ubuntututopic"
+            ],
+            "codename": "Utopic Unicorn",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/14.04"
+            },
+            "media": [
+                {
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/utopic/ubuntu-14.10-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 14.10(.\\d\\+?)? i386"
+                    },
+                    "kernel": "install/vmlinuz"
+                },
+                {
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/utopic/ubuntu-14.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 14.10(.\\d\\+?)? amd64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/utopic/ubuntu-14.10-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 14.10(.\\d\\+?)? i386"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/utopic/ubuntu-14.10-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 14.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi",
+                    "initrd": "casper/initrd.lz"
+                }
+            ],
+            "installer": {
+                "script": {
+                    "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                }
+            },
+            "-id": "http://ubuntu.com/ubuntu/14.10",
+            "family": "linux",
+            "distro": "ubuntu",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/14.04"
+            },
+            "release-date": "2014-10-23"
+        }
+    }
+}

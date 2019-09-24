@@ -1,0 +1,210 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "firmware": {
+                "-type": "efi",
+                "-arch": "x86_64"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "rhel8.0",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/7.6"
+            },
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-8-0-(([0-9]|[1-9][0-9])-)?BaseOS-x86_64"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "ppc/ppc64/vmlinuz",
+                    "initrd": "ppc/ppc64/initrd.img",
+                    "-arch": "ppc64le",
+                    "iso": {
+                        "system-id": "PPC",
+                        "volume-id": "RHEL[_-]8[_-]0[_-](([0-9]|[1-9][0-9])[_-])?BaseOS[_-]ppc64le"
+                    }
+                },
+                {
+                    "-arch": "aarch64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-8-0-(([0-9]|[1-9][0-9])-)?BaseOS-aarch64"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "iso": {
+                        "volume-id": "RHEL-8-0-(([0-9]|[1-9][0-9])-)?BaseOS-s390x",
+                        "system-id": "LINUX"
+                    }
+                }
+            ],
+            "resources": [
+                {
+                    "-arch": "ppc64le",
+                    "minimum": {
+                        "cpu": "1000000000",
+                        "ram": "2147483648",
+                        "storage": "10737418240",
+                        "n-cpus": "1"
+                    },
+                    "recommended": {
+                        "cpu": "4000000000",
+                        "ram": "2147483648",
+                        "storage": "21474836480"
+                    }
+                },
+                {
+                    "network-install": {
+                        "ram": "3221225472"
+                    },
+                    "-arch": "all",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "cpu": "1000000000",
+                        "ram": "1073741824",
+                        "storage": "10737418240"
+                    },
+                    "recommended": {
+                        "storage": "10737418240",
+                        "cpu": "1000000000",
+                        "ram": "1073741824"
+                    }
+                }
+            ],
+            "kernel-url-argument": "inst.repo",
+            "_name": "Red Hat Enterprise Linux 8.0",
+            "distro": "rhel",
+            "tree": [
+                {
+                    "-arch": "aarch64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^8.0(.([0-9]|[1-9][0-9]))?$",
+                        "arch": "aarch64"
+                    }
+                },
+                {
+                    "-arch": "ppc64le",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^8.0(.([0-9]|[1-9][0-9]))?$",
+                        "arch": "ppc64le"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^8.0(.([0-9]|[1-9][0-9]))?$",
+                        "arch": "s390x"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "treeinfo": {
+                        "version": "^8.0(.([0-9]|[1-9][0-9]))?$",
+                        "arch": "x86_64",
+                        "family": "Red Hat Enterprise Linux"
+                    }
+                },
+                {
+                    "-arch": "aarch64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^8.0(.([0-9]|[1-9][0-9]))?$",
+                        "arch": "aarch64"
+                    }
+                }
+            ],
+            "_vendor": "Red Hat, Inc",
+            "release-date": "2018-05-07",
+            "codename": "Ootpa",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0100"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    },
+                    {
+                        "-id": "http://usb.org/usb/80ee/0021"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1003"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1005"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1033/0194"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0004"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1041"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1042"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1043"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1044"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1045"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1048"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1049"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1052"
+                    },
+                    {
+                        "-id": "http://qemu.org/chipset/x86/q35"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/10d3"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/293e"
+                    }
+                ]
+            },
+            "-id": "http://redhat.com/rhel/8.0",
+            "version": "8.0"
+        }
+    }
+}

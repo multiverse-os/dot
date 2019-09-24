@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Apple Inc.",
+            "distro": "osx",
+            "upgrades": {
+                "-id": "http://apple.com/macosx/10.2"
+            },
+            "-id": "http://apple.com/macosx/10.3",
+            "short-id": "macosx10.3",
+            "_name": "MacOS X Panther",
+            "version": "10.3",
+            "family": "darwin",
+            "codename": "Panther",
+            "release-date": "2003-10-24"
+        }
+    }
+}

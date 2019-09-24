@@ -1,0 +1,27 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "dragonflybsd",
+            "distro": "dragonflybsd",
+            "_vendor": "DragonFlyBSD Project",
+            "release-date": "2017-08-02",
+            "eol-date": "2017-10-16",
+            "-id": "http://dragonflybsd.org/dragonflybsd/4.8.1",
+            "short-id": "dragonflybsd4.8.1",
+            "_name": "DragonFlyBSD 4.8.1",
+            "version": "4.8.1",
+            "upgrades": {
+                "-id": "http://dragonflybsd.org/dragonflybsd/4.8.0"
+            },
+            "media": {
+                "iso": {
+                    "system-id": "DragonFly",
+                    "volume-id": "DragonFly v4.8.1",
+                    "volume-size": "346052608"
+                },
+                "-arch": "x86_64"
+            }
+        }
+    }
+}

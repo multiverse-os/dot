@@ -1,0 +1,42 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "scientificlinux5.11",
+            "_name": "Scientific Linux 5.11",
+            "_vendor": "Scientific Linux",
+            "family": "linux",
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.11"
+            },
+            "release-date": "2013-11-11",
+            "eol-date": "2017-03-31",
+            "-id": "http://scientificlinux.org/scientificlinux/5.11",
+            "version": "5.11",
+            "distro": "scientificlinux",
+            "upgrades": {
+                "-id": "http://scientificlinux.org/scientificlinux/5.10"
+            },
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/obsolete/511/x86_64/",
+                    "treeinfo": {
+                        "version": "511",
+                        "arch": "x86_64",
+                        "family": "Scientific Linux"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/obsolete/511/i386/",
+                    "treeinfo": {
+                        "family": "Scientific Linux",
+                        "version": "511",
+                        "arch": "i386"
+                    }
+                }
+            ]
+        }
+    }
+}

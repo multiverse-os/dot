@@ -1,0 +1,95 @@
+{
+    "libosinfo": {
+        "os": {
+            "version": "15.10",
+            "distro": "ubuntu",
+            "release-date": "2015-10-22",
+            "short-id": [
+                "ubuntu15.10",
+                "ubuntutwily"
+            ],
+            "_name": "Ubuntu 15.10",
+            "installer": {
+                "script": {
+                    "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                }
+            },
+            "-id": "http://ubuntu.com/ubuntu/15.10",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "16106127360"
+                }
+            },
+            "_vendor": "Canonical Ltd",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/15.04"
+            },
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/15.04"
+            },
+            "eol-date": "2016-07-28",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/wily/ubuntu-15.10-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 15.10(.\\d\\+?)? i386"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/wily/ubuntu-15.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 15.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    }
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/wily/ubuntu-15.10-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 15.10(.\\d\\+?)? i386"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "i686",
+                    "-live": "true"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu 15.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/wily/ubuntu-15.10-desktop-amd64.iso"
+                }
+            ],
+            "family": "linux",
+            "codename": "Wily Werewolf"
+        },
+        "-version": "0.0.1"
+    }
+}

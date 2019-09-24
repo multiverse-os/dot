@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "mandriva",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandriva/2007.1"
+            },
+            "derives-from": {
+                "-id": "http://mandriva.com/mandriva/2007.1"
+            },
+            "eol-date": "2010-10-09",
+            "_name": "Mandriva Linux 2008",
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "version": "2008.0",
+            "release-date": "2007-10-09",
+            "-id": "http://mandriva.com/mandriva/2008.0",
+            "short-id": "mandriva2008.0"
+        }
+    }
+}

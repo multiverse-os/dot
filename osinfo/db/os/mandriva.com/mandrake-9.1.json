@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "mandrake9.1",
+            "_name": "Mandrake Linux 9.1",
+            "family": "linux",
+            "distro": "mandrake",
+            "version": "9.1",
+            "-id": "http://mandriva.com/mandrake/9.1",
+            "_vendor": "Mandriva",
+            "codename": "Bamboo",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/9.0"
+            },
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/9.0"
+            },
+            "release-date": "2003-03-25"
+        }
+    }
+}

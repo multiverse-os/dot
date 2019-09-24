@@ -1,0 +1,72 @@
+{
+    "libosinfo": {
+        "os": {
+            "distro": "openbsd",
+            "eol-date": "2012-11-01",
+            "short-id": "openbsd5.0",
+            "version": "5.0",
+            "family": "openbsd",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/4.9"
+            },
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/4.9"
+            },
+            "release-date": "2011-11-01",
+            "variant": {
+                "-id": "netinst",
+                "_name": "OpenBSD 5.0"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2011 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/i386    5.0 Install CD",
+                        "application-id": "OpenBSD 5.0 i386 Install CD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "OpenBSD/amd64   5.0 Install CD",
+                        "application-id": "OpenBSD 5.0 amd64 Install CD",
+                        "publisher-id": "Copyright \\(c\\) 2011 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.0/i386/cd50.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2011 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/i386    5\\.0 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.0 i386 bootonly CD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.0/amd64/cd50.iso",
+                    "iso": {
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.0 amd64 bootonly CD",
+                        "publisher-id": "Copyright \\(c\\) 2011 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   5\\.0 boot-only CD"
+                    }
+                }
+            ],
+            "-id": "http://openbsd.org/openbsd/5.0",
+            "_name": "OpenBSD 5.0",
+            "_vendor": "OpenBSD Project"
+        },
+        "-version": "0.0.1"
+    }
+}

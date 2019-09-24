@@ -1,0 +1,35 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://microsoft.com/win/me",
+            "_name": "Microsoft Windows Millennium Edition",
+            "_vendor": "Microsoft Corporation",
+            "family": "win9x",
+            "distro": "win",
+            "release-date": "2000-09-14",
+            "short-id": "winme",
+            "version": "4.9",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/98"
+            },
+            "upgrades": {
+                "-id": "http://microsoft.com/win/98"
+            },
+            "eol-date": "2006-07-11",
+            "resources": {
+                "-arch": "i686",
+                "minimum": {
+                    "cpu": "150000000",
+                    "ram": "33554432",
+                    "storage": "335544320"
+                },
+                "recommended": {
+                    "cpu": "300000000",
+                    "ram": "67108864",
+                    "storage": "2147483648"
+                }
+            }
+        }
+    }
+}

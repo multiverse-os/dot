@@ -1,0 +1,20 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://sun.com/opensolaris/2009.06",
+            "version": "2009.06",
+            "_vendor": "Sun",
+            "distro": "opensolaris",
+            "release-date": "2009-06-01",
+            "short-id": "opensolaris2009.06",
+            "_name": "OpenSolaris 2009.06",
+            "family": "solaris",
+            "devices": {
+                "device": {
+                    "-id": "http://usb.org/usb/80ee/0021"
+                }
+            }
+        }
+    }
+}

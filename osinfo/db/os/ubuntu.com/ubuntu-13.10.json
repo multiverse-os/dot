@@ -1,0 +1,95 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Canonical Ltd",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/13.04"
+            },
+            "-id": "http://ubuntu.com/ubuntu/13.10",
+            "short-id": [
+                "ubuntu13.10",
+                "ubuntusaucy"
+            ],
+            "codename": "Saucy Salamander",
+            "eol-date": "2014-07-17",
+            "media": [
+                {
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/saucy/ubuntu-13.10-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 13.10(.\\d\\+?)? i386"
+                    }
+                },
+                {
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/saucy/ubuntu-13.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 13.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/saucy/ubuntu-13.10-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 13.10(.\\d\\+?)? i386"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/saucy/ubuntu-13.10-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 13.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi",
+                    "initrd": "casper/initrd.lz"
+                }
+            ],
+            "installer": {
+                "script": {
+                    "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                }
+            },
+            "family": "linux",
+            "distro": "ubuntu",
+            "release-date": "2013-10-17",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "16106127360"
+                }
+            },
+            "_name": "Ubuntu 13.10",
+            "version": "13.10",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/13.04"
+            }
+        }
+    }
+}

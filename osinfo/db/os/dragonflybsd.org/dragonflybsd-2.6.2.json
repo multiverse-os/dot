@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "release-date": "2010-04-21",
+            "-id": "http://dragonflybsd.org/dragonflybsd/2.6.2",
+            "_name": "DragonFlyBSD 2.6.2",
+            "version": "2.6.2",
+            "family": "dragonflybsd",
+            "distro": "dragonflybsd",
+            "short-id": "dragonflybsd2.6.2",
+            "_vendor": "DragonFlyBSD Project",
+            "upgrades": {
+                "-id": "http://dragonflybsd.org/dragonflybsd/2.6.1"
+            },
+            "eol-date": "2010-05-07"
+        }
+    }
+}

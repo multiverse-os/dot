@@ -1,0 +1,61 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/silverblue/29"
+            },
+            "derives-from": {
+                "-id": "http://fedoraproject.org/silverblue/29"
+            },
+            "-id": "http://fedoraproject.org/silverblue/30",
+            "distro": "fedora",
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/silverblue/kickstart/desktop"
+                }
+            },
+            "release-date": "2019-04-30",
+            "resources": {
+                "recommended": {
+                    "storage": "21474836480",
+                    "ram": "2147483648"
+                },
+                "network-install": {
+                    "ram": "5368709120"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            },
+            "_vendor": "Fedora Project",
+            "media": {
+                "kernel": "isolinux/vmlinuz",
+                "initrd": "isolinux/initrd.img",
+                "-arch": "x86_64",
+                "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Silverblue/x86_64/iso/Fedora-Silverblue-ostree-x86_64-30-1.2.iso",
+                "iso": {
+                    "volume-id": "Fedora-SB-ostree-x86_64-30"
+                }
+            },
+            "tree": {
+                "-arch": "x86_64",
+                "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Silverblue/x86_64/os",
+                "treeinfo": {
+                    "version": "30",
+                    "arch": "x86_64",
+                    "family": "Fedora",
+                    "variant": "Silverblue"
+                }
+            },
+            "short-id": "silverblue30",
+            "_name": "Fedora Silverblue 30",
+            "version": "30"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandriva/2009.0"
+            },
+            "release-date": "2009-04-29",
+            "eol-date": "2010-10-29",
+            "-id": "http://mandriva.com/mandriva/2009.1",
+            "short-id": "mandriva2009.1",
+            "_name": "Mandriva Linux 2009 Spring",
+            "distro": "mandriva",
+            "version": "2009.1",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandriva/2009.0"
+            }
+        }
+    }
+}

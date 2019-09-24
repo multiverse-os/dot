@@ -1,0 +1,65 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "11.2",
+            "upgrades": {
+                "-id": "http://suse.com/sled/11.1"
+            },
+            "eol-date": "2014-01-31",
+            "short-id": "sled11sp2",
+            "_name": "SUSE Linux Enterprise Desktop 11 SP2",
+            "_vendor": "SUSE",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "SLED-11-SP2-DVD-i586",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd"
+                },
+                {
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLED-11-SP2-DVD-x86_64"
+                    },
+                    "kernel": "boot/x86_64/loader/linux"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "536870912",
+                    "storage": "1074151424",
+                    "cpu": "500000000"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "12884901888"
+                }
+            },
+            "distro": "sled",
+            "release-date": "2012-02-15",
+            "-id": "http://suse.com/sled/11.2",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://suse.com/sled/11.1"
+            },
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1033/0194"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0004"
+                    }
+                ]
+            }
+        }
+    }
+}

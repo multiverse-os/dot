@@ -1,0 +1,66 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://openbsd.org/openbsd/4.2",
+            "short-id": "openbsd4.2",
+            "_name": "OpenBSD 4.2",
+            "version": "4.2",
+            "family": "openbsd",
+            "distro": "openbsd",
+            "_vendor": "OpenBSD Project",
+            "release-date": "2007-11-01",
+            "variant": {
+                "_name": "OpenBSD 4.2",
+                "-id": "netinst"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "OpenBSD/i386    4.2 Install CD",
+                        "application-id": "OpenBSD 4.2 i386 Install CD",
+                        "publisher-id": "Copyright \\(c\\) 2007 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2007 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/amd64   4.2 Install CD",
+                        "application-id": "OpenBSD 4.2 amd64 Install CD"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/4.2/i386/cd42.iso",
+                    "iso": {
+                        "application-id": "OpenBSD 4\\.2 i386 bootonly CD",
+                        "publisher-id": "Copyright \\(c\\) 2007 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/i386    4\\.2 boot-only CD",
+                        "system-id": "OpenBSD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/4.2/amd64/cd42.iso",
+                    "iso": {
+                        "application-id": "OpenBSD 4\\.2 amd64 bootonly CD",
+                        "publisher-id": "Copyright \\(c\\) 2007 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   4\\.2 boot-only CD",
+                        "system-id": "OpenBSD"
+                    }
+                }
+            ],
+            "eol-date": "2008-11-01"
+        }
+    }
+}

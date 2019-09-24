@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "os": {
+            "-id": "http://oracle.com/oel/4.4",
+            "_vendor": "Oracle America",
+            "family": "linux",
+            "distro": "oel",
+            "release-date": "2006-12-20",
+            "eol-date": "2013-03-28",
+            "short-id": "oel4.4",
+            "_name": "Oracle Enterprise Linux 4.4",
+            "version": "4.4",
+            "clones": {
+                "-id": "http://redhat.com/rhel/4.4"
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "freebsd",
+            "release-date": "1999-05-17",
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/3.0"
+            },
+            "short-id": "freebsd3.2",
+            "_name": "FreeBSD 3.2",
+            "version": "3.2",
+            "_vendor": "FreeBSD Project",
+            "family": "freebsd",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/3.0"
+            },
+            "-id": "http://freebsd.org/freebsd/3.2"
+        }
+    }
+}

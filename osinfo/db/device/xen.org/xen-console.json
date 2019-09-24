@@ -1,0 +1,13 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "product-id": "console",
+            "name": "xen-console",
+            "-id": "http://xen.org/xen/console",
+            "class": "console",
+            "bus-type": "xen",
+            "product": "Virtual Console"
+        }
+    }
+}

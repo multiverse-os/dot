@@ -1,0 +1,314 @@
+{
+    "libosinfo": {
+        "os": {
+            "eol-date": "2010-12-02",
+            "tree": [
+                {
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "12",
+                        "arch": "i386"
+                    },
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/i386/os/"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/x86_64/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "12",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "12"
+                    }
+                }
+            ],
+            "_vendor": "Fedora Project",
+            "codename": "Constantine",
+            "version": "12",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/11"
+            },
+            "release-date": "2009-11-17",
+            "media": [
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/i386/iso/Fedora-12-i386-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 i386 DVD",
+                        "system-id": "LINUX",
+                        "volume-size": "3204427776"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/i386/iso/Fedora-12-i386-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 i386 Disc 1",
+                        "system-id": "LINUX",
+                        "volume-size": "724697088"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/i386/iso/Fedora-12-i386-disc2.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 i386 Disc 2",
+                        "system-id": "LINUX",
+                        "volume-size": "728029184"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/i386/iso/Fedora-12-i386-disc3.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 i386 Disc 3",
+                        "system-id": "LINUX",
+                        "volume-size": "726962176"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora 12 i386 Disc 4",
+                        "system-id": "LINUX",
+                        "volume-size": "722438144"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/i386/iso/Fedora-12-i386-disc4.iso"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/i386/iso/Fedora-12-i386-disc5.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "303261696",
+                        "volume-id": "Fedora 12 i386 Disc 5"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/x86_64/iso/Fedora-12-x86_64-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 x86_64 DVD",
+                        "system-id": "LINUX",
+                        "volume-size": "3537600512"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/x86_64/iso/Fedora-12-x86_64-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 x86_64 Disc 1",
+                        "system-id": "LINUX",
+                        "volume-size": "727363584"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/x86_64/iso/Fedora-12-x86_64-disc2.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 x86_64 Disc 2",
+                        "system-id": "LINUX",
+                        "volume-size": "719775744"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/x86_64/iso/Fedora-12-x86_64-disc3.iso",
+                    "iso": {
+                        "volume-size": "726503424",
+                        "volume-id": "Fedora 12 x86_64 Disc 3",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/x86_64/iso/Fedora-12-x86_64-disc4.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 x86_64 Disc 4",
+                        "system-id": "LINUX",
+                        "volume-size": "727928832"
+                    }
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/x86_64/iso/Fedora-12-x86_64-disc5.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 x86_64 Disc 5",
+                        "system-id": "LINUX",
+                        "volume-size": "636233728"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "iso": {
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "3738935296",
+                        "volume-id": "Fedora 12 ppc DVD"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/ppc/iso/Fedora-12-ppc-DVD.iso"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/ppc/iso/Fedora-12-ppc-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 ppc Disc 1",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "729341952"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/ppc/iso/Fedora-12-ppc-disc2.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 ppc Disc 2",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "728432640"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/ppc/iso/Fedora-12-ppc-disc3.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 ppc Disc 3",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "726351872"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora 12 ppc Disc 4",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "726714368"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/ppc/iso/Fedora-12-ppc-disc4.iso"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/ppc/iso/Fedora-12-ppc-disc5.iso",
+                    "iso": {
+                        "volume-size": "726775808",
+                        "volume-id": "Fedora 12 ppc Disc 5",
+                        "system-id": "PPC|LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Fedora/ppc/iso/Fedora-12-ppc-disc6.iso",
+                    "iso": {
+                        "volume-id": "Fedora 12 ppc Disc 6",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "16394240"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Live/i686/Fedora-12-i686-Live.iso",
+                    "iso": {
+                        "volume-id": "Fedora-12-i686-Live",
+                        "system-id": "LINUX",
+                        "volume-size": "685336576"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Live/i686/Fedora-12-i686-Live-KDE.iso",
+                    "iso": {
+                        "volume-id": "Fedora-12-i686-Live-KDE",
+                        "system-id": "LINUX",
+                        "volume-size": "713181184"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686"
+                },
+                {
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Live/x86_64/Fedora-12-x86_64-Live.iso",
+                    "iso": {
+                        "volume-id": "Fedora-12-x86_64-Live",
+                        "system-id": "LINUX",
+                        "volume-size": "687138816"
+                    },
+                    "kernel": "isolinux/vmlinuz0"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/12/Live/x86_64/Fedora-12-x86_64-Live-KDE.iso",
+                    "iso": {
+                        "volume-id": "Fedora-12-x86_64-Live-KDE",
+                        "system-id": "LINUX",
+                        "volume-size": "717940736"
+                    }
+                }
+            ],
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                }
+            },
+            "-id": "http://fedoraproject.org/fedora/12",
+            "_name": "Fedora 12",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/11"
+            },
+            "short-id": "fedora12",
+            "distro": "fedora"
+        },
+        "-version": "0.0.1"
+    }
+}

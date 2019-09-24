@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2020-06-30",
+            "-id": "http://oracle.com/ol/5.9",
+            "version": "5.9",
+            "distro": "ol",
+            "family": "linux",
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.9"
+            },
+            "release-date": "2013-02-12",
+            "short-id": "ol5.9",
+            "_name": "Oracle Linux 5.9",
+            "_vendor": "Oracle America"
+        }
+    }
+}

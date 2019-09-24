@@ -1,0 +1,31 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "SUSE Linux Enterprise Desktop 10",
+            "_vendor": "SUSE",
+            "distro": "sled",
+            "upgrades": {
+                "-id": "http://suse.com/sled/9"
+            },
+            "release-date": "2006-06-17",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "1074151424"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            },
+            "-id": "http://suse.com/sled/10",
+            "short-id": "sled10",
+            "version": "10",
+            "family": "linux"
+        }
+    }
+}

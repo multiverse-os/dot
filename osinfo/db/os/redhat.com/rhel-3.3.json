@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "rhel3.3",
+            "version": "3.3",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "eol-date": "2014-01-30",
+            "-id": "http://redhat.com/rhel/3.3",
+            "_name": "Red Hat Enterprise Linux 3 Update 3",
+            "distro": "rhel",
+            "codename": "Taroon",
+            "release-date": "2004-09-03",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/3.2"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/3.2"
+            }
+        }
+    }
+}

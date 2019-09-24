@@ -1,0 +1,44 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "storage": "1074151424",
+                    "cpu": "500000000",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "17179869184"
+                }
+            },
+            "-id": "http://suse.com/sled/12",
+            "short-id": "sled12",
+            "version": "12",
+            "_vendor": "SUSE",
+            "derives-from": {
+                "-id": "http://suse.com/sled/11.4"
+            },
+            "eol-date": "2016-06-30",
+            "media": {
+                "iso": {
+                    "system-id": "LINUX",
+                    "volume-id": "SLE-12-Desktop-DVD-x86_64"
+                },
+                "kernel": "boot/x86_64/loader/linux",
+                "initrd": "boot/x86_64/loader/initrd",
+                "-arch": "x86_64"
+            },
+            "_name": "SUSE Linux Enterprise Desktop 12",
+            "family": "linux",
+            "distro": "sled",
+            "upgrades": {
+                "-id": "http://suse.com/sled/11.4"
+            },
+            "release-date": "2014-10-27"
+        }
+    }
+}

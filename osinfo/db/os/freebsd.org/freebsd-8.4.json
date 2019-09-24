@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "FreeBSD Project",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/8.3"
+            },
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/8.3"
+            },
+            "eol-date": "2015-08-01",
+            "-id": "http://freebsd.org/freebsd/8.4",
+            "short-id": "freebsd8.4",
+            "_name": "FreeBSD 8.4",
+            "release-date": "2013-06-09",
+            "version": "8.4",
+            "family": "freebsd",
+            "distro": "freebsd"
+        }
+    }
+}

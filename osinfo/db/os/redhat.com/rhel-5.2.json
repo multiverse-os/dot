@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "rhel5.2",
+            "_name": "Red Hat Enterprise Linux 5.2",
+            "version": "5.2",
+            "distro": "rhel",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/5.1"
+            },
+            "release-date": "2008-05-21",
+            "eol-date": "2020-03-31",
+            "-id": "http://redhat.com/rhel/5.2",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "codename": "Tikanga",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/5.1"
+            }
+        }
+    }
+}

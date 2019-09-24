@@ -1,0 +1,84 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "n-cpus": "1",
+                    "ram": "536870912",
+                    "storage": "3221225472"
+                },
+                "recommended": {
+                    "storage": "8589934592",
+                    "cpu": "2400000000",
+                    "ram": "1073741824"
+                }
+            },
+            "short-id": "opensuse11.3",
+            "_name": "openSUSE 11.3",
+            "family": "linux",
+            "distro": "opensuse",
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/11.2"
+            },
+            "eol-date": "2012-01-20",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://download.opensuse.org/distribution/11.3/iso/openSUSE-11.3-DVD-i586.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-DVD-i586-Build0702..001",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX Products GmbH"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd"
+                },
+                {
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "url": "http://download.opensuse.org/distribution/11.3/iso/openSUSE-11.3-DVD-x86_64.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-DVD-x86_64.0702..001",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX Products GmbH"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://download.opensuse.org/distribution/11.3/iso/openSUSE-11.3-GNOME-LiveCD-i686.iso",
+                    "iso": {
+                        "volume-id": "openSUSE Live CD.*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX Products GmbH"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://download.opensuse.org/distribution/11.3/iso/openSUSE-11.3-GNOME-LiveCD-x86_64.iso",
+                    "iso": {
+                        "volume-id": "openSUSE Live CD.*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX Products GmbH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                }
+            ],
+            "-id": "http://opensuse.org/opensuse/11.3",
+            "version": "11.3",
+            "_vendor": "openSUSE",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/11.2"
+            },
+            "release-date": "2010-07-15"
+        }
+    }
+}

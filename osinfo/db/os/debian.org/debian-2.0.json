@@ -1,0 +1,25 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": [
+                "debian2.0",
+                "debianhamm"
+            ],
+            "version": "2.0",
+            "_vendor": "Debian Project",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://debian.org/debian/1.3"
+            },
+            "-id": "http://debian.org/debian/2.0",
+            "_name": "Debian GNU/Linux 2.0",
+            "distro": "debian",
+            "codename": "hamm",
+            "derives-from": {
+                "-id": "http://debian.org/debian/1.3"
+            },
+            "release-date": "1998-07-24"
+        }
+    }
+}

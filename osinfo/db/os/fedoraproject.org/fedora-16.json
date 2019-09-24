@@ -1,0 +1,144 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "16",
+            "family": "linux",
+            "distro": "fedora",
+            "eol-date": "2013-02-12",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "805306368"
+                },
+                "recommended": {
+                    "storage": "9663676416",
+                    "cpu": "400000000",
+                    "ram": "1207959552"
+                }
+            },
+            "short-id": "fedora16",
+            "codename": "Verne",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/15"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/16/Fedora/i386/iso/Fedora-16-i386-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 16 i386 DVD",
+                        "system-id": "LINUX",
+                        "volume-size": "3806375936"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/16/Fedora/x86_64/iso/Fedora-16-x86_64-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 16 x86_64 DVD",
+                        "system-id": "LINUX",
+                        "volume-size": "3756955648"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/16/Live/i686/Fedora-16-i686-Live-Desktop.iso",
+                    "iso": {
+                        "volume-size": "633985024",
+                        "volume-id": "Fedora-16-i686-Live-Desktop",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/16/Live/i686/Fedora-16-i686-Live-KDE.iso",
+                    "iso": {
+                        "volume-size": "730486784",
+                        "volume-id": "Fedora-16-i686-Live-KDE",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/16/Live/x86_64/Fedora-16-x86_64-Live-Desktop.iso",
+                    "iso": {
+                        "volume-id": "Fedora-16-x86_64-Live-Desktop",
+                        "system-id": "LINUX",
+                        "volume-size": "633040896"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/16/Live/x86_64/Fedora-16-x86_64-Live-KDE.iso",
+                    "iso": {
+                        "volume-id": "Fedora-16-x86_64-Live-KDE",
+                        "system-id": "LINUX",
+                        "volume-size": "728915968"
+                    }
+                }
+            ],
+            "tree": [
+                {
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "16",
+                        "arch": "i386"
+                    },
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/16/Fedora/i386/os/"
+                },
+                {
+                    "treeinfo": {
+                        "arch": "x86_64",
+                        "family": "Fedora",
+                        "version": "16"
+                    },
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/16/Fedora/x86_64/os/"
+                },
+                {
+                    "-arch": "all",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "16"
+                    }
+                }
+            ],
+            "_name": "Fedora 16",
+            "_vendor": "Fedora Project",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/15"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "-id": "http://fedoraproject.org/fedora/16",
+            "release-date": "2011-11-08"
+        }
+    }
+}

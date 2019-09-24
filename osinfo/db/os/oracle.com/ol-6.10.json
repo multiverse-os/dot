@@ -1,0 +1,39 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "media": [
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "OL6.10 x86_64 Disc 1"
+                    }
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "OL6.10 i386 Disc 1"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                }
+            ],
+            "short-id": "ol6.10",
+            "_name": "Oracle Linux 6.10",
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.10"
+            },
+            "eol-date": "2024-03-31",
+            "distro": "ol",
+            "release-date": "2018-06-25",
+            "-id": "http://oracle.com/ol/6.10",
+            "version": "6.10",
+            "_vendor": "Oracle America",
+            "family": "linux"
+        }
+    }
+}

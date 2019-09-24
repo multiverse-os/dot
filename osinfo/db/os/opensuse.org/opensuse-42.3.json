@@ -1,0 +1,77 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "42.3",
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/42.2"
+            },
+            "variant": {
+                "-id": "netinst",
+                "_name": "openSUSE Leap 42.3"
+            },
+            "_name": "openSUSE Leap 42.3",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/42.2"
+            },
+            "eol-date": "2019-01-31",
+            "_vendor": "openSUSE",
+            "family": "linux",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://opensuse.org/opensuse/autoyast/jeos"
+                    },
+                    {
+                        "-id": "http://opensuse.org/opensuse/autoyast/desktop"
+                    }
+                ]
+            },
+            "short-id": "opensuse42.3",
+            "distro": "opensuse",
+            "release-date": "2017-07-26",
+            "media": [
+                {
+                    "url": "http://download.opensuse.org/distribution/leap/42.3/iso/openSUSE-Leap-42.3-DVD-x86_64.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-Leap-42.3-DVD-x86_64*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64"
+                },
+                {
+                    "url": "http://download.opensuse.org/distribution/leap/42.3/iso/openSUSE-Leap-42.3-NET-x86_64.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-Leap-42.3-NET-x86_64*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    }
+                }
+            ],
+            "resources": {
+                "recommended": {
+                    "storage": "17179869184",
+                    "cpu": "2400000000",
+                    "ram": "2147483648"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1600000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "3221225472"
+                }
+            },
+            "-id": "http://opensuse.org/opensuse/42.3"
+        }
+    }
+}

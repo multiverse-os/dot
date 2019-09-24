@@ -1,0 +1,15 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "product": "VGA",
+            "product-id": "1111",
+            "-id": "http://pcisig.com/pci/1234/1111",
+            "name": "vga",
+            "bus-type": "pci",
+            "class": "video",
+            "_vendor": "QEMU",
+            "vendor-id": "1234"
+        }
+    }
+}

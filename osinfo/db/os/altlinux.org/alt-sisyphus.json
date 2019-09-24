@@ -1,0 +1,60 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "release-status": "snapshot",
+            "-id": "http://altlinux.org/alt/sisyphus",
+            "short-id": "alt.sisyphus",
+            "version": "sisyphus",
+            "_vendor": "BaseALT",
+            "family": "linux",
+            "distro": "alt",
+            "_name": "ALT regular",
+            "upgrades": {
+                "-id": "http://altlinux.org/alt/p8.starterkits"
+            },
+            "derives-from": {
+                "-id": "http://altlinux.org/alt/p8.starterkits"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "ALT regular-.*/i586",
+                        "publisher-id": "ALT LINUX TEAM",
+                        "application-id": "REGULAR-.*"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz"
+                },
+                {
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "ALT regular-.*/x86_64",
+                        "publisher-id": "ALT LINUX TEAM",
+                        "application-id": "REGULAR-.*"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "536870912",
+                    "storage": "10737418240",
+                    "n-cpus": "1",
+                    "cpu": "1000000000"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            }
+        }
+    }
+}

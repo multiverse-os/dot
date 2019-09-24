@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://mandriva.com/mandriva/2010.2",
+            "short-id": "mandriva2010.2",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandriva/2010.1"
+            },
+            "version": "2010.2",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandriva/2010.1"
+            },
+            "release-date": "2010-12-01",
+            "_name": "Mandriva Linux 2010.2",
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "distro": "mandriva"
+        }
+    }
+}

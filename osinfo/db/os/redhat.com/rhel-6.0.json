@@ -1,0 +1,125 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "Red Hat Enterprise Linux 6.0",
+            "_vendor": "Red Hat, Inc",
+            "release-date": "2010-11-10",
+            "eol-date": "2023-11-30",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1003"
+                    },
+                    {
+                        "-id": "http://usb.org/usb/80ee/0021"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    },
+                    {
+                        "-id": "http://qemu.org/chipset/x86/q35"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/10d3"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/293e"
+                    }
+                ]
+            },
+            "-id": "http://redhat.com/rhel/6.0",
+            "distro": "rhel",
+            "codename": "Santiago",
+            "tree": [
+                {
+                    "-arch": "ppc64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.0$",
+                        "arch": "ppc64"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.0$",
+                        "arch": "s390x"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.0$",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.0$",
+                        "arch": "x86_64"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "ram": "1073741824",
+                    "storage": "9663676416",
+                    "cpu": "400000000"
+                },
+                "maximum": {
+                    "ram": "1099511627776"
+                }
+            },
+            "kernel-url-argument": "method",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "rhel6.0",
+            "version": "6.0",
+            "family": "linux",
+            "media": [
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL_6.0 i386.*"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL_6.0 x86_64.*"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ]
+        }
+    }
+}

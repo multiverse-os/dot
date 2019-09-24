@@ -1,69 +1,118 @@
-package dot
+package osinfo
 
 import (
-	"encoding/xml"
+	"encoding/json"
 	"fmt"
-	"os"
-	//"io/ioutil"
+	"io/ioutil"
 )
 
 var OSInfoDBRepository = "https://gitlab.com/libosinfo/osinfo-db"
 
-// TODO: Build a script to determine newest version and recreate this map
-var xmlFile = map[string]string{
-	"Debian":   "./osinfo/os/debian.org/debian-10.xml.in",
-	"Ubuntu":   "./osinfo/os/ubuntu.com/ubuntu-19.04.xml.in",
-	"Redhat":   "./osinfo/os/redhat.com/rhl-9.xml.in",
-	"CentOS":   "./osinfo/os/centos.org/centos-7.0.xml.in",
-	"Fedora":   "./osinfo/os/fedoraproject.org/fedora-30.xml.in",
-	"Gentoo":   "./osinfo/os/gentoo.org/gentoo-rolling.xml.in",
-	"Alpine":   "./osinfo/os/alpinelinux.org/alpinelinux-3.8.xml.in",
-	"OpenSUSE": "./osinfo/os/opensuse.org/opensuse-42.3.xml.in",
-	"Android":  "./osinfo/os/android-x86.org/android-x86-8.1.xml.in",
-	"Arch":     "./osinfo/os/archlinux.org/archlinux-rolling.xml.in",
-}
+func Load(distro Distribution) (infoFiles []*InfoFile) {
+	filenames := distro.OSFiles()
 
-func LoadOSInfo(name string) (osInfo *OSInfo) {
+	for _, filename := range filenames {
+		fmt.Println("filename:", filename)
 
-	root := &Node{}
-	err := NewDecoder(r, ps...).Decode(root)
-	if err != nil {
-		return nil, err
+		jsonBytes, _ := ioutil.ReadFile(filename)
+		infoFile := &InfoFile{}
+		err := json.Unmarshal(jsonBytes, &infoFile)
+		if err != nil {
+			fmt.Println("[error] error unmarshalling json data:", err)
+		}
+
+		infoFiles = append(infoFiles, infoFile)
 	}
 
-	//xmlBytes, err := ioutil.ReadFile(distributionInfo[distributionName])
-	osXML, err := os.Open(xmlFile[name])
-	decoder := xml.NewDecoder(osXML)
-	//fmt.Println("len of xmlBytes:", len(xmlBytes))
-	err = decoder.Decode(&osInfo)
-	//err = xml.Unmarshal(xmlBytes, &os)
-	if err != nil {
-		panic(err)
+	fmt.Println("len(infoFiles):", len(infoFiles))
+	fmt.Println("osInfo:", infoFiles)
+
+	for _, file := range infoFiles {
+		fmt.Println("file:", file)
+		fmt.Println("file.LibOSInfo.OS.ReleaseVersion:")
+		fmt.Println("rv:", file.LibOSInfo.OS.ReleaseVersion)
 	}
-	fmt.Println("osInfo:", osInfo)
-	return osInfo
+
+	return infoFiles
 }
 
-type OSInfo struct {
-	OperatingSystem OS `xml:"libosinfo"`
+type InfoFile struct {
+	LibOSInfo struct {
+		InfoVersion string `json:"-version"`
+		OS          struct {
+			ShortIDs        []string `json:"short-id"`
+			ReleaseDate     string   `json:"release-date"`
+			ReleaseName     string   `json:"codename"`
+			ReleaseVersion  string   `json:"version"`
+			Vendor          string   `json:"_vendor"`
+			Family          string   `json:"linux"`
+			URL             string   `json:"-id"`
+			Name            string   `json:"name"`
+			Distro          string   `json:"distro"`
+			PreviousVersion struct {
+				URL string `json:"-id"`
+			} `json:"derives-from"`
+			Variant []struct {
+				Id   string `json:"-id"`
+				Name string `json:"_name"`
+			} `json:"variant"`
+			Media []struct {
+				Arch    string `json:"-arch"`
+				Variant struct {
+					Id string `json:"-id"`
+				} `json:"variant"`
+				URL string `json:"url"`
+				ISO struct {
+					VolumeID string `json:"volume-id"`
+				} `json:"iso"`
+				Kernel string `json:"kernel"`
+				Initrd string `json:"initrd"`
+			} `json:"media"`
+			Tree []struct {
+				Kernel string `json:"kernel"`
+				Initrd string `json:"initrd"`
+				Arch   string `json:"-arch"`
+				URL    string `json:"url"`
+			} `json:"tree"`
+			Image []struct {
+				Arch   string `json:"-arch"`
+				Format string `json:"-format"`
+				Cloud  string `json:"-cloud-init"`
+				URL    string `json:"url"`
+			} `json:"image"`
+			Installer struct {
+				Script []struct {
+					Id string `json:"-id"`
+				} `json:"script"`
+			} `json:"installer"`
+			Upgrades struct {
+				Id string `json:"-id"`
+			} `json:"upgrades"`
+			Resources struct {
+				Arch        string `json:"-arch"`
+				Recommended struct {
+					Storage string `json:"storage"`
+					CPU     string `json:"cpu"`
+					RAM     string `json:"ram"`
+				} `json:"recommended"`
+				Minimum struct {
+					Storage string `json:"storage"`
+					CPU     string `json:"cpu"`
+					RAM     string `json:"ram"`
+					CPUs    string `json:"n-cpus"`
+				} `json:"minimum"`
+			} `json:"resources"`
+		} `json:"os"`
+	} `json:"libosinfo"`
 }
 
-type OS struct {
-	Id string `xml:"id,attr"`
-	//ReleaseShortID string `xml:"os>short-id"`
-	Version string `xml:"version"`
-	//Vendor         string      `xml:"_vendor"`
-	//Family         string      `xml:"family"`
-	//Name           string      `xml:"distro"`
-	//ReleaseName    string      `xml:"codename"`
-	//UpgradesURL    string      `xml:"upgrade"`
-	//ReleaseDate    string      `xml:"release-date"`
-	//Devices        []Device    `xml:"devices,device"`
-	//Resources      []Resources `xml:"resources"`
-	//Variants       []Variant   `xml:"variant"`
-	//Media          []Media     `xml:"media"`
-	//ArchTrees      []ArchTree  `xml:"tree"`
-	//Images         []Image     `xml:"image"`
+type ByVersion []*InfoFile
+
+func (self ByVersion) Len() int      { return len(self) }
+func (self ByVersion) Swap(i, j int) { self[i], self[j] = self[j], self[i] }
+
+func (self ByVersion) Less(i, j int) bool {
+	return self[i].LibOSInfo.OS.ReleaseVersion < self[j].LibOSInfo.OS.ReleaseVersion
 }
 
 type Device struct {

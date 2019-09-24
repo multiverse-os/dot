@@ -1,0 +1,26 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "release-date": "2005-06-06",
+            "-id": "http://debian.org/debian/3.1",
+            "short-id": [
+                "debian3.1",
+                "debiansarge"
+            ],
+            "codename": "sarge",
+            "upgrades": {
+                "-id": "http://debian.org/debian/3"
+            },
+            "derives-from": {
+                "-id": "http://debian.org/debian/3"
+            },
+            "eol-date": "2008-03-31",
+            "_name": "Debian GNU/Linux 3.1",
+            "version": "3.1",
+            "_vendor": "Debian Project",
+            "family": "linux",
+            "distro": "debian"
+        }
+    }
+}

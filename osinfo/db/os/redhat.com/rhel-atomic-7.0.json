@@ -1,0 +1,42 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "2147483648",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "storage": "10737418240",
+                    "cpu": "1000000000",
+                    "ram": "2147483648"
+                }
+            },
+            "version": "7.0",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "distro": "rhel",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/7.0"
+            },
+            "-id": "http://redhat.com/rhel-atomic/7.0",
+            "short-id": "rhel-atomic-7.0",
+            "_name": "Red Hat Enterprise Linux Atomic Host 7.0",
+            "release-date": "2014-06-10",
+            "media": {
+                "iso": {
+                    "volume-size": "750313472",
+                    "system-id": "LINUX",
+                    "volume-id": "RHEL.*Atomic.*7 x86_64.*"
+                },
+                "kernel": "isolinux/vmlinuz",
+                "initrd": "isolinux/initrd.img",
+                "-arch": "x86_64"
+            }
+        }
+    }
+}

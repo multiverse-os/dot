@@ -1,0 +1,136 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "alpinelinux3.8",
+            "version": "3.8",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://alpinelinux.org/alpinelinux/3.7"
+            },
+            "derives-from": {
+                "-id": "http://alpinelinux.org/alpinelinux/3.7"
+            },
+            "-id": "http://alpinelinux.org/alpinelinux/3.8",
+            "_name": "Alpine Linux 3.8",
+            "_vendor": "Alpine Linux Project",
+            "distro": "alpinelinux",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "134217728",
+                    "storage": "1073741824"
+                },
+                "recommended": {
+                    "storage": "4294967296",
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "805306368"
+                }
+            },
+            "variant": [
+                {
+                    "-id": "standard",
+                    "_name": "Alpinelinux 3.8 Standard"
+                },
+                {
+                    "-id": "extended",
+                    "_name": "Alpinelinux 3.8 Extended"
+                },
+                {
+                    "-id": "virtual",
+                    "_name": "Alpinelinux 3.8 Virtual"
+                },
+                {
+                    "-id": "xen",
+                    "_name": "Alpinelinux 3.8 Xen"
+                }
+            ],
+            "media": [
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "standard"
+                    },
+                    "iso": {
+                        "volume-id": "alpine-std 3.8.\\d x86$"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "standard"
+                    },
+                    "iso": {
+                        "volume-id": "alpine-std 3.8.\\d x86_64$"
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "standard"
+                    },
+                    "iso": {
+                        "volume-id": "alpine-std 3.8.\\d ppc64le$"
+                    },
+                    "-arch": "ppc64le"
+                },
+                {
+                    "-arch": "s390x",
+                    "variant": {
+                        "-id": "standard"
+                    },
+                    "iso": {
+                        "volume-id": "alpine-std 3.8.\\d s390x$"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "extended"
+                    },
+                    "iso": {
+                        "volume-id": "alpine-ext 3.8.\\d x86$"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "extended"
+                    },
+                    "iso": {
+                        "volume-id": "alpine-ext 3.8.\\d x86_64$"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "virtual"
+                    },
+                    "iso": {
+                        "volume-id": "alpine-virt 3.8.\\d x86$"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "virtual"
+                    },
+                    "iso": {
+                        "volume-id": "alpine-virt 3.8.\\d x86_64$"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "xen"
+                    },
+                    "iso": {
+                        "volume-id": "alpine-xen 3.8.\\d x86_64$"
+                    }
+                }
+            ]
+        }
+    }
+}

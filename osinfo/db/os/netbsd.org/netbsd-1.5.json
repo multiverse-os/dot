@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "netbsd",
+            "upgrades": {
+                "-id": "http://netbsd.org/netbsd/1.4"
+            },
+            "release-date": "2000-12-06",
+            "version": "1.5",
+            "family": "netbsd",
+            "_name": "NetBSD 1.5",
+            "_vendor": "NetBSD Project",
+            "derives-from": {
+                "-id": "http://netbsd.org/netbsd/1.4"
+            },
+            "-id": "http://netbsd.org/netbsd/1.5",
+            "short-id": "netbsd1.5"
+        }
+    }
+}

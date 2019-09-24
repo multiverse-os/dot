@@ -1,0 +1,13 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "-id": "http://xen.org/xen/pci",
+            "class": "input",
+            "bus-type": "xen",
+            "product": "Virtual PCI",
+            "product-id": "pci",
+            "name": "xen-pci"
+        }
+    }
+}

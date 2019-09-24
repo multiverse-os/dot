@@ -1,0 +1,60 @@
+{
+    "libosinfo": {
+        "os": {
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/13.1"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://download.opensuse.org/distribution/13.2/iso/openSUSE-13.2-DVD-i586.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-13.2-DVD",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd"
+                },
+                {
+                    "iso": {
+                        "volume-id": "openSUSE-13.2-DVD-x86_64",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "url": "http://download.opensuse.org/distribution/13.2/iso/openSUSE-13.2-DVD-x86_64.iso"
+                }
+            ],
+            "distro": "opensuse",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/13.1"
+            },
+            "_name": "openSUSE 13.2",
+            "version": "13.2",
+            "_vendor": "openSUSE",
+            "family": "linux",
+            "release-date": "2014-11-04",
+            "eol-date": "2017-01-16",
+            "-id": "http://opensuse.org/opensuse/13.2",
+            "short-id": "opensuse13.2",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "3221225472",
+                    "cpu": "500000000"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "2147483648",
+                    "storage": "10737418240"
+                }
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

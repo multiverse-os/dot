@@ -1,0 +1,44 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://scientificlinux.org/scientificlinux/7.5",
+            "version": "7.5",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://scientificlinux.org/scientificlinux/7.4"
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/7.5"
+            },
+            "release-date": "2018-05-10",
+            "short-id": "scientificlinux7.5",
+            "_name": "Scientific Linux 7.5",
+            "_vendor": "Scientific Linux",
+            "distro": "scientificlinux",
+            "tree": {
+                "-arch": "x86_64",
+                "url": "http://ftp1.scientificlinux.org/linux/scientific/7.5/x86_64/os/",
+                "treeinfo": {
+                    "version": "7.5",
+                    "arch": "x86_64",
+                    "family": "Scientific"
+                }
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "n-cpus": "1"
+                },
+                "recommended": {
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "cpu": "1000000000"
+                }
+            }
+        }
+    }
+}

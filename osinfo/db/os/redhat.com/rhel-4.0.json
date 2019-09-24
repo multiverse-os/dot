@@ -1,0 +1,17 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://redhat.com/rhel/4.0",
+            "distro": "rhel",
+            "codename": "Nahant",
+            "eol-date": "2015-02-28",
+            "short-id": "rhel4.0",
+            "_name": "Red Hat Enterprise Linux 4.0",
+            "version": "4.0",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "release-date": "2005-02-15"
+        }
+    }
+}

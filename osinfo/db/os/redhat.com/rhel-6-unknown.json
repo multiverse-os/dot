@@ -1,0 +1,85 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/6.10"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "_name": "Red Hat Enterprise Linux 6 Unknown",
+            "family": "linux",
+            "media": [
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-6.(1[1-9]|[2-9][0-9]) .*.i386$"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-6.(1[1-9]|[2-9][0-9]) .*.x86_64$"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "ppc",
+                    "iso": {
+                        "system-id": "PPC",
+                        "volume-id": "RHEL-6.(1[1-9]|[2-9][0-9]) .*.ppc64$"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "s390x",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-6.(1[1-9]|[2-9][0-9]) .*.s390x$"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                }
+            ],
+            "version": "6-unknown",
+            "codename": "Santiago",
+            "resources": {
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                },
+                "maximum": {
+                    "ram": "13194139533312"
+                },
+                "-arch": "all"
+            },
+            "-id": "http://redhat.com/rhel/6-unknown",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/6.10"
+            },
+            "distro": "rhel",
+            "eol-date": "2024-06-30",
+            "short-id": "rhel6-unknown",
+            "_vendor": "Red Hat, Inc"
+        }
+    }
+}

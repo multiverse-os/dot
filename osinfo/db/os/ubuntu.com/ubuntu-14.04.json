@@ -1,0 +1,110 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "codename": "Trusty Tahr",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/13.10"
+            },
+            "release-date": "2014-04-17",
+            "media": [
+                {
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "i686",
+                    "url": "http://releases.ubuntu.com/14.04/ubuntu-14.04.6-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 14.04(.\\d\\+?)? LTS i386"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://releases.ubuntu.com/14.04/ubuntu-14.04.6-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 14.04(.\\d\\+?)? LTS amd64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://releases.ubuntu.com/14.04/ubuntu-14.04.6-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 14.04(.\\d\\+?)? LTS i386"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                        }
+                    }
+                },
+                {
+                    "-live": "true",
+                    "url": "http://releases.ubuntu.com/14.04/ubuntu-14.04.6-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 14.04(.\\d\\+?)? LTS amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi",
+                    "initrd": "casper/initrd.lz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                        }
+                    },
+                    "-arch": "x86_64"
+                }
+            ],
+            "-id": "http://ubuntu.com/ubuntu/14.04",
+            "_name": "Ubuntu 14.04 LTS",
+            "distro": "ubuntu",
+            "short-id": [
+                "ubuntu14.04",
+                "ubuntutrusty"
+            ],
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/13.10"
+            },
+            "eol-date": "2019-04-17",
+            "version": "14.04",
+            "_vendor": "Canonical Ltd",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "16106127360"
+                }
+            },
+            "family": "linux",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                    },
+                    {
+                        "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                    }
+                ]
+            }
+        }
+    }
+}

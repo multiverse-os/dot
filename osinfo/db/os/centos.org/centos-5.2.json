@@ -1,0 +1,36 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://centos.org/centos/5.2",
+            "short-id": "centos5.2",
+            "_name": "CentOS 5.2",
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.2"
+            },
+            "eol-date": "2017-03-31",
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/5.2/os/x86_64/",
+                    "kernel": "images/pxeboot/vmlinuz",
+                    "initrd": "images/pxeboot/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/5.2/os/i386/",
+                    "kernel": "images/pxeboot/vmlinuz",
+                    "initrd": "images/pxeboot/initrd.img"
+                }
+            ],
+            "version": "5.2",
+            "_vendor": "CentOS",
+            "family": "linux",
+            "distro": "centos",
+            "upgrades": {
+                "-id": "http://centos.org/centos/5.1"
+            },
+            "release-date": "2008-06-24"
+        }
+    }
+}

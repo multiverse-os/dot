@@ -1,0 +1,26 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": [
+                "debian2.2",
+                "debianpotato"
+            ],
+            "version": "2.2",
+            "family": "linux",
+            "distro": "debian",
+            "derives-from": {
+                "-id": "http://debian.org/debian/2.1"
+            },
+            "eol-date": "2003-06-30",
+            "-id": "http://debian.org/debian/2.2",
+            "_name": "Debian GNU/Linux 2.2",
+            "_vendor": "Debian Project",
+            "codename": "potato",
+            "upgrades": {
+                "-id": "http://debian.org/debian/2.1"
+            },
+            "release-date": "2000-08-15"
+        }
+    }
+}

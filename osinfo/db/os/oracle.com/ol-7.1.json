@@ -1,0 +1,27 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://oracle.com/ol/7.1",
+            "_name": "Oracle Linux 7.1",
+            "family": "linux",
+            "distro": "ol",
+            "clones": {
+                "-id": "http://redhat.com/rhel/7.1"
+            },
+            "release-date": "2015-03-11",
+            "media": {
+                "-arch": "x86_64",
+                "iso": {
+                    "system-id": "LINUX",
+                    "volume-id": "OL-7.1 Server.x86_64"
+                },
+                "kernel": "isolinux/vmlinuz",
+                "initrd": "isolinux/initrd.img"
+            },
+            "short-id": "ol7.1",
+            "version": "7.1",
+            "_vendor": "Oracle America"
+        }
+    }
+}

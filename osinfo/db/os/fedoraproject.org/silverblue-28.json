@@ -1,0 +1,50 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "Fedora Silverblue 28",
+            "_vendor": "Fedora Project",
+            "distro": "fedora",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/27"
+            },
+            "eol-date": "2019-05-29",
+            "media": {
+                "-arch": "x86_64",
+                "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/28/AtomicWorkstation/x86_64/iso/Fedora-AtomicWorkstation-ostree-x86_64-28-1.1.iso",
+                "iso": {
+                    "volume-id": "Fedora-AW-ostree-x86_64-28",
+                    "system-id": "LINUX"
+                },
+                "kernel": "isolinux/vmlinuz",
+                "initrd": "isolinux/initrd.img"
+            },
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/silverblue/kickstart/desktop"
+                }
+            },
+            "-id": "http://fedoraproject.org/silverblue/28",
+            "short-id": "silverblue28",
+            "version": "28",
+            "family": "linux",
+            "release-date": "2018-05-01",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "storage": "21474836480",
+                    "ram": "2147483648"
+                },
+                "network-install": {
+                    "ram": "5368709120"
+                }
+            }
+        }
+    }
+}

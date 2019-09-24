@@ -1,0 +1,39 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://oracle.com/ol/6.1",
+            "short-id": "ol6.1",
+            "_vendor": "Oracle America",
+            "family": "linux",
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.1"
+            },
+            "release-date": "2011-06-07",
+            "media": [
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "OL6.1 x86_64 Disc 1"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "OL6.1 i386 Disc 1"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "_name": "Oracle Linux 6.1",
+            "version": "6.1",
+            "distro": "ol",
+            "eol-date": "2024-03-31"
+        }
+    }
+}

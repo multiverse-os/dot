@@ -1,0 +1,586 @@
+{
+    "libosinfo": {
+        "datamap": {
+            "-id": "http://x.org/x11-keyboard",
+            "entry": [
+                {
+                    "-inval": "af_ZA",
+                    "-outval": "za"
+                },
+                {
+                    "-inval": "ar_AE",
+                    "-outval": "ae"
+                },
+                {
+                    "-inval": "ar_BH",
+                    "-outval": "bh"
+                },
+                {
+                    "-inval": "ar_DZ",
+                    "-outval": "dz"
+                },
+                {
+                    "-inval": "ar_EG",
+                    "-outval": "eg"
+                },
+                {
+                    "-outval": "in",
+                    "-inval": "ar_IN"
+                },
+                {
+                    "-inval": "ar_IQ",
+                    "-outval": "iq"
+                },
+                {
+                    "-inval": "ar_JO",
+                    "-outval": "jo"
+                },
+                {
+                    "-inval": "ar_KW",
+                    "-outval": "kw"
+                },
+                {
+                    "-outval": "lb",
+                    "-inval": "ar_LB"
+                },
+                {
+                    "-inval": "ar_LY",
+                    "-outval": "ly"
+                },
+                {
+                    "-inval": "ar_MA",
+                    "-outval": "ma"
+                },
+                {
+                    "-inval": "ar_OM",
+                    "-outval": "om"
+                },
+                {
+                    "-inval": "ar_QA",
+                    "-outval": "qa"
+                },
+                {
+                    "-inval": "ar_SA",
+                    "-outval": "sa"
+                },
+                {
+                    "-outval": "sd",
+                    "-inval": "ar_SD"
+                },
+                {
+                    "-inval": "ar_SY",
+                    "-outval": "sy"
+                },
+                {
+                    "-inval": "ar_TN",
+                    "-outval": "tn"
+                },
+                {
+                    "-inval": "ar_YE",
+                    "-outval": "ye"
+                },
+                {
+                    "-inval": "as_IN",
+                    "-outval": "in"
+                },
+                {
+                    "-inval": "ast_ES",
+                    "-outval": "es (ast)"
+                },
+                {
+                    "-inval": "be_BY",
+                    "-outval": "by"
+                },
+                {
+                    "-inval": "bg_BG",
+                    "-outval": "bg"
+                },
+                {
+                    "-inval": "bn_BD",
+                    "-outval": "bd"
+                },
+                {
+                    "-inval": "bn_IN",
+                    "-outval": "in (ben)"
+                },
+                {
+                    "-inval": "br_FR",
+                    "-outval": "fr (bre)"
+                },
+                {
+                    "-inval": "bs_BA",
+                    "-outval": "ba"
+                },
+                {
+                    "-inval": "ca_ES",
+                    "-outval": "es (cat)"
+                },
+                {
+                    "-inval": "cs_CZ",
+                    "-outval": "cz"
+                },
+                {
+                    "-inval": "cy_GB",
+                    "-outval": "gb"
+                },
+                {
+                    "-inval": "da_DK",
+                    "-outval": "dk"
+                },
+                {
+                    "-inval": "de_AT",
+                    "-outval": "at"
+                },
+                {
+                    "-inval": "de_BE",
+                    "-outval": "be"
+                },
+                {
+                    "-inval": "de_CH",
+                    "-outval": "ch"
+                },
+                {
+                    "-inval": "de_DE",
+                    "-outval": "de"
+                },
+                {
+                    "-inval": "de_LU",
+                    "-outval": "lu"
+                },
+                {
+                    "-inval": "el_GR",
+                    "-outval": "gr"
+                },
+                {
+                    "-inval": "en_AU",
+                    "-outval": "au"
+                },
+                {
+                    "-inval": "en_BW",
+                    "-outval": "bw"
+                },
+                {
+                    "-inval": "en_CA",
+                    "-outval": "ca (eng)"
+                },
+                {
+                    "-inval": "en_DK",
+                    "-outval": "dk"
+                },
+                {
+                    "-inval": "en_GB",
+                    "-outval": "gb"
+                },
+                {
+                    "-inval": "en_HK",
+                    "-outval": "hk"
+                },
+                {
+                    "-inval": "en_IE",
+                    "-outval": "ie"
+                },
+                {
+                    "-inval": "en_IN",
+                    "-outval": "in (eng)"
+                },
+                {
+                    "-outval": "nz",
+                    "-inval": "en_NZ"
+                },
+                {
+                    "-inval": "en_PH",
+                    "-outval": "ph"
+                },
+                {
+                    "-outval": "sg",
+                    "-inval": "en_SG"
+                },
+                {
+                    "-inval": "en_US",
+                    "-outval": "us"
+                },
+                {
+                    "-inval": "en_ZA",
+                    "-outval": "za"
+                },
+                {
+                    "-inval": "en_ZW",
+                    "-outval": "zw"
+                },
+                {
+                    "-inval": "es_AR",
+                    "-outval": "ar"
+                },
+                {
+                    "-inval": "es_BO",
+                    "-outval": "bo"
+                },
+                {
+                    "-inval": "es_CL",
+                    "-outval": "cl"
+                },
+                {
+                    "-inval": "es_CO",
+                    "-outval": "co"
+                },
+                {
+                    "-inval": "es_CR",
+                    "-outval": "cr"
+                },
+                {
+                    "-inval": "es_DO",
+                    "-outval": "do"
+                },
+                {
+                    "-inval": "es_EC",
+                    "-outval": "ec"
+                },
+                {
+                    "-inval": "es_ES",
+                    "-outval": "es"
+                },
+                {
+                    "-inval": "es_GT",
+                    "-outval": "gt"
+                },
+                {
+                    "-inval": "es_HN",
+                    "-outval": "hn"
+                },
+                {
+                    "-inval": "es_MX",
+                    "-outval": "mx"
+                },
+                {
+                    "-outval": "ni",
+                    "-inval": "es_NI"
+                },
+                {
+                    "-inval": "es_PA",
+                    "-outval": "pa"
+                },
+                {
+                    "-inval": "es_PE",
+                    "-outval": "pe"
+                },
+                {
+                    "-inval": "es_PR",
+                    "-outval": "pr"
+                },
+                {
+                    "-inval": "es_PY",
+                    "-outval": "py"
+                },
+                {
+                    "-inval": "es_SV",
+                    "-outval": "sv"
+                },
+                {
+                    "-inval": "es_US",
+                    "-outval": "us"
+                },
+                {
+                    "-inval": "es_UY",
+                    "-outval": "uy"
+                },
+                {
+                    "-inval": "es_VE",
+                    "-outval": "ve"
+                },
+                {
+                    "-inval": "et_EE",
+                    "-outval": "ee"
+                },
+                {
+                    "-outval": "es",
+                    "-inval": "eu_ES"
+                },
+                {
+                    "-inval": "fa_IR",
+                    "-outval": "ir"
+                },
+                {
+                    "-inval": "fi_FI",
+                    "-outval": "fi"
+                },
+                {
+                    "-inval": "fo_FO",
+                    "-outval": "fo"
+                },
+                {
+                    "-inval": "fr_BE",
+                    "-outval": "be"
+                },
+                {
+                    "-inval": "fr_CA",
+                    "-outval": "ca"
+                },
+                {
+                    "-inval": "fr_CH",
+                    "-outval": "ch (fr)"
+                },
+                {
+                    "-outval": "fr",
+                    "-inval": "fr_FR"
+                },
+                {
+                    "-inval": "fr_LU",
+                    "-outval": "lu"
+                },
+                {
+                    "-inval": "ga_IE",
+                    "-outval": "ie"
+                },
+                {
+                    "-inval": "gl_ES",
+                    "-outval": "es"
+                },
+                {
+                    "-inval": "gu_IN",
+                    "-outval": "in (guj)"
+                },
+                {
+                    "-inval": "gv_GB",
+                    "-outval": "gb"
+                },
+                {
+                    "-inval": "he_IL",
+                    "-outval": "il"
+                },
+                {
+                    "-inval": "hi_IN",
+                    "-outval": "in"
+                },
+                {
+                    "-inval": "hr_HR",
+                    "-outval": "hr"
+                },
+                {
+                    "-outval": "hu",
+                    "-inval": "hu_HU"
+                },
+                {
+                    "-inval": "id_ID",
+                    "-outval": "id"
+                },
+                {
+                    "-inval": "is_IS",
+                    "-outval": "is"
+                },
+                {
+                    "-inval": "it_CH",
+                    "-outval": "ch"
+                },
+                {
+                    "-inval": "it_IT",
+                    "-outval": "it"
+                },
+                {
+                    "-outval": "jp",
+                    "-inval": "ja_JP"
+                },
+                {
+                    "-inval": "kl_GL",
+                    "-outval": "gl"
+                },
+                {
+                    "-outval": "in (kan)",
+                    "-inval": "kn_IN"
+                },
+                {
+                    "-inval": "ko_KR",
+                    "-outval": "kr"
+                },
+                {
+                    "-inval": "kw_GB",
+                    "-outval": "gb"
+                },
+                {
+                    "-inval": "lo_LA",
+                    "-outval": "la"
+                },
+                {
+                    "-outval": "lt",
+                    "-inval": "lt_LT"
+                },
+                {
+                    "-inval": "lv_LV",
+                    "-outval": "lv"
+                },
+                {
+                    "-inval": "mai_IN",
+                    "-outval": "in"
+                },
+                {
+                    "-inval": "mk_MK",
+                    "-outval": "mk"
+                },
+                {
+                    "-inval": "ml_IN",
+                    "-outval": "in (mal)"
+                },
+                {
+                    "-outval": "in",
+                    "-inval": "mr_IN"
+                },
+                {
+                    "-inval": "ms_MY",
+                    "-outval": "my"
+                },
+                {
+                    "-inval": "mt_MT",
+                    "-outval": "mt"
+                },
+                {
+                    "-outval": "no",
+                    "-inval": "nb_NO"
+                },
+                {
+                    "-inval": "nds_DE",
+                    "-outval": "de"
+                },
+                {
+                    "-outval": "np",
+                    "-inval": "ne_NP"
+                },
+                {
+                    "-inval": "nl_BE",
+                    "-outval": "be"
+                },
+                {
+                    "-inval": "nl_NL",
+                    "-outval": "nl"
+                },
+                {
+                    "-inval": "nn_NO",
+                    "-outval": "no"
+                },
+                {
+                    "-inval": "oc_FR",
+                    "-outval": "fr (oci)"
+                },
+                {
+                    "-inval": "or_IN",
+                    "-outval": "in (ori)"
+                },
+                {
+                    "-inval": "pa_IN",
+                    "-outval": "in (guru)"
+                },
+                {
+                    "-inval": "pl_PL",
+                    "-outval": "pl"
+                },
+                {
+                    "-inval": "pt_BR",
+                    "-outval": "br"
+                },
+                {
+                    "-inval": "pt_PT",
+                    "-outval": "pt"
+                },
+                {
+                    "-inval": "ro_RO",
+                    "-outval": "ro"
+                },
+                {
+                    "-inval": "ru_RU",
+                    "-outval": "ru"
+                },
+                {
+                    "-inval": "ru_UA",
+                    "-outval": "ua"
+                },
+                {
+                    "-inval": "se_NO",
+                    "-outval": "no (smi)"
+                },
+                {
+                    "-inval": "si_LK",
+                    "-outval": "lk"
+                },
+                {
+                    "-inval": "sk_SK",
+                    "-outval": "sk"
+                },
+                {
+                    "-inval": "sl_SI",
+                    "-outval": "si"
+                },
+                {
+                    "-inval": "sq_AL",
+                    "-outval": "al"
+                },
+                {
+                    "-inval": "sr_RS",
+                    "-outval": "rs"
+                },
+                {
+                    "-inval": "sv_FI",
+                    "-outval": "fi"
+                },
+                {
+                    "-inval": "sv_SE",
+                    "-outval": "se"
+                },
+                {
+                    "-inval": "ta_IN",
+                    "-outval": "in (tam)"
+                },
+                {
+                    "-inval": "te_IN",
+                    "-outval": "in (tel)"
+                },
+                {
+                    "-inval": "th_TH",
+                    "-outval": "th"
+                },
+                {
+                    "-inval": "tl_PH",
+                    "-outval": "ph"
+                },
+                {
+                    "-outval": "tr",
+                    "-inval": "tr_TR"
+                },
+                {
+                    "-inval": "uk_UA",
+                    "-outval": "ua"
+                },
+                {
+                    "-outval": "pk",
+                    "-inval": "ur_PK"
+                },
+                {
+                    "-inval": "uz_UZ",
+                    "-outval": "uz"
+                },
+                {
+                    "-inval": "wa_BE",
+                    "-outval": "be"
+                },
+                {
+                    "-inval": "xh_ZA",
+                    "-outval": "za"
+                },
+                {
+                    "-inval": "zh_CN",
+                    "-outval": "cn"
+                },
+                {
+                    "-inval": "zh_HK",
+                    "-outval": "hk"
+                },
+                {
+                    "-inval": "zh_TW",
+                    "-outval": "tw"
+                },
+                {
+                    "-inval": "zu_ZA",
+                    "-outval": "za"
+                }
+            ]
+        },
+        "-version": "0.0.1"
+    }
+}

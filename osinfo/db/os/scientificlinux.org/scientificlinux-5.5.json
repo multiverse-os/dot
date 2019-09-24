@@ -1,0 +1,42 @@
+{
+    "libosinfo": {
+        "os": {
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.5"
+            },
+            "version": "5.5",
+            "_vendor": "Scientific Linux",
+            "distro": "scientificlinux",
+            "upgrades": {
+                "-id": "http://scientificlinux.org/scientificlinux/5.4"
+            },
+            "release-date": "2010-05-19",
+            "eol-date": "2017-03-31",
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/obsolete/55/x86_64/",
+                    "treeinfo": {
+                        "family": "Scientific Linux",
+                        "version": "55",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/obsolete/55/i386/",
+                    "treeinfo": {
+                        "family": "Scientific Linux",
+                        "version": "55",
+                        "arch": "i386"
+                    }
+                }
+            ],
+            "-id": "http://scientificlinux.org/scientificlinux/5.5",
+            "short-id": "scientificlinux5.5",
+            "_name": "Scientific Linux 5.5",
+            "family": "linux"
+        },
+        "-version": "0.0.1"
+    }
+}

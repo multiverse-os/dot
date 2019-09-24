@@ -1,0 +1,54 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2006-04-30",
+            "_name": "Ubuntu 4.10",
+            "version": "4.10",
+            "_vendor": "Canonical Ltd",
+            "family": "linux",
+            "distro": "ubuntu",
+            "codename": "Warty Warthog",
+            "release-date": "2004-10-26",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/warty/warty-release-install-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 4.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.img"
+                },
+                {
+                    "initrd": "casper/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/warty/warty-release-install-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 4.10(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz"
+                },
+                {
+                    "-installer": "false",
+                    "url": "http://old-releases.ubuntu.com/releases/warty/warty-release-live-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 4.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.img",
+                    "-arch": "i686",
+                    "-live": "true"
+                }
+            ],
+            "-id": "http://ubuntu.com/ubuntu/4.10",
+            "short-id": [
+                "ubuntu4.10",
+                "ubuntuwarty"
+            ]
+        }
+    }
+}

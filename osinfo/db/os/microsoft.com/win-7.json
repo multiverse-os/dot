@@ -1,0 +1,474 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    },
+                    {
+                        "-id": "http://qemu.org/chipset/x86/q35"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/10d3"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/293e"
+                    }
+                ]
+            },
+            "-id": "http://microsoft.com/win/7",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/vista"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "debug"
+                    },
+                    "iso": {
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        },
+                        "volume-id": "(GRMCCHK)_",
+                        "publisher-id": "MICROSOFT CORPORATION"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "debug"
+                    },
+                    "iso": {
+                        "volume-id": "(GRMCXCHK)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "starter"
+                    },
+                    "iso": {
+                        "volume-id": "(GSP1RMCNSTFREO|GRMCNSTFREO|GRMCSTFREO|GSP1RMCSTFREO)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language",
+                            "-regex": "true"
+                        }
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "home-basic"
+                    },
+                    "iso": {
+                        "volume-id": "(GSP1RMCHBFRER|GRMCHBFRER)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "home-premium"
+                    },
+                    "iso": {
+                        "volume-id": "(GSP1RMCNHPFRER|GRMCNHPFRER|GSP1RMCHPFRER|GRMCHPFRER)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "home-premium"
+                    },
+                    "iso": {
+                        "volume-id": "(GSP1RMCNHPXFRER|GSP1RMCHPXFRER|GSP1RMCNHPXFRER|GRMCNHPXFRER|GRMCHPXFRER)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "professional"
+                    },
+                    "iso": {
+                        "volume-id": "(GRMCNPRFRER|GRMCPRVOL|GSP1RMCPRVOL|GRMCPRFRER|GSP1RMCN?PRFRER|GRMCPRFREO)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "iso": {
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        },
+                        "volume-id": "(GRMCNPRXFRER|GRMCPRXVOL|GSP1RMCN?PRXFRER|GSP1RMCPRXVOL)_"
+                    },
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "professional"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "enterprise"
+                    },
+                    "iso": {
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        },
+                        "volume-id": "(GRMCENVOL|GRMCNENVOL|GSP1RMCNENVOL|GSP1RMCENVOL)_"
+                    }
+                },
+                {
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "enterprise"
+                    },
+                    "iso": {
+                        "volume-id": "(GSP1RMCENXVOL|GRMCENXVOL|GRMCNENXVOL|GSP1RMCNENXVOL)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "ultimate"
+                    },
+                    "iso": {
+                        "volume-id": "(GRMCULFRER|GSP1RMCNULFRER|GSP1RMCULFRER|GRMCNULFRER)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "ultimate"
+                    },
+                    "iso": {
+                        "volume-id": "(GRMCULXFRER|GSP1RMCNULXFRER|GSP1RMCULXFRER|GRMCNULXFRER)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language",
+                            "-regex": "true"
+                        }
+                    }
+                },
+                {
+                    "-installer-reboots": "2",
+                    "iso": {
+                        "volume-id": "(GRMCPRFRER)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "iso": {
+                        "volume-id": "(GRMCHPXFRER|GRMCXCHK|GRMCPRXFRER)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    }
+                }
+            ],
+            "resources": [
+                {
+                    "-arch": "i686",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "ram": "1073741824",
+                        "storage": "17179869184",
+                        "cpu": "1000000000"
+                    }
+                },
+                {
+                    "maximum": {
+                        "ram": "206158430208"
+                    },
+                    "-arch": "x86_64",
+                    "minimum": {
+                        "cpu": "1000000000",
+                        "n-cpus": "1",
+                        "ram": "2147483648",
+                        "storage": "21474836480"
+                    }
+                }
+            ],
+            "driver": [
+                {
+                    "-arch": "i686",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/preinst/virtio-win/0.1.171/w7/x86",
+                    "-pre-installable": "true",
+                    "-signed": "false",
+                    "file": [
+                        "viostor.cat",
+                        "viostor.inf",
+                        "viostor.sys"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        }
+                    ]
+                },
+                {
+                    "-arch": "x86_64",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/preinst/virtio-win/0.1.171/w7/amd64",
+                    "-pre-installable": "true",
+                    "-signed": "false",
+                    "file": [
+                        "viostor.cat",
+                        "viostor.inf",
+                        "viostor.sys"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        }
+                    ]
+                },
+                {
+                    "-signed": "false",
+                    "file": [
+                        "spice-guest-tools-0.141.exe",
+                        "spice-guest-tools-0.141.cmd",
+                        "qxl-0.141.cer",
+                        "virtio-0.141.cer"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1000"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1002"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1003"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1004"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1005"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1b36/0100"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1041"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1043"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1044"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1045"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1048"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1052"
+                        }
+                    ],
+                    "-arch": "i686",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/postinst/spice-guest-tools/0.141"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/postinst/spice-guest-tools/0.141",
+                    "-signed": "false",
+                    "file": [
+                        "spice-guest-tools-0.141.exe",
+                        "spice-guest-tools-0.141.cmd",
+                        "qxl-0.141.cer",
+                        "virtio-0.141.cer"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1000"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1002"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1003"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1004"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1005"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1b36/0100"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1041"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1043"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1044"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1045"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1048"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1052"
+                        }
+                    ]
+                }
+            ],
+            "_name": "Microsoft Windows 7",
+            "distro": "win",
+            "upgrades": {
+                "-id": "http://microsoft.com/win/vista"
+            },
+            "release-date": "2009-10-22",
+            "short-id": "win7",
+            "version": "6.1",
+            "variant": [
+                {
+                    "-id": "debug",
+                    "_name": "Microsoft Windows 7 Debug Checked Build"
+                },
+                {
+                    "_name": "Microsoft Windows 7 Starter",
+                    "-id": "starter"
+                },
+                {
+                    "-id": "home-basic",
+                    "_name": "Microsoft Windows 7 Home Basic"
+                },
+                {
+                    "_name": "Microsoft Windows 7 Home Premium",
+                    "-id": "home-premium"
+                },
+                {
+                    "-id": "professional",
+                    "_name": "Microsoft Windows 7 Professional"
+                },
+                {
+                    "-id": "enterprise",
+                    "_name": "Microsoft Windows 7 Enterprise"
+                },
+                {
+                    "-id": "ultimate",
+                    "_name": "Microsoft Windows 7 Ultimate"
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/jeos"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/desktop"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/cmd/desktop"
+                    }
+                ]
+            },
+            "_vendor": "Microsoft Corporation",
+            "family": "winnt",
+            "eol-date": "2015-01-13"
+        }
+    }
+}

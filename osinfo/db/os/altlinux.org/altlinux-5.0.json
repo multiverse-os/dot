@@ -1,0 +1,66 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "codename": "Ark",
+            "eol-date": "2011-08-30",
+            "-id": "http://altlinux.org/altlinux/5.0",
+            "version": "5.0",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://altlinux.org/altlinux/4.1"
+            },
+            "release-date": "2009-10-29",
+            "media": [
+                {
+                    "kernel": "isolinux/alt0/vmlinuz",
+                    "initrd": "isolinux/alt0/full.cz",
+                    "-arch": "i686",
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p5/iso/ark/altlinux-5.0.0-ark-server-i586-ru-install-cd.iso",
+                    "iso": {
+                        "volume-id": "ALT Linux 5.0.\\d",
+                        "publisher-id": "ALT Linux Team"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p5/iso/ark/altlinux-5.0.0-ark-server-x86_64-ru-install-cd.iso",
+                    "iso": {
+                        "publisher-id": "ALT Linux Team",
+                        "volume-id": "ALT Linux 5.0.\\d"
+                    },
+                    "kernel": "isolinux/alt0/vmlinuz",
+                    "initrd": "isolinux/alt0/full.cz"
+                }
+            ],
+            "short-id": "altlinux5.0",
+            "_name": "ALT Linux 5.0",
+            "_vendor": "ALTLinux",
+            "derives-from": {
+                "-id": "http://altlinux.org/altlinux/4.1"
+            },
+            "distro": "altlinux",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    }
+                ]
+            },
+            "resources": {
+                "recommended": {
+                    "ram": "536870912",
+                    "storage": "5368709120"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "67108864"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                }
+            },
+            "-id": "http://scientificlinux.org/scientificlinux/6.3",
+            "_name": "Scientific Linux 6.3",
+            "distro": "scientificlinux",
+            "upgrades": {
+                "-id": "http://scientificlinux.org/scientificlinux/6.2"
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.3"
+            },
+            "eol-date": "2013-03-09",
+            "tree": [
+                {
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/6.3/x86_64/os/",
+                    "kernel": "images/pxeboot/vmlinuz",
+                    "initrd": "images/pxeboot/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/6.3/i386/os/",
+                    "kernel": "images/pxeboot/vmlinuz",
+                    "initrd": "images/pxeboot/initrd.img"
+                }
+            ],
+            "short-id": "scientificlinux6.3",
+            "version": "6.3",
+            "_vendor": "Scientific Linux",
+            "family": "linux",
+            "release-date": "2012-09-08"
+        }
+    }
+}

@@ -1,0 +1,237 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "fedora",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/12"
+            },
+            "eol-date": "2011-06-04",
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                }
+            },
+            "-id": "http://fedoraproject.org/fedora/13",
+            "tree": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "13",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "13",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "13"
+                    }
+                }
+            ],
+            "_vendor": "Fedora Project",
+            "family": "linux",
+            "codename": "Goddard",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/12"
+            },
+            "version": "13",
+            "_name": "Fedora 13",
+            "release-date": "2010-05-25",
+            "media": [
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 13 i386 DVD",
+                        "system-id": "LINUX",
+                        "volume-size": "3277086720"
+                    }
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc1.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "726675456",
+                        "volume-id": "Fedora 13 i386 Disc 1"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc2.iso",
+                    "iso": {
+                        "volume-id": "Fedora 13 i386 Disc 2",
+                        "system-id": "LINUX",
+                        "volume-size": "724484096"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc3.iso",
+                    "iso": {
+                        "volume-size": "722425856",
+                        "volume-id": "Fedora 13 i386 Disc 3",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc4.iso",
+                    "iso": {
+                        "volume-id": "Fedora 13 i386 Disc 4",
+                        "system-id": "LINUX",
+                        "volume-size": "718925824"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc5.iso",
+                    "iso": {
+                        "volume-id": "Fedora 13 i386 Disc 5",
+                        "system-id": "LINUX",
+                        "volume-size": "386164736"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 13 x86_64 DVD",
+                        "system-id": "LINUX",
+                        "volume-size": "3630045184"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 13 x86_64 Disc 1",
+                        "system-id": "LINUX",
+                        "volume-size": "728256512"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc2.iso",
+                    "iso": {
+                        "volume-id": "Fedora 13 x86_64 Disc 2",
+                        "system-id": "LINUX",
+                        "volume-size": "728606720"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc3.iso",
+                    "iso": {
+                        "volume-id": "Fedora 13 x86_64 Disc 3",
+                        "system-id": "LINUX",
+                        "volume-size": "726992896"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc4.iso",
+                    "iso": {
+                        "volume-id": "Fedora 13 x86_64 Disc 4",
+                        "system-id": "LINUX",
+                        "volume-size": "723963904"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc5.iso",
+                    "iso": {
+                        "volume-id": "Fedora 13 x86_64 Disc 5",
+                        "system-id": "LINUX",
+                        "volume-size": "723660800"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/i686/Fedora-13-i686-Live.iso",
+                    "iso": {
+                        "volume-id": "Fedora-13-i686-Live",
+                        "system-id": "LINUX",
+                        "volume-size": "707715072"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/i686/Fedora-13-i686-Live-KDE.iso",
+                    "iso": {
+                        "volume-size": "731193344",
+                        "volume-id": "Fedora-13-i686-Live-KDE",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz0"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/x86_64/Fedora-13-x86_64-Live.iso",
+                    "iso": {
+                        "volume-id": "Fedora-13-x86_64-Live",
+                        "system-id": "LINUX",
+                        "volume-size": "709580800"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-size": "733466624",
+                        "volume-id": "Fedora-13-x86_64-Live-KDE",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/x86_64/Fedora-13-x86_64-Live-KDE.iso"
+                }
+            ],
+            "short-id": "fedora13"
+        }
+    }
+}

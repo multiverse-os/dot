@@ -1,0 +1,61 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://fedoraproject.org/fedora/unknown",
+            "short-id": "fedora-unknown",
+            "_name": "Fedora",
+            "distro": "fedora",
+            "release-status": "prerelease",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "version": "unknown",
+            "_vendor": "Fedora Project",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/rawhide"
+            },
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/rawhide"
+            },
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "Fedora-.*-dvd-x86_64-[3-9][1-9]"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "iso": {
+                        "volume-id": "Fedora-.*-Live-[3-9][1-9].*"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                }
+            ],
+            "tree": {
+                "-arch": "x86_64",
+                "treeinfo": {
+                    "family": "Fedora",
+                    "version": "[3-9][1-9]",
+                    "arch": "x86_64"
+                }
+            }
+        }
+    }
+}

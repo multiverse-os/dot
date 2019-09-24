@@ -1,0 +1,142 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2006-01-16",
+            "-id": "http://fedoraproject.org/fedora/3",
+            "codename": "Heidelberg",
+            "release-date": "2004-11-08",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/i386/iso/FC3-i386-disc1.iso",
+                    "iso": {
+                        "application-id": "FC/3 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "646987776"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "iso": {
+                        "application-id": "FC/3 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "668520448"
+                    },
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/i386/iso/FC3-i386-disc2.iso"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/i386/iso/FC3-i386-disc3.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "667498496",
+                        "application-id": "FC/3 i386"
+                    }
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/i386/iso/FC3-i386-disc4.iso",
+                    "iso": {
+                        "application-id": "FC/3 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "404764672"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/i386/iso/FC3-i386-DVD.iso",
+                    "iso": {
+                        "application-id": "FC/3 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "2466410496"
+                    }
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/x86_64/iso/FC3-x86_64-disc1.iso",
+                    "iso": {
+                        "application-id": "FC/3 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "668137472"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/x86_64/iso/FC3-x86_64-disc2.iso",
+                    "iso": {
+                        "application-id": "FC/3 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "669126656"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/x86_64/iso/FC3-x86_64-disc3.iso",
+                    "iso": {
+                        "volume-size": "668422144",
+                        "application-id": "FC/3 x86_64",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/x86_64/iso/FC3-x86_64-disc4.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "634851328",
+                        "application-id": "FC/3 x86_64"
+                    }
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/x86_64/iso/FC3-x86_64-DVD.iso",
+                    "iso": {
+                        "application-id": "FC/3 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "2639267840"
+                    }
+                }
+            ],
+            "tree": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/i386/os/",
+                    "kernel": "images/pxeboot/vmlinuz",
+                    "initrd": "images/pxeboot/initrd.img",
+                    "boot-iso": "images/boot.iso"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/3/x86_64/os/",
+                    "kernel": "images/pxeboot/vmlinuz",
+                    "initrd": "images/pxeboot/initrd.img",
+                    "boot-iso": "images/boot.iso"
+                }
+            ],
+            "_name": "Fedora Core 3",
+            "_vendor": "Fedora Project",
+            "family": "linux",
+            "distro": "fedora",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/2"
+            },
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                }
+            },
+            "short-id": "fedora3",
+            "version": "3",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/2"
+            }
+        }
+    }
+}

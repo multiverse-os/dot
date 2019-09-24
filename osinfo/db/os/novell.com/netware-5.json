@@ -1,0 +1,15 @@
+{
+    "libosinfo": {
+        "os": {
+            "_name": "Novell Netware 5",
+            "_vendor": "Novell",
+            "family": "netware",
+            "distro": "netware",
+            "version": "5",
+            "release-date": "1998-10-01",
+            "-id": "http://novell.com/netware/5",
+            "short-id": "netware5"
+        },
+        "-version": "0.0.1"
+    }
+}

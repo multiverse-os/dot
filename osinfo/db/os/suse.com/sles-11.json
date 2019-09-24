@@ -1,0 +1,32 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "sles11",
+            "_name": "SUSE Linux Enterprise Server 11",
+            "_vendor": "SUSE",
+            "derives-from": {
+                "-id": "http://suse.com/sles/10.4"
+            },
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    }
+                ]
+            },
+            "-id": "http://suse.com/sles/11",
+            "version": "11",
+            "family": "linux",
+            "distro": "sles",
+            "upgrades": {
+                "-id": "http://suse.com/sles/10.4"
+            },
+            "release-date": "2009-03-24",
+            "eol-date": "2010-12-31"
+        }
+    }
+}

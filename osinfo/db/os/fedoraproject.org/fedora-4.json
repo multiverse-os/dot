@@ -1,0 +1,209 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                }
+            },
+            "family": "linux",
+            "distro": "fedora",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/3"
+            },
+            "release-date": "2005-06-13",
+            "eol-date": "2006-08-07",
+            "_vendor": "Fedora Project",
+            "tree": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/i386/os/",
+                    "kernel": "images/pxeboot/vmlinuz",
+                    "initrd": "images/pxeboot/initrd.img",
+                    "boot-iso": "images/boot.iso"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/x86_64/os/",
+                    "kernel": "images/pxeboot/vmlinuz",
+                    "initrd": "images/pxeboot/initrd.img",
+                    "boot-iso": "images/boot.iso"
+                }
+            ],
+            "-id": "http://fedoraproject.org/fedora/4",
+            "version": "4",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/3"
+            },
+            "short-id": "fedora4",
+            "_name": "Fedora Core 4",
+            "codename": "Stentz",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/i386/iso/FC4-i386-disc1.iso",
+                    "iso": {
+                        "application-id": "FC/4 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "665434112"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/i386/iso/FC4-i386-disc2.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "668708864",
+                        "application-id": "FC/4 i386"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/i386/iso/FC4-i386-disc3.iso",
+                    "iso": {
+                        "application-id": "FC/4 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "668954624"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/i386/iso/FC4-i386-disc4.iso",
+                    "iso": {
+                        "application-id": "FC/4 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "660512768"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/i386/iso/FC4-i386-DVD.iso",
+                    "iso": {
+                        "application-id": "FC/4 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "2750582784"
+                    }
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/x86_64/iso/FC4-x86_64-disc1.iso",
+                    "iso": {
+                        "volume-size": "668174336",
+                        "application-id": "FC/4 x86_64",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/x86_64/iso/FC4-x86_64-disc2.iso",
+                    "iso": {
+                        "application-id": "FC/4 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "666898432"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/x86_64/iso/FC4-x86_64-disc3.iso",
+                    "iso": {
+                        "application-id": "FC/4 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "669458432"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/x86_64/iso/FC4-x86_64-disc4.iso",
+                    "iso": {
+                        "application-id": "FC/4 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "667107328"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/x86_64/iso/FC4-x86_64-disc5.iso",
+                    "iso": {
+                        "volume-size": "173809664",
+                        "application-id": "FC/4 x86_64",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/x86_64/iso/FC4-x86_64-DVD.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "2932850688",
+                        "application-id": "FC/4 x86_64"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "iso": {
+                        "application-id": "FC/4 ppc",
+                        "system-id": "PPC",
+                        "volume-size": "661739520"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/ppc/iso/FC4-ppc-disc1.iso"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/ppc/iso/FC4-ppc-disc2.iso",
+                    "iso": {
+                        "volume-size": "642336768",
+                        "application-id": "FC/4 ppc",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/ppc/iso/FC4-ppc-disc3.iso",
+                    "iso": {
+                        "application-id": "FC/4 ppc",
+                        "system-id": "LINUX",
+                        "volume-size": "614821888"
+                    }
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/ppc/iso/FC4-ppc-disc4.iso",
+                    "iso": {
+                        "application-id": "FC/4 ppc",
+                        "system-id": "LINUX",
+                        "volume-size": "662865920"
+                    }
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/ppc/iso/FC4-ppc-disc5.iso",
+                    "iso": {
+                        "application-id": "FC/4 ppc",
+                        "system-id": "LINUX",
+                        "volume-size": "462649344"
+                    }
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/4/ppc/iso/FC4-ppc-DVD.iso",
+                    "iso": {
+                        "application-id": "FC/4 ppc",
+                        "system-id": "PPC",
+                        "volume-size": "3090690048"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ]
+        }
+    }
+}

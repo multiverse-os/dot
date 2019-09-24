@@ -1,0 +1,75 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "ubuntu",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/8.10"
+            },
+            "release-date": "2009-04-23",
+            "eol-date": "2010-10-23",
+            "short-id": [
+                "ubuntu9.04",
+                "ubuntujaunty"
+            ],
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/8.10"
+            },
+            "version": "9.04",
+            "_vendor": "Canonical Ltd",
+            "codename": "Jaunty Jackalope",
+            "devices": {
+                "device": {
+                    "-id": "http://pcisig.com/pci/1af4/1001"
+                }
+            },
+            "_name": "Ubuntu 9.04",
+            "family": "linux",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/jaunty/ubuntu-9.04-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 9.04(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 9.04(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/jaunty/ubuntu-9.04-server-amd64.iso"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu 9.04(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/jaunty/ubuntu-9.04-desktop-i386.iso"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu 9.04(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/jaunty/ubuntu-9.04-desktop-amd64.iso"
+                }
+            ],
+            "-id": "http://ubuntu.com/ubuntu/9.04"
+        }
+    }
+}

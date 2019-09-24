@@ -1,0 +1,16 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "oel",
+            "-id": "http://oracle.com/oel/4.5",
+            "_name": "Oracle Enterprise Linux 4.5",
+            "version": "4.5",
+            "_vendor": "Oracle America",
+            "family": "linux",
+            "short-id": "oel4.5",
+            "release-date": "2007-07-11",
+            "eol-date": "2013-03-28"
+        }
+    }
+}

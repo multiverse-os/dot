@@ -1,0 +1,77 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "rhel-atomic-7.2",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel-atomic/7.1"
+            },
+            "release-date": "2015-11-19",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "ram": "2147483648",
+                    "storage": "10737418240",
+                    "n-cpus": "1"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "2147483648",
+                    "storage": "10737418240"
+                }
+            },
+            "family": "linux",
+            "distro": "rhel",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel-atomic/7.1"
+            },
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Red Hat Enterprise Linux Atomic",
+                        "volume-size": "727855104"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Red Hat Enterprise Linux Atomic",
+                        "volume-size": "736882688"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Red Hat Enterprise Linux Atomic",
+                        "volume-size": "736743424"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Red Hat Enterprise Linux Atomic",
+                        "volume-size": "733599744"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "-id": "http://redhat.com/rhel-atomic/7.2",
+            "_name": "Red Hat Enterprise Linux Atomic Host 7.2",
+            "version": "7.2",
+            "_vendor": "Red Hat, Inc"
+        }
+    }
+}

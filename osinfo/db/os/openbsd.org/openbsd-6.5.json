@@ -1,0 +1,74 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "variant": {
+                "-id": "netinst",
+                "_name": "OpenBSD 6.5"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "https://cdn.openbsd.org/pub/OpenBSD/6.5/i386/install65.iso",
+                    "iso": {
+                        "volume-id": "OpenBSD/i386    6.5 Install CD",
+                        "application-id": "OpenBSD 6.5 i386 Install CD",
+                        "publisher-id": "Copyright \\(c\\) 2019 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD"
+                    }
+                },
+                {
+                    "url": "https://cdn.openbsd.org/pub/OpenBSD/6.5/amd64/install65.iso",
+                    "iso": {
+                        "application-id": "OpenBSD 6.5 amd64 Install CD",
+                        "publisher-id": "Copyright \\(c\\) 2019 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/amd64   6.5 Install CD"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/6.5/i386/cd65.iso",
+                    "iso": {
+                        "volume-id": "OpenBSD/i386    6\\.5 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 6\\.5 i386 bootonly CD",
+                        "publisher-id": "Copyright \\(c\\) 2019 Theo de Raadt, The OpenBSD project"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/6.5/amd64/cd65.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2019 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   6\\.5 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 6\\.5 amd64 bootonly CD"
+                    }
+                }
+            ],
+            "short-id": "openbsd6.5",
+            "version": "6.5",
+            "_vendor": "OpenBSD Project",
+            "eol-date": "2020-05-01",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/6.4"
+            },
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/6.4"
+            },
+            "release-date": "2019-05-01",
+            "-id": "http://openbsd.org/openbsd/6.5",
+            "_name": "OpenBSD 6.5",
+            "family": "openbsd",
+            "distro": "openbsd"
+        }
+    }
+}

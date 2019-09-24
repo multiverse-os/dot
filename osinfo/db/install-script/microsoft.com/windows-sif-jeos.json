@@ -1,0 +1,62 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "install-script": {
+            "profile": "jeos",
+            "expected-filename": "winnt.sif",
+            "config": {
+                "param": [
+                    {
+                        "-name": "admin-password",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "reg-product-key",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "user-realname",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "driver-signing",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "injection-method": "floppy",
+            "template": {
+                "stylesheet": {
+                    "template": {
+                        "#content": "\"\n    ComputerName=\n\n[Display]\n    BitsPerPel=16\n    Xresolution=640\n    YResolution=480\n    Vrefresh=60\n\n[RegionalSettings]\n    LanguageGroup=1\n\n[Identification]\n    JoinWorkgroup=WORKGROUP\n\n[Networking]\n    InstallDefaultComponents=Yes",
+                        "-match": "/install-script-config",
+                        "if": {
+                            "#content": "DriverSigningPolicy=Ignore",
+                            "-test": "config/driver-signing = 'false'"
+                        },
+                        "value-of": [
+                            {
+                                "-select": "config/admin-password"
+                            },
+                            {
+                                "-select": "config/reg-product-key"
+                            },
+                            {
+                                "-select": "config/user-realname"
+                            }
+                        ]
+                    },
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform",
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    }
+                }
+            },
+            "-id": "http://microsoft.com/windows/sif/jeos",
+            "path-format": "dos",
+            "product-key-format": "$$$$$-$$$$$-$$$$$-$$$$$-$$$$$",
+            "can-pre-install-drivers": ""
+        }
+    }
+}

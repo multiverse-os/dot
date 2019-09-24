@@ -1,0 +1,13 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "class": "input",
+            "bus-type": "xen",
+            "product": "Virtual Keyboard",
+            "product-id": "vkbd",
+            "name": "xen-vkbd",
+            "-id": "http://xen.org/xen/vkbd"
+        }
+    }
+}

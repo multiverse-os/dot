@@ -1,0 +1,140 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "7-unknown",
+            "distro": "rhel",
+            "codename": "Maipo",
+            "-id": "http://redhat.com/rhel/7-unknown",
+            "short-id": "rhel7-unknown",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL-7.([89]|[1-9][0-9]).*x86_64.*"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "aarch64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-7.([89]|[1-9][0-9]).*aarch64$"
+                    }
+                },
+                {
+                    "-arch": "ppc64",
+                    "iso": {
+                        "volume-id": "RHEL[-_]7.([89]|[1-9][0-9]).*ppc64$",
+                        "system-id": "PPC"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "RHEL[-_]7.([89]|[1-9][0-9]).*ppc64le$",
+                        "system-id": "PPC"
+                    },
+                    "-arch": "ppc64le"
+                },
+                {
+                    "-arch": "s390x",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-7.([89]|[1-9][0-9]).*s390x$"
+                    }
+                }
+            ],
+            "tree": [
+                {
+                    "-arch": "ppc64",
+                    "treeinfo": {
+                        "version": "^7.([89]|[1-9][0-9])$",
+                        "arch": "ppc64",
+                        "family": "Red Hat Enterprise Linux"
+                    }
+                },
+                {
+                    "-arch": "ppc64le",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^7.([89]|[1-9][0-9])$",
+                        "arch": "ppc64le"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^7.([89]|[1-9][0-9])$",
+                        "arch": "s390x"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^7.([89]|[1-9][0-9])$",
+                        "arch": "x86_64"
+                    }
+                }
+            ],
+            "resources": [
+                {
+                    "-arch": "ppc64",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "cpu": "1000000000",
+                        "ram": "2147483648",
+                        "storage": "10737418240"
+                    },
+                    "recommended": {
+                        "cpu": "4000000000",
+                        "ram": "2147483648",
+                        "storage": "21474836480"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "minimum": {
+                        "ram": "1073741824",
+                        "storage": "10737418240",
+                        "n-cpus": "1",
+                        "cpu": "1000000000"
+                    },
+                    "recommended": {
+                        "ram": "1073741824",
+                        "storage": "10737418240",
+                        "cpu": "1000000000"
+                    },
+                    "maximum": {
+                        "ram": "13194139533312"
+                    },
+                    "network-install": {
+                        "ram": "2147483648"
+                    }
+                }
+            ],
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/7.7"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/7.7"
+            },
+            "_name": "Red Hat Enterprise Linux 7 Unknown",
+            "_vendor": "Red Hat, Inc",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            }
+        }
+    }
+}

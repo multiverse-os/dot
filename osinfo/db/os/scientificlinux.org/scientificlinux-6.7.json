@@ -1,0 +1,54 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2016-05-25",
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/6.7/x86_64/os/",
+                    "treeinfo": {
+                        "family": "Scientific",
+                        "version": "6.7",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/6.7/i386/os/",
+                    "treeinfo": {
+                        "family": "Scientific Linux",
+                        "version": "6.7",
+                        "arch": "i386"
+                    },
+                    "-arch": "i686"
+                }
+            ],
+            "-id": "http://scientificlinux.org/scientificlinux/6.7",
+            "short-id": "scientificlinux6.7",
+            "version": "6.7",
+            "family": "linux",
+            "distro": "scientificlinux",
+            "release-date": "2015-08-26",
+            "resources": {
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                }
+            },
+            "_name": "Scientific Linux 6.7",
+            "_vendor": "Scientific Linux",
+            "upgrades": {
+                "-id": "http://scientificlinux.org/scientificlinux/6.6"
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.7"
+            }
+        }
+    }
+}

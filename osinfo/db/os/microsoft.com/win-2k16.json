@@ -1,0 +1,92 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "win2k16",
+            "_name": "Microsoft Windows Server 2016",
+            "version": "10.0",
+            "distro": "win",
+            "variant": [
+                {
+                    "-id": "hyperv",
+                    "_name": "Windows Server 2016 for HyperV"
+                },
+                {
+                    "-id": "essentials",
+                    "_name": "Windows Server 2016 Essentials"
+                }
+            ],
+            "release-date": "2017-10-17",
+            "media": [
+                {
+                    "iso": {
+                        "volume-id": "^(SSS_X64CHK|SSS_X64FREE?)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "essentials"
+                    },
+                    "iso": {
+                        "volume-id": "^(SESS_X64FREE?)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "^(SHV_X64CHK|SHV_X64FREE?)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "hyperv"
+                    }
+                }
+            ],
+            "-id": "http://microsoft.com/win/2k16",
+            "_vendor": "Microsoft Corporation",
+            "family": "winnt",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/2k12r2"
+            },
+            "upgrades": {
+                "-id": "http://microsoft.com/win/2k12r2"
+            },
+            "resources": {
+                "maximum": {
+                    "ram": "26388279066624"
+                },
+                "-arch": "x86_64",
+                "minimum": {
+                    "cpu": "1400000000",
+                    "n-cpus": "1",
+                    "ram": "536870912",
+                    "storage": "34359738368"
+                },
+                "recommended": {
+                    "cpu": "2000000000",
+                    "ram": "2147483648",
+                    "storage": "42949672960"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,353 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "10",
+            "distro": "fedora",
+            "codename": "Cambridge",
+            "tree": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "10",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/x86_64/os/",
+                    "treeinfo": {
+                        "version": "10",
+                        "arch": "x86_64",
+                        "family": "Fedora"
+                    },
+                    "-arch": "x86_64"
+                }
+            ],
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/9"
+            },
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                }
+            },
+            "short-id": "fedora10",
+            "_name": "Fedora 10",
+            "_vendor": "Fedora Project",
+            "family": "linux",
+            "release-date": "2008-11-25",
+            "eol-date": "2009-12-17",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1005"
+                    }
+                ]
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/i386/iso/Fedora-10-i386-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 i386 DVD",
+                        "system-id": "LINUX",
+                        "volume-size": "3662573568"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/i386/iso/Fedora-10-i386-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 i386 Disc 1",
+                        "system-id": "LINUX",
+                        "volume-size": "720508928"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/i386/iso/Fedora-10-i386-disc2.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 i386 Disc 2",
+                        "system-id": "LINUX",
+                        "volume-size": "706545664"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/i386/iso/Fedora-10-i386-disc3.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 i386 Disc 3",
+                        "system-id": "LINUX",
+                        "volume-size": "708554752"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/i386/iso/Fedora-10-i386-disc4.iso",
+                    "iso": {
+                        "volume-size": "724043776",
+                        "volume-id": "Fedora 10 i386 Disc 4",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/i386/iso/Fedora-10-i386-disc5.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 i386 Disc 5",
+                        "system-id": "LINUX",
+                        "volume-size": "720308224"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/i386/iso/Fedora-10-i386-disc6.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 i386 Disc 6",
+                        "system-id": "LINUX",
+                        "volume-size": "83990528"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/x86_64/iso/Fedora-10-x86_64-DVD.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "4172283904",
+                        "volume-id": "Fedora 10 x86_64 DVD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/x86_64/iso/Fedora-10-x86_64-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 x86_64 Disc 1",
+                        "system-id": "LINUX",
+                        "volume-size": "721672192"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/x86_64/iso/Fedora-10-x86_64-disc2.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 x86_64 Disc 2",
+                        "system-id": "LINUX",
+                        "volume-size": "723263488"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/x86_64/iso/Fedora-10-x86_64-disc3.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 x86_64 Disc 3",
+                        "system-id": "LINUX",
+                        "volume-size": "721778688"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/x86_64/iso/Fedora-10-x86_64-disc4.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 x86_64 Disc 4",
+                        "system-id": "LINUX",
+                        "volume-size": "721303552"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/x86_64/iso/Fedora-10-x86_64-disc5.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 x86_64 Disc 5",
+                        "system-id": "LINUX",
+                        "volume-size": "724482048"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/x86_64/iso/Fedora-10-x86_64-disc6.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 x86_64 Disc 6",
+                        "system-id": "LINUX",
+                        "volume-size": "560422912"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/ppc/iso/Fedora-10-ppc-DVD.iso",
+                    "iso": {
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "4497768448",
+                        "volume-id": "Fedora 10 ppc DVD"
+                    }
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/ppc/iso/Fedora-10-ppc-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 ppc Disc 1",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "729636864"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/ppc/iso/Fedora-10-ppc-disc2.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 ppc Disc 2",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "708579328"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/ppc/iso/Fedora-10-ppc-disc3.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 ppc Disc 3",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "714471424"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora 10 ppc Disc 4",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "687958016"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/ppc/iso/Fedora-10-ppc-disc4.iso"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/ppc/iso/Fedora-10-ppc-disc5.iso",
+                    "iso": {
+                        "volume-size": "716013568",
+                        "volume-id": "Fedora 10 ppc Disc 5",
+                        "system-id": "PPC|LINUX"
+                    }
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/ppc/iso/Fedora-10-ppc-disc6.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 ppc Disc 6",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "716664832"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Fedora/ppc/iso/Fedora-10-ppc-disc7.iso",
+                    "iso": {
+                        "volume-id": "Fedora 10 ppc Disc 7",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "94961664"
+                    }
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Live/i686/F10-i686-Live.iso",
+                    "iso": {
+                        "volume-id": "F10-i686-Live",
+                        "system-id": "LINUX",
+                        "volume-size": "714407936"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Live/i686/F10-i686-Live-KDE.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "711905280",
+                        "volume-id": "F10-i686-Live-KDE"
+                    }
+                },
+                {
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Live/x86_64/F10-x86_64-Live.iso",
+                    "iso": {
+                        "volume-id": "F10-x86_64-Live",
+                        "system-id": "LINUX",
+                        "volume-size": "717281280"
+                    },
+                    "kernel": "isolinux/vmlinuz0"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/10/Live/x86_64/F10-x86_64-Live-KDE.iso",
+                    "iso": {
+                        "volume-id": "F10-x86_64-Live-KDE",
+                        "system-id": "LINUX",
+                        "volume-size": "717221888"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                }
+            ],
+            "-id": "http://fedoraproject.org/fedora/10",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/9"
+            }
+        }
+    }
+}

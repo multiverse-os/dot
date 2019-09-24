@@ -1,0 +1,150 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "CentOS",
+            "family": "linux",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                }
+            },
+            "-id": "http://centos.org/centos/6.9",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "tree": [
+                {
+                    "treeinfo": {
+                        "arch": "x86_64",
+                        "family": "CentOS",
+                        "version": "6.9"
+                    },
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/6.9/os/x86_64/"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/6.9/os/i386/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "6.9",
+                        "arch": "i386"
+                    }
+                }
+            ],
+            "version": "6.9",
+            "distro": "centos",
+            "release-date": "2017-04-05",
+            "eol-date": "2018-07-03",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.9_Final",
+                        "volume-size": "3850491904"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "CentOS_6.9_Final",
+                        "volume-size": "3971962880",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-6.9-i386-LiveDVD",
+                        "volume-size": "2001133568"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "iso": {
+                        "volume-size": "2023274496",
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-6.9-x86_64-LiveDVD"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.9_Final",
+                        "volume-size": "375089152"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.9_Final",
+                        "volume-size": "427110400"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS",
+                        "volume-size": "190959616"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS",
+                        "volume-size": "240283648"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "short-id": "centos6.9",
+            "upgrades": {
+                "-id": "http://centos.org/centos/6.8"
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.9"
+            },
+            "_name": "CentOS 6.9"
+        }
+    }
+}

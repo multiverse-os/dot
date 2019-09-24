@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "platform": {
+            "-id": "http://linux-kvm.org/qemu-kvm/1.1.0",
+            "short-id": "qemu-kvm-1.1.0",
+            "_name": "QEMU-KVM 1.1.0",
+            "_vendor": "linux-kvm.org",
+            "version": "1.1.0",
+            "release-date": "2012-07-02",
+            "upgrades": {
+                "-id": "http://linux-kvm.org/qemu-kvm/1.0.1"
+            },
+            "derives-from": {
+                "-id": "http://qemu.org/qemu/1.1"
+            }
+        }
+    }
+}

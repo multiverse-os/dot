@@ -1,0 +1,49 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "17.10",
+            "_vendor": "System76, Inc.",
+            "release-date": "2017-10-19",
+            "media": [
+                {
+                    "iso": {
+                        "volume-id": "Pop_OS 17.10 amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi",
+                    "initrd": "casper/initrd.gz",
+                    "-arch": "x86_64",
+                    "-live": "true"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "iso": {
+                        "volume-id": "Pop_OS 17.10 amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi",
+                    "initrd": "casper/initrd.gz"
+                }
+            ],
+            "short-id": "popos17.10",
+            "_name": "Pop!_OS 17.10",
+            "distro": "popos",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "ram": "1073741824",
+                    "storage": "16106127360",
+                    "cpu": "1000000000"
+                }
+            },
+            "-id": "http://system76.com/popos/17.10",
+            "family": "linux"
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://altlinux.org/alt/p8.starterkits"
+            },
+            "release-status": "snapshot",
+            "short-id": "alt.p9",
+            "version": "p9",
+            "family": "linux",
+            "distro": "alt",
+            "derives-from": {
+                "-id": "http://altlinux.org/alt/p8.starterkits"
+            },
+            "media": [
+                {
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "ALT p9.*/i586",
+                        "publisher-id": "ALT LINUX TEAM",
+                        "application-id": "ALT-P9-.*"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz"
+                },
+                {
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "ALT p9.*/x86_64",
+                        "publisher-id": "ALT LINUX TEAM",
+                        "application-id": "ALT-P9-.*"
+                    }
+                }
+            ],
+            "resources": {
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "536870912",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                },
+                "-arch": "all"
+            },
+            "-id": "http://altlinux.org/alt/p9.starterkits",
+            "_name": "ALT p9 StarterKits",
+            "_vendor": "BaseALT"
+        }
+    }
+}

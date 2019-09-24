@@ -1,0 +1,71 @@
+{
+    "libosinfo": {
+        "os": {
+            "distro": "sle",
+            "upgrades": {
+                "-id": "http://suse.com/sle/15"
+            },
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-15-SP[1-9]-Installer-DVD-x86_64"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                },
+                {
+                    "initrd": "boot/aarch64/initrd",
+                    "-arch": "aarch64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-15-SP[1-9]-Installer-DVD-aarch64"
+                    },
+                    "kernel": "boot/aarch64/linux"
+                },
+                {
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-15-SP[1-9]-Installer-DVD-ppc64le"
+                    },
+                    "kernel": "boot/ppc64le/linux",
+                    "initrd": "boot/ppc64le/initrd",
+                    "-arch": "ppc64"
+                },
+                {
+                    "-arch": "s390x",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-15-SP[1-9]-Installer-DVD-s390x"
+                    },
+                    "kernel": "boot/s390x/linux",
+                    "initrd": "boot/s390x/initrd"
+                }
+            ],
+            "version": "15-unknown",
+            "short-id": "sle15-unknown",
+            "_name": "SUSE Linux Enterprise 15 Unknown",
+            "_vendor": "SUSE",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://suse.com/sle/15"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "1074151424"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "17179869184"
+                }
+            },
+            "-id": "http://suse.com/sle/15-unknown"
+        },
+        "-version": "0.0.1"
+    }
+}

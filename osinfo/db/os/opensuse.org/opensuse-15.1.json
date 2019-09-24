@@ -1,0 +1,121 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "linux",
+            "release-date": "2019-05-22",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "storage": "3221225472",
+                    "cpu": "1600000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824"
+                },
+                "recommended": {
+                    "storage": "17179869184",
+                    "cpu": "2400000000",
+                    "ram": "2147483648"
+                }
+            },
+            "-id": "http://opensuse.org/opensuse/15.1",
+            "version": "15.1",
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/15.0"
+            },
+            "_name": "openSUSE Leap 15.1",
+            "distro": "opensuse",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/15.0"
+            },
+            "variant": {
+                "-id": "netinst",
+                "_name": "openSUSE Leap 15.1"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://opensuse.org/opensuse/autoyast/jeos"
+                    },
+                    {
+                        "-id": "http://opensuse.org/opensuse/autoyast/desktop"
+                    }
+                ]
+            },
+            "short-id": "opensuse15.1",
+            "_vendor": "openSUSE",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "url": "https://download.opensuse.org/distribution/leap/15.1/iso/openSUSE-Leap-15.1-DVD-x86_64.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-Leap-15.1-DVD-x86_64*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://download.opensuse.org/distribution/leap/15.1/iso/openSUSE-Leap-15.1-NET-x86_64.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-Leap-15.1-NET-x86_64*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                },
+                {
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "url": "https://download.opensuse.org/distribution/leap/15.1/live/openSUSE-Leap-15.1-GNOME-Live-x86_64-Current.iso",
+                    "iso": {
+                        "volume-id": "openSUSE_Leap_15.1_GNOME_Live",
+                        "publisher-id": "SUSE LINUX GMBH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-installer-script": "false",
+                    "url": "https://download.opensuse.org/distribution/leap/15.1/live/openSUSE-Leap-15.1-KDE-Live-x86_64-Current.iso",
+                    "iso": {
+                        "volume-id": "openSUSE_Leap_15.1_KDE_Live",
+                        "publisher-id": "SUSE LINUX GMBH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "-live": "true"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "url": "https://download.opensuse.org/distribution/leap/15.1/live/openSUSE-Leap-15.1-Rescue-CD-x86_64-Current.iso",
+                    "iso": {
+                        "volume-id": "openSUSE_Leap_15.1_Rescue_CD",
+                        "publisher-id": "SUSE LINUX GMBH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                }
+            ],
+            "tree": {
+                "-arch": "x86_64",
+                "url": "https://download.opensuse.org/pub/opensuse/distribution/leap/15.1/repo/oss/",
+                "treeinfo": {
+                    "family": "openSUSE Leap",
+                    "version": "15.1",
+                    "arch": "x86_64"
+                }
+            }
+        }
+    }
+}

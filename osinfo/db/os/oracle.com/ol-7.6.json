@@ -1,0 +1,38 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "ol7.6",
+            "media": [
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "OL-7.6 Server.x86_64"
+                    }
+                },
+                {
+                    "-arch": "aarch64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "OL-7.6 Server.aarch64"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "_vendor": "Oracle America",
+            "family": "linux",
+            "distro": "ol",
+            "clones": {
+                "-id": "http://redhat.com/rhel/7.6"
+            },
+            "release-date": "2018-11-19",
+            "-id": "http://oracle.com/ol/7.6",
+            "_name": "Oracle Linux 7.6",
+            "version": "7.6"
+        }
+    }
+}

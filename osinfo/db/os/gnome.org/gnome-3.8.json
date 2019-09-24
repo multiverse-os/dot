@@ -1,0 +1,40 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "GNOME 3.8",
+            "family": "linux",
+            "distro": "gnome",
+            "release-date": "2013-03-27",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "n-cpus": "1"
+                }
+            },
+            "media": {
+                "initrd": "isolinux/initrd0.img",
+                "-arch": "i686",
+                "-live": "true",
+                "iso": {
+                    "volume-id": "GNOME38-LiveCD",
+                    "system-id": "LINUX"
+                },
+                "kernel": "isolinux/vmlinuz0"
+            },
+            "-id": "http://gnome.org/gnome/3.8",
+            "short-id": "gnome3.8",
+            "version": "3.8",
+            "_vendor": "GNOME Project",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/19"
+            },
+            "upgrades": {
+                "-id": "http://gnome.org/gnome/3.6"
+            }
+        }
+    }
+}

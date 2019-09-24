@@ -1,0 +1,72 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "15",
+            "family": "linux",
+            "release-date": "2018-07-16",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-15-Installer-DVD-x86_64"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                },
+                {
+                    "-arch": "aarch64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-15-Installer-DVD-aarch64"
+                    },
+                    "kernel": "boot/aarch64/linux",
+                    "initrd": "boot/aarch64/initrd"
+                },
+                {
+                    "kernel": "boot/ppc64le/linux",
+                    "initrd": "boot/ppc64le/initrd",
+                    "-arch": "ppc64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-15-Installer-DVD-ppc64le"
+                    }
+                },
+                {
+                    "kernel": "boot/s390x/linux",
+                    "initrd": "boot/s390x/initrd",
+                    "-arch": "s390x",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-15-Installer-DVD-s390x"
+                    }
+                }
+            ],
+            "-id": "http://suse.com/sle/15",
+            "short-id": "sle15",
+            "_name": "SUSE Linux Enterprise 15",
+            "derives-from": {
+                "-id": "http://suse.com/sles/12.3"
+            },
+            "resources": {
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "1074151424"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "17179869184"
+                },
+                "-arch": "all"
+            },
+            "_vendor": "SUSE",
+            "distro": "sle",
+            "upgrades": {
+                "-id": "http://suse.com/sles/12.3"
+            }
+        }
+    }
+}

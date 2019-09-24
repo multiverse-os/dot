@@ -1,0 +1,245 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://fedoraproject.org/fedora/23",
+            "version": "23",
+            "_vendor": "Fedora Project",
+            "family": "linux",
+            "tree": [
+                {
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Server/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "23",
+                        "arch": "i386"
+                    },
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "server"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "23",
+                        "arch": "x86_64"
+                    },
+                    "-arch": "x86_64",
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Server/x86_64/os/",
+                    "variant": {
+                        "-id": "server"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "23"
+                    },
+                    "-arch": "all"
+                }
+            ],
+            "_name": "Fedora 23",
+            "release-date": "2015-11-03",
+            "variant": [
+                {
+                    "-id": "workstation",
+                    "_name": "Fedora 23 Workstation"
+                },
+                {
+                    "-id": "workstation-netinst",
+                    "_name": "Fedora 23 Workstation"
+                },
+                {
+                    "_name": "Fedora 23 Server",
+                    "-id": "server"
+                },
+                {
+                    "-id": "server-netinst",
+                    "_name": "Fedora 23 Server"
+                }
+            ],
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1041"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1042"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1043"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1044"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1045"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1048"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1049"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1052"
+                    },
+                    {
+                        "-id": "http://qemu.org/chipset/x86/q35"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/10d3"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/293e"
+                    }
+                ]
+            },
+            "media": [
+                {
+                    "iso": {
+                        "volume-id": "Fedora-Live-WS-i686-23.*",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Workstation/i386/iso/Fedora-Live-Workstation-i686-23-10.iso"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora-Live-WS-x86_64-23.*",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Workstation/x86_64/iso/Fedora-Live-Workstation-x86_64-23-10.iso"
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "workstation-netinst"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Workstation/i386/iso/Fedora-Workstation-netinst-i386-23.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WS-23(_[A-Za-z]*)*-i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "workstation-netinst"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Workstation/x86_64/iso/Fedora-Workstation-netinst-x86_64-23.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WS-23(_[A-Za-z]*)*-x86_64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Server/i386/iso/Fedora-Server-DVD-i386-23.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S-23(_[A-Za-z]*)*-i386",
+                        "system-id": "LINUX",
+                        "volume-size": "2254878720"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Server/x86_64/iso/Fedora-Server-DVD-x86_64-23.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S-23(_[A-Za-z]*)*-x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "2149087232"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "server-netinst"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Server/i386/iso/Fedora-Server-netinst-i386-23.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "479557632",
+                        "volume-id": "Fedora-S-23(_[A-Za-z]*)*-i386"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server-netinst"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Server/x86_64/iso/Fedora-Server-netinst-x86_64-23.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S-23(_[A-Za-z]*)*-x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "435079168"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "storage": "10737418240",
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "fedora23",
+            "distro": "fedora",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/22"
+            },
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/22"
+            },
+            "eol-date": "2016-12-20"
+        }
+    }
+}

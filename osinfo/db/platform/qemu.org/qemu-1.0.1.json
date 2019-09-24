@@ -1,0 +1,16 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "platform": {
+            "-id": "http://qemu.org/qemu/1.0.1",
+            "short-id": "qemu-1.0.1",
+            "_name": "QEMU 1.0.1",
+            "_vendor": "qemu.org",
+            "version": "1.0.1",
+            "release-date": "2012-02-17",
+            "upgrades": {
+                "-id": "http://qemu.org/qemu/1.0"
+            }
+        }
+    }
+}

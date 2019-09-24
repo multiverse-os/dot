@@ -1,0 +1,84 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "12.2",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/12.1"
+            },
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/12.1"
+            },
+            "release-date": "2012-09-05",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://download.opensuse.org/distribution/12.2/iso/openSUSE-12.2-DVD-i586.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX Products GmbH",
+                        "volume-id": "openSUSE-DVD-i586-Build0167"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd"
+                },
+                {
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "url": "http://download.opensuse.org/distribution/12.2/iso/openSUSE-12.2-DVD-x86_64.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-DVD-x86_640167",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX Products GmbH"
+                    }
+                },
+                {
+                    "url": "http://download.opensuse.org/distribution/12.2/iso/openSUSE-12.2-GNOME-LiveCD-i686.iso",
+                    "iso": {
+                        "volume-id": "openSUSE Live CD.*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX Products GmbH"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd",
+                    "-arch": "i686",
+                    "-live": "true"
+                },
+                {
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://download.opensuse.org/distribution/12.2/iso/openSUSE-12.2-GNOME-LiveCD-x86_64.iso",
+                    "iso": {
+                        "publisher-id": "SUSE LINUX Products GmbH",
+                        "volume-id": "openSUSE Live CD.*",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "boot/x86_64/loader/linux"
+                }
+            ],
+            "-id": "http://opensuse.org/opensuse/12.2",
+            "_name": "openSUSE 12.2",
+            "_vendor": "openSUSE",
+            "distro": "opensuse",
+            "eol-date": "2014-01-15",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "3221225472"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "2147483648",
+                    "storage": "10737418240"
+                }
+            },
+            "short-id": "opensuse12.2"
+        }
+    }
+}

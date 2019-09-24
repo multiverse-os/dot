@@ -1,0 +1,112 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://ubuntu.com/ubuntu/17.10",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/17.04"
+            },
+            "eol-date": "2018-07-19",
+            "version": "17.10",
+            "_vendor": "Canonical Ltd",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/17.04"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "storage": "16106127360",
+                    "cpu": "1000000000",
+                    "ram": "1073741824"
+                }
+            },
+            "codename": "Artful Aardvark",
+            "release-date": "2017-10-19",
+            "media": [
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/artful/ubuntu-17.10.1-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 17.10(.\\d\\+?)? i386"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 17.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/artful/ubuntu-17.10.1-server-amd64.iso"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/artful/ubuntu-17.10.1-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 17.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi",
+                    "initrd": "casper/initrd.lz"
+                },
+                {
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "aarch64",
+                    "url": "http://old-releases.ubuntu.com/releases/artful/ubuntu-17.10-server-arm64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 17.10(.\\d\\+?)? arm64"
+                    }
+                },
+                {
+                    "-arch": "ppc64le",
+                    "url": "http://old-releases.ubuntu.com/releases/artful/ubuntu-17.10-server-ppc64el.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 17.10(.\\d\\+?)? ppc64"
+                    },
+                    "kernel": "install/vmlinux",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "kernel": "boot/kernel.ubuntu",
+                    "initrd": "boot/initrd.ubuntu",
+                    "-arch": "s390x",
+                    "url": "http://old-releases.ubuntu.com/releases/artful/ubuntu-17.10-server-s390x.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 17.10(.\\d\\+?)? s390x"
+                    }
+                }
+            ],
+            "short-id": [
+                "ubuntu17.10",
+                "ubuntuartful"
+            ],
+            "_name": "Ubuntu 17.10",
+            "family": "linux",
+            "distro": "ubuntu",
+            "installer": {
+                "script": {
+                    "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                }
+            }
+        }
+    }
+}

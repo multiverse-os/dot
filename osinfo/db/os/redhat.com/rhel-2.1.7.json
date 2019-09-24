@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Red Hat, Inc",
+            "codename": "Pensacola",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/2.1.6"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/2.1.6"
+            },
+            "release-date": "2005-04-28",
+            "-id": "http://redhat.com/rhel/2.1.7",
+            "short-id": "rhel2.1.7",
+            "_name": "Red Hat Enterprise Linux 2.1 Update 7",
+            "version": "2.1.7",
+            "family": "linux",
+            "distro": "rhel",
+            "eol-date": "2009-05-31"
+        }
+    }
+}

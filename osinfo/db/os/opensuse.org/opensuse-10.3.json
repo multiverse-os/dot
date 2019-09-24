@@ -1,0 +1,36 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "linux",
+            "distro": "opensuse",
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/10.2"
+            },
+            "release-date": "2007-10-04",
+            "short-id": "opensuse10.3",
+            "_name": "openSUSE 10.3",
+            "version": "10.3",
+            "_vendor": "openSUSE",
+            "eol-date": "2009-10-31",
+            "-id": "http://opensuse.org/opensuse/10.3",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/10.2"
+            },
+            "resources": {
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "268435456",
+                    "storage": "524288000",
+                    "cpu": "500000000"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "536870912",
+                    "storage": "3221225472"
+                },
+                "-arch": "all"
+            }
+        }
+    }
+}

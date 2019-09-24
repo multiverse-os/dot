@@ -1,0 +1,248 @@
+{
+    "libosinfo": {
+        "os": {
+            "short-id": "eos3.6",
+            "release-date": "2019-06-11",
+            "resources": {
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "42949672960"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "-id": "http://endlessos.com/eos/3.6",
+            "version": "3.6",
+            "family": "linux",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "base"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.6.3/eos-amd64-amd64/base/eos-eos3.6-amd64-amd64.190910-121905.base.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-6-\\d+-base$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "en"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.6.3/eos-amd64-amd64/en/eos-eos3.6-amd64-amd64.190910-121907.en.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-6-\\d+-en$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "url": "https://images-dl.endlessm.com/release/3.6.3/eos-amd64-amd64/es/eos-eos3.6-amd64-amd64.190910-125010.es.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-6-\\d+-es$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "es"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "fr"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.6.3/eos-amd64-amd64/fr/eos-eos3.6-amd64-amd64.190910-130706.fr.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-6-\\d+-fr$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "-live": "true",
+                    "variant": {
+                        "-id": "id"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.6.3/eos-amd64-amd64/id/eos-eos3.6-amd64-amd64.190910-165243.id.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-6-\\d+-id$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "pt_BR"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.6.3/eos-amd64-amd64/pt_BR/eos-eos3.6-amd64-amd64.190910-141633.pt_BR.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-6-\\d+-pt_BR$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "th"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.6.3/eos-amd64-amd64/th/eos-eos3.6-amd64-amd64.190910-145521.th.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-6-\\d+-th$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "vi"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.6.3/eos-amd64-amd64/vi/eos-eos3.6-amd64-amd64.190910-152705.vi.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-6-\\d+-vi$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true"
+                },
+                {
+                    "-arch": "all",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "other"
+                    },
+                    "iso": {
+                        "volume-id": "\\D+-3-6-\\d+",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                }
+            ],
+            "_vendor": "Endless Mobile, Inc",
+            "upgrades": {
+                "-id": "http://endlessos.com/eos/3.5"
+            },
+            "derives-from": {
+                "-id": "http://endlessos.com/eos/3.5"
+            },
+            "variant": [
+                {
+                    "-id": "base",
+                    "_name": "Endless OS Basic"
+                },
+                {
+                    "-id": "en",
+                    "_name": "Endless OS English"
+                },
+                {
+                    "-id": "es",
+                    "_name": "Endless OS Spanish"
+                },
+                {
+                    "-id": "fr",
+                    "_name": "Endless OS French"
+                },
+                {
+                    "-id": "id",
+                    "_name": "Endless OS Indonesian"
+                },
+                {
+                    "-id": "pt_BR",
+                    "_name": "Endless OS Portuguese (Brazil)"
+                },
+                {
+                    "-id": "th",
+                    "_name": "Endless OS Thai"
+                },
+                {
+                    "-id": "vi",
+                    "_name": "Endless OS Vietnamese"
+                },
+                {
+                    "-id": "other",
+                    "_name": "Endless OS (other)"
+                }
+            ],
+            "_name": "Endless OS 3.6",
+            "distro": "eos",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0100"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    },
+                    {
+                        "-id": "http://usb.org/usb/80ee/0021"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1003"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1005"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1033/0194"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0004"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1041"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1042"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1043"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1044"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1045"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1048"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1049"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1052"
+                    },
+                    {
+                        "-id": "http://qemu.org/chipset/x86/q35"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/10d3"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/293e"
+                    }
+                ]
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

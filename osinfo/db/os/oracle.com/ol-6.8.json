@@ -1,0 +1,39 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "ol",
+            "release-date": "2016-05-17",
+            "eol-date": "2024-03-31",
+            "_vendor": "Oracle America",
+            "family": "linux",
+            "_name": "Oracle Linux 6.8",
+            "version": "6.8",
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.8"
+            },
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "OL6.8 x86_64 Disc 1"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "OL6.8 i386 Disc 1"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "-id": "http://oracle.com/ol/6.8",
+            "short-id": "ol6.8"
+        }
+    }
+}

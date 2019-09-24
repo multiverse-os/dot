@@ -1,0 +1,42 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://scientificlinux.org/scientificlinux/5.6",
+            "_vendor": "Scientific Linux",
+            "distro": "scientificlinux",
+            "release-date": "2011-06-21",
+            "eol-date": "2017-03-31",
+            "short-id": "scientificlinux5.6",
+            "_name": "Scientific Linux 5.6",
+            "version": "5.6",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://scientificlinux.org/scientificlinux/5.5"
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.6"
+            },
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/obsolete/56/x86_64/",
+                    "treeinfo": {
+                        "family": "Scientific Linux",
+                        "version": "56",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/obsolete/56/i386/",
+                    "treeinfo": {
+                        "family": "Scientific Linux",
+                        "version": "56",
+                        "arch": "i386"
+                    }
+                }
+            ]
+        }
+    }
+}

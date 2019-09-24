@@ -1,0 +1,95 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/12.04"
+            },
+            "release-date": "2012-10-18",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "1073741824",
+                    "storage": "5368709120",
+                    "cpu": "1000000000",
+                    "n-cpus": "1"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "16106127360"
+                }
+            },
+            "_vendor": "Canonical Ltd",
+            "family": "linux",
+            "distro": "ubuntu",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/12.04"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/quantal/ubuntu-12.10-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 12.10(.\\d\\+?)? i386"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    }
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/quantal/ubuntu-12.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 12.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/quantal/ubuntu-12.10-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 12.10(.\\d\\+?)? i386"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/quantal/ubuntu-12.10-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 12.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "x86_64"
+                }
+            ],
+            "-id": "http://ubuntu.com/ubuntu/12.10",
+            "version": "12.10",
+            "codename": "Quantal Quetzal",
+            "eol-date": "2014-05-16",
+            "installer": {
+                "script": {
+                    "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                }
+            },
+            "short-id": [
+                "ubuntu12.10",
+                "ubuntuquantal"
+            ],
+            "_name": "Ubuntu 12.10"
+        }
+    }
+}

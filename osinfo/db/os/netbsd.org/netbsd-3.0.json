@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "netbsd",
+            "upgrades": {
+                "-id": "http://netbsd.org/netbsd/2.0"
+            },
+            "derives-from": {
+                "-id": "http://netbsd.org/netbsd/2.0"
+            },
+            "-id": "http://netbsd.org/netbsd/3.0",
+            "version": "3.0",
+            "_vendor": "NetBSD Project",
+            "family": "netbsd",
+            "release-date": "2005-12-23",
+            "short-id": "netbsd3.0",
+            "_name": "NetBSD 3.0"
+        }
+    }
+}

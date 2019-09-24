@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Red Hat, Inc",
+            "distro": "rhel",
+            "codename": "Taroon",
+            "-id": "http://redhat.com/rhel/3.8",
+            "short-id": "rhel3.8",
+            "_name": "Red Hat Enterprise Linux 3 Update 8",
+            "eol-date": "2014-01-30",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/3.7"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/3.7"
+            },
+            "version": "3.8",
+            "family": "linux",
+            "release-date": "2006-07-20"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "name": "xen-vif",
+            "-id": "http://xen.org/xen/vif",
+            "class": "net",
+            "bus-type": "xen",
+            "product": "Virtual Interface",
+            "product-id": "vif"
+        }
+    }
+}

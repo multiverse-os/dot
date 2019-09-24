@@ -1,0 +1,44 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://suse.com/sles/12",
+            "upgrades": {
+                "-id": "http://suse.com/sles/11.4"
+            },
+            "release-date": "2014-10-27",
+            "media": {
+                "-arch": "x86_64",
+                "iso": {
+                    "system-id": "LINUX",
+                    "volume-id": "SLE-12-Server-DVD-x86_64"
+                },
+                "kernel": "boot/x86_64/loader/linux",
+                "initrd": "boot/x86_64/loader/initrd"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "1074151424"
+                },
+                "recommended": {
+                    "ram": "1073741824",
+                    "storage": "17179869184",
+                    "cpu": "2400000000"
+                }
+            },
+            "short-id": "sles12",
+            "_name": "SUSE Linux Enterprise Server 12",
+            "version": "12",
+            "_vendor": "SUSE",
+            "family": "linux",
+            "distro": "sles",
+            "derives-from": {
+                "-id": "http://suse.com/sles/11.4"
+            },
+            "eol-date": "2016-06-30"
+        }
+    }
+}

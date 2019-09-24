@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "win16",
+            "upgrades": {
+                "-id": "http://microsoft.com/win/2.0"
+            },
+            "derives-from": {
+                "-id": "http://microsoft.com/win/2.0"
+            },
+            "-id": "http://microsoft.com/win/2.1",
+            "_name": "Microsoft Windows 2.1",
+            "_vendor": "Microsoft Corporation",
+            "distro": "win",
+            "version": "2.1",
+            "release-date": "1988-05-27",
+            "eol-date": "2001-12-31",
+            "short-id": "win2.1"
+        }
+    }
+}

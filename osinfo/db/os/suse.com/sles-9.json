@@ -1,0 +1,28 @@
+{
+    "libosinfo": {
+        "os": {
+            "release-date": "2004-08-03",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "storage": "2147483648",
+                    "cpu": "500000000",
+                    "ram": "268435456"
+                },
+                "recommended": {
+                    "cpu": "1600000000",
+                    "ram": "536870912",
+                    "storage": "4294967296"
+                }
+            },
+            "-id": "http://suse.com/sles/9",
+            "short-id": "sles9",
+            "_name": "SUSE Linux Enterprise Server 9",
+            "family": "linux",
+            "distro": "sles",
+            "version": "9",
+            "_vendor": "SUSE"
+        },
+        "-version": "0.0.1"
+    }
+}

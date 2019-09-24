@@ -1,0 +1,43 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "SUSE Linux Enterprise Desktop 11",
+            "version": "11",
+            "_vendor": "SUSE",
+            "family": "linux",
+            "distro": "sled",
+            "release-date": "2009-03-24",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    }
+                ]
+            },
+            "short-id": "sled11",
+            "upgrades": {
+                "-id": "http://suse.com/sled/10.4"
+            },
+            "derives-from": {
+                "-id": "http://suse.com/sled/10.4"
+            },
+            "eol-date": "2010-12-31",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "3221225472"
+                },
+                "recommended": {
+                    "ram": "1073741824"
+                }
+            },
+            "-id": "http://suse.com/sled/11"
+        }
+    }
+}

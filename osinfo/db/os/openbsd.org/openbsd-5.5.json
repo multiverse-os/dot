@@ -1,0 +1,72 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/5.4"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2014 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/i386    5.5 Install CD",
+                        "application-id": "OpenBSD 5.5 i386 Install CD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2014 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/amd64   5.5 Install CD",
+                        "application-id": "OpenBSD 5.5 amd64 Install CD"
+                    }
+                },
+                {
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.5/i386/cd55.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2014 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/i386    5\\.5 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.5 i386 bootonly CD"
+                    },
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    }
+                },
+                {
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2014 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   5\\.5 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.5 amd64 bootonly CD"
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.5/amd64/cd55.iso"
+                }
+            ],
+            "short-id": "openbsd5.5",
+            "version": "5.5",
+            "distro": "openbsd",
+            "_vendor": "OpenBSD Project",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/5.4"
+            },
+            "release-date": "2014-05-01",
+            "eol-date": "2015-05-01",
+            "variant": {
+                "-id": "netinst",
+                "_name": "OpenBSD 5.5"
+            },
+            "-id": "http://openbsd.org/openbsd/5.5",
+            "_name": "OpenBSD 5.5",
+            "family": "openbsd"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "os": {
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/4.10"
+            },
+            "short-id": "freebsd4.11",
+            "_name": "FreeBSD 4.11",
+            "distro": "freebsd",
+            "release-date": "2005-01-25",
+            "eol-date": "2007-01-31",
+            "-id": "http://freebsd.org/freebsd/4.11",
+            "version": "4.11",
+            "_vendor": "FreeBSD Project",
+            "family": "freebsd",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/4.10"
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

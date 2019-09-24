@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/6.1"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/6.1"
+            },
+            "-id": "http://redhat.com/rhl/7",
+            "short-id": "rhl7",
+            "version": "7",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "distro": "rhl",
+            "release-date": "2000-09-25",
+            "eol-date": "2003-03-31",
+            "_name": "Red Hat Linux 7",
+            "codename": "Guinness"
+        }
+    }
+}

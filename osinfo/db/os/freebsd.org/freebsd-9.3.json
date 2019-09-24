@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "os": {
+            "-id": "http://freebsd.org/freebsd/9.3",
+            "_vendor": "FreeBSD Project",
+            "family": "freebsd",
+            "distro": "freebsd",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/9.2"
+            },
+            "eol-date": "2016-12-31",
+            "short-id": "freebsd9.3",
+            "_name": "FreeBSD 9.3",
+            "version": "9.3",
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/9.2"
+            },
+            "release-date": "2014-07-16"
+        },
+        "-version": "0.0.1"
+    }
+}

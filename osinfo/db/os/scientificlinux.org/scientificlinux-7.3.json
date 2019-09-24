@@ -1,0 +1,44 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "clones": {
+                "-id": "http://redhat.com/rhel/7.3"
+            },
+            "release-date": "2017-01-25",
+            "-id": "http://scientificlinux.org/scientificlinux/7.3",
+            "short-id": "scientificlinux7.3",
+            "version": "7.3",
+            "upgrades": {
+                "-id": "http://scientificlinux.org/scientificlinux/7.2"
+            },
+            "tree": {
+                "-arch": "x86_64",
+                "url": "http://ftp1.scientificlinux.org/linux/scientific/7.3/x86_64/os/",
+                "treeinfo": {
+                    "version": "7.3",
+                    "arch": "x86_64",
+                    "family": "Scientific"
+                }
+            },
+            "resources": {
+                "recommended": {
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "cpu": "1000000000"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            },
+            "_name": "Scientific Linux 7.3",
+            "_vendor": "Scientific Linux",
+            "family": "linux",
+            "distro": "scientificlinux"
+        }
+    }
+}

@@ -1,0 +1,113 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://voidlinux.org/voidlinux/rolling",
+            "_vendor": "Void Linux",
+            "family": "linux",
+            "distro": "voidlinux",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "iso": {
+                        "volume-id": "VOID_LIVE"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "iso": {
+                        "volume-id": "VOID_LIVE"
+                    }
+                }
+            ],
+            "short-id": "voidlinux",
+            "_name": "Void Linux",
+            "release-status": "rolling",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1033/0194"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1002"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1003"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1004"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1005"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1009"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1041"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1042"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1043"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1044"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1045"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1048"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1049"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1052"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0004"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0100"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/10d3"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/293e"
+                    },
+                    {
+                        "-id": "http://qemu.org/chipset/x86/q35"
+                    },
+                    {
+                        "-id": "http://usb.org/usb/80ee/0021"
+                    }
+                ]
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "100663296",
+                    "storage": "367001600"
+                }
+            }
+        }
+    }
+}

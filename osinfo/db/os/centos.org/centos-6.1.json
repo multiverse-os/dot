@@ -1,0 +1,84 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "CentOS 6.1",
+            "version": "6.1",
+            "eol-date": "2011-12-20",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                }
+            },
+            "-id": "http://centos.org/centos/6.1",
+            "short-id": "centos6.1",
+            "_vendor": "CentOS",
+            "distro": "centos",
+            "release-date": "2011-12-09",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://centos.org/centos/6.0"
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.1"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.1_Final"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.1_Final"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/6.1/os/x86_64/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "^6.1$",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/6.1/os/i386/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "^6.1$",
+                        "arch": "i386"
+                    }
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            }
+        }
+    }
+}

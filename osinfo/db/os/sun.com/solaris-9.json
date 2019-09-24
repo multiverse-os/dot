@@ -1,0 +1,16 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "solaris",
+            "_name": "Solaris 9",
+            "version": "9",
+            "family": "solaris",
+            "release-date": "2002-05-28",
+            "eol-date": "2014-10-01",
+            "-id": "http://sun.com/solaris/9",
+            "short-id": "solaris9",
+            "_vendor": "Sun"
+        }
+    }
+}

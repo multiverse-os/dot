@@ -1,0 +1,72 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "variant": {
+                "-id": "netinst",
+                "_name": "OpenBSD 5.7"
+            },
+            "short-id": "openbsd5.7",
+            "version": "5.7",
+            "family": "openbsd",
+            "_vendor": "OpenBSD Project",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/5.6"
+            },
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/5.6"
+            },
+            "release-date": "2015-05-01",
+            "media": [
+                {
+                    "iso": {
+                        "volume-id": "OpenBSD/i386    5.7 Install CD",
+                        "application-id": "OpenBSD 5.7 i386 Install CD",
+                        "publisher-id": "Copyright \\(c\\) 2015 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2015 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/amd64   5.7 Install CD",
+                        "application-id": "OpenBSD 5.7 amd64 Install CD"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "OpenBSD/i386    5\\.7 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.7 i386 bootonly CD",
+                        "publisher-id": "Copyright \\(c\\) 2015 Theo de Raadt, The OpenBSD project"
+                    },
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.7/i386/cd57.iso"
+                },
+                {
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.7/amd64/cd57.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2015 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   5\\.7 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.7 amd64 bootonly CD"
+                    },
+                    "-arch": "x86_64"
+                }
+            ],
+            "-id": "http://openbsd.org/openbsd/5.7",
+            "_name": "OpenBSD 5.7",
+            "distro": "openbsd",
+            "eol-date": "2016-03-29"
+        }
+    }
+}

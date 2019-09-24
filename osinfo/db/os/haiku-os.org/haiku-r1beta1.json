@@ -1,0 +1,55 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Haiku, Inc.",
+            "upgrades": {
+                "-id": "http://haiku-os.org/haiku/r1alpha4.1"
+            },
+            "derives-from": {
+                "-id": "http://haiku-os.org/haiku/r1alpha4.1"
+            },
+            "media": [
+                {
+                    "iso": {
+                        "volume-id": "bootimg",
+                        "system-id": "LINUX",
+                        "volume-size": "3325952"
+                    },
+                    "-arch": "i686",
+                    "-live": "true"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "iso": {
+                        "volume-id": "bootimg",
+                        "system-id": "LINUX",
+                        "volume-size": "3325952"
+                    }
+                }
+            ],
+            "family": "haiku",
+            "distro": "haiku",
+            "release-date": "2018-09-28",
+            "resources": {
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "4294967296"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "storage": "2147483648",
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                }
+            },
+            "-id": "http://haiku-os.org/haiku/r1beta1",
+            "short-id": "haikur1beta1",
+            "_name": "Haiku R1/Beta1",
+            "version": "r1beta1"
+        }
+    }
+}

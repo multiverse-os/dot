@@ -1,0 +1,16 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Mandriva",
+            "distro": "mes",
+            "eol-date": "2014-06-16",
+            "-id": "http://mandriva.com/mes/5.0",
+            "version": "5.0",
+            "family": "linux",
+            "release-date": "2009-06-16",
+            "short-id": "mes5",
+            "_name": "Mandriva Enterprise Server 5.0"
+        }
+    }
+}

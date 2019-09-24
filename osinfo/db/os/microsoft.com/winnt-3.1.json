@@ -1,0 +1,16 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2000-12-31",
+            "-id": "http://microsoft.com/winnt/3.1",
+            "short-id": "winnt3.1",
+            "_name": "Microsoft Windows NT Server 3.1",
+            "version": "3.1",
+            "release-date": "1993-07-27",
+            "_vendor": "Microsoft Corporation",
+            "family": "winnt",
+            "distro": "winnt"
+        }
+    }
+}

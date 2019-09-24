@@ -1,0 +1,55 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://suse.com/sled/11.3"
+            },
+            "derives-from": {
+                "-id": "http://suse.com/sled/11.3"
+            },
+            "release-date": "2015-07-15",
+            "eol-date": "2019-03-31",
+            "media": [
+                {
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLED-11-SP4-DVD-i586"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLED-11-SP4-DVD-x86_64"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                }
+            ],
+            "resources": {
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "12884901888"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "ram": "536870912",
+                    "storage": "1074151424",
+                    "cpu": "500000000"
+                }
+            },
+            "short-id": "sled11sp4",
+            "_name": "SUSE Linux Enterprise Desktop 11 SP4",
+            "version": "11.4",
+            "_vendor": "SUSE",
+            "distro": "sled",
+            "-id": "http://suse.com/sled/11.4"
+        }
+    }
+}

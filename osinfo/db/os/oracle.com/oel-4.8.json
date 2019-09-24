@@ -1,0 +1,16 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "Oracle Enterprise Linux 4.8",
+            "_vendor": "Oracle America",
+            "distro": "oel",
+            "eol-date": "2013-03-28",
+            "-id": "http://oracle.com/oel/4.8",
+            "short-id": "oel4.8",
+            "version": "4.8",
+            "family": "linux",
+            "release-date": "2009-05-21"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "1.0",
+            "_vendor": "FreeBSD Project",
+            "family": "freebsd",
+            "distro": "freebsd",
+            "release-date": "1993-11-01",
+            "-id": "http://freebsd.org/freebsd/1.0",
+            "short-id": "freebsd1.0",
+            "_name": "FreeBSD 1.0"
+        }
+    }
+}

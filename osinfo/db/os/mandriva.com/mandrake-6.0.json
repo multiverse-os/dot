@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "mandrake6.0",
+            "_name": "Mandrake Linux 6.0",
+            "family": "linux",
+            "distro": "mandrake",
+            "version": "6.0",
+            "release-date": "1999-05-27",
+            "-id": "http://mandriva.com/mandrake/6.0",
+            "_vendor": "Mandriva",
+            "codename": "Venus",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/5.2"
+            },
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/5.2"
+            }
+        }
+    }
+}

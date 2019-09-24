@@ -1,0 +1,44 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "linux",
+            "release-date": "2018-12-03",
+            "version": "7.6",
+            "_vendor": "Scientific Linux",
+            "distro": "scientificlinux",
+            "upgrades": {
+                "-id": "http://scientificlinux.org/scientificlinux/7.5"
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/7.6"
+            },
+            "-id": "http://scientificlinux.org/scientificlinux/7.6",
+            "short-id": "scientificlinux7.6",
+            "_name": "Scientific Linux 7.6",
+            "tree": {
+                "-arch": "x86_64",
+                "url": "http://ftp1.scientificlinux.org/linux/scientific/7.6/x86_64/os/",
+                "treeinfo": {
+                    "version": "7.6",
+                    "arch": "x86_64",
+                    "family": "Scientific"
+                }
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "n-cpus": "1",
+                    "cpu": "1000000000"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            }
+        }
+    }
+}

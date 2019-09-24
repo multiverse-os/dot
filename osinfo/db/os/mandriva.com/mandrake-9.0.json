@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/8.2"
+            },
+            "release-date": "2002-09-25",
+            "family": "linux",
+            "distro": "mandrake",
+            "codename": "Dolphin",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/8.2"
+            },
+            "version": "9.0",
+            "-id": "http://mandriva.com/mandrake/9.0",
+            "short-id": "mandrake9.0",
+            "_name": "Mandrake Linux 9.0",
+            "_vendor": "Mandriva"
+        }
+    }
+}

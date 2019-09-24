@@ -1,0 +1,194 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "winxp",
+            "_name": "Microsoft Windows XP",
+            "version": "5.1",
+            "driver": [
+                {
+                    "device": {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    },
+                    "-arch": "i686",
+                    "-location": "https://zeenix.fedorapeople.org/drivers/win-tools-1/preinst/winxp/x86",
+                    "-pre-installable": "true",
+                    "-signed": "false",
+                    "file": [
+                        "viostor.cat",
+                        "viostor.inf",
+                        "viostor.sys",
+                        "txtsetup.oem"
+                    ]
+                },
+                {
+                    "-signed": "false",
+                    "file": [
+                        "viostor.cat",
+                        "viostor.inf",
+                        "viostor.sys",
+                        "txtsetup.oem"
+                    ],
+                    "device": {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    },
+                    "-arch": "x86_64",
+                    "-location": "https://zeenix.fedorapeople.org/drivers/win-tools-1/preinst/winxp/amd64",
+                    "-pre-installable": "true"
+                },
+                {
+                    "-arch": "i686",
+                    "-location": "https://zeenix.fedorapeople.org/drivers/win-tools/postinst",
+                    "-signed": "false",
+                    "file": [
+                        "spice-guest-tools-0.65.exe",
+                        "spice-guest-tools-0.65.cmd",
+                        "redhat09.cer",
+                        "redhat10.cer"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1000"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1002"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1003"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1b36/0100"
+                        }
+                    ]
+                },
+                {
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1000"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1002"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1003"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1b36/0100"
+                        }
+                    ],
+                    "-arch": "x86_64",
+                    "-location": "https://zeenix.fedorapeople.org/drivers/win-tools/postinst",
+                    "-signed": "false",
+                    "file": [
+                        "spice-guest-tools-0.65.exe",
+                        "spice-guest-tools-0.65.cmd",
+                        "redhat09.cer",
+                        "redhat10.cer"
+                    ]
+                }
+            ],
+            "_vendor": "Microsoft Corporation",
+            "family": "winnt",
+            "derives-from": [
+                {
+                    "-id": "http://microsoft.com/win/2k"
+                },
+                {
+                    "-id": "http://microsoft.com/win/me"
+                }
+            ],
+            "upgrades": {
+                "-id": "http://microsoft.com/win/me"
+            },
+            "release-date": "2001-10-25",
+            "devices": {
+                "device": {
+                    "-id": "http://pcisig.com/pci/8086/100e"
+                }
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://microsoft.com/windows/sif/jeos"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/sif/desktop"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/reg/desktop"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/cmd/desktop"
+                    }
+                ]
+            },
+            "eol-date": "2009-04-19",
+            "resources": [
+                {
+                    "-arch": "i686",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "ram": "67108864",
+                        "storage": "1610612736",
+                        "cpu": "233000000"
+                    },
+                    "recommended": {
+                        "cpu": "300000000",
+                        "ram": "536870912",
+                        "storage": "10737418240"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "minimum": {
+                        "storage": "1610612736",
+                        "cpu": "733000000",
+                        "n-cpus": "1",
+                        "ram": "268435456"
+                    },
+                    "recommended": {
+                        "storage": "10737418240",
+                        "cpu": "733000000",
+                        "ram": "536870912"
+                    }
+                }
+            ],
+            "-id": "http://microsoft.com/win/xp",
+            "distro": "win",
+            "media": [
+                {
+                    "-installer-reboots": "2",
+                    "iso": {
+                        "volume-id": "(WXPFPP|WXHFPP|WXPCCP|WXHCCP|WXPOEM|WXHOEM|WXPVOL|WXPEVL|XRMPFPP|XRMHFPP|XRMPCCP|XRMHCCP|XRMPOEM|XRMHOEM|XRMPVOL|XRMSD2|X1APFPP|X1AHFPP|X1APCCP|X1APCCP|X1AHCCP|X1APOEM|X1AHOEM|X1APVOL|VRMPFPP|VRMHFPP|VRMPCCP|VRMHCCP|VRMPOEM|VRMHOEM|VRMPVOL|VRMSD2|VX2PFPP|VX2HFPP|VX2PCCP|VX2HCCP|VX2POEM|VX2HOEM|VX2PRMFPP|VX2PVOL|GRTMUPD|GRTMPFPP|GRTMPRMFPP|GRTMHFPP|GRTMHKFPP|GRTMHKNFPP|GRTMHRMFPP|GRTMPOEM|GRTMHOEM|GRTMPVOL|GRTMPKNVOL|GRTMPKVOL|GRTMPRMVOL|MX2PFPP|MRMSD2)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-installer-reboots": "2",
+                    "iso": {
+                        "volume-id": "(ARMPXFPP|ARMPXCCP|ARMPXOEM|ARMPXVOL|AX2PXCFPP|AX2PXFPP)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    },
+                    "-arch": "x86_64"
+                }
+            ]
+        }
+    }
+}

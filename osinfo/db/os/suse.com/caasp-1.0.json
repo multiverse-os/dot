@@ -1,0 +1,45 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "caasp1.0",
+            "version": "1.0",
+            "vendor": {
+                "#content": "SUSE",
+                "-lang": "fr"
+            },
+            "distro": "caasp",
+            "derives-from": {
+                "-id": "http://suse.com/sles/12.2"
+            },
+            "release-date": "2017-08-03",
+            "resources": {
+                "minimum": {
+                    "ram": "2147483648",
+                    "storage": "21474836480",
+                    "cpu": "500000000"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "8589934592",
+                    "storage": "42949672960"
+                },
+                "-arch": "all"
+            },
+            "-id": "http://suse.com/caasp/1.0",
+            "_name": "SUSE CaaS Platform 1.0",
+            "_vendor": "SUSE",
+            "family": "linux",
+            "eol-date": "2017-10-26",
+            "media": {
+                "iso": {
+                    "system-id": "LINUX",
+                    "volume-id": "SUSE-CaaS-Platform-1.0-DVD-x86_6"
+                },
+                "kernel": "boot/x86_64/loader/linux",
+                "initrd": "boot/x86_64/loader/initrd",
+                "-arch": "x86_64"
+            }
+        }
+    }
+}

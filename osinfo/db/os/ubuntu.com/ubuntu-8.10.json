@@ -1,0 +1,70 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "8.10",
+            "codename": "Intrepid Ibex",
+            "eol-date": "2010-04-30",
+            "family": "linux",
+            "distro": "ubuntu",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/8.04"
+            },
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/8.04"
+            },
+            "-id": "http://ubuntu.com/ubuntu/8.10",
+            "short-id": [
+                "ubuntu8.10",
+                "ubuntuintrepid"
+            ],
+            "_name": "Ubuntu 8.10",
+            "_vendor": "Canonical Ltd",
+            "release-date": "2008-10-30",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/intrepid/ubuntu-8.10-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 8.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/intrepid/ubuntu-8.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 8.10(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/intrepid/ubuntu-8.10-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 8.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/intrepid/ubuntu-8.10-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 8.10(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz",
+                    "-arch": "x86_64"
+                }
+            ]
+        }
+    }
+}

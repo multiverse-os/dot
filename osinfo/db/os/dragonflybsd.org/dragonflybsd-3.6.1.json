@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "os": {
+            "-id": "http://dragonflybsd.org/dragonflybsd/3.6.1",
+            "short-id": "dragonflybsd3.6.1",
+            "_name": "DragonFlyBSD 3.6.1",
+            "version": "3.6.1",
+            "distro": "dragonflybsd",
+            "release-date": "2014-02-21",
+            "eol-date": "2014-04-09",
+            "family": "dragonflybsd",
+            "_vendor": "DragonFlyBSD Project",
+            "upgrades": {
+                "-id": "http://dragonflybsd.org/dragonflybsd/3.6.0"
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

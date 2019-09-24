@@ -1,0 +1,306 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "release-date": "2017-06-17",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "ram": "1073741824",
+                    "storage": "21474836480",
+                    "cpu": "1000000000"
+                }
+            },
+            "image": [
+                {
+                    "-arch": "x86_64",
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud.debian.org/images/cloud/OpenStack/current-9/debian-9-openstack-amd64.qcow2"
+                },
+                {
+                    "-cloud-init": "true",
+                    "url": "https://cloud.debian.org/images/cloud/OpenStack/current-9/debian-9-openstack-amd64.raw",
+                    "-arch": "x86_64",
+                    "-format": "raw"
+                },
+                {
+                    "-arch": "aarch64",
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud.debian.org/images/cloud/OpenStack/current-9/debian-9-openstack-arm64.qcow2"
+                },
+                {
+                    "-format": "raw",
+                    "-cloud-init": "true",
+                    "url": "https://cloud.debian.org/images/cloud/OpenStack/current-9/debian-9-openstack-arm64.raw",
+                    "-arch": "aarch64"
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://debian.org/debian/preseed/jeos"
+                    },
+                    {
+                        "-id": "http://debian.org/debian/preseed/desktop"
+                    }
+                ]
+            },
+            "short-id": [
+                "debian9",
+                "debianstretch"
+            ],
+            "media": [
+                {
+                    "kernel": "install.386/vmlinuz",
+                    "initrd": "install.386/initrd.gz",
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "universal-netinst"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/i386/iso-cd/debian-9.9.0-i386-netinst.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ i386 n"
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "universal-netinst"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/amd64/iso-cd/debian-9.9.0-amd64-netinst.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ amd64 n"
+                    },
+                    "kernel": "install.amd/vmlinuz",
+                    "initrd": "install.amd/initrd.gz",
+                    "-arch": "x86_64"
+                },
+                {
+                    "initrd": "install.a64/initrd.gz",
+                    "-arch": "aarch64",
+                    "variant": {
+                        "-id": "universal-netinst"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/arm64/iso-cd/debian-9.9.0-arm64-netinst.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ arm64 n"
+                    },
+                    "kernel": "install.a64/vmlinuz"
+                },
+                {
+                    "-arch": "armv7l",
+                    "variant": {
+                        "-id": "universal-netinst"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/armhf/iso-cd/debian-9.9.0-armhf-netinst.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ armhf n"
+                    },
+                    "kernel": "install.armhf/vmlinuz",
+                    "initrd": "install.armhf/initrd.gz"
+                },
+                {
+                    "initrd": "install/initrd.gz",
+                    "-arch": "ppc64le",
+                    "variant": {
+                        "-id": "universal-netinst"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/ppc64el/iso-cd/debian-9.9.0-ppc64el-netinst.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ ppc64el n"
+                    },
+                    "kernel": "install/vmlinux"
+                },
+                {
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/s390x/iso-cd/debian-9.9.0-s390x-netinst.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ s390x n"
+                    },
+                    "kernel": "boot/linux_vm",
+                    "initrd": "boot/root.bin",
+                    "-arch": "s390x",
+                    "variant": {
+                        "-id": "universal-netinst"
+                    }
+                },
+                {
+                    "initrd": "install.386/initrd.gz",
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "universal"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/i386/iso-dvd/debian-9.9.0-i386-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ i386 (\\d)+"
+                    },
+                    "kernel": "install.386/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "universal"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/amd64/iso-dvd/debian-9.9.0-amd64-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ amd64 (\\d)+"
+                    },
+                    "kernel": "install.amd/vmlinuz",
+                    "initrd": "install.amd/initrd.gz"
+                },
+                {
+                    "-arch": "aarch64",
+                    "variant": {
+                        "-id": "universal"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/arm64/iso-dvd/debian-9.9.0-arm64-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ arm64 (\\d)+"
+                    },
+                    "kernel": "install.a64/vmlinuz",
+                    "initrd": "install.a64/initrd.gz"
+                },
+                {
+                    "kernel": "install.armhf/vmlinuz",
+                    "initrd": "install.armhf/initrd.gz",
+                    "-arch": "armv7l",
+                    "variant": {
+                        "-id": "universal"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/armhf/iso-dvd/debian-9.9.0-armhf-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ armhf (\\d)+"
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "universal"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/ppc64el/iso-dvd/debian-9.9.0-ppc64el-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ ppc64el (\\d)+"
+                    },
+                    "kernel": "install/vmlinux",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "ppc64le"
+                },
+                {
+                    "initrd": "boot/root.bin",
+                    "-arch": "s390x",
+                    "variant": {
+                        "-id": "universal"
+                    },
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/9.9.0/s390x/iso-dvd/debian-9.9.0-s390x-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian 9.(\\d)+.(\\d)+ s390x (\\d)+"
+                    },
+                    "kernel": "boot/linux_vm"
+                }
+            ],
+            "tree": [
+                {
+                    "kernel": "current/images/netboot/debian-installer/i386/linux",
+                    "initrd": "current/images/netboot/debian-installer/i386/initrd.gz",
+                    "-arch": "i686",
+                    "url": "http://deb.debian.org/debian/dists/stretch/main/installer-i386"
+                },
+                {
+                    "url": "http://deb.debian.org/debian/dists/stretch/main/installer-amd64",
+                    "kernel": "current/images/netboot/debian-installer/amd64/linux",
+                    "initrd": "current/images/netboot/debian-installer/amd64/initrd.gz",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "aarch64",
+                    "url": "http://deb.debian.org/debian/dists/stretch/main/installer-arm64",
+                    "kernel": "current/images/netboot/debian-installer/arm64/linux",
+                    "initrd": "current/images/netboot/debian-installer/arm64/initrd.gz"
+                },
+                {
+                    "-arch": "armv7l",
+                    "url": "http://deb.debian.org/debian/dists/stretch/main/installer-armhf",
+                    "kernel": "current/images/netboot/debian-installer/armhf/linux",
+                    "initrd": "current/images/netboot/debian-installer/armhf/initrd.gz"
+                },
+                {
+                    "-arch": "s390x",
+                    "url": "http://deb.debian.org/debian/dists/stretch/main/installer-s390x",
+                    "kernel": "current/images/generic/kernel.debian",
+                    "initrd": "current/images/generic/initrd.debian"
+                },
+                {
+                    "-arch": "ppc64le",
+                    "url": "http://deb.debian.org/debian/dists/stretch/main/installer-ppc64el",
+                    "kernel": "current/images/netboot/debian-installer/ppc64el/vmlinux",
+                    "initrd": "current/images/netboot/debian-installer/ppc64el/initrd.gz"
+                }
+            ],
+            "version": "9",
+            "codename": "stretch",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1041"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1042"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1043"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1044"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1045"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1048"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1049"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1052"
+                    },
+                    {
+                        "-id": "http://qemu.org/chipset/x86/q35"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/10d3"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/293e"
+                    }
+                ]
+            },
+            "variant": [
+                {
+                    "-id": "universal",
+                    "_name": "Debian 9"
+                },
+                {
+                    "-id": "universal-netinst",
+                    "_name": "Debian 9"
+                }
+            ],
+            "upgrades": {
+                "-id": "http://debian.org/debian/8"
+            },
+            "derives-from": {
+                "-id": "http://debian.org/debian/8"
+            },
+            "-id": "http://debian.org/debian/9",
+            "_name": "Debian 9",
+            "_vendor": "Debian Project",
+            "family": "linux",
+            "distro": "debian"
+        }
+    }
+}

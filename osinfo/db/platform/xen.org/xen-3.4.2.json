@@ -1,0 +1,15 @@
+{
+    "libosinfo": {
+        "platform": {
+            "upgrades": {
+                "-id": "http://xen.org/xen/3.4.1"
+            },
+            "-id": "http://xen.org/xen/3.4.2",
+            "short-id": "xen-3.4.2",
+            "_name": "Xen 3.4.2",
+            "_vendor": "Citrix Systems, Inc.",
+            "version": "3.4.2"
+        },
+        "-version": "0.0.1"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "-id": "http://qemu.org/chipset/x86/q35",
+            "name": "qemu-x86-q35",
+            "class": "chipset"
+        }
+    }
+}

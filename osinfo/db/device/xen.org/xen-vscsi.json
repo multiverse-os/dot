@@ -1,0 +1,13 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "product": "Virtual SCSI",
+            "product-id": "vscsi",
+            "name": "xen-vscsi",
+            "-id": "http://xen.org/xen/vscsi",
+            "class": "block",
+            "bus-type": "xen"
+        }
+    }
+}

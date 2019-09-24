@@ -1,0 +1,49 @@
+{
+    "libosinfo": {
+        "os": {
+            "family": "haiku",
+            "distro": "haiku",
+            "-id": "http://haiku-os.org/haiku/r1alpha4.1",
+            "short-id": "haikur1alpha4.1",
+            "_name": "Haiku R1/Alpha4.1",
+            "version": "r1alpha4.1",
+            "_vendor": "Haiku, Inc.",
+            "upgrades": {
+                "-id": "http://haiku-os.org/haiku/r1alpha3"
+            },
+            "derives-from": {
+                "-id": "http://haiku-os.org/haiku/r1alpha3"
+            },
+            "release-date": "2012-11-14",
+            "devices": {
+                "device": {
+                    "-id": "http://usb.org/usb/80ee/0021"
+                }
+            },
+            "media": {
+                "-arch": "i686",
+                "-live": "true",
+                "iso": {
+                    "volume-id": "Haiku",
+                    "system-id": "FreeBSD",
+                    "volume-size": "615106560"
+                }
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "536870912",
+                    "storage": "2147483648"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "4294967296"
+                }
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

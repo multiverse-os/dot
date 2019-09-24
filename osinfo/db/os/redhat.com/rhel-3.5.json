@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "os": {
+            "codename": "Taroon",
+            "release-date": "2005-05-20",
+            "eol-date": "2014-01-30",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/3.4"
+            },
+            "short-id": "rhel3.5",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "distro": "rhel",
+            "-id": "http://redhat.com/rhel/3.5",
+            "_name": "Red Hat Enterprise Linux 3 Update 5",
+            "version": "3.5",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/3.4"
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "openbsd",
+            "eol-date": "2014-11-01",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/5.3"
+            },
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/5.3"
+            },
+            "release-date": "2013-11-01",
+            "variant": {
+                "-id": "netinst",
+                "_name": "OpenBSD 5.4"
+            },
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    }
+                ]
+            },
+            "short-id": "openbsd5.4",
+            "_name": "OpenBSD 5.4",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/i386    5.4 Install CD",
+                        "application-id": "OpenBSD 5.4 i386 Install CD",
+                        "publisher-id": "Copyright \\(c\\) 2013 Theo de Raadt, The OpenBSD project"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "OpenBSD/amd64   5.4 Install CD",
+                        "application-id": "OpenBSD 5.4 amd64 Install CD",
+                        "publisher-id": "Copyright \\(c\\) 2013 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD"
+                    }
+                },
+                {
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.4/i386/cd54.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2013 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/i386    5\\.4 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.4 i386 bootonly CD"
+                    },
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.4/amd64/cd54.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2013 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   5\\.4 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.4 amd64 bootonly CD"
+                    }
+                }
+            ],
+            "-id": "http://openbsd.org/openbsd/5.4",
+            "version": "5.4",
+            "family": "openbsd",
+            "_vendor": "OpenBSD Project"
+        }
+    }
+}

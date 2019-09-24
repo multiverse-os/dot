@@ -1,0 +1,208 @@
+{
+    "libosinfo": {
+        "os": {
+            "_name": "Fedora 25",
+            "release-date": "2016-11-22",
+            "variant": [
+                {
+                    "-id": "workstation",
+                    "_name": "Fedora 25 Workstation"
+                },
+                {
+                    "-id": "workstation-netinst",
+                    "_name": "Fedora 25 Workstation"
+                },
+                {
+                    "-id": "server",
+                    "_name": "Fedora 25 Server"
+                },
+                {
+                    "-id": "server-netinst",
+                    "_name": "Fedora 25 Server"
+                }
+            ],
+            "tree": [
+                {
+                    "url": "http://archives.fedoraproject.org/pub/archive/fedora/linux/releases/25/Server/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "25",
+                        "arch": "i386"
+                    },
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "server"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archives.fedoraproject.org/pub/archive/fedora/linux/releases/25/Server/x86_64/os/",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "25",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "25"
+                    }
+                }
+            ],
+            "-id": "http://fedoraproject.org/fedora/25",
+            "_vendor": "Fedora Project",
+            "distro": "fedora",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/24"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "fedora25",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/24"
+            },
+            "version": "25",
+            "family": "linux",
+            "eol-date": "2017-12-12",
+            "media": [
+                {
+                    "-live": "true",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/25/Workstation/i386/iso/Fedora-Workstation-Live-i386-25-1.3.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WS-Live-25.*",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/25/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-25-1.3.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WS-Live-25.*",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/25/Workstation/i386/iso/Fedora-Workstation-netinst-i386-25-1.3.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WS-dvd-i386-25",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "workstation-netinst"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "workstation-netinst"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/25/Workstation/x86_64/iso/Fedora-Workstation-netinst-x86_64-25-1.3.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WS-dvd-x86_64-25",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/25/Server/i386/iso/Fedora-Server-dvd-i386-25-1.3.iso",
+                    "iso": {
+                        "volume-size": "2113044480",
+                        "volume-id": "Fedora-S-dvd-i386-25",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686"
+                },
+                {
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/25/Server/x86_64/iso/Fedora-Server-dvd-x86_64-25-1.3.iso",
+                    "iso": {
+                        "volume-size": "2018396160",
+                        "volume-id": "Fedora-S-dvd-x86_64-25",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "server-netinst"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/25/Server/i386/iso/Fedora-Server-netinst-i386-25-1.3.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "489494528",
+                        "volume-id": "Fedora-S-dvd-i386-25"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server-netinst"
+                    },
+                    "url": "http://archives.fedoraproject.org/pub/archive/fedora/linux/releases/25/Server/x86_64/iso/Fedora-Server-netinst-x86_64-25-1.3.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S-dvd-x86_64-25",
+                        "system-id": "LINUX",
+                        "volume-size": "507488256"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                }
+            ]
+        },
+        "-version": "0.0.1"
+    }
+}

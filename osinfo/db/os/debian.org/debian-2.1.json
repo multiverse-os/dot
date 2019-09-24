@@ -1,0 +1,26 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "debian",
+            "-id": "http://debian.org/debian/2.1",
+            "_name": "Debian GNU/Linux 2.1",
+            "version": "2.1",
+            "_vendor": "Debian Project",
+            "family": "linux",
+            "eol-date": "2000-10-30",
+            "short-id": [
+                "debian2.1",
+                "debianslink"
+            ],
+            "codename": "slink",
+            "upgrades": {
+                "-id": "http://debian.org/debian/2.0"
+            },
+            "derives-from": {
+                "-id": "http://debian.org/debian/2.0"
+            },
+            "release-date": "1999-03-09"
+        }
+    }
+}

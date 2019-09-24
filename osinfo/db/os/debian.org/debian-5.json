@@ -1,0 +1,51 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "storage": "5368709120",
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "134217728"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "536870912",
+                    "storage": "5368709120"
+                }
+            },
+            "upgrades": {
+                "-id": "http://debian.org/debian/4"
+            },
+            "version": "5.0",
+            "family": "linux",
+            "codename": "lenny",
+            "release-date": "2009-02-14",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    }
+                ]
+            },
+            "_name": "Debian GNU/Linux 5.0",
+            "distro": "debian",
+            "short-id": [
+                "debian5",
+                "debian5.0",
+                "debianlenny"
+            ],
+            "_vendor": "Debian Project",
+            "derives-from": {
+                "-id": "http://debian.org/debian/4"
+            },
+            "eol-date": "2012-02-06",
+            "-id": "http://debian.org/debian/5"
+        }
+    }
+}

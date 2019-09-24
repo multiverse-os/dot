@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "ol5.8",
+            "distro": "ol",
+            "eol-date": "2020-06-30",
+            "release-date": "2012-03-08",
+            "-id": "http://oracle.com/ol/5.8",
+            "_name": "Oracle Linux 5.8",
+            "version": "5.8",
+            "_vendor": "Oracle America",
+            "family": "linux",
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.8"
+            }
+        }
+    }
+}

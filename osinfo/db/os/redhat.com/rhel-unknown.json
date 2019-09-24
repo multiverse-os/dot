@@ -1,0 +1,86 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://redhat.com/rhel/unknown",
+            "version": "unknown",
+            "family": "linux",
+            "distro": "rhel",
+            "resources": [
+                {
+                    "recommended": {
+                        "cpu": "4000000000",
+                        "ram": "2147483648",
+                        "storage": "21474836480"
+                    },
+                    "-arch": "ppc64",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "cpu": "1000000000",
+                        "ram": "2147483648",
+                        "storage": "10737418240"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "cpu": "1000000000",
+                        "ram": "1073741824",
+                        "storage": "10737418240"
+                    },
+                    "recommended": {
+                        "cpu": "1000000000",
+                        "ram": "1073741824",
+                        "storage": "10737418240"
+                    }
+                }
+            ],
+            "short-id": "rhel-unknown",
+            "_name": "Red Hat Enterprise Linux Unknown",
+            "_vendor": "Red Hat, Inc",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/8-unknown"
+            },
+            "media": [
+                {
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-(9|[1-9][0-9])-([0-9]|[1-9][0-9]).*x86_64$"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "aarch64",
+                    "iso": {
+                        "volume-id": "RHEL-(9|[1-9][0-9])-([0-9]|[1-9][0-9]).*aarch64$",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "iso": {
+                        "system-id": "PPC",
+                        "volume-id": "RHEL-(9|[1-9][0-9])-([0-9]|[1-9][0-9]).*ppc64$"
+                    },
+                    "-arch": "ppc64"
+                },
+                {
+                    "-arch": "ppc64le",
+                    "iso": {
+                        "system-id": "PPC",
+                        "volume-id": "RHEL[_-](9|[1-9][0-9])[_-]([0-9]|[1-9][0-9]).*ppc64le$"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-(9|[1-9][0-9])-([0-9]|[1-9][0-9]).*s390x$"
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://microsoft.com/win/95"
+            },
+            "resources": {
+                "-arch": "i686",
+                "minimum": {
+                    "cpu": "66000000",
+                    "ram": "16777216",
+                    "storage": "125829120"
+                },
+                "recommended": {
+                    "cpu": "233000000",
+                    "ram": "25165824",
+                    "storage": "419430400"
+                }
+            },
+            "short-id": "win98",
+            "_name": "Microsoft Windows 98",
+            "_vendor": "Microsoft Corporation",
+            "family": "win9x",
+            "distro": "win",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/95"
+            },
+            "release-date": "1998-06-25",
+            "eol-date": "2006-07-11",
+            "-id": "http://microsoft.com/win/98",
+            "version": "4.1"
+        }
+    }
+}

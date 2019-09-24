@@ -1,0 +1,16 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "1.0",
+            "distro": "mbs",
+            "release-date": "2013-02-21",
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "eol-date": "2018-02-20",
+            "-id": "http://mandriva.com/mbs/1.0",
+            "short-id": "mbs1.0",
+            "_name": "Mandriva Business Server 1.0"
+        }
+    }
+}

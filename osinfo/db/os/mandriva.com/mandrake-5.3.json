@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://mandriva.com/mandrake/5.3",
+            "_name": "Mandrake Linux 5.3",
+            "_vendor": "Mandriva",
+            "release-date": "1999-02-11",
+            "short-id": "mandrake5.3",
+            "family": "linux",
+            "distro": "mandrake",
+            "codename": "Festen",
+            "version": "5.3",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/5.2"
+            },
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/5.2"
+            }
+        }
+    }
+}

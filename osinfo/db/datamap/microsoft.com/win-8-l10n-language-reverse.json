@@ -1,0 +1,158 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "datamap": {
+            "-id": "http://microsoft.com/win/8/l10n-language-reverse",
+            "entry": [
+                {
+                    "-inval": "en_US",
+                    "-outval": "EN-US"
+                },
+                {
+                    "-inval": "en_GB",
+                    "-outval": "EN-GB"
+                },
+                {
+                    "-inval": "ar_SA",
+                    "-outval": "AR-SA"
+                },
+                {
+                    "-inval": "bg_BG",
+                    "-outval": "BG-BG"
+                },
+                {
+                    "-inval": "zh_HK",
+                    "-outval": "ZH-HK"
+                },
+                {
+                    "-inval": "zh_CN",
+                    "-outval": "ZH-CN"
+                },
+                {
+                    "-outval": "ZH-TW",
+                    "-inval": "zh_TW"
+                },
+                {
+                    "-inval": "hr_HR",
+                    "-outval": "HR-HR"
+                },
+                {
+                    "-inval": "cs_CZ",
+                    "-outval": "CS-CZ"
+                },
+                {
+                    "-inval": "da_DK",
+                    "-outval": "DA-DK"
+                },
+                {
+                    "-outval": "NL-NL",
+                    "-inval": "nl_NL"
+                },
+                {
+                    "-inval": "et_EE",
+                    "-outval": "ET-EE"
+                },
+                {
+                    "-inval": "fi_FI",
+                    "-outval": "FI-FI"
+                },
+                {
+                    "-inval": "fr_FR",
+                    "-outval": "FR-FR"
+                },
+                {
+                    "-inval": "de_DE",
+                    "-outval": "DE-DE"
+                },
+                {
+                    "-inval": "el_GR",
+                    "-outval": "EL-GR"
+                },
+                {
+                    "-inval": "he_IL",
+                    "-outval": "HE-IL"
+                },
+                {
+                    "-inval": "hu_HU",
+                    "-outval": "HU-HU"
+                },
+                {
+                    "-inval": "it_IT",
+                    "-outval": "IT-IT"
+                },
+                {
+                    "-outval": "JA-JP",
+                    "-inval": "ja_JP"
+                },
+                {
+                    "-inval": "ko_KR",
+                    "-outval": "KO-KR"
+                },
+                {
+                    "-inval": "lv_LV",
+                    "-outval": "LV-LV"
+                },
+                {
+                    "-outval": "LT-LT",
+                    "-inval": "lt_LT"
+                },
+                {
+                    "-inval": "nb_NO",
+                    "-outval": "NB-NO"
+                },
+                {
+                    "-outval": "PL-PL",
+                    "-inval": "pl_PL"
+                },
+                {
+                    "-inval": "pt_BR",
+                    "-outval": "PT-BR"
+                },
+                {
+                    "-inval": "pt_PT",
+                    "-outval": "PT-PT"
+                },
+                {
+                    "-inval": "ro_RO",
+                    "-outval": "RO-RO"
+                },
+                {
+                    "-inval": "ru_RU",
+                    "-outval": "RU-RU"
+                },
+                {
+                    "-inval": "sr_RS@latin",
+                    "-outval": "SR-LATN-CS"
+                },
+                {
+                    "-outval": "SK-SK",
+                    "-inval": "sk_SK"
+                },
+                {
+                    "-inval": "sl_SI",
+                    "-outval": "SL-SI"
+                },
+                {
+                    "-outval": "ES-ES",
+                    "-inval": "es_ES"
+                },
+                {
+                    "-inval": "sv_SE",
+                    "-outval": "SV-SE"
+                },
+                {
+                    "-inval": "th_TH",
+                    "-outval": "TH-TH"
+                },
+                {
+                    "-inval": "tr_TR",
+                    "-outval": "TR-TR"
+                },
+                {
+                    "-inval": "uk_UA",
+                    "-outval": "UK-UA"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "FreeDOS 1.2",
+            "version": "1.2",
+            "variant": [
+                {
+                    "-id": "standard",
+                    "_name": "FreeDOS 1.2 \"Standard\" Installer"
+                },
+                {
+                    "-id": "legacy",
+                    "_name": "FreeDOS 1.2 \"Legacy\" Installer"
+                }
+            ],
+            "-id": "http://freedos.org/freedos/1.2",
+            "short-id": "freedos1.2",
+            "distro": "freedos",
+            "release-date": "2016-12-25",
+            "media": [
+                {
+                    "variant": {
+                        "-id": "standard"
+                    },
+                    "url": "http://www.freedos.org/download/download/FD12CD.iso",
+                    "iso": {
+                        "volume-id": "FD-SETUP",
+                        "system-id": "LINUX"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "legacy"
+                    },
+                    "url": "http://www.freedos.org/download/download/FD12LGCY.iso",
+                    "iso": {
+                        "volume-id": "FDI-CD",
+                        "system-id": "LINUX"
+                    }
+                }
+            ],
+            "resources": {
+                "recommended": {
+                    "ram": "67108864",
+                    "storage": "419430400"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "ram": "33554432",
+                    "storage": "209715200",
+                    "n-cpus": "1"
+                }
+            },
+            "_vendor": "FreeDOS",
+            "family": "linux"
+        }
+    }
+}

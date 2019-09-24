@@ -1,0 +1,18 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "platform": {
+            "_vendor": "Red Hat, Inc.",
+            "version": "3.1.0.5.7",
+            "upgrades": {
+                "-id": "http://redhat.com/xen-rhel/3.1.0.5.6"
+            },
+            "derives-from": {
+                "-id": "http://xen.org/xen/3.1.0"
+            },
+            "-id": "http://redhat.com/xen-rhel/3.1.0.5.7",
+            "short-id": "xen-rhel-3.1.0.5.7",
+            "_name": "Xen 3.1.0 (RHEL 5.7)"
+        }
+    }
+}

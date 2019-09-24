@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Mandriva",
+            "distro": "mandriva",
+            "version": "2006.0",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/10.2"
+            },
+            "release-date": "2005-10-14",
+            "-id": "http://mandriva.com/mandriva/2006.0",
+            "short-id": "mandriva2006.0",
+            "_name": "Mandriva Linux 2006.0",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/10.2"
+            }
+        }
+    }
+}

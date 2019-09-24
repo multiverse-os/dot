@@ -1,0 +1,381 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "win10",
+            "version": "10.0",
+            "family": "winnt",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "education"
+                    },
+                    "iso": {
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        },
+                        "volume-id": "(J_)?CEDN?A_X86FRE_"
+                    }
+                },
+                {
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "education"
+                    },
+                    "iso": {
+                        "volume-id": "(J_)?CEDN?A_X64FREE?_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "enterprise"
+                    },
+                    "iso": {
+                        "volume-id": "^(J_)?CEN?A_X86FREV_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "variant": {
+                        "-id": "enterprise"
+                    },
+                    "iso": {
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        },
+                        "volume-id": "^(J_)?CENN?A_X64FREV_",
+                        "publisher-id": "MICROSOFT CORPORATION"
+                    },
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2"
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "enterprise-ltsb"
+                    },
+                    "iso": {
+                        "volume-id": "(J_)?CESN?N?_X86FREV_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "enterprise-ltsb"
+                    },
+                    "iso": {
+                        "volume-id": "(J_)?CESN?N?_X64FREV_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "enterprise-ltsb-eval"
+                    },
+                    "iso": {
+                        "volume-id": "CESE_X86FREE_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language",
+                            "-regex": "true"
+                        }
+                    },
+                    "-arch": "i686",
+                    "-installer-reboots": "2"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "enterprise-ltsb-eval"
+                    },
+                    "iso": {
+                        "volume-id": "CESE_X64FREE_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "iso": {
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        },
+                        "volume-id": "^(J_)?CCSN?A_X86FRE_"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "iso": {
+                        "volume-id": "^(J_)?(CCSN?A|C?CCOMA)_X64FREE?_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    }
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/jeos"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/desktop"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/cmd/desktop"
+                    }
+                ]
+            },
+            "_name": "Microsoft Windows 10",
+            "driver": [
+                {
+                    "-pre-installable": "true",
+                    "-signed": "false",
+                    "file": [
+                        "viostor.cat",
+                        "viostor.inf",
+                        "viostor.sys"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        }
+                    ],
+                    "-arch": "i686",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/preinst/virtio-win/0.1.171/w10/x86"
+                },
+                {
+                    "-pre-installable": "true",
+                    "-signed": "false",
+                    "file": [
+                        "viostor.cat",
+                        "viostor.inf",
+                        "viostor.sys"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        }
+                    ],
+                    "-arch": "x86_64",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/preinst/virtio-win/0.1.171/w10/amd64"
+                },
+                {
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/postinst/spice-guest-tools/0.141",
+                    "-signed": "false",
+                    "file": [
+                        "spice-guest-tools-0.141.exe",
+                        "spice-guest-tools-0.141.cmd",
+                        "qxl-0.141.cer",
+                        "virtio-0.141.cer"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1000"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1002"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1003"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1004"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1005"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1b36/0100"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1041"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1043"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1044"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1045"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1048"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1052"
+                        }
+                    ],
+                    "-arch": "i686"
+                },
+                {
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1000"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1002"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1003"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1004"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1005"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1b36/0100"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1041"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1043"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1044"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1045"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1048"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1052"
+                        }
+                    ],
+                    "-arch": "x86_64",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/postinst/spice-guest-tools/0.141",
+                    "-signed": "false",
+                    "file": [
+                        "spice-guest-tools-0.141.exe",
+                        "spice-guest-tools-0.141.cmd",
+                        "qxl-0.141.cer",
+                        "virtio-0.141.cer"
+                    ]
+                }
+            ],
+            "-id": "http://microsoft.com/win/10",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/8.1"
+            },
+            "resources": [
+                {
+                    "minimum": {
+                        "cpu": "1000000000",
+                        "n-cpus": "1",
+                        "ram": "1073741824",
+                        "storage": "17179869184"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "minimum": {
+                        "cpu": "1000000000",
+                        "n-cpus": "1",
+                        "ram": "2147483648",
+                        "storage": "21474836480"
+                    },
+                    "maximum": {
+                        "ram": "6597069766656"
+                    }
+                }
+            ],
+            "_vendor": "Microsoft Corporation",
+            "distro": "win",
+            "upgrades": {
+                "-id": "http://microsoft.com/win/8.1"
+            },
+            "release-date": "2015-07-29",
+            "variant": [
+                {
+                    "-id": "education",
+                    "_name": "Microsoft Windows 10 Education"
+                },
+                {
+                    "-id": "enterprise",
+                    "_name": "Microsoft Windows 10 Enterprise"
+                },
+                {
+                    "-id": "enterprise-ltsb",
+                    "_name": "Microsoft Windows 10 Enterprise (Long Term Servicing Branch)"
+                },
+                {
+                    "-id": "enterprise-ltsb-eval",
+                    "_name": "Microsoft Windows 10 Enterprise (Long Term Servicing Branch) Evaluation"
+                }
+            ]
+        }
+    }
+}

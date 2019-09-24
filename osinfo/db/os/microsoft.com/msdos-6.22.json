@@ -1,0 +1,15 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "msdos6.22",
+            "_name": "Microsoft MS-DOS 6.22",
+            "_vendor": "Microsoft",
+            "version": "6.22",
+            "family": "msdos",
+            "distro": "msdos",
+            "release-date": "1994-06-01",
+            "-id": "http://microsoft.com/msdos/6.22"
+        }
+    }
+}

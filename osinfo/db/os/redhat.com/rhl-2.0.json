@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://redhat.com/rhl/2.0",
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/1.1"
+            },
+            "eol-date": "1996-10-03",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "distro": "rhl",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/1.1"
+            },
+            "release-date": "1995-09-20",
+            "short-id": "rhl2.0",
+            "_name": "Red Hat Linux 2.0",
+            "version": "2.0"
+        }
+    }
+}

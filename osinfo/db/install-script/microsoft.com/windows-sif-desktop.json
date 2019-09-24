@@ -1,0 +1,156 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "install-script": {
+            "expected-filename": "winnt.sif",
+            "can-pre-install-drivers": "",
+            "injection-method": "floppy",
+            "template": {
+                "stylesheet": {
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    },
+                    "template": [
+                        {
+                            "-name": "script-disk",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/script-disk != ''",
+                                    "value-of": {
+                                        "-select": "config/script-disk"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "A"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "password",
+                            "choose": {
+                                "when": {
+                                    "-test": "os/version = 5.1",
+                                    "choose": {
+                                        "when": {
+                                            "-test": "config/admin-password = ''",
+                                            "text": "*"
+                                        },
+                                        "otherwise": {
+                                            "value-of": {
+                                                "-select": "config/admin-password"
+                                            }
+                                        }
+                                    }
+                                },
+                                "otherwise": {
+                                    "value-of": {
+                                        "-select": "config/admin-password"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "call-template": {
+                                "-name": "password"
+                            },
+                            "value-of": [
+                                {
+                                    "-select": "config/user-realname"
+                                },
+                                {
+                                    "-select": "config/hostname"
+                                }
+                            ],
+                            "-match": "/install-script-config",
+                            "choose": [
+                                {
+                                    "when": {
+                                        "#content": "MsDosInitiated=\"0\"\n    UnattendedInstall=\"Yes\"",
+                                        "-test": "os/version \u003e 5.0"
+                                    },
+                                    "otherwise": "MsDosInitiated=No\n    UnattendedInstall=Yes"
+                                },
+                                {
+                                    "when": {
+                                        "#content": "TargetPath=\\WINDOWS",
+                                        "-test": "os/version \u003e 5.0"
+                                    },
+                                    "otherwise": "TargetPath=\\WINNT"
+                                },
+                                {
+                                    "when": {
+                                        "#content": "OrgName=\"\"",
+                                        "-test": "os/version \u003e 5.0",
+                                        "value-of": {
+                                            "-select": "config/reg-product-key"
+                                        }
+                                    },
+                                    "otherwise": "ProductID="
+                                }
+                            ],
+                            "if": [
+                                {
+                                    "#content": "DriverSigningPolicy=Ignore",
+                                    "-test": "config/driver-signing = 'false'"
+                                },
+                                {
+                                    "#content": "AutoLogon=Yes",
+                                    "-test": "os/version = 5.0"
+                                },
+                                {
+                                    "#content": "[Display]\n    BitsPerPel=16\n    Xresolution=640\n    YResolution=480\n    Vrefresh=60\n\n[RegionalSettings]\n    LanguageGroup=1",
+                                    "-test": "os/version = 5.0"
+                                },
+                                {
+                                    "#content": "[LicenseFilePrintData]\n    AutoMode=PerServer\n    AutoUsers=5",
+                                    "-test": "os/version \u003e 5.0"
+                                },
+                                {
+                                    "#content": ":\\windows.cmd \u003ec:\\windows\\osinfo.log 2\u003e\u00261\"\n\n[WindowsFirewall]\n    Profiles = WindowsFirewall.TurnOffFirewall\n\n[WindowsFirewall.TurnOffFirewall]\n    Mode = 0",
+                                    "-test": "os/version \u003e 5.0",
+                                    "call-template": {
+                                        "-name": "script-disk"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform"
+                }
+            },
+            "-id": "http://microsoft.com/windows/sif/desktop",
+            "product-key-format": "$$$$$-$$$$$-$$$$$-$$$$$-$$$$$",
+            "config": {
+                "param": [
+                    {
+                        "-policy": "optional",
+                        "-name": "admin-password"
+                    },
+                    {
+                        "-name": "reg-product-key",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "user-realname",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "hostname",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "script-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "driver-signing",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "profile": "desktop",
+            "path-format": "dos"
+        }
+    }
+}

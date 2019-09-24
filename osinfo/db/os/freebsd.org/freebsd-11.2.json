@@ -1,0 +1,55 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "FreeBSD Project",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/11.1"
+            },
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/11.1"
+            },
+            "release-date": "2018-06-27",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "url": "https://download.freebsd.org/ftp/releases/ISO-IMAGES/11.2/FreeBSD-11.2-RELEASE-amd64-dvd1.iso",
+                    "iso": {
+                        "system-id": "FreeBSD",
+                        "volume-id": "11_2_RELEASE_AMD64_DVD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "https://download.freebsd.org/ftp/releases/ISO-IMAGES/11.2/FreeBSD-11.2-RELEASE-amd64-disc1.iso",
+                    "iso": {
+                        "system-id": "FreeBSD",
+                        "volume-id": "11_2_RELEASE_AMD64_CD"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://download.freebsd.org/ftp/releases/ISO-IMAGES/11.2/FreeBSD-11.2-RELEASE-i386-dvd1.iso",
+                    "iso": {
+                        "system-id": "FreeBSD",
+                        "volume-id": "11_2_RELEASE_I386_DVD"
+                    }
+                },
+                {
+                    "iso": {
+                        "system-id": "FreeBSD",
+                        "volume-id": "11_2_RELEASE_I386_CD"
+                    },
+                    "-arch": "i686",
+                    "url": "https://download.freebsd.org/ftp/releases/ISO-IMAGES/11.2/FreeBSD-11.2-RELEASE-i386-disc1.iso"
+                }
+            ],
+            "-id": "http://freebsd.org/freebsd/11.2",
+            "short-id": "freebsd11.2",
+            "family": "freebsd",
+            "distro": "freebsd",
+            "_name": "FreeBSD 11.2",
+            "version": "11.2"
+        }
+    }
+}

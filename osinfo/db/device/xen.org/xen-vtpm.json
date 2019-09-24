@@ -1,0 +1,12 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "bus-type": "xen",
+            "product": "Virtual TPM",
+            "product-id": "vtpm",
+            "name": "xen-vtpm",
+            "-id": "http://xen.org/xen/vtpm"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "os": {
+            "-id": "http://apple.com/macosx/10.1",
+            "short-id": "macosx10.1",
+            "family": "darwin",
+            "codename": "Puma",
+            "_name": "MacOS X Puma",
+            "version": "10.1",
+            "_vendor": "Apple Inc.",
+            "distro": "osx",
+            "upgrades": {
+                "-id": "http://apple.com/macosx/10.0"
+            },
+            "release-date": "2001-09-25"
+        },
+        "-version": "0.0.1"
+    }
+}

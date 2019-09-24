@@ -1,0 +1,42 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "5.6",
+            "_vendor": "CentOS",
+            "distro": "centos",
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.6"
+            },
+            "tree": [
+                {
+                    "url": "http://vault.centos.org/5.6/os/x86_64/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "5.6",
+                        "arch": "x86_64"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "treeinfo": {
+                        "version": "5.6",
+                        "arch": "i386",
+                        "family": "CentOS"
+                    },
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/5.6/os/i386/"
+                }
+            ],
+            "-id": "http://centos.org/centos/5.6",
+            "short-id": "centos5.6",
+            "_name": "CentOS 5.6",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://centos.org/centos/5.5"
+            },
+            "release-date": "2011-04-09",
+            "eol-date": "2017-03-31"
+        }
+    }
+}

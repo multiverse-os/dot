@@ -1,0 +1,129 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": [
+                "ubuntu16.10",
+                "ubuntutyakkety"
+            ],
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/16.04"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "16106127360"
+                }
+            },
+            "_name": "Ubuntu 16.10",
+            "distro": "ubuntu",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/16.04"
+            },
+            "release-date": "2016-10-13",
+            "-id": "http://ubuntu.com/ubuntu/16.10",
+            "eol-date": "2017-07-20",
+            "installer": {
+                "script": {
+                    "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                }
+            },
+            "version": "16.10",
+            "_vendor": "Canonical Ltd",
+            "family": "linux",
+            "codename": "Yakkety Yak",
+            "media": [
+                {
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/yakkety/ubuntu-16.10-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.10(.\\d\\+?)? i386"
+                    }
+                },
+                {
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/yakkety/ubuntu-16.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "install/vmlinuz"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/yakkety/ubuntu-16.10-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 16.10(.\\d\\+?)? i386"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "i686"
+                },
+                {
+                    "kernel": "casper/vmlinuz.efi",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/yakkety/ubuntu-16.10-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 16.10(.\\d\\+?)? amd64"
+                    }
+                },
+                {
+                    "-arch": "aarch64",
+                    "url": "http://old-releases.ubuntu.com/releases/yakkety/ubuntu-16.10-server-arm64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.10(.\\d\\+?)? arm64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://old-releases.ubuntu.com/releases/yakkety/ubuntu-16.10-server-powerpc.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.10(.\\d\\+?)? ppc"
+                    }
+                },
+                {
+                    "initrd": "install/initrd.gz",
+                    "-arch": "ppc64le",
+                    "url": "http://old-releases.ubuntu.com/releases/yakkety/ubuntu-16.10-server-ppc64el.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.10(.\\d\\+?)? ppc64"
+                    },
+                    "kernel": "install/vmlinux"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.10(.\\d\\+?)? s390x"
+                    },
+                    "kernel": "boot/kernel.ubuntu",
+                    "initrd": "boot/initrd.ubuntu",
+                    "-arch": "s390x",
+                    "url": "http://old-releases.ubuntu.com/releases/yakkety/ubuntu-16.10-server-s390x.iso"
+                }
+            ]
+        }
+    }
+}

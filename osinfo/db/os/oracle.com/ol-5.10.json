@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "os": {
+            "_name": "Oracle Linux 5.10",
+            "distro": "ol",
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.10"
+            },
+            "release-date": "2013-10-02",
+            "-id": "http://oracle.com/ol/5.10",
+            "version": "5.10",
+            "_vendor": "Oracle America",
+            "family": "linux",
+            "eol-date": "2020-06-30",
+            "short-id": "ol5.10"
+        },
+        "-version": "0.0.1"
+    }
+}

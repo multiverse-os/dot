@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "freebsd6.2",
+            "_name": "FreeBSD 6.2",
+            "version": "6.2",
+            "_vendor": "FreeBSD Project",
+            "family": "freebsd",
+            "release-date": "2007-01-15",
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/6.1"
+            },
+            "-id": "http://freebsd.org/freebsd/6.2",
+            "distro": "freebsd",
+            "eol-date": "2008-05-31",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/6.1"
+            }
+        }
+    }
+}

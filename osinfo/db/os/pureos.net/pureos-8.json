@@ -1,0 +1,38 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://pureos.net/pureos/8",
+            "distro": "pureos",
+            "release-status": "prerelease",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "1073741824",
+                    "storage": "5368709120",
+                    "cpu": "1000000000",
+                    "n-cpus": "1"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "16106127360"
+                }
+            },
+            "family": "linux",
+            "media": {
+                "-arch": "x86_64",
+                "-live": "true",
+                "iso": {
+                    "volume-id": "PureOS 8.0 GNOME Live"
+                },
+                "kernel": "casper/vmlinuz",
+                "initrd": "casper/initrd.img"
+            },
+            "short-id": "pureos8",
+            "_name": "PureOS",
+            "version": "8",
+            "_vendor": "Purism, SPC"
+        }
+    }
+}

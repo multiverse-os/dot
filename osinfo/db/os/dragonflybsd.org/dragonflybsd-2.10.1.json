@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "dragonflybsd",
+            "release-date": "2011-04-26",
+            "short-id": "dragonflybsd2.10.1",
+            "_name": "DragonFlyBSD 2.10.1",
+            "version": "2.10.1",
+            "family": "dragonflybsd",
+            "_vendor": "DragonFlyBSD Project",
+            "upgrades": {
+                "-id": "http://dragonflybsd.org/dragonflybsd/2.8.2"
+            },
+            "eol-date": "2012-02-22",
+            "-id": "http://dragonflybsd.org/dragonflybsd/2.10.1"
+        }
+    }
+}

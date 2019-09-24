@@ -1,0 +1,74 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2018-05-01",
+            "variant": {
+                "-id": "netinst",
+                "_name": "OpenBSD 6.1"
+            },
+            "-id": "http://openbsd.org/openbsd/6.1",
+            "short-id": "openbsd6.1",
+            "_name": "OpenBSD 6.1",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/6.0"
+            },
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/6.0"
+            },
+            "release-date": "2017-04-11",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "https://ftp.eu.openbsd.org/pub/OpenBSD/6.1/i386/install61.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2017 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/i386    6.1 Install CD",
+                        "application-id": "OpenBSD 6.1 i386 Install CD"
+                    }
+                },
+                {
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2017 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/amd64   6.1 Install CD",
+                        "application-id": "OpenBSD 6.1 amd64 Install CD"
+                    },
+                    "-arch": "x86_64",
+                    "url": "https://ftp.eu.openbsd.org/pub/OpenBSD/6.1/amd64/install61.iso"
+                },
+                {
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/6.1/i386/cd61.iso",
+                    "iso": {
+                        "volume-id": "OpenBSD/i386    6\\.1 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 6\\.1 i386 bootonly CD",
+                        "publisher-id": "Copyright \\(c\\) 2017 Theo de Raadt, The OpenBSD project"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2017 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   6\\.1 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 6\\.1 amd64 bootonly CD"
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/6.1/amd64/cd61.iso"
+                }
+            ],
+            "version": "6.1",
+            "family": "openbsd",
+            "distro": "openbsd",
+            "_vendor": "OpenBSD Project"
+        }
+    }
+}

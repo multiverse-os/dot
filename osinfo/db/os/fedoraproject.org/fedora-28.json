@@ -1,0 +1,171 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "media": [
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/28/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-28-1.1.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WS-Live-28.*",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "workstation-netinst"
+                    },
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/28/Workstation/x86_64/iso/Fedora-Workstation-netinst-x86_64-28-1.1.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Fedora-WS-dvd-x86_64-28"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "installer": {
+                        "script": {
+                            "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                        }
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "installer": {
+                        "script": {
+                            "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/28/Server/x86_64/iso/Fedora-Server-dvd-x86_64-28-1.1.iso",
+                    "iso": {
+                        "volume-size": "2903031808",
+                        "volume-id": "Fedora-S-dvd-x86_64-28",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server-netinst"
+                    },
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/28/Server/x86_64/iso/Fedora-Server-netinst-x86_64-28-1.1.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S-dvd-x86_64-28",
+                        "system-id": "LINUX",
+                        "volume-size": "610408448"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "installer": {
+                        "script": {
+                            "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                        }
+                    }
+                }
+            ],
+            "tree": [
+                {
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "28",
+                        "arch": "x86_64"
+                    },
+                    "-arch": "x86_64",
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/28/Server/x86_64/os/",
+                    "variant": {
+                        "-id": "server"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "28"
+                    }
+                }
+            ],
+            "resources": {
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "n-cpus": "1",
+                    "cpu": "1000000000"
+                }
+            },
+            "-id": "http://fedoraproject.org/fedora/28",
+            "version": "28",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/27"
+            },
+            "variant": [
+                {
+                    "-id": "workstation",
+                    "_name": "Fedora 28 Workstation"
+                },
+                {
+                    "-id": "workstation-netinst",
+                    "_name": "Fedora 28 Workstation"
+                },
+                {
+                    "-id": "server",
+                    "_name": "Fedora 28 Server"
+                },
+                {
+                    "-id": "server-netinst",
+                    "_name": "Fedora 28 Server"
+                }
+            ],
+            "release-date": "2018-05-01",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/27"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "eol-date": "2019-05-29",
+            "image": [
+                {
+                    "-cloud-init": "true",
+                    "url": "https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-28-1.1.x86_64.qcow2",
+                    "-arch": "x86_64",
+                    "-format": "qcow2"
+                },
+                {
+                    "-arch": "aarch64",
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/28/Cloud/aarch64/images/Fedora-Cloud-Base-28-1.1.aarch64.qcow2"
+                }
+            ],
+            "short-id": "fedora28",
+            "_name": "Fedora 28",
+            "_vendor": "Fedora Project",
+            "distro": "fedora"
+        }
+    }
+}

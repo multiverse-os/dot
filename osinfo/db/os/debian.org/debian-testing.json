@@ -1,0 +1,104 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "tree": [
+                {
+                    "url": "http://deb.debian.org/debian/dists/testing/main/installer-i386",
+                    "kernel": "current/images/netboot/debian-installer/i386/linux",
+                    "initrd": "current/images/netboot/debian-installer/i386/initrd.gz",
+                    "-arch": "i686"
+                },
+                {
+                    "kernel": "current/images/netboot/debian-installer/amd64/linux",
+                    "initrd": "current/images/netboot/debian-installer/amd64/initrd.gz",
+                    "-arch": "x86_64",
+                    "url": "http://deb.debian.org/debian/dists/testing/main/installer-amd64"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "storage": "10737418240",
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824"
+                },
+                "recommended": {
+                    "ram": "1073741824",
+                    "storage": "21474836480",
+                    "cpu": "1000000000"
+                }
+            },
+            "-id": "http://debian.org/debian/testing",
+            "short-id": "debiantesting",
+            "version": "testing",
+            "family": "linux",
+            "distro": "debian",
+            "upgrades": {
+                "-id": "http://debian.org/debian/9"
+            },
+            "derives-from": {
+                "-id": "http://debian.org/debian/9"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://debian.org/debian/preseed/jeos"
+                    },
+                    {
+                        "-id": "http://debian.org/debian/preseed/desktop"
+                    }
+                ]
+            },
+            "_name": "Debian testing",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://cdimage.debian.org/cdimage/weekly-builds/i386/iso-dvd/debian-testing-i386-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian testing i386 1"
+                    },
+                    "kernel": "install.386/vmlinuz",
+                    "initrd": "install.386/initrd.gz"
+                },
+                {
+                    "url": "http://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-dvd/debian-testing-amd64-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian testing amd64 1"
+                    },
+                    "kernel": "install.amd/vmlinuz",
+                    "initrd": "install.amd/initrd.gz",
+                    "-arch": "x86_64"
+                }
+            ],
+            "image": [
+                {
+                    "-arch": "x86_64",
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud.debian.org/images/cloud/OpenStack/testing/debian-testing-openstack-amd64.qcow2"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-format": "raw",
+                    "-cloud-init": "true",
+                    "url": "https://cloud.debian.org/images/cloud/OpenStack/testing/debian-testing-openstack-amd64.raw"
+                },
+                {
+                    "-arch": "aarch64",
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud.debian.org/images/cloud/OpenStack/testing/debian-testing-openstack-arm64.qcow2"
+                },
+                {
+                    "-arch": "aarch64",
+                    "-format": "raw",
+                    "-cloud-init": "true",
+                    "url": "https://cloud.debian.org/images/cloud/OpenStack/testing/debian-testing-openstack-arm64.raw"
+                }
+            ],
+            "_vendor": "Debian Project"
+        }
+    }
+}

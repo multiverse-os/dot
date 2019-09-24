@@ -1,0 +1,60 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "sles10sp2",
+            "_vendor": "SUSE",
+            "distro": "sles",
+            "derives-from": {
+                "-id": "http://suse.com/sles/10.1"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "1074151424"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            },
+            "-id": "http://suse.com/sles/10.2",
+            "release-date": "2008-05-19",
+            "eol-date": "2010-04-11",
+            "devices": {
+                "device": {
+                    "-id": "http://usb.org/usb/80ee/0021"
+                }
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLES-10-SP2-DVD-i586"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd"
+                },
+                {
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLES-10-SP2-DVD-x86_64"
+                    }
+                }
+            ],
+            "version": "10.2",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://suse.com/sles/10.1"
+            },
+            "_name": "SUSE Linux Enterprise Server 10 SP2"
+        }
+    }
+}

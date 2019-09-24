@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "NetBSD Project",
+            "upgrades": {
+                "-id": "http://netbsd.org/netbsd/5.0"
+            },
+            "derives-from": {
+                "-id": "http://netbsd.org/netbsd/5.0"
+            },
+            "release-date": "2010-11-19",
+            "-id": "http://netbsd.org/netbsd/5.1",
+            "short-id": "netbsd5.1",
+            "_name": "NetBSD 5.1",
+            "version": "5.1",
+            "family": "netbsd",
+            "distro": "netbsd"
+        }
+    }
+}

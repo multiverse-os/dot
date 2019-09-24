@@ -1,0 +1,148 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "install-script": {
+            "needs-internet": "true",
+            "template": {
+                "stylesheet": {
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    },
+                    "template": [
+                        {
+                            "value-of": [
+                                {
+                                    "-select": "script/expected-filename"
+                                },
+                                {
+                                    "-select": "config/l10n-language"
+                                },
+                                {
+                                    "-select": "config/l10n-keyboard"
+                                }
+                            ],
+                            "call-template": {
+                                "-name": "hostname"
+                            },
+                            "-match": "/command-line",
+                            "text": [
+                                "file=/",
+                                "locale=",
+                                "keyboard-configuration/layoutcode=",
+                                "hostname=",
+                                "priority=critical console-setup/ask_detect=false domain=unassigned-domain interface=auto",
+                                "noprompt boot=casper automatic-ubiquity"
+                            ]
+                        },
+                        {
+                            "-name": "target-disk",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/target-disk != ''",
+                                    "value-of": {
+                                        "-select": "config/target-disk"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "/dev/vda"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "hostname",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/hostname != ''",
+                                    "value-of": {
+                                        "-select": "config/hostname"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "ubuntu"
+                                }
+                            }
+                        },
+                        {
+                            "#content": "d-i user-setup/allow-password-weak boolean true\n\nd-i finish-install/reboot_in_progress note\n#Temporary workaround for LP:1258245\nd-i preseed/early_command string chmod 666 /dev/ttyS0\nubiquity ubiquity/summary note\nubiquity ubiquity/reboot boolean true\n\n# Create an osinfo-install-successful file in /root\nd-i preseed/late_command string in-target \\\n    touch /root/osinfo-install-successful",
+                            "-match": "/install-script-config",
+                            "value-of": [
+                                {
+                                    "-select": "config/l10n-language"
+                                },
+                                {
+                                    "-select": "config/l10n-timezone"
+                                },
+                                {
+                                    "-select": "config/user-realname"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-password"
+                                },
+                                {
+                                    "-select": "config/user-password"
+                                }
+                            ],
+                            "call-template": [
+                                {
+                                    "-name": "hostname"
+                                },
+                                {
+                                    "-name": "target-disk"
+                                },
+                                {
+                                    "-name": "target-disk"
+                                }
+                            ]
+                        }
+                    ],
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform"
+                }
+            },
+            "-id": "http://ubuntu.com/ubuntu/preseed/desktop",
+            "profile": "desktop",
+            "expected-filename": "preseed.cfg",
+            "config": {
+                "param": [
+                    {
+                        "-name": "l10n-keyboard",
+                        "-policy": "optional",
+                        "-value-map": "http://x.org/x11-keyboard"
+                    },
+                    {
+                        "-name": "l10n-timezone",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "l10n-language",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "user-login",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "user-realname",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "user-password",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "target-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "hostname",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "injection-method": "initrd"
+        }
+    }
+}

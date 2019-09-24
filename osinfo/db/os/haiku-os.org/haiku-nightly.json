@@ -1,0 +1,56 @@
+{
+    "libosinfo": {
+        "os": {
+            "_vendor": "Haiku, Inc.",
+            "family": "haiku",
+            "distro": "haiku",
+            "derives-from": {
+                "-id": "http://haiku-os.org/haiku/r1alpha4.1"
+            },
+            "release-status": "snapshot",
+            "short-id": "haikunightly",
+            "version": "nightly",
+            "upgrades": {
+                "-id": "http://haiku-os.org/haiku/r1alpha4.1"
+            },
+            "devices": {
+                "device": {
+                    "-id": "http://pcisig.com/pci/1af4/1042"
+                }
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "iso": {
+                        "volume-id": "haiku-nightly-x86"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "iso": {
+                        "volume-id": "haiku-nightly-x86_64"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "536870912",
+                    "storage": "2147483648"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "4294967296"
+                }
+            },
+            "-id": "http://haiku-os.org/haiku/nightly",
+            "_name": "Haiku Nightly"
+        },
+        "-version": "0.0.1"
+    }
+}

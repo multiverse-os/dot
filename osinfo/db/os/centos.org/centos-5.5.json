@@ -1,0 +1,42 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "centos5.5",
+            "version": "5.5",
+            "_vendor": "CentOS",
+            "distro": "centos",
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.5"
+            },
+            "release-date": "2010-05-15",
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/5.5/os/x86_64/",
+                    "treeinfo": {
+                        "arch": "x86_64",
+                        "family": "CentOS",
+                        "version": "5.5"
+                    }
+                },
+                {
+                    "url": "http://vault.centos.org/5.5/os/i386/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "5.5",
+                        "arch": "i386"
+                    },
+                    "-arch": "i686"
+                }
+            ],
+            "-id": "http://centos.org/centos/5.5",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://centos.org/centos/5.4"
+            },
+            "eol-date": "2017-03-31",
+            "_name": "CentOS 5.5"
+        }
+    }
+}

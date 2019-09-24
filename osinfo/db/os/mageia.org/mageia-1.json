@@ -1,0 +1,70 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://mageia.org/mageia/1",
+            "short-id": "mageia1",
+            "_vendor": "Mageia",
+            "family": "linux",
+            "distro": "mageia",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "1-i586",
+                        "publisher-id": "Mageia.Org"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "mageia-dual-1"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "mageia-dual-1"
+                    }
+                },
+                {
+                    "iso": {
+                        "publisher-id": "Mageia.Org",
+                        "volume-id": "1-x86_64"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-live": "true",
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "Livecd-1-(GNOME|KDE)"
+                    }
+                }
+            ],
+            "_name": "Mageia 1",
+            "version": "1",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandriva/2010.1"
+            },
+            "release-date": "2011-06-01",
+            "eol-date": "2012-12-01",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0100"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    },
+                    {
+                        "-id": "http://usb.org/usb/80ee/0021"
+                    }
+                ]
+            }
+        }
+    }
+}

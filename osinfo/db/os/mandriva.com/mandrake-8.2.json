@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "os": {
+            "version": "8.2",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/8.1"
+            },
+            "release-date": "2002-03-18",
+            "family": "linux",
+            "distro": "mandrake",
+            "codename": "Bluebird",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/8.1"
+            },
+            "-id": "http://mandriva.com/mandrake/8.2",
+            "short-id": "mandrake8.2",
+            "_name": "Mandrake Linux 8.2",
+            "_vendor": "Mandriva"
+        },
+        "-version": "0.0.1"
+    }
+}

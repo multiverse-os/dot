@@ -1,0 +1,28 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "osx",
+            "upgrades": {
+                "-id": "http://apple.com/macosx/10.6"
+            },
+            "release-date": "2011-07-20",
+            "short-id": "macosx10.7",
+            "_name": "MacOS X Lion",
+            "version": "10.7",
+            "_vendor": "Apple Inc.",
+            "-id": "http://apple.com/macosx/10.7",
+            "family": "darwin",
+            "codename": "Lion",
+            "resources": {
+                "minimum": {
+                    "ram": "2147483648",
+                    "storage": "7516192768",
+                    "n-cpus": "2",
+                    "cpu": "1600000000"
+                },
+                "-arch": "all"
+            }
+        }
+    }
+}

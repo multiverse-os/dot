@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://microsoft.com/winnt/3.5",
+            "family": "winnt",
+            "distro": "winnt",
+            "upgrades": {
+                "-id": "http://microsoft.com/winnt/3.1"
+            },
+            "release-date": "1994-09-21",
+            "short-id": "winnt3.5",
+            "_name": "Microsoft Windows NT Server 3.5",
+            "_vendor": "Microsoft Corporation",
+            "version": "3.5",
+            "derives-from": {
+                "-id": "http://microsoft.com/winnt/3.1"
+            },
+            "eol-date": "2001-12-31"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "1.0",
+            "release-date": "1985-11-20",
+            "-id": "http://microsoft.com/win/1.0",
+            "short-id": "win1.0",
+            "_name": "Microsoft Windows 1.0",
+            "eol-date": "2001-12-31",
+            "_vendor": "Microsoft Corporation",
+            "family": "win16",
+            "distro": "win"
+        }
+    }
+}

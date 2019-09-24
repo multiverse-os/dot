@@ -1,0 +1,122 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Red Hat, Inc",
+            "distro": "rhel",
+            "codename": "Maipo",
+            "release-date": "2015-03-05",
+            "resources": [
+                {
+                    "-arch": "ppc64",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "cpu": "1000000000",
+                        "ram": "2147483648",
+                        "storage": "10737418240"
+                    },
+                    "recommended": {
+                        "cpu": "1000000000",
+                        "ram": "2147483648",
+                        "storage": "21474836480"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "minimum": {
+                        "storage": "10737418240",
+                        "n-cpus": "1",
+                        "cpu": "1000000000",
+                        "ram": "1073741824"
+                    },
+                    "recommended": {
+                        "cpu": "1000000000",
+                        "ram": "1073741824",
+                        "storage": "10737418240"
+                    },
+                    "maximum": {
+                        "ram": "6597069766656"
+                    },
+                    "network-install": {
+                        "ram": "1610612736"
+                    }
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "rhel7.1",
+            "_name": "Red Hat Enterprise Linux 7.1",
+            "version": "7.1",
+            "family": "linux",
+            "tree": [
+                {
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux$",
+                        "version": "^7.1$",
+                        "arch": "ppc64"
+                    },
+                    "-arch": "ppc64"
+                },
+                {
+                    "-arch": "s390x",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux$",
+                        "version": "^7.1$",
+                        "arch": "s390x"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux$",
+                        "version": "^7.1$",
+                        "arch": "x86_64"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "aarch64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux Server for ARM Development Preview",
+                        "version": "^7.1$",
+                        "arch": "aarch64"
+                    }
+                }
+            ],
+            "-id": "http://redhat.com/rhel/7.1",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/7.0"
+            },
+            "media": [
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL-7.1.*x86_64.*"
+                    }
+                },
+                {
+                    "-arch": "aarch64",
+                    "iso": {
+                        "volume-id": "RHELSA-7.1.*aarch64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/7.0"
+            }
+        }
+    }
+}

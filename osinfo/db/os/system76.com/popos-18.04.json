@@ -1,0 +1,55 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "derives-from": {
+                "-id": "http://system76.com/popos/17.10"
+            },
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "iso": {
+                        "volume-id": "Pop_OS 18.04 amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi",
+                    "initrd": "casper/initrd.gz"
+                },
+                {
+                    "-live": "true",
+                    "iso": {
+                        "volume-id": "Pop_OS 18.04 amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi",
+                    "initrd": "casper/initrd.gz",
+                    "-arch": "x86_64"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "2147483648",
+                    "storage": "16106127360"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "4294967296",
+                    "storage": "16106127360"
+                }
+            },
+            "-id": "http://system76.com/popos/18.04",
+            "short-id": "popos18.04",
+            "_name": "Pop!_OS 18.04",
+            "version": "18.04",
+            "release-date": "2018-04-30",
+            "_vendor": "System76, Inc.",
+            "family": "linux",
+            "distro": "popos",
+            "upgrades": {
+                "-id": "http://system76.com/popos/17.10"
+            }
+        }
+    }
+}

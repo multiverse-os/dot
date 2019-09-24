@@ -1,0 +1,38 @@
+{
+    "libosinfo": {
+        "os": {
+            "-id": "http://asianux.com/asianux/unknown",
+            "name": "Asianux unknown",
+            "vendor": "Asianux Project",
+            "distro": "asianux",
+            "media": {
+                "-arch": "x86_64",
+                "iso": {
+                    "volume-id": "Asianux Server (7 (?!SP[123])|(4 ?!SP[67])).+",
+                    "system-id": "LINUX"
+                },
+                "kernel": "isolinux/vmlinuz",
+                "initrd": "isolinux/initrd.img"
+            },
+            "short-id": "asianux-unknown",
+            "version": "unknown",
+            "family": "linux",
+            "release-status": "prerelease",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

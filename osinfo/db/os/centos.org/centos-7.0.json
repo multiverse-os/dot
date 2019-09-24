@@ -1,0 +1,162 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://centos.org/centos/6.5"
+            },
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "CentOS 7 x86_64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "variant": {
+                        "-id": "live-gnome"
+                    },
+                    "url": "https://buildlogs.centos.org/rolling/7/isos/x86_64/CentOS-7-x86_64-LiveGNOME.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-7-x86_64-(Live)?GNOME*"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "variant": {
+                        "-id": "live-kde"
+                    },
+                    "url": "https://buildlogs.centos.org/rolling/7/isos/x86_64/CentOS-7-x86_64-LiveKDE.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-7-x86_64-LiveKDE*"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                }
+            ],
+            "image": {
+                "-arch": "x86_64",
+                "-format": "qcow2",
+                "-cloud-init": "true",
+                "url": "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2"
+            },
+            "short-id": [
+                "centos7.0",
+                "centos7"
+            ],
+            "version": "7",
+            "_vendor": "CentOS",
+            "family": "linux",
+            "-id": "http://centos.org/centos/7.0",
+            "distro": "centos",
+            "release-date": "2014-07-07",
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://mirror.centos.org/centos-7/7/os/x86_64/",
+                    "treeinfo": {
+                        "version": "^7$",
+                        "arch": "x86_64",
+                        "family": "CentOS"
+                    }
+                },
+                {
+                    "-arch": "aarch64",
+                    "url": "http://mirror.centos.org/altarch/7/os/aarch64/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "^7$",
+                        "arch": "aarch64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://mirror.centos.org/altarch/7/os/i386/",
+                    "treeinfo": {
+                        "version": "^7$",
+                        "arch": "i386",
+                        "family": "CentOS"
+                    }
+                },
+                {
+                    "-arch": "ppc64le",
+                    "url": "http://mirror.centos.org/altarch/7/os/ppc64le/",
+                    "treeinfo": {
+                        "arch": "ppc64le",
+                        "family": "CentOS",
+                        "version": "^7$"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "version": "^7$",
+                        "arch": "ppc64",
+                        "family": "CentOS"
+                    },
+                    "-arch": "ppc64",
+                    "url": "http://mirror.centos.org/altarch/7/os/ppc64/"
+                },
+                {
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "^7$"
+                    },
+                    "-arch": "all"
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "_name": "CentOS 7",
+            "variant": [
+                {
+                    "-id": "live-gnome",
+                    "_name": "CentOS 7 (GNOME)"
+                },
+                {
+                    "-id": "live-kde",
+                    "_name": "CentOS 7 (KDE)"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "n-cpus": "1",
+                    "cpu": "1000000000"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                },
+                "network-install": {
+                    "ram": "1610612736"
+                }
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/7.6"
+            }
+        }
+    }
+}

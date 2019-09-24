@@ -1,0 +1,255 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "install-script": {
+            "profile": "jeos",
+            "expected-filename": "rhel.ks",
+            "config": {
+                "param": [
+                    {
+                        "-name": "admin-password",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "l10n-keyboard",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "l10n-language",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "l10n-timezone",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "target-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "script-disk",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "injection-method": [
+                "cdrom",
+                "disk",
+                "floppy",
+                "initrd"
+            ],
+            "template": {
+                "stylesheet": {
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform",
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    },
+                    "template": [
+                        {
+                            "choose": {
+                                "when": [
+                                    {
+                                        "value-of": {
+                                            "-select": "config/target-disk"
+                                        },
+                                        "-test": "config/target-disk != ''"
+                                    },
+                                    {
+                                        "-test": "os/version \u003e 5.5",
+                                        "text": "/dev/vda"
+                                    }
+                                ],
+                                "otherwise": {
+                                    "text": "/dev/sda"
+                                }
+                            },
+                            "-name": "target-disk"
+                        },
+                        {
+                            "-name": "script-disk",
+                            "variable": {
+                                "-name": "script-disk",
+                                "choose": {
+                                    "when": [
+                                        {
+                                            "-test": "config/script-disk != ''",
+                                            "value-of": {
+                                                "-select": "config/script-disk"
+                                            }
+                                        },
+                                        {
+                                            "-test": "os/version \u003e 5.5",
+                                            "text": "/dev/sda"
+                                        }
+                                    ],
+                                    "otherwise": {
+                                        "text": "/dev/sdb"
+                                    }
+                                }
+                            },
+                            "value-of": {
+                                "-select": "substring-after($script-disk, '/dev/')"
+                            }
+                        },
+                        {
+                            "-match": "/command-line",
+                            "text": "ks=",
+                            "choose": {
+                                "when": {
+                                    "-test": "script/preferred-injection-method = 'initrd'",
+                                    "text": "file:/"
+                                },
+                                "otherwise": {
+                                    "call-template": {
+                                        "-name": "script-disk"
+                                    },
+                                    "text": [
+                                        "hd:",
+                                        ":/"
+                                    ]
+                                }
+                            },
+                            "value-of": {
+                                "-select": "script/expected-filename"
+                            },
+                            "if": {
+                                "-test": "script/installation-source = 'network'",
+                                "choose": {
+                                    "when": {
+                                        "-test": "os/version \u003c 7",
+                                        "text": "method="
+                                    },
+                                    "otherwise": {
+                                        "text": "inst.repo="
+                                    }
+                                },
+                                "call-template": {
+                                    "-name": "installation-url"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "version",
+                            "choose": {
+                                "when": {
+                                    "-test": "os/version \u003c 7",
+                                    "text": "6"
+                                },
+                                "otherwise": {
+                                    "text": "7"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "arch",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/hardware-arch = 'x86_64'",
+                                    "text": "x86_64"
+                                },
+                                "otherwise": {
+                                    "text": "i386"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "installation-url",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/installation-url != ''",
+                                        "value-of": {
+                                            "-select": "config/installation-url"
+                                        }
+                                    },
+                                    {
+                                        "-test": "tree/url != ''",
+                                        "value-of": {
+                                            "-select": "tree/url"
+                                        }
+                                    },
+                                    {
+                                        "-test": "os/distro = centos",
+                                        "text": [
+                                            "http://mirror.centos.org/centos/",
+                                            "/os/"
+                                        ],
+                                        "call-template": [
+                                            {
+                                                "-name": "version"
+                                            },
+                                            {
+                                                "-name": "arch"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "#content": "@core\n%end\n\n%post --erroronfail\n\n# Create an osinfo-install-successful file in /root\ntouch /root/osinfo-install-successful\n\n%end",
+                            "call-template": {
+                                "-name": "target-disk"
+                            },
+                            "choose": {
+                                "when": {
+                                    "#content": "@base",
+                                    "-test": "os/version \u003c 7"
+                                },
+                                "otherwise": {
+                                    "choose": {
+                                        "when": {
+                                            "#content": "@^minimal",
+                                            "-test": "os/distro = 'centos'"
+                                        },
+                                        "otherwise": "@standard"
+                                    }
+                                }
+                            },
+                            "-match": "/install-script-config",
+                            "value-of": [
+                                {
+                                    "-select": "os/short-id"
+                                },
+                                {
+                                    "-select": "script/profile"
+                                },
+                                {
+                                    "-select": "config/l10n-language"
+                                },
+                                {
+                                    "-select": "config/admin-password"
+                                },
+                                {
+                                    "-select": "config/l10n-timezone"
+                                }
+                            ],
+                            "if": [
+                                {
+                                    "#content": "cdrom",
+                                    "-test": "script/installation-source = 'media'",
+                                    "if": {
+                                        "#content": "install",
+                                        "-test": "os/version \u003c 8"
+                                    }
+                                },
+                                {
+                                    "#content": "authconfig --enableshadow --enablemd5",
+                                    "-test": "os/version \u003c 8"
+                                },
+                                {
+                                    "-test": "script/installation-source = 'network'",
+                                    "call-template": {
+                                        "-name": "installation-url"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "-id": "http://redhat.com/rhel/kickstart/jeos"
+        }
+    }
+}

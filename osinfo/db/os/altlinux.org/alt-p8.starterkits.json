@@ -1,0 +1,60 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://altlinux.org/alt/p8.starterkits",
+            "short-id": "alt.p8",
+            "version": "p8",
+            "family": "linux",
+            "distro": "alt",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "536870912",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "_name": "ALT p8 StarterKits",
+            "_vendor": "BaseALT",
+            "upgrades": {
+                "-id": "http://altlinux.org/alt/8.2"
+            },
+            "derives-from": {
+                "-id": "http://altlinux.org/alt/8.2"
+            },
+            "release-status": "snapshot",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "iso": {
+                        "publisher-id": "ALT LINUX TEAM",
+                        "application-id": "ALT-P8-.*",
+                        "system-id": "LINUX",
+                        "volume-id": "ALT p8.*/i586"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "iso": {
+                        "application-id": "ALT-P8-.*",
+                        "system-id": "LINUX",
+                        "volume-id": "ALT p8.*/x86_64",
+                        "publisher-id": "ALT LINUX TEAM"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "recommended": {
+                    "storage": "5368709120",
+                    "cpu": "1000000000",
+                    "ram": "536870912"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "67108864",
+                    "storage": "5368709120"
+                }
+            },
+            "-id": "http://ubuntu.com/ubuntu/10.04",
+            "version": "10.04",
+            "codename": "Lucid Lynx",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/9.10"
+            },
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/9.10"
+            },
+            "short-id": [
+                "ubuntu10.04",
+                "ubuntulucid"
+            ],
+            "_vendor": "Canonical Ltd",
+            "family": "linux",
+            "distro": "ubuntu",
+            "_name": "Ubuntu 10.04 LTS",
+            "release-date": "2010-04-29",
+            "eol-date": "2015-04-30",
+            "media": [
+                {
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/lucid/ubuntu-10.04-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 10.04(.\\d\\+?)? LTS i386",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/lucid/ubuntu-10.04-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 10.04(.\\d\\+?)? LTS amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "1.1",
+            "distro": "rhl",
+            "codename": "Mother's Day + 0.1",
+            "eol-date": "1995-09-20",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/1.0"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/1.0"
+            },
+            "release-date": "1995-08-01",
+            "-id": "http://redhat.com/rhl/1.1",
+            "short-id": "rhl1.1",
+            "_name": "Red Hat Linux 1.1",
+            "_vendor": "Red Hat, Inc"
+        }
+    }
+}

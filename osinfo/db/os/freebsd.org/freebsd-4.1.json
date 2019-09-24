@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "FreeBSD 4.1",
+            "_vendor": "FreeBSD Project",
+            "release-date": "2000-06-27",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/4.0"
+            },
+            "distro": "freebsd",
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/4.0"
+            },
+            "-id": "http://freebsd.org/freebsd/4.1",
+            "short-id": "freebsd4.1",
+            "version": "4.1",
+            "family": "freebsd"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://dragonflybsd.org/dragonflybsd/1.4.4",
+            "version": "1.4.4",
+            "eol-date": "2006-07-24",
+            "short-id": "dragonflybsd1.4.4",
+            "_name": "DragonFlyBSD 1.4.4",
+            "family": "dragonflybsd",
+            "distro": "dragonflybsd",
+            "_vendor": "DragonFlyBSD Project",
+            "upgrades": {
+                "-id": "http://dragonflybsd.org/dragonflybsd/1.4.0"
+            },
+            "release-date": "2006-04-23"
+        }
+    }
+}

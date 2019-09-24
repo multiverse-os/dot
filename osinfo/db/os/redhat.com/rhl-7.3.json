@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://redhat.com/rhl/7.3",
+            "short-id": "rhl7.3",
+            "_name": "Red Hat Linux 7.3",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/7.2"
+            },
+            "release-date": "2002-05-06",
+            "eol-date": "2003-12-31",
+            "version": "7.3",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "distro": "rhl",
+            "codename": "Valhalla",
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/7.2"
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/12.10"
+            },
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/12.10"
+            },
+            "_name": "Ubuntu 13.04",
+            "codename": "Raring Ringtail",
+            "media": [
+                {
+                    "initrd": "install/initrd.gz",
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/raring/ubuntu-13.04-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 13.04(.\\d\\+?)? i386"
+                    },
+                    "kernel": "install/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/raring/ubuntu-13.04-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 13.04(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/raring/ubuntu-13.04-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 13.04(.\\d\\+?)? i386"
+                    }
+                },
+                {
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/raring/ubuntu-13.04-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 13.04(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi"
+                }
+            ],
+            "_vendor": "Canonical Ltd",
+            "short-id": [
+                "ubuntu13.04",
+                "ubunturaring"
+            ],
+            "version": "13.04",
+            "family": "linux",
+            "distro": "ubuntu",
+            "release-date": "2013-04-25",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "16106127360"
+                }
+            },
+            "-id": "http://ubuntu.com/ubuntu/13.04",
+            "eol-date": "2014-01-27"
+        }
+    }
+}

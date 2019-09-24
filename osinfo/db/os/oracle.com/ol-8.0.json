@@ -1,0 +1,38 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "ol8.0",
+            "version": "8.0",
+            "_vendor": "Oracle America",
+            "clones": {
+                "-id": "http://redhat.com/rhel/8.0"
+            },
+            "release-status": "prerelease",
+            "-id": "http://oracle.com/ol/8.0",
+            "_name": "Oracle Linux 8.0",
+            "family": "linux",
+            "distro": "ol",
+            "media": [
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Oracle-Linux-8-0-x86_64"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "aarch64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Oracle-Linux-8-0-aarch64"
+                    }
+                }
+            ]
+        }
+    }
+}

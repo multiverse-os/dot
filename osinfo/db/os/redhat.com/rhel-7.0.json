@@ -1,0 +1,150 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0100"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    },
+                    {
+                        "-id": "http://usb.org/usb/80ee/0021"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1003"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1005"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1033/0194"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0004"
+                    }
+                ]
+            },
+            "tree": [
+                {
+                    "-arch": "ppc64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^7.0$",
+                        "arch": "ppc64"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^7.0$",
+                        "arch": "s390x"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^7.0$",
+                        "arch": "x86_64"
+                    },
+                    "-arch": "x86_64"
+                }
+            ],
+            "_name": "Red Hat Enterprise Linux 7.0",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "kernel-url-argument": "inst.repo",
+            "short-id": "rhel7.0",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/6.5"
+            },
+            "release-date": "2014-06-10",
+            "version": "7.0",
+            "codename": "Maipo",
+            "firmware": {
+                "-arch": "x86_64",
+                "-type": "efi"
+            },
+            "resources": [
+                {
+                    "-arch": "ppc64",
+                    "minimum": {
+                        "cpu": "1000000000",
+                        "ram": "2147483648",
+                        "storage": "10737418240",
+                        "n-cpus": "1"
+                    },
+                    "recommended": {
+                        "cpu": "1000000000",
+                        "ram": "2147483648",
+                        "storage": "21474836480"
+                    }
+                },
+                {
+                    "network-install": {
+                        "ram": "1610612736"
+                    },
+                    "-arch": "all",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "cpu": "1000000000",
+                        "ram": "1073741824",
+                        "storage": "10737418240"
+                    },
+                    "recommended": {
+                        "storage": "10737418240",
+                        "cpu": "1000000000",
+                        "ram": "1073741824"
+                    },
+                    "maximum": {
+                        "ram": "3298534883328"
+                    }
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "-id": "http://redhat.com/rhel/7.0",
+            "distro": "rhel",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL-7.0.*x86_64.*"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "aarch64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHELSA-1.5 Server\\.aarch64"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ]
+        }
+    }
+}

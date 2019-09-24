@@ -1,0 +1,55 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "android-x86",
+            "release-date": "2019-01-15",
+            "media": [
+                {
+                    "url": "http://cznic.dl.osdn.jp/android-x86/69704/android-x86_64-8.1-r1.iso",
+                    "iso": {
+                        "volume-id": "Android-x86 LiveCD",
+                        "system-id": "LINUX",
+                        "volume-size": "896534528"
+                    },
+                    "kernel": "kernel",
+                    "initrd": "initrd.img",
+                    "-arch": "x86_64",
+                    "-live": "true"
+                },
+                {
+                    "kernel": "kernel",
+                    "initrd": "initrd.img",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://cznic.dl.osdn.jp/android-x86/69704/android-x86-8.1-r1.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "707430400",
+                        "volume-id": "Android-x86 LiveCD"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "_name": "Android-x86 8.1",
+            "version": "8.1",
+            "_vendor": "Android-x86",
+            "codename": "oreo-x86",
+            "-id": "http://android-x86.org/android-x86/8.1",
+            "short-id": "android-x86-8.1",
+            "family": "linux"
+        }
+    }
+}

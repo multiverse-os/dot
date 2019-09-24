@@ -1,0 +1,27 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://dragonflybsd.org/dragonflybsd/5.0.0"
+            },
+            "release-date": "2017-11-06",
+            "-id": "http://dragonflybsd.org/dragonflybsd/5.0.1",
+            "short-id": "dragonflybsd5.0.1",
+            "_name": "DragonFlyBSD 5.0.1",
+            "version": "5.0.1",
+            "family": "dragonflybsd",
+            "distro": "dragonflybsd",
+            "media": {
+                "-arch": "x86_64",
+                "iso": {
+                    "system-id": "DragonFly",
+                    "volume-id": "DragonFly v5.0.1",
+                    "volume-size": "791875584"
+                }
+            },
+            "_vendor": "DragonFlyBSD Project",
+            "eol-date": "2017-12-04"
+        }
+    }
+}

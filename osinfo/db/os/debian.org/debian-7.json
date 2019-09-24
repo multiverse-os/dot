@@ -1,0 +1,101 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://debian.org/debian/7",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://debian.org/debian/preseed/jeos"
+                    },
+                    {
+                        "-id": "http://debian.org/debian/preseed/desktop"
+                    }
+                ]
+            },
+            "_name": "Debian 7",
+            "distro": "debian",
+            "upgrades": {
+                "-id": "http://debian.org/debian/6"
+            },
+            "release-date": "2013-05-04",
+            "eol-date": "2018-05-31",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/7.11.0/i386/iso-dvd/debian-7.11.0-i386-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian 7.\\d.\\d i386 1"
+                    },
+                    "kernel": "install.386/vmlinuz",
+                    "initrd": "install.386/initrd.gz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/7.11.0/amd64/iso-dvd/debian-7.11.0-amd64-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian 7.\\d.\\d amd64 1"
+                    },
+                    "kernel": "install.amd/vmlinuz",
+                    "initrd": "install.amd/initrd.gz"
+                }
+            ],
+            "short-id": [
+                "debian7",
+                "debianwheezy"
+            ],
+            "version": "7",
+            "codename": "wheezy",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1002"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1003"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1004"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1009"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0100"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1033/0194"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0004"
+                    }
+                ]
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "134217728",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "21474836480"
+                }
+            },
+            "_vendor": "Debian Project",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://debian.org/debian/6"
+            }
+        }
+    }
+}

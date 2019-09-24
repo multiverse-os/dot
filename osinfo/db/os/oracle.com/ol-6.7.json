@@ -1,0 +1,39 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Oracle America",
+            "family": "linux",
+            "distro": "ol",
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.7"
+            },
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "OL6.7 x86_64 Disc 1"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "OL6.7 i386 Disc 1"
+                    }
+                }
+            ],
+            "-id": "http://oracle.com/ol/6.7",
+            "short-id": "ol6.7",
+            "_name": "Oracle Linux 6.7",
+            "version": "6.7",
+            "release-date": "2015-07-27",
+            "eol-date": "2024-03-31"
+        }
+    }
+}

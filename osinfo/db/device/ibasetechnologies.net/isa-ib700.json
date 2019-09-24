@@ -1,0 +1,12 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "bus-type": "isa",
+            "class": "watchdog",
+            "product": "iBASE 700",
+            "-id": "http://ibasetechnologies.net/isa/ib700",
+            "name": "ib700"
+        }
+    }
+}

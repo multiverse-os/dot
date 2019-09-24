@@ -1,0 +1,102 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/6.6"
+            },
+            "tree": [
+                {
+                    "-arch": "ppc64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.7$",
+                        "arch": "ppc64"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.7$",
+                        "arch": "s390x"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.7$",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.7$",
+                        "arch": "x86_64"
+                    }
+                }
+            ],
+            "codename": "Santiago",
+            "_name": "Red Hat Enterprise Linux 6.7",
+            "version": "6.7",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "distro": "rhel",
+            "eol-date": "2023-11-30",
+            "media": [
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-6.7 .*.i386.*"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL-6.7 .*.x86_64.*"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "-id": "http://redhat.com/rhel/6.7",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/6.6"
+            },
+            "release-date": "2015-07-22",
+            "resources": {
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                },
+                "maximum": {
+                    "ram": "13194139533312"
+                },
+                "-arch": "all"
+            },
+            "short-id": "rhel6.7"
+        }
+    }
+}

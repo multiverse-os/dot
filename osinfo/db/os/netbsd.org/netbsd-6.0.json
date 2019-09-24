@@ -1,0 +1,77 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://netbsd.org/netbsd/6.0",
+            "short-id": "netbsd6.0",
+            "_name": "NetBSD 6.0",
+            "derives-from": {
+                "-id": "http://netbsd.org/netbsd/5.0"
+            },
+            "version": "6.0",
+            "_vendor": "NetBSD Project",
+            "family": "netbsd",
+            "distro": "netbsd",
+            "upgrades": {
+                "-id": "http://netbsd.org/netbsd/5.0"
+            },
+            "release-date": "2012-10-13",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD-archive/NetBSD-6.0/images/NetBSD-6.0-amd64.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_60",
+                        "volume-size": "345745408"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD-archive/NetBSD-6.0/amd64/installation/cdrom/boot.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_60",
+                        "volume-size": "48611328"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD-archive/NetBSD-6.0/amd64/installation/cdrom/boot-com.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_60",
+                        "volume-size": "48611328"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD-archive/NetBSD-6.0/images/NetBSD-6.0-i386.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_60",
+                        "volume-size": "327729152"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD-archive/NetBSD-6.0/i386/installation/cdrom/boot.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_60",
+                        "volume-size": "44697600"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD-archive/NetBSD-6.0/i386/installation/cdrom/boot-com.iso",
+                    "iso": {
+                        "volume-id": "NETBSD_60",
+                        "volume-size": "44697600",
+                        "system-id": "NetBSD"
+                    }
+                }
+            ]
+        }
+    }
+}

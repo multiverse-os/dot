@@ -1,0 +1,182 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "3.5",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://endlessos.com/eos/3.4"
+            },
+            "release-date": "2018-11-09",
+            "distro": "eos",
+            "eol-date": "2019-06-11",
+            "resources": {
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "42949672960"
+                },
+                "-arch": "all"
+            },
+            "_name": "Endless OS 3.5",
+            "upgrades": {
+                "-id": "http://endlessos.com/eos/3.4"
+            },
+            "-id": "http://endlessos.com/eos/3.5",
+            "short-id": "eos3.5",
+            "_vendor": "Endless Mobile, Inc",
+            "variant": [
+                {
+                    "-id": "base",
+                    "_name": "Endless OS Basic"
+                },
+                {
+                    "-id": "en",
+                    "_name": "Endless OS English"
+                },
+                {
+                    "-id": "es",
+                    "_name": "Endless OS Spanish"
+                },
+                {
+                    "-id": "fr",
+                    "_name": "Endless OS French"
+                },
+                {
+                    "-id": "id",
+                    "_name": "Endless OS Indonesian"
+                },
+                {
+                    "-id": "pt_BR",
+                    "_name": "Endless OS Portuguese (Brazil)"
+                },
+                {
+                    "-id": "th",
+                    "_name": "Endless OS Thai"
+                },
+                {
+                    "_name": "Endless OS Vietnamese",
+                    "-id": "vi"
+                },
+                {
+                    "-id": "other",
+                    "_name": "Endless OS (other)"
+                }
+            ],
+            "media": [
+                {
+                    "-live": "true",
+                    "variant": {
+                        "-id": "base"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.5.8/eos-amd64-amd64/base/eos-eos3.5-amd64-amd64.190408-205334.base.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-5-\\d+-base$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "en"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.5.8/eos-amd64-amd64/en/eos-eos3.5-amd64-amd64.190408-212651.en.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-5-\\d+-en$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "es"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.5.8/eos-amd64-amd64/es/eos-eos3.5-amd64-amd64.190408-213733.es.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-5-\\d+-es$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "fr"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.5.8/eos-amd64-amd64/fr/eos-eos3.5-amd64-amd64.190408-215550.fr.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-5-\\d+-fr$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "id"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.5.8/eos-amd64-amd64/id/eos-eos3.5-amd64-amd64.190408-222523.id.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-5-\\d+-id$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "iso": {
+                        "publisher-id": "ENDLESS COMPUTERS",
+                        "volume-id": "Endless-OS-3-5-\\d+-pt_BR$"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "pt_BR"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.5.8/eos-amd64-amd64/pt_BR/eos-eos3.5-amd64-amd64.190409-000505.pt_BR.iso"
+                },
+                {
+                    "url": "https://images-dl.endlessm.com/release/3.5.8/eos-amd64-amd64/th/eos-eos3.5-amd64-amd64.190408-230211.th.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-5-\\d+-th$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "th"
+                    }
+                },
+                {
+                    "-live": "true",
+                    "variant": {
+                        "-id": "vi"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.5.8/eos-amd64-amd64/vi/eos-eos3.5-amd64-amd64.190408-230353.vi.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-5-\\d+-vi$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "all",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "other"
+                    },
+                    "iso": {
+                        "volume-id": "\\D+-3-5-\\d+",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                }
+            ]
+        }
+    }
+}

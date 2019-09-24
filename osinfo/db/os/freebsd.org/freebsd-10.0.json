@@ -1,0 +1,32 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    }
+                ]
+            },
+            "short-id": "freebsd10.0",
+            "_name": "FreeBSD 10.0",
+            "version": "10.0",
+            "family": "freebsd",
+            "distro": "freebsd",
+            "release-date": "2014-01-14",
+            "-id": "http://freebsd.org/freebsd/10.0",
+            "_vendor": "FreeBSD Project",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/9.2"
+            },
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/9.2"
+            },
+            "eol-date": "2015-02-28"
+        }
+    }
+}

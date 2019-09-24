@@ -1,0 +1,51 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/6.0/x86_64/os/",
+                    "treeinfo": {
+                        "arch": "x86_64",
+                        "family": "Scientific Linux",
+                        "version": "6.0"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/6.0/i386/os/",
+                    "treeinfo": {
+                        "family": "Scientific Linux",
+                        "version": "6.0",
+                        "arch": "i386"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                }
+            },
+            "-id": "http://scientificlinux.org/scientificlinux/6.0",
+            "_name": "Scientific Linux 6.0",
+            "_vendor": "Scientific Linux",
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.0"
+            },
+            "release-date": "2011-03-03",
+            "eol-date": "2011-12-09",
+            "short-id": "scientificlinux6.0",
+            "version": "6.0",
+            "family": "linux",
+            "distro": "scientificlinux"
+        }
+    }
+}

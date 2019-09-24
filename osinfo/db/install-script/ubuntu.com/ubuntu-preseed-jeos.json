@@ -1,0 +1,141 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "install-script": {
+            "profile": "jeos",
+            "expected-filename": "preseed.cfg",
+            "config": {
+                "param": [
+                    {
+                        "-name": "admin-password",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "l10n-keyboard",
+                        "-policy": "optional",
+                        "-value-map": "http://x.org/x11-keyboard"
+                    },
+                    {
+                        "-name": "l10n-timezone",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-policy": "optional",
+                        "-name": "l10n-language"
+                    },
+                    {
+                        "-name": "target-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "hostname",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "injection-method": "initrd",
+            "template": {
+                "stylesheet": {
+                    "template": [
+                        {
+                            "-match": "/command-line",
+                            "text": [
+                                "file=/",
+                                "locale=",
+                                "keyboard-configuration/layoutcode=",
+                                "hostname=",
+                                "priority=critical console-setup/ask_detect=false domain=unassigned-domain interface=auto"
+                            ],
+                            "value-of": [
+                                {
+                                    "-select": "script/expected-filename"
+                                },
+                                {
+                                    "-select": "config/l10n-language"
+                                },
+                                {
+                                    "-select": "config/l10n-keyboard"
+                                }
+                            ],
+                            "call-template": {
+                                "-name": "hostname"
+                            }
+                        },
+                        {
+                            "choose": {
+                                "when": {
+                                    "-test": "config/target-disk != ''",
+                                    "value-of": {
+                                        "-select": "config/target-disk"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "/dev/vda"
+                                }
+                            },
+                            "-name": "target-disk"
+                        },
+                        {
+                            "-name": "hostname",
+                            "choose": {
+                                "otherwise": {
+                                    "text": "ubuntu"
+                                },
+                                "when": {
+                                    "-test": "config/hostname != ''",
+                                    "value-of": {
+                                        "-select": "config/hostname"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "#content": "# Create an osinfo-install-successful file in /root\nd-i preseed/late_command string in-target \\\n    touch /root/osinfo-install-successful",
+                            "-match": "/install-script-config",
+                            "value-of": [
+                                {
+                                    "-select": "config/l10n-language"
+                                },
+                                {
+                                    "-select": "config/l10n-keyboard"
+                                },
+                                {
+                                    "-select": "config/l10n-timezone"
+                                },
+                                {
+                                    "-select": "config/admin-password"
+                                },
+                                {
+                                    "-select": "config/admin-password"
+                                }
+                            ],
+                            "call-template": {
+                                "-name": "hostname"
+                            },
+                            "choose": {
+                                "when": {
+                                    "-test": "os/version \u003c 13.10",
+                                    "if": {
+                                        "#content": "d-i pkgsel/include string python-software-properties",
+                                        "-test": "os/version = 12.04"
+                                    }
+                                },
+                                "otherwise": "d-i pkgsel/include string python3-software-properties"
+                            },
+                            "if": {
+                                "#content": "ubiquity ubiquity/success_command string sed -i 's/eject -p -m.*/\u0026 [ \"$prompt\" ] || return 0/' /etc/init.d/casper",
+                                "-test": "os/version = 13.04"
+                            }
+                        }
+                    ],
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform",
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    }
+                }
+            },
+            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+        }
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "platform": {
+            "short-id": "qemu-1.0",
+            "_name": "QEMU 1.0",
+            "_vendor": "qemu.org",
+            "version": "1.0",
+            "release-date": "2011-12-01",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1000/0012"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1234/1111"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1013/00b8"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/15ad/0710"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0100"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/10ec/8029"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1022/2000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/10ec/8139"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/100e"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1274/5000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/25ab"
+                    },
+                    {
+                        "-id": "http://ibasetechnologies.net/isa/ib700"
+                    },
+                    {
+                        "-id": "http://ibm.com/ps2/keyboard"
+                    },
+                    {
+                        "-id": "http://ibm.com/ps2/mouse"
+                    },
+                    {
+                        "-id": "http://usb.org/usb/80ee/0021"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1002"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1003"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1009"
+                    }
+                ]
+            },
+            "-id": "http://qemu.org/qemu/1.0"
+        }
+    }
+}

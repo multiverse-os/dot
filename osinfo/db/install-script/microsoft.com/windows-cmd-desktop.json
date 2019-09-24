@@ -1,0 +1,215 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "install-script": {
+            "-id": "http://microsoft.com/windows/cmd/desktop",
+            "post-install-drivers-signing-req": "strict",
+            "config": {
+                "param": [
+                    {
+                        "-name": "admin-password",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "user-realname",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "avatar-location",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "avatar-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "target-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "script-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "post-install-drivers-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-policy": "optional",
+                        "-name": "post-install-drivers-location"
+                    },
+                    {
+                        "-name": "driver-signing",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "injection-method": [
+                "cdrom",
+                "floppy"
+            ],
+            "avatar-format": {
+                "mime-type": "image/bmp",
+                "width": "48",
+                "height": "48",
+                "alpha": "false"
+            },
+            "template": {
+                "stylesheet": {
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    },
+                    "template": [
+                        {
+                            "choose": {
+                                "when": {
+                                    "-test": "config/target-disk != ''",
+                                    "value-of": {
+                                        "-select": "config/target-disk"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "C"
+                                }
+                            },
+                            "-name": "target-disk"
+                        },
+                        {
+                            "-name": "script-disk",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/script-disk != ''",
+                                        "value-of": {
+                                            "-select": "config/script-disk"
+                                        }
+                                    },
+                                    {
+                                        "-test": "script/preferred-injection-method = 'cdrom'",
+                                        "text": "E"
+                                    }
+                                ],
+                                "otherwise": {
+                                    "text": "A"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "post-install-drivers-disk",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/post-install-drivers-disk != ''",
+                                        "value-of": {
+                                            "-select": "config/post-install-drivers-disk"
+                                        }
+                                    },
+                                    {
+                                        "-test": "script/preferred-injection-method = 'cdrom'",
+                                        "text": "E"
+                                    }
+                                ],
+                                "otherwise": {
+                                    "text": "A"
+                                }
+                            }
+                        },
+                        {
+                            "choose": {
+                                "when": {
+                                    "-test": "os/version \u003c 6.0",
+                                    "text": [
+                                        ":\\Documents and Settings\\All Users\\Application Data\\Microsoft\\User Account Pictures\\",
+                                        ".bmp"
+                                    ],
+                                    "value-of": {
+                                        "-select": "config/user-realname"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": ":\\ProgramData\\Microsoft\\User Account Pictures\\user.bmp"
+                                }
+                            },
+                            "-name": "avatar-destination",
+                            "call-template": {
+                                "-name": "target-disk"
+                            }
+                        },
+                        {
+                            "#content": "\" cmd /c %%i\n\nEXIT",
+                            "if": [
+                                {
+                                    "#content": ":\\windows.reg",
+                                    "-test": "os/version \u003c 6.0",
+                                    "value-of": [
+                                        {
+                                            "-select": "config/user-realname"
+                                        },
+                                        {
+                                            "-select": "config/admin-password"
+                                        },
+                                        {
+                                            "-select": "config/user-realname"
+                                        }
+                                    ],
+                                    "text": "",
+                                    "call-template": {
+                                        "-name": "script-disk"
+                                    }
+                                },
+                                {
+                                    "text": "",
+                                    "-test": "os/version \u003c 6.2",
+                                    "value-of": [
+                                        {
+                                            "-select": "config/avatar-location"
+                                        },
+                                        {
+                                            "-select": "config/avatar-disk"
+                                        },
+                                        {
+                                            "-select": "config/avatar-location"
+                                        }
+                                    ],
+                                    "call-template": {
+                                        "-name": "avatar-destination"
+                                    }
+                                },
+                                {
+                                    "#content": "bcdedit.exe -set loadoptions DDISABLE_INTEGRITY_CHECKS\nbcdedit.exe -set TESTSIGNING ON",
+                                    "-test": "config/driver-signing = 'false' and os/version \u003e 5.1"
+                                }
+                            ],
+                            "call-template": [
+                                {
+                                    "-name": "post-install-drivers-disk"
+                                },
+                                {
+                                    "-name": "post-install-drivers-disk"
+                                },
+                                {
+                                    "-name": "post-install-drivers-disk"
+                                }
+                            ],
+                            "value-of": [
+                                {
+                                    "-select": "config/post-install-drivers-location"
+                                },
+                                {
+                                    "-select": "script/expected-filename"
+                                }
+                            ],
+                            "-match": "/install-script-config"
+                        }
+                    ],
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform"
+                }
+            },
+            "profile": "desktop",
+            "path-format": "dos",
+            "expected-filename": "windows.cmd",
+            "can-post-install-drivers": ""
+        }
+    }
+}

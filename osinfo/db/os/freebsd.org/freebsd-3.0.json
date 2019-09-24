@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/2.2.8"
+            },
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/2.2.8"
+            },
+            "-id": "http://freebsd.org/freebsd/3.0",
+            "short-id": "freebsd3.0",
+            "_name": "FreeBSD 3.0",
+            "release-date": "1998-10-16",
+            "version": "3.0",
+            "_vendor": "FreeBSD Project",
+            "family": "freebsd",
+            "distro": "freebsd"
+        }
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://openbsd.org/openbsd/4.9",
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/4.8"
+            },
+            "eol-date": "2012-05-01",
+            "media": [
+                {
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2011 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/i386    4.9 Install CD",
+                        "application-id": "OpenBSD 4.9 i386 Install CD"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/amd64   4.9 Install CD",
+                        "application-id": "OpenBSD 4.9 amd64 Install CD",
+                        "publisher-id": "Copyright \\(c\\) 2011 Theo de Raadt, The OpenBSD project"
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/4.9/i386/cd49.iso",
+                    "iso": {
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 4\\.9 i386 bootonly CD",
+                        "publisher-id": "Copyright \\(c\\) 2011 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/i386    4\\.9 boot-only CD"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/4.9/amd64/cd49.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2011 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   4\\.9 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 4\\.9 amd64 bootonly CD"
+                    },
+                    "-arch": "x86_64"
+                }
+            ],
+            "version": "4.9",
+            "family": "openbsd",
+            "release-date": "2011-05-01",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/4.8"
+            },
+            "devices": {
+                "device": {
+                    "-id": "http://pcisig.com/pci/1022/2000"
+                }
+            },
+            "short-id": "openbsd4.9",
+            "_name": "OpenBSD 4.9",
+            "distro": "openbsd",
+            "_vendor": "OpenBSD Project",
+            "variant": {
+                "-id": "netinst",
+                "_name": "OpenBSD 4.9"
+            }
+        }
+    }
+}

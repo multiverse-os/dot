@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2012-07-08",
+            "-id": "http://mandriva.com/mandriva/2010.1",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandriva/2010.0"
+            },
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "distro": "mandriva",
+            "version": "2010.1",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandriva/2010.0"
+            },
+            "release-date": "2010-07-08",
+            "short-id": "mandriva2010.1",
+            "_name": "Mandriva Linux 2010 Spring"
+        }
+    }
+}

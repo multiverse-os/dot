@@ -1,0 +1,16 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "linux",
+            "distro": "oel",
+            "_name": "Oracle Enterprise Linux 4.6",
+            "version": "4.6",
+            "_vendor": "Oracle America",
+            "release-date": "2008-04-16",
+            "eol-date": "2013-03-28",
+            "-id": "http://oracle.com/oel/4.6",
+            "short-id": "oel4.6"
+        }
+    }
+}

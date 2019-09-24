@@ -1,0 +1,31 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "134217728",
+                    "storage": "52428800"
+                }
+            },
+            "short-id": "cirros0.3.4",
+            "_name": "CirrOS 0.3.4",
+            "family": "linux",
+            "distro": "cirros",
+            "upgrades": {
+                "-id": "http://cirros-cloud.net/cirros/0.3.3"
+            },
+            "derives-from": {
+                "-id": "http://cirros-cloud.net/cirros/0.3.3"
+            },
+            "release-date": "2015-04-22",
+            "eol-date": "2017-02-14",
+            "-id": "http://cirros-cloud.net/cirros/0.3.4",
+            "version": "0.3.4",
+            "_vendor": "CirrOS"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "media": {
+                "-arch": "x86_64",
+                "iso": {
+                    "system-id": "LINUX",
+                    "volume-id": "Asianux Server 7.0 x86_64"
+                },
+                "kernel": "isolinux/vmlinuz",
+                "initrd": "isolinux/initrd.img"
+            },
+            "name": "Asianux Server 7",
+            "version": "7.0",
+            "vendor": "Asianux Project",
+            "family": "linux",
+            "distro": "asianux",
+            "codename": "Lotus",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/7.0"
+            },
+            "release-date": "2015-07-16",
+            "-id": "http://asianux.com/asianux/7.0",
+            "short-id": "asianux7.0",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "storage": "10737418240",
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            }
+        }
+    }
+}

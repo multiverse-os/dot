@@ -6,6 +6,7 @@ import (
 
 	cli "github.com/multiverse-os/cli"
 	dot "github.com/multiverse-os/dot"
+	osinfo "github.com/multiverse-os/dot/osinfo"
 )
 
 func main() {
@@ -28,8 +29,8 @@ func main() {
 					environment := dot.DefaultEnvironment()
 					fmt.Println("config:", environment)
 
-					osInfo := dot.LoadOSInfo("Debian")
-					fmt.Println("osInfo:", osInfo)
+					info := osinfo.Load(osinfo.Debian)
+					fmt.Println("osInfo:", info)
 
 					//config.Provision()
 

@@ -1,0 +1,38 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "CirrOS 0.3.0",
+            "version": "0.3.0",
+            "_vendor": "CirrOS",
+            "family": "linux",
+            "distro": "cirros",
+            "release-date": "2011-10-20",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "134217728",
+                    "storage": "52428800"
+                }
+            },
+            "-id": "http://cirros-cloud.net/cirros/0.3.0",
+            "short-id": "cirros0.3.0",
+            "eol-date": "2013-02-08",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://usb.org/usb/80ee/0021"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    }
+                ]
+            }
+        }
+    }
+}

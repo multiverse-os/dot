@@ -1,0 +1,27 @@
+{
+    "libosinfo": {
+        "os": {
+            "version": "4.0",
+            "_vendor": "Debian Project",
+            "upgrades": {
+                "-id": "http://debian.org/debian/3.1"
+            },
+            "derives-from": {
+                "-id": "http://debian.org/debian/3.1"
+            },
+            "release-date": "2007-04-08",
+            "-id": "http://debian.org/debian/4",
+            "short-id": [
+                "debian4",
+                "debian4.0",
+                "debianetch"
+            ],
+            "_name": "Debian GNU/Linux 4.0",
+            "eol-date": "2010-02-15",
+            "family": "linux",
+            "distro": "debian",
+            "codename": "etch"
+        },
+        "-version": "0.0.1"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "libosinfo": {
+        "device": {
+            "product": "Virtual FrameBuffer",
+            "product-id": "vfb",
+            "name": "xen-vfb",
+            "-id": "http://xen.org/xen/vfb",
+            "class": "video",
+            "bus-type": "xen"
+        },
+        "-version": "0.0.1"
+    }
+}

@@ -1,0 +1,328 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "install-script": {
+            "config": {
+                "param": [
+                    {
+                        "-name": "admin-password",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "l10n-keyboard",
+                        "-policy": "optional",
+                        "-value-map": "http://x.org/x11-keyboard"
+                    },
+                    {
+                        "-name": "l10n-language",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-policy": "optional",
+                        "-name": "l10n-timezone"
+                    },
+                    {
+                        "-name": "target-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "script-disk",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "injection-method": [
+                "cdrom",
+                "disk",
+                "floppy",
+                "initrd"
+            ],
+            "template": {
+                "stylesheet": {
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform",
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    },
+                    "template": [
+                        {
+                            "-name": "target-disk",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/target-disk != ''",
+                                        "value-of": {
+                                            "-select": "config/target-disk"
+                                        }
+                                    },
+                                    {
+                                        "-test": "os/version \u003e 9",
+                                        "text": "/dev/vda"
+                                    },
+                                    {
+                                        "-test": "os/version \u003e 6",
+                                        "text": "/dev/sda"
+                                    }
+                                ],
+                                "otherwise": {
+                                    "text": "/dev/hda"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "script-disk",
+                            "variable": {
+                                "-name": "script-disk",
+                                "choose": {
+                                    "when": [
+                                        {
+                                            "-test": "config/script-disk != ''",
+                                            "value-of": {
+                                                "-select": "config/script-disk"
+                                            }
+                                        },
+                                        {
+                                            "text": "/dev/sda",
+                                            "-test": "os/version \u003e 9"
+                                        },
+                                        {
+                                            "-test": "os/version \u003e 6",
+                                            "text": "/dev/sdb"
+                                        }
+                                    ],
+                                    "otherwise": {
+                                        "text": "/dev/hdb"
+                                    }
+                                }
+                            },
+                            "value-of": {
+                                "-select": "substring-after($script-disk, '/dev/')"
+                            }
+                        },
+                        {
+                            "-name": "rootfs",
+                            "choose": {
+                                "otherwise": {
+                                    "text": "ext3"
+                                },
+                                "when": {
+                                    "-test": "os/version \u003e 10",
+                                    "text": "ext4"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "bootfs",
+                            "choose": {
+                                "when": {
+                                    "-test": "os/version \u003e 11",
+                                    "text": "ext4"
+                                },
+                                "otherwise": {
+                                    "text": "ext3"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "keyboard",
+                            "choose": {
+                                "when": {
+                                    "-test": "os/version \u003e 17",
+                                    "value-of": {
+                                        "-select": "config/l10n-keyboard"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "us"
+                                }
+                            }
+                        },
+                        {
+                            "-match": "/command-line",
+                            "text": "ks=",
+                            "choose": {
+                                "when": {
+                                    "-test": "script/preferred-injection-method = 'initrd'",
+                                    "text": "file:/"
+                                },
+                                "otherwise": {
+                                    "text": [
+                                        "hd:",
+                                        ":/"
+                                    ],
+                                    "call-template": {
+                                        "-name": "script-disk"
+                                    }
+                                }
+                            },
+                            "value-of": {
+                                "-select": "script/expected-filename"
+                            },
+                            "if": {
+                                "choose": {
+                                    "when": {
+                                        "-test": "os/version \u003c 19",
+                                        "text": "method="
+                                    },
+                                    "otherwise": {
+                                        "text": "inst.repo="
+                                    }
+                                },
+                                "call-template": {
+                                    "-name": "installation-url"
+                                },
+                                "-test": "script/installation-source = 'network'"
+                            }
+                        },
+                        {
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/installation-url != ''",
+                                        "value-of": {
+                                            "-select": "config/installation-url"
+                                        }
+                                    },
+                                    {
+                                        "-test": "tree/url != ''",
+                                        "value-of": {
+                                            "-select": "tree/url"
+                                        }
+                                    }
+                                ]
+                            },
+                            "-name": "installation-url"
+                        },
+                        {
+                            "-name": "url-or-mirrorlist",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/installation-url != '' or tree/url != ''",
+                                    "text": "--url=",
+                                    "call-template": {
+                                        "-name": "installation-url"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": [
+                                        "--mirrorlist=",
+                                        "https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever\u0026arch=$basearch"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "#content": "%end\n\n%post --erroronfail\n\n# Create an osinfo-install-successful file in /root\ntouch /root/osinfo-install-successful\n\n%end",
+                            "-match": "/install-script-config",
+                            "value-of": [
+                                {
+                                    "-select": "os/short-id"
+                                },
+                                {
+                                    "-select": "script/profile"
+                                },
+                                {
+                                    "-select": "config/l10n-language"
+                                },
+                                {
+                                    "-select": "config/admin-password"
+                                },
+                                {
+                                    "-select": "config/l10n-timezone"
+                                }
+                            ],
+                            "if": [
+                                {
+                                    "#content": "cdrom",
+                                    "-test": "script/installation-source='media' and (count(media/variant) = 0 or not(contains(media/variant, 'netinst')))",
+                                    "if": {
+                                        "#content": "install",
+                                        "-test": "os/version \u003c 29"
+                                    }
+                                },
+                                {
+                                    "#content": "mouse generic3ps/2 --device psaux",
+                                    "-test": "os/version \u003c 7",
+                                    "value-of": [
+                                        {
+                                            "-select": "config/l10n-language"
+                                        },
+                                        {
+                                            "-select": "config/l10n-language"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "#content": "selinux --enforcing",
+                                    "-test": "os/version \u003e 1"
+                                },
+                                {
+                                    "#content": "yes",
+                                    "-test": "os/version \u003c 14"
+                                },
+                                {
+                                    "call-template": {
+                                        "-name": "url-or-mirrorlist"
+                                    },
+                                    "-test": "script/installation-source='network' or contains(media/variant, 'netinst')"
+                                },
+                                {
+                                    "#content": "@hardware-support",
+                                    "-test": "os/version \u003e 6"
+                                }
+                            ],
+                            "call-template": [
+                                {
+                                    "-name": "keyboard"
+                                },
+                                {
+                                    "-name": "target-disk"
+                                }
+                            ],
+                            "choose": [
+                                {
+                                    "when": {
+                                        "#content": "authconfig --enableshadow --enablemd5",
+                                        "-test": "os/version \u003c 28"
+                                    },
+                                    "otherwise": "authselect select sssd"
+                                },
+                                {
+                                    "when": {
+                                        "#content": "--name=LogVol00 --vgname=VolGroup00 --size=1024 --grow",
+                                        "-test": "os/version \u003c 3",
+                                        "call-template": [
+                                            {
+                                                "-name": "bootfs"
+                                            },
+                                            {
+                                                "-name": "target-disk"
+                                            },
+                                            {
+                                                "-name": "target-disk"
+                                            },
+                                            {
+                                                "-name": "rootfs"
+                                            }
+                                        ]
+                                    },
+                                    "otherwise": "autopart"
+                                },
+                                {
+                                    "when": {
+                                        "#content": "@base",
+                                        "-test": "os/version \u003c 18"
+                                    },
+                                    "otherwise": "@standard"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "-id": "http://fedoraproject.org/fedora/kickstart/jeos",
+            "profile": "jeos",
+            "expected-filename": "fedora.ks"
+        }
+    }
+}

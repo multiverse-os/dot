@@ -1,0 +1,77 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "netbsd7.1.2",
+            "_name": "NetBSD 7.1.2",
+            "version": "7.1.2",
+            "family": "netbsd",
+            "upgrades": {
+                "-id": "http://netbsd.org/netbsd/7.1.1"
+            },
+            "derives-from": {
+                "-id": "http://netbsd.org/netbsd/7.1.1"
+            },
+            "release-date": "2018-03-15",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.1.2/images/NetBSD-7.1.2-amd64.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_712",
+                        "volume-size": "393525248"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.1.2/amd64/installation/cdrom/boot.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_712",
+                        "volume-size": "85927936"
+                    }
+                },
+                {
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.1.2/amd64/installation/cdrom/boot-com.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_712",
+                        "volume-size": "85927936"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.1.2/images/NetBSD-7.1.2-i386.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_712",
+                        "volume-size": "426956800"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.1.2/i386/installation/cdrom/boot.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_712",
+                        "volume-size": "90728448"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.1.2/i386/installation/cdrom/boot-com.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_712",
+                        "volume-size": "90728448"
+                    }
+                }
+            ],
+            "-id": "http://netbsd.org/netbsd/7.1.2",
+            "_vendor": "NetBSD Project",
+            "distro": "netbsd"
+        }
+    }
+}

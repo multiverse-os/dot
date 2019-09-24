@@ -1,0 +1,18 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "5.0",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "codename": "Tikanga",
+            "kernel-url-argument": "method",
+            "-id": "http://redhat.com/rhel/5.0",
+            "short-id": "rhel5.0",
+            "_name": "Red Hat Enterprise Linux 5.0",
+            "distro": "rhel",
+            "release-date": "2007-03-14",
+            "eol-date": "2020-03-31"
+        }
+    }
+}

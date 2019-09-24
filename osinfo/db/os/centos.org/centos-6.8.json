@@ -1,0 +1,172 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/6.8/os/x86_64/",
+                    "treeinfo": {
+                        "version": "6.8",
+                        "arch": "x86_64",
+                        "family": "CentOS"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/6.8/os/i386/",
+                    "treeinfo": {
+                        "version": "6.8",
+                        "arch": "i386",
+                        "family": "CentOS"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                }
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.8_Final",
+                        "volume-size": "3844679680"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "CentOS_6.8_Final",
+                        "volume-size": "3916271616",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-installer-script": "false",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-6.8-i386-LiveCD"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-6.8-x86_64-LiveCD"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-6.8-i386-LiveDVD",
+                        "volume-size": "1990477824"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "-installer-script": "false"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "iso": {
+                        "volume-size": "2011746304",
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-6.8-x86_64-LiveDVD"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "iso": {
+                        "volume-size": "370984960",
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.8_Final"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.8_Final",
+                        "volume-size": "467867648"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS",
+                        "volume-size": "227659776"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS",
+                        "volume-size": "238219264"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                }
+            ],
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.8"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "_vendor": "CentOS",
+            "_name": "CentOS 6.8",
+            "version": "6.8",
+            "family": "linux",
+            "distro": "centos",
+            "eol-date": "2017-04-05",
+            "-id": "http://centos.org/centos/6.8",
+            "upgrades": {
+                "-id": "http://centos.org/centos/6.7"
+            },
+            "release-date": "2016-05-25",
+            "short-id": "centos6.8"
+        }
+    }
+}

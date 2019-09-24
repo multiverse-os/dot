@@ -1,0 +1,80 @@
+{
+    "libosinfo": {
+        "os": {
+            "eol-date": "2009-04-18",
+            "short-id": [
+                "ubuntu7.10",
+                "ubuntugutsy"
+            ],
+            "version": "7.10",
+            "distro": "ubuntu",
+            "codename": "Gutsy Gibbon",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/7.04"
+            },
+            "release-date": "2007-10-18",
+            "-id": "http://ubuntu.com/ubuntu/7.10",
+            "_name": "Ubuntu 7.10",
+            "_vendor": "Canonical Ltd",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/7.04"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/gutsy/ubuntu-7.10-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 7.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "initrd": "install/initrd.gz",
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/gutsy/ubuntu-7.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 7.10(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 7.10(.\\d\\+?)? sparc",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "boot/sparc64",
+                    "initrd": "boot/initrd.gz",
+                    "-arch": "sparc64",
+                    "url": "http://old-releases.ubuntu.com/releases/gutsy/ubuntu-7.10-server-sparc.iso"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/gutsy/ubuntu-7.10-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 7.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/gutsy/ubuntu-7.10-desktop-amd64.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Ubuntu 7.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz"
+                }
+            ]
+        },
+        "-version": "0.0.1"
+    }
+}

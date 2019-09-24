@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "release-date": "2002-09-24",
+            "-id": "http://apple.com/macosx/10.2",
+            "short-id": "macosx10.2",
+            "_name": "MacOS X Jaguar",
+            "_vendor": "Apple Inc.",
+            "distro": "osx",
+            "upgrades": {
+                "-id": "http://apple.com/macosx/10.1"
+            },
+            "version": "10.2",
+            "family": "darwin",
+            "codename": "Jaguar"
+        }
+    }
+}

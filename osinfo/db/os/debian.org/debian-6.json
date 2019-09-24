@@ -1,0 +1,93 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "6.0",
+            "distro": "debian",
+            "resources": {
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "536870912",
+                    "storage": "5368709120"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "134217728",
+                    "storage": "5368709120"
+                }
+            },
+            "codename": "squeeze",
+            "derives-from": {
+                "-id": "http://debian.org/debian/5"
+            },
+            "release-date": "2011-02-06",
+            "eol-date": "2016-02-29",
+            "short-id": [
+                "debian6",
+                "debian6.0",
+                "debiansqueeze"
+            ],
+            "_name": "Debian 6.0",
+            "_vendor": "Debian Project",
+            "family": "linux",
+            "installer": {
+                "script": {
+                    "-id": "http://debian.org/debian/preseed/jeos"
+                }
+            },
+            "-id": "http://debian.org/debian/6",
+            "upgrades": {
+                "-id": "http://debian.org/debian/5"
+            },
+            "devices": {
+                "device": {
+                    "-id": "http://usb.org/usb/80ee/0021"
+                }
+            },
+            "media": [
+                {
+                    "kernel": "install.386/vmlinuz",
+                    "initrd": "install.386/initrd.gz",
+                    "-arch": "i686",
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/6.0.10/i386/iso-dvd/debian-6.0.10-i386-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian 6.0.1?\\d i386 1"
+                    }
+                },
+                {
+                    "kernel": "install.amd/vmlinuz",
+                    "initrd": "install.amd/initrd.gz",
+                    "-arch": "x86_64",
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/6.0.10/amd64/iso-dvd/debian-6.0.10-amd64-DVD-1.iso",
+                    "iso": {
+                        "volume-id": "Debian 6.0.1?\\d amd64 1"
+                    }
+                },
+                {
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/6.0.10-live/i386/iso-hybrid/debian-live-6.0.10-i386-gnome-desktop.iso",
+                    "iso": {
+                        "volume-id": "Debian squeeze.*",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://cdimage.debian.org/mirror/cdimage/archive/6.0.10-live/amd64/iso-hybrid/debian-live-6.0.10-amd64-gnome-desktop.iso",
+                    "iso": {
+                        "volume-id": "Debian squeeze.*",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                }
+            ]
+        }
+    }
+}

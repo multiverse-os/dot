@@ -1,0 +1,145 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://fedoraproject.org/fedora/rawhide",
+            "short-id": "fedora-rawhide",
+            "variant": [
+                {
+                    "_name": "Fedora Rawhide Workstation",
+                    "-id": "workstation"
+                },
+                {
+                    "-id": "server",
+                    "_name": "Fedora Rawhide Server"
+                },
+                {
+                    "-id": "everything-netinst",
+                    "_name": "Fedora Rawhide Everything"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "n-cpus": "1"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "version": "Rawhide",
+            "distro": "fedora",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/29"
+            },
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/29"
+            },
+            "release-status": "prerelease",
+            "tree": [
+                {
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "Rawhide",
+                        "arch": "x86_64",
+                        "variant": "Server"
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Server/x86_64/os"
+                },
+                {
+                    "-arch": "aarch64",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Server/aarch64/os",
+                    "treeinfo": {
+                        "version": "Rawhide",
+                        "arch": "aarch64",
+                        "variant": "Server",
+                        "family": "Fedora"
+                    }
+                },
+                {
+                    "-arch": "armv7l",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Server/armhfp/os",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "Rawhide",
+                        "arch": "armhfp",
+                        "variant": "Server"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "everything-netinst"
+                    },
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/x86_64/os",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "Rawhide",
+                        "arch": "x86_64",
+                        "variant": "Everything"
+                    }
+                },
+                {
+                    "-arch": "aarch64",
+                    "variant": {
+                        "-id": "everything-netinst"
+                    },
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/aarch64/os",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "Rawhide",
+                        "arch": "aarch64",
+                        "variant": "Everything"
+                    }
+                },
+                {
+                    "-arch": "armv7l",
+                    "variant": {
+                        "-id": "everything-netinst"
+                    },
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/armhfp/os",
+                    "treeinfo": {
+                        "variant": "Everything",
+                        "family": "Fedora",
+                        "version": "Rawhide",
+                        "arch": "armhfp"
+                    }
+                }
+            ],
+            "_name": "Fedora Rawhide",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "Fedora-.*-dvd-x86_64-rawh"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "iso": {
+                        "volume-id": "Fedora-.*-Live-rawh.*"
+                    }
+                }
+            ],
+            "_vendor": "Fedora Project",
+            "family": "linux"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "FreeBSD 4.6",
+            "version": "4.6",
+            "_vendor": "FreeBSD Project",
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/4.5"
+            },
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/4.5"
+            },
+            "-id": "http://freebsd.org/freebsd/4.6",
+            "short-id": "freebsd4.6",
+            "family": "freebsd",
+            "distro": "freebsd",
+            "release-date": "2002-06-15"
+        }
+    }
+}

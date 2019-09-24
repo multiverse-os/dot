@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/2.0.5"
+            },
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/2.0.5"
+            },
+            "-id": "http://freebsd.org/freebsd/2.2.8",
+            "short-id": "freebsd2.2.8",
+            "_name": "FreeBSD 2.2.8",
+            "version": "2.2.8",
+            "distro": "freebsd",
+            "_vendor": "FreeBSD Project",
+            "family": "freebsd",
+            "release-date": "1998-11-22"
+        }
+    }
+}

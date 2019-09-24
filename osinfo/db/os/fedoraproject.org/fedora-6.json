@@ -1,0 +1,236 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://fedoraproject.org/fedora/6",
+            "_name": "Fedora Core 6",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/5"
+            },
+            "short-id": "fedora6",
+            "release-date": "2006-10-24",
+            "tree": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/i386/os/",
+                    "kernel": "images/pxeboot/vmlinuz",
+                    "initrd": "images/pxeboot/initrd.img",
+                    "boot-iso": "images/boot.iso"
+                },
+                {
+                    "initrd": "images/pxeboot/initrd.img",
+                    "boot-iso": "images/boot.iso",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/x86_64/os/",
+                    "kernel": "images/pxeboot/vmlinuz"
+                }
+            ],
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                }
+            },
+            "_vendor": "Fedora Project",
+            "family": "linux",
+            "distro": "fedora",
+            "codename": "Zod",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/5"
+            },
+            "version": "6",
+            "eol-date": "2007-12-07",
+            "media": [
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/i386/iso/FC-6-i386-disc1.iso",
+                    "iso": {
+                        "application-id": "FC-6 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "708780032"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/i386/iso/FC-6-i386-disc2.iso",
+                    "iso": {
+                        "application-id": "FC-6 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "714240000"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/i386/iso/FC-6-i386-disc3.iso",
+                    "iso": {
+                        "application-id": "FC-6 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "711491584"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/i386/iso/FC-6-i386-disc4.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "715229184",
+                        "application-id": "FC-6 i386"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/i386/iso/FC-6-i386-disc5.iso",
+                    "iso": {
+                        "volume-size": "677183488",
+                        "application-id": "FC-6 i386",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/i386/iso/FC-6-i386-DVD.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "3525195776",
+                        "application-id": "FC/6 i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/x86_64/iso/FC-6-x86_64-disc1.iso",
+                    "iso": {
+                        "application-id": "FC-6 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "704204800"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/x86_64/iso/FC-6-x86_64-disc2.iso",
+                    "iso": {
+                        "application-id": "FC-6 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "709750784"
+                    }
+                },
+                {
+                    "iso": {
+                        "application-id": "FC-6 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "706191360"
+                    },
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/x86_64/iso/FC-6-x86_64-disc3.iso"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/x86_64/iso/FC-6-x86_64-disc4.iso",
+                    "iso": {
+                        "application-id": "FC-6 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "707473408"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/x86_64/iso/FC-6-x86_64-disc5.iso",
+                    "iso": {
+                        "application-id": "FC-6 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "715692032"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/x86_64/iso/FC-6-x86_64-disc6.iso",
+                    "iso": {
+                        "volume-size": "546852864",
+                        "application-id": "FC-6 x86_64",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/x86_64/iso/FC-6-x86_64-DVD.iso",
+                    "iso": {
+                        "application-id": "FC/6 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "4088006656"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/ppc/iso/FC-6-ppc-disc1.iso",
+                    "iso": {
+                        "application-id": "FC-6 ppc",
+                        "system-id": "PPC",
+                        "volume-size": "730435584"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/ppc/iso/FC-6-ppc-disc2.iso",
+                    "iso": {
+                        "application-id": "FC-6 ppc",
+                        "system-id": "LINUX",
+                        "volume-size": "713457664"
+                    }
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/ppc/iso/FC-6-ppc-disc3.iso",
+                    "iso": {
+                        "application-id": "FC-6 ppc",
+                        "system-id": "LINUX",
+                        "volume-size": "708587520"
+                    }
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/ppc/iso/FC-6-ppc-disc4.iso",
+                    "iso": {
+                        "application-id": "FC-6 ppc",
+                        "system-id": "LINUX",
+                        "volume-size": "704706560"
+                    }
+                },
+                {
+                    "iso": {
+                        "application-id": "FC-6 ppc",
+                        "system-id": "LINUX",
+                        "volume-size": "714592256"
+                    },
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/ppc/iso/FC-6-ppc-disc5.iso"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/ppc/iso/FC-6-ppc-disc6.iso",
+                    "iso": {
+                        "volume-size": "604110848",
+                        "application-id": "FC-6 ppc",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/core/6/ppc/iso/FC-6-ppc-DVD.iso",
+                    "iso": {
+                        "application-id": "FC/6 ppc",
+                        "system-id": "PPC",
+                        "volume-size": "4285673472"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ]
+        }
+    }
+}

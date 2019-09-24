@@ -1,0 +1,36 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "media": {
+                "-live": "true",
+                "url": "http://ftp.gnome.org/pub/gnome/misc/promo-usb/GNOME-3.6.0.iso",
+                "iso": {
+                    "volume-id": "GNOME36-LiveCD",
+                    "system-id": "LINUX"
+                },
+                "kernel": "isolinux/vmlinuz0",
+                "initrd": "isolinux/initrd0.img",
+                "-arch": "i686"
+            },
+            "short-id": "gnome3.6",
+            "distro": "gnome",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/18"
+            },
+            "release-date": "2012-09-26",
+            "family": "linux",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "805306368"
+                }
+            },
+            "-id": "http://gnome.org/gnome/3.6",
+            "_name": "GNOME 3.6",
+            "version": "3.6",
+            "_vendor": "GNOME Project"
+        }
+    }
+}

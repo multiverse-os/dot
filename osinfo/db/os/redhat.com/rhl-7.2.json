@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2003-12-31",
+            "-id": "http://redhat.com/rhl/7.2",
+            "short-id": "rhl7.2",
+            "_name": "Red Hat Linux 7.2",
+            "family": "linux",
+            "codename": "Enigma",
+            "release-date": "2001-10-22",
+            "version": "7.2",
+            "_vendor": "Red Hat, Inc",
+            "distro": "rhl",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/7.1"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/7.1"
+            }
+        }
+    }
+}

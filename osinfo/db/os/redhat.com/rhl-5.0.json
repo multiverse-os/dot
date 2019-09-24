@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Red Hat, Inc",
+            "distro": "rhl",
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/4.2"
+            },
+            "version": "5.0",
+            "short-id": "rhl5.0",
+            "_name": "Red Hat Linux 5.0",
+            "family": "linux",
+            "codename": "Hurricane",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/4.2"
+            },
+            "release-date": "1997-12-01",
+            "eol-date": "1999-04-26",
+            "-id": "http://redhat.com/rhl/5.0"
+        }
+    }
+}

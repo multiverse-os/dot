@@ -1,0 +1,39 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "rhel",
+            "codename": "Nahant",
+            "-id": "http://redhat.com/rhel/4.9",
+            "short-id": "rhel4.9",
+            "_name": "Red Hat Enterprise Linux 4.9",
+            "version": "4.9",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/4.8"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL_4.9 i386.*"
+                    }
+                },
+                {
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL_4.9 x86_64.*"
+                    },
+                    "-arch": "x86_64"
+                }
+            ],
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/4.8"
+            },
+            "release-date": "2011-02-16",
+            "eol-date": "2015-02-28"
+        }
+    }
+}

@@ -1,0 +1,201 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://releases.ubuntu.com/16.04/ubuntu-16.04.6-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.04(.\\d\\+?)? LTS i386"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": [
+                            {
+                                "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                            },
+                            {
+                                "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": [
+                            {
+                                "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                            },
+                            {
+                                "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                            }
+                        ]
+                    },
+                    "-arch": "x86_64",
+                    "url": "http://releases.ubuntu.com/16.04/ubuntu-16.04.6-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.04(.\\d\\+?)? LTS amd64"
+                    },
+                    "kernel": "install/vmlinuz"
+                },
+                {
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                        }
+                    },
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://releases.ubuntu.com/16.04/ubuntu-16.04.6-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 16.04(.\\d\\+?)? LTS i386"
+                    }
+                },
+                {
+                    "url": "http://releases.ubuntu.com/16.04/ubuntu-16.04.6-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 16.04(.\\d\\+?)? LTS amd64"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.04(.\\d\\+?)? LTS ppc"
+                    },
+                    "-arch": "ppc",
+                    "url": "http://cdimage.ubuntu.com/ubuntu/releases/16.04/release/ubuntu-16.04.6-server-powerpc.iso"
+                },
+                {
+                    "-arch": "ppc64le",
+                    "url": "http://cdimage.ubuntu.com/ubuntu/releases/16.04/release/ubuntu-16.04.6-server-ppc64el.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.04(.\\d\\+?)? LTS ppc64"
+                    },
+                    "kernel": "install/vmlinux",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-arch": "s390x",
+                    "url": "http://cdimage.ubuntu.com/ubuntu/releases/16.04/release/ubuntu-16.04.6-server-s390x.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 16.04(.\\d\\+?)? LTS s390x"
+                    },
+                    "kernel": "boot/kernel.ubuntu",
+                    "initrd": "boot/initrd.ubuntu"
+                }
+            ],
+            "_name": "Ubuntu 16.04",
+            "_vendor": "Canonical Ltd",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/15.10"
+            },
+            "release-date": "2016-04-21",
+            "eol-date": "2021-04-21",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                    },
+                    {
+                        "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                    }
+                ]
+            },
+            "-id": "http://ubuntu.com/ubuntu/16.04",
+            "version": "16.04",
+            "family": "linux",
+            "distro": "ubuntu",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "2147483648",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "2147483648",
+                    "storage": "16106127360"
+                }
+            },
+            "short-id": [
+                "ubuntu16.04",
+                "ubuntutxenial"
+            ],
+            "codename": "Xenial Xerus",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/15.10"
+            },
+            "image": [
+                {
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-disk1.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-uefi1.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-cloud-init": "true",
+                    "url": "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-disk1.vmdk",
+                    "-arch": "x86_64",
+                    "-format": "vmdk"
+                },
+                {
+                    "-arch": "aarch64",
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-arm64-disk1.img"
+                },
+                {
+                    "-arch": "armv7l",
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-armhf-disk1.img"
+                },
+                {
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-i386-disk1.img",
+                    "-arch": "i686"
+                },
+                {
+                    "-cloud-init": "true",
+                    "url": "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-i386-disk1.vmdk",
+                    "-arch": "i686",
+                    "-format": "vmdk"
+                },
+                {
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-ppc64el-disk1.img",
+                    "-arch": "ppc64le"
+                },
+                {
+                    "-arch": "s390x",
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-s390x-disk1.img"
+                }
+            ]
+        }
+    }
+}

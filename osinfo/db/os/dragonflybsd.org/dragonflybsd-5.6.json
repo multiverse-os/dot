@@ -1,0 +1,25 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://dragonflybsd.org/dragonflybsd/5.6",
+            "version": "5.6",
+            "_vendor": "DragonFlyBSD Project",
+            "release-date": "2019-06-17",
+            "media": {
+                "-arch": "x86_64",
+                "iso": {
+                    "system-id": "DragonFly",
+                    "volume-id": "DragonFly_v5.6.(\\d)+"
+                }
+            },
+            "short-id": "dragonflybsd5.6",
+            "_name": "DragonFlyBSD 5.6",
+            "family": "dragonflybsd",
+            "distro": "dragonflybsd",
+            "upgrades": {
+                "-id": "http://dragonflybsd.org/dragonflybsd/5.4.3"
+            }
+        }
+    }
+}

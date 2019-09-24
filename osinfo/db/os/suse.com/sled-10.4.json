@@ -1,0 +1,55 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "1074151424"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            },
+            "-id": "http://suse.com/sled/10.4",
+            "_name": "SUSE Linux Enterprise Desktop 10 SP4",
+            "_vendor": "SUSE",
+            "release-date": "2011-04-12",
+            "upgrades": {
+                "-id": "http://suse.com/sled/10.3"
+            },
+            "derives-from": {
+                "-id": "http://suse.com/sled/10.3"
+            },
+            "eol-date": "2013-07-31",
+            "media": [
+                {
+                    "initrd": "boot/i386/loader/initrd",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLED-10-SP4-DVD-i586"
+                    },
+                    "kernel": "boot/i386/loader/linux"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLED-10-SP4-DVD-x86_64"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                }
+            ],
+            "short-id": "sled10sp4",
+            "version": "10.4",
+            "family": "linux",
+            "distro": "sled"
+        }
+    }
+}

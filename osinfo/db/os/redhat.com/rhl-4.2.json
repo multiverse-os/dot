@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/4.1"
+            },
+            "-id": "http://redhat.com/rhl/4.2",
+            "version": "4.2",
+            "family": "linux",
+            "codename": "Biltmore",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/4.1"
+            },
+            "eol-date": "1999-04-26",
+            "short-id": "rhl4.2",
+            "_name": "Red Hat Linux 4.2",
+            "_vendor": "Red Hat, Inc",
+            "distro": "rhl",
+            "release-date": "1997-05-19"
+        }
+    }
+}

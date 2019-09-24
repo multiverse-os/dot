@@ -1,0 +1,72 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "storage": "16106127360",
+                    "cpu": "800000000",
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "42949672960"
+                }
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/jeos"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/desktop"
+                    }
+                ]
+            },
+            "-id": "http://microsoft.com/win/vista",
+            "_vendor": "Microsoft Corporation",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/xp"
+            },
+            "upgrades": {
+                "-id": "http://microsoft.com/win/xp"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "(FB1EVOL|LRMCFRE|FRTMBVOL|FRTMEVOL|FRMBVOL|FRMEVOL|FRMCFRE)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language",
+                            "-regex": "true"
+                        }
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "(FB1EXVOL|LRMCXFRE|FRTMBXVOL|FRMEXVOL|FRTMEXVOL|FRMBXVOL|FRMCXFRE)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language",
+                            "-regex": "true"
+                        }
+                    },
+                    "-arch": "x86_64"
+                }
+            ],
+            "_name": "Microsoft Windows Vista",
+            "family": "winnt",
+            "distro": "win",
+            "release-date": "2006-11-30",
+            "short-id": "winvista",
+            "version": "6.0",
+            "eol-date": "2012-04-10"
+        }
+    }
+}

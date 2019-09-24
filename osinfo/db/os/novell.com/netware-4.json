@@ -1,0 +1,15 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "release-date": "1993-04-01",
+            "-id": "http://novell.com/netware/4",
+            "short-id": "netware4",
+            "_name": "Novell Netware 4",
+            "_vendor": "Novell",
+            "family": "netware",
+            "distro": "netware",
+            "version": "4"
+        }
+    }
+}

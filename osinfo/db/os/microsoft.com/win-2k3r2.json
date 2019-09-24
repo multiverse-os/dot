@@ -1,0 +1,92 @@
+{
+    "libosinfo": {
+        "os": {
+            "family": "winnt",
+            "upgrades": {
+                "-id": "http://microsoft.com/win/2k3"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://microsoft.com/windows/sif/jeos"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/sif/desktop"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/reg/desktop"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/cmd/desktop"
+                    }
+                ]
+            },
+            "short-id": "win2k3r2",
+            "version": "5.2",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        },
+                        "volume-id": "(CRMEFPP|CRMSFPP|CR0SCD2|CR0ECD2|BX2SFPP|BX2EFPP|BRMECD2FRE|BRMSCD2FRE)_",
+                        "publisher-id": "MICROSOFT CORPORATION"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "(CRMEXFPP|CRMSXFPP|CR0SCD2X|CR0ECD2X|BX2SXFPP|BX2EXFPP|BRMECD2XFRE|BRMSCD2XFRE)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language",
+                            "-regex": "true"
+                        }
+                    }
+                }
+            ],
+            "resources": [
+                {
+                    "-arch": "i686",
+                    "minimum": {
+                        "storage": "2147483648",
+                        "cpu": "133000000",
+                        "n-cpus": "1",
+                        "ram": "134217728"
+                    },
+                    "recommended": {
+                        "cpu": "550000000",
+                        "ram": "268435456",
+                        "storage": "4294967296"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "ram": "536870912",
+                        "storage": "4294967296",
+                        "cpu": "1500000000"
+                    },
+                    "recommended": {
+                        "storage": "8589934592"
+                    }
+                }
+            ],
+            "_vendor": "Microsoft Corporation",
+            "eol-date": "2015-07-14",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/2k3"
+            },
+            "release-date": "2005-12-06",
+            "_name": "Microsoft Windows Server 2003 R2",
+            "distro": "win",
+            "-id": "http://microsoft.com/win/2k3r2"
+        },
+        "-version": "0.0.1"
+    }
+}

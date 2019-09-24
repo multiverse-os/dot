@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://apple.com/macosx/10.4",
+            "version": "10.4",
+            "family": "darwin",
+            "upgrades": {
+                "-id": "http://apple.com/macosx/10.3"
+            },
+            "short-id": "macosx10.4",
+            "_name": "MacOS X Tiger",
+            "_vendor": "Apple Inc.",
+            "distro": "osx",
+            "codename": "Tiger",
+            "release-date": "2005-04-29"
+        }
+    }
+}

@@ -1,0 +1,528 @@
+{
+    "libosinfo": {
+        "install-script": {
+            "profile": "jeos",
+            "expected-filename": "autoinst.xml",
+            "config": {
+                "param": [
+                    {
+                        "-name": "target-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "l10n-keyboard",
+                        "-policy": "optional",
+                        "-value-map": "http://x.org/x11-keyboard"
+                    },
+                    {
+                        "-name": "l10n-language",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "l10n-timezone",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "admin-password",
+                        "-policy": "required"
+                    }
+                ]
+            },
+            "injection-method": [
+                "disk",
+                "initrd"
+            ],
+            "template": {
+                "stylesheet": {
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform",
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "xml",
+                        "-indent": "yes",
+                        "-omit-xml-declaration": "yes"
+                    },
+                    "template": [
+                        {
+                            "-name": "target-disk",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/target-disk != ''",
+                                    "value-of": {
+                                        "-select": "config/target-disk"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "/dev/vda"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "l10n-language",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/l10n-language != '' and config/l10n-language != 'C'",
+                                    "value-of": {
+                                        "-select": "config/l10n-language"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "en_US"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "l10n-keyboard",
+                            "choose": {
+                                "when": {
+                                    "value-of": {
+                                        "-select": "config/l10n-keyboard"
+                                    },
+                                    "-test": "config/l10n-keyboard != '' and config/l10n-keyboard != 'C'"
+                                },
+                                "otherwise": {
+                                    "text": "us"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "network-device",
+                            "choose": {
+                                "when": {
+                                    "-test": "contains(os/version, 'tumbleweed')",
+                                    "text": "ens3"
+                                },
+                                "otherwise": {
+                                    "text": "eth0"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "installation-url",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/installation-url != ''",
+                                        "value-of": {
+                                            "-select": "config/installation-url"
+                                        }
+                                    },
+                                    {
+                                        "-test": "tree/url != ''",
+                                        "value-of": {
+                                            "-select": "tree/url"
+                                        }
+                                    }
+                                ],
+                                "otherwise": {
+                                    "call-template": {
+                                        "-name": "repo-oss"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": [
+                                "http://download.opensuse.org/",
+                                "/repo/oss/"
+                            ],
+                            "if": {
+                                "-test": "not(contains(os/version, 'tumbleweed'))",
+                                "text": "distribution/leap/"
+                            },
+                            "value-of": {
+                                "-select": "os/version"
+                            },
+                            "-name": "repo-oss"
+                        },
+                        {
+                            "-name": "repo-non-oss",
+                            "text": [
+                                "http://download.opensuse.org/",
+                                "/repo/non-oss/"
+                            ],
+                            "if": {
+                                "-test": "not(contains(os/version, 'tumbleweed'))",
+                                "text": "distribution/leap/"
+                            },
+                            "value-of": {
+                                "-select": "os/version"
+                            }
+                        },
+                        {
+                            "-name": "repo-update-oss",
+                            "text": [
+                                "http://download.opensuse.org/update/",
+                                "/"
+                            ],
+                            "if": [
+                                {
+                                    "-test": "not(contains(os/version, 'tumbleweed'))",
+                                    "text": "leap/"
+                                },
+                                {
+                                    "-test": "not(contains(os/version, 'tumbleweed'))",
+                                    "text": "oss/"
+                                }
+                            ],
+                            "value-of": {
+                                "-select": "os/version"
+                            }
+                        },
+                        {
+                            "text": [
+                                "http://download.opensuse.org/update/leap/",
+                                "/non-oss/"
+                            ],
+                            "value-of": {
+                                "-select": "os/version"
+                            },
+                            "-name": "repo-update-non-oss"
+                        },
+                        {
+                            "-match": "/command-line",
+                            "text": "autoyast=",
+                            "choose": {
+                                "when": {
+                                    "-test": "script-preferred-injection-method = 'initrd'",
+                                    "text": "file:///"
+                                },
+                                "otherwise": {
+                                    "text": "device://sda/"
+                                }
+                            },
+                            "value-of": {
+                                "-select": "script/expected-filename"
+                            },
+                            "if": {
+                                "-test": "script/installation-source = 'network'",
+                                "text": "install=",
+                                "call-template": {
+                                    "-name": "installation-url"
+                                }
+                            }
+                        },
+                        {
+                            "-match": "/install-script-config",
+                            "profile": {
+                                "language": {
+                                    "call-template": {
+                                        "-name": "l10n-language"
+                                    }
+                                },
+                                "software": {
+                                    "packages": {
+                                        "-type": "list",
+                                        "package": [
+                                            "autoyast2-installation",
+                                            "dhcp-client",
+                                            "dhcp-tools"
+                                        ]
+                                    },
+                                    "patterns": {
+                                        "-type": "list",
+                                        "pattern": [
+                                            "apparmor",
+                                            "apparmor_opt",
+                                            "base",
+                                            "console",
+                                            "devel_basis",
+                                            "enhanced_base",
+                                            "enhanced_base_opt",
+                                            "sw_management",
+                                            "yast2_basis",
+                                            "yast2_install_wf"
+                                        ]
+                                    }
+                                },
+                                "-xmlns": "http://www.suse.com/1.0/yast2ns",
+                                "firewall": {
+                                    "enable_firewall": {
+                                        "#content": "false",
+                                        "-type": "boolean"
+                                    },
+                                    "start_firewall": {
+                                        "#content": "false",
+                                        "-type": "boolean"
+                                    }
+                                },
+                                "users": {
+                                    "-type": "list",
+                                    "user": {
+                                        "gid": "0",
+                                        "home": "/root",
+                                        "shell": "/bin/bash",
+                                        "uid": "0",
+                                        "user_password": {
+                                            "value-of": {
+                                                "-select": "config/admin-password"
+                                            }
+                                        },
+                                        "username": "root",
+                                        "encrypted": {
+                                            "#content": "false",
+                                            "-type": "boolean"
+                                        },
+                                        "fullname": "root"
+                                    }
+                                },
+                                "partitioning": {
+                                    "-type": "list",
+                                    "drive": {
+                                        "device": {
+                                            "call-template": {
+                                                "-name": "target-disk"
+                                            }
+                                        },
+                                        "type": {
+                                            "#content": "CT_DISK",
+                                            "-type": "symbol"
+                                        },
+                                        "use": "all"
+                                    }
+                                },
+                                "report": {
+                                    "errors": {
+                                        "log": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "show": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "timeout": {
+                                            "#content": "0",
+                                            "-type": "integer"
+                                        }
+                                    },
+                                    "messages": {
+                                        "timeout": {
+                                            "#content": "10",
+                                            "-type": "integer"
+                                        },
+                                        "log": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "show": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        }
+                                    },
+                                    "warnings": {
+                                        "log": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "show": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "timeout": {
+                                            "#content": "10",
+                                            "-type": "integer"
+                                        }
+                                    },
+                                    "yesno_messages": {
+                                        "log": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "show": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "timeout": {
+                                            "#content": "10",
+                                            "-type": "integer"
+                                        }
+                                    }
+                                },
+                                "scripts": {
+                                    "chroot-scripts": {
+                                        "-type": "list",
+                                        "script": {
+                                            "chrooted": {
+                                                "#content": "true",
+                                                "-type": "boolean"
+                                            },
+                                            "source": {
+                                                "#content": "# Create an osinfo-install-successful file in /root\ntouch /root/osinfo-install-successful",
+                                                "call-template": [
+                                                    {
+                                                        "-name": "installation-url"
+                                                    },
+                                                    {
+                                                        "-name": "repo-non-oss"
+                                                    },
+                                                    {
+                                                        "-name": "repo-update-oss"
+                                                    }
+                                                ],
+                                                "if": {
+                                                    "#content": "repo-update-non-oss",
+                                                    "-test": "not(contains(os/version, 'tumbleweed'))",
+                                                    "call-template": {
+                                                        "-name": "repo-update-non-oss"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "-config": "http://www.suse.com/1.0/configns",
+                                "bootloader": {
+                                    "device_map": {
+                                        "-type": "list",
+                                        "device_map_entry": {
+                                            "firmware": "hd0",
+                                            "linux": {
+                                                "call-template": {
+                                                    "-name": "target-disk"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "global": {
+                                        "boot_boot": "false",
+                                        "boot_mbr": "false",
+                                        "gfxmode": "auto",
+                                        "distributor": "",
+                                        "failsafe_disabled": "true",
+                                        "terminal": "gfxterm",
+                                        "timeout": {
+                                            "#content": "8",
+                                            "-type": "integer"
+                                        },
+                                        "activate": "true",
+                                        "boot_extended": "false",
+                                        "boot_root": "true",
+                                        "vgamode": "",
+                                        "append": {
+                                            "#content": "1 splash=silent quiet showopts",
+                                            "call-template": {
+                                                "-name": "target-disk"
+                                            }
+                                        },
+                                        "default": "0",
+                                        "generic_mbr": "true",
+                                        "os_prober": "true"
+                                    },
+                                    "loader_type": "grub2"
+                                },
+                                "general": {
+                                    "storage": {
+                                        "partition_alignment": {
+                                            "#content": "align_optimal",
+                                            "-type": "symbol"
+                                        },
+                                        "start_multipath": {
+                                            "#content": "false",
+                                            "-type": "boolean"
+                                        }
+                                    },
+                                    "ask-list": {
+                                        "-type": "list"
+                                    },
+                                    "mode": {
+                                        "confirm": {
+                                            "#content": "false",
+                                            "-type": "boolean"
+                                        },
+                                        "final_reboot": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        }
+                                    },
+                                    "proposals": {
+                                        "-type": "list"
+                                    },
+                                    "signature-handling": {
+                                        "accept_file_without_checksum": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "accept_non_trusted_gpg_key": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "accept_unknown_gpg_key": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "accept_unsigned_file": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        },
+                                        "accept_verification_failed": {
+                                            "#content": "false",
+                                            "-type": "boolean"
+                                        },
+                                        "import_gpg_key": {
+                                            "#content": "true",
+                                            "-type": "boolean"
+                                        }
+                                    }
+                                },
+                                "keyboard": {
+                                    "keyboard_values": {
+                                        "delay": "",
+                                        "discaps": {
+                                            "#content": "false",
+                                            "-type": "boolean"
+                                        },
+                                        "numlock": "bios",
+                                        "rate": ""
+                                    },
+                                    "keymap": {
+                                        "call-template": {
+                                            "-name": "l10n-keyboard"
+                                        }
+                                    }
+                                },
+                                "networking": {
+                                    "interfaces": {
+                                        "-type": "list",
+                                        "interface": {
+                                            "bootproto": "dhcp",
+                                            "device": {
+                                                "call-template": {
+                                                    "-name": "network-device"
+                                                }
+                                            },
+                                            "startmode": "auto",
+                                            "usercontrol": "no"
+                                        }
+                                    }
+                                },
+                                "services-manager": {
+                                    "default_target": "multi-user"
+                                },
+                                "timezone": {
+                                    "hwclock": "UTC",
+                                    "timezone": {
+                                        "value-of": {
+                                            "-select": "config/l10n-timezone"
+                                        }
+                                    }
+                                },
+                                "user_defaults": {
+                                    "groups": "",
+                                    "home": "/home",
+                                    "inactive": "-1",
+                                    "shell": "/bin/bash",
+                                    "skel": "/etc/skel",
+                                    "umask": "022",
+                                    "expire": "",
+                                    "group": "100"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "-id": "http://opensuse.org/opensuse/autoyast/jeos"
+        },
+        "-version": "0.0.1"
+    }
+}

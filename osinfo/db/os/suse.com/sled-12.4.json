@@ -1,0 +1,43 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "SUSE",
+            "family": "linux",
+            "distro": "sled",
+            "derives-from": {
+                "-id": "http://suse.com/sled/12.3"
+            },
+            "media": {
+                "kernel": "boot/x86_64/loader/linux",
+                "initrd": "boot/x86_64/loader/initrd",
+                "-arch": "x86_64",
+                "iso": {
+                    "system-id": "LINUX",
+                    "volume-id": "SLE-12-SP4-Desktop-DVD-x86_64"
+                }
+            },
+            "resources": {
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "17179869184"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "ram": "536870912",
+                    "storage": "1074151424",
+                    "cpu": "500000000"
+                }
+            },
+            "_name": "SUSE Linux Enterprise Desktop 12 SP4",
+            "version": "12.4",
+            "upgrades": {
+                "-id": "http://suse.com/sled/12.3"
+            },
+            "release-date": "2018-12-12",
+            "-id": "http://suse.com/sled/12.4",
+            "short-id": "sled12sp4"
+        }
+    }
+}

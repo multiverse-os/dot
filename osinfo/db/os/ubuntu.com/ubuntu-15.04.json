@@ -1,0 +1,95 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": [
+                "ubuntu15.04",
+                "ubuntutvivid"
+            ],
+            "distro": "ubuntu",
+            "-id": "http://ubuntu.com/ubuntu/15.04",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/14.10"
+            },
+            "eol-date": "2016-02-04",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "16106127360"
+                }
+            },
+            "media": [
+                {
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    },
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/vivid/ubuntu-15.04-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 15.04(.\\d\\+?)? i386"
+                    },
+                    "kernel": "install/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/vivid/ubuntu-15.04-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 15.04(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/vivid/ubuntu-15.04-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 15.04(.\\d\\+?)? i386"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz"
+                },
+                {
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/vivid/ubuntu-15.04-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 15.04(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz.efi"
+                }
+            ],
+            "version": "15.04",
+            "_vendor": "Canonical Ltd",
+            "codename": "Vivid Vervet",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/14.10"
+            },
+            "release-date": "2015-04-23",
+            "_name": "Ubuntu 15.04",
+            "installer": {
+                "script": {
+                    "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                }
+            }
+        }
+    }
+}

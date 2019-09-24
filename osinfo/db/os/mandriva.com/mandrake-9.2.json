@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://mandriva.com/mandrake/9.2",
+            "short-id": "mandrake9.2",
+            "_name": "Mandrake Linux 9.2",
+            "distro": "mandrake",
+            "codename": "FiveStar",
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "version": "9.2",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/9.1"
+            },
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/9.1"
+            },
+            "release-date": "2003-12-14"
+        }
+    }
+}

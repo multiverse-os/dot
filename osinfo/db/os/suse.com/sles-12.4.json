@@ -1,0 +1,72 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "SUSE",
+            "derives-from": {
+                "-id": "http://suse.com/sles/12.3"
+            },
+            "release-date": "2018-12-12",
+            "version": "12.4",
+            "short-id": "sles12sp4",
+            "_name": "SUSE Linux Enterprise Server 12 SP4",
+            "family": "linux",
+            "distro": "sles",
+            "upgrades": {
+                "-id": "http://suse.com/sles/12.3"
+            },
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-12-SP4-Server-DVD-x86_64"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                },
+                {
+                    "kernel": "boot/aarch64/linux",
+                    "initrd": "boot/aarch64/initrd",
+                    "-arch": "aarch64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-12-SP4-Server-DVD-aarch64"
+                    }
+                },
+                {
+                    "-arch": "ppc64",
+                    "iso": {
+                        "volume-id": "SLE-12-SP4-Server-DVD-ppc64le",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "boot/ppc64le/linux",
+                    "initrd": "boot/ppc64le/initrd"
+                },
+                {
+                    "initrd": "boot/s390x/initrd",
+                    "-arch": "s390x",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLE-12-SP4-Server-DVD-s390x"
+                    },
+                    "kernel": "boot/s390x/linux"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "536870912",
+                    "storage": "1074151424",
+                    "cpu": "500000000"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "17179869184"
+                }
+            },
+            "-id": "http://suse.com/sles/12.4"
+        }
+    }
+}

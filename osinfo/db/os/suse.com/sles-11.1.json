@@ -1,0 +1,55 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2012-08-31",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "1074151424"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "12884901888"
+                }
+            },
+            "-id": "http://suse.com/sles/11.1",
+            "_name": "SUSE Linux Enterprise Server 11 SP1",
+            "version": "11.1",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://suse.com/sles/11"
+            },
+            "release-date": "2010-06-02",
+            "short-id": "sles11sp1",
+            "_vendor": "SUSE",
+            "distro": "sles",
+            "upgrades": {
+                "-id": "http://suse.com/sles/11"
+            },
+            "media": [
+                {
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLES-11-SP1-DVD-i586"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "SLES-11-SP1-DVD-x86_64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                }
+            ]
+        }
+    }
+}

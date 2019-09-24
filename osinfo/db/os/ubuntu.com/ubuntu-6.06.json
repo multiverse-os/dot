@@ -1,0 +1,171 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "codename": "Dapper Drake",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/5.10"
+            },
+            "release-date": "2006-06-01",
+            "eol-date": "2011-06-01",
+            "-id": "http://ubuntu.com/ubuntu/6.06",
+            "short-id": [
+                "ubuntu6.06",
+                "ubuntudapper"
+            ],
+            "version": "6.06",
+            "distro": "ubuntu",
+            "media": [
+                {
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 6.06(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 6.06(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-server-powerpc.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 6.06(.\\d\\+?)? ppc",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/powerpc/vmlinux",
+                    "initrd": "install/powerpc/initrd.gz"
+                },
+                {
+                    "-arch": "parisc",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-server-hppa.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 6.06(.\\d\\+?)? hppa",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz-hppa32",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-arch": "ia64",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-server-ia64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 6.06(.\\d\\+?)? ia64",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "sparc64",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-server-sparc.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 6.06(.\\d\\+?)? sparc",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "boot/sparc64",
+                    "initrd": "boot/initrd.gz"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 6.06(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-desktop-amd64.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Ubuntu 6.06(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "x86_64",
+                    "-live": "true"
+                },
+                {
+                    "initrd": "install/powerpc/initrd.gz",
+                    "-arch": "ppc",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-desktop-powerpc.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Ubuntu 6.06(.\\d\\+?)? ppc"
+                    },
+                    "kernel": "install/powerpc/vmlinux"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-dvd-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 6.06(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-dvd-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 6.06(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-arch": "ppc",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-dvd-powerpc.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 6.06(.\\d\\+?)? ppc",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/powerpc/vmlinux",
+                    "initrd": "install/powerpc/initrd.gz"
+                },
+                {
+                    "kernel": "install/vmlinux-hppa32",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "parisc",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-alternate-hppa.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 6.06(.\\d\\+?)? hppa",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu 6.06(.\\d\\+?)? ia64",
+                        "system-id": "LINUX"
+                    },
+                    "-arch": "ia64",
+                    "url": "http://old-releases.ubuntu.com/releases/dapper/ubuntu-6.06-alternate-ia64.iso"
+                }
+            ],
+            "_name": "Ubuntu 6.06 LTS",
+            "_vendor": "Canonical Ltd",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/5.10"
+            }
+        }
+    }
+}

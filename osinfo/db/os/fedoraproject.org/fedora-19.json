@@ -1,0 +1,197 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "Fedora 19",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/18"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Fedora/i386/iso/Fedora-19-i386-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 19 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "4518858752"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Fedora/i386/iso/Fedora-19-i386-netinst.iso",
+                    "iso": {
+                        "volume-id": "Fedora 19 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "370006016"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Fedora/x86_64/iso/Fedora-19-x86_64-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 19 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "4444481536"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Live/i386/Fedora-Live-Desktop-i686-19-1.iso",
+                    "iso": {
+                        "volume-id": "Fedora-Live-Desktop-i686-19-1",
+                        "system-id": "LINUX",
+                        "volume-size": "962682880"
+                    },
+                    "kernel": "isolinux/vmlinuz0"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Live/i386/Fedora-Live-KDE-i686-19-1.iso",
+                    "iso": {
+                        "volume-id": "Fedora-Live-KDE-i686-19-1",
+                        "system-id": "LINUX",
+                        "volume-size": "883580928"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora-Live-Desktop-x86_64-19-1",
+                        "system-id": "LINUX",
+                        "volume-size": "997115904"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Live/x86_64/Fedora-Live-Desktop-x86_64-19-1.iso"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Live/x86_64/Fedora-Live-KDE-x86_64-19-1.iso",
+                    "iso": {
+                        "volume-id": "Fedora-Live-KDE-x86_64-19-1",
+                        "system-id": "LINUX",
+                        "volume-size": "920012800"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "-live": "true",
+                    "url": "https://archive.fedoraproject.org/pub/alt/releases/19/Spins/x86_64/Fedora-Live-LXDE-x86_64-19-1.iso",
+                    "iso": {
+                        "volume-id": "Fedora-Live-LXDE-x86_64-19-1",
+                        "system-id": "LINUX",
+                        "volume-size": "724379648"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "https://archive.fedoraproject.org/pub/alt/releases/19/Spins/x86_64/Fedora-Live-XFCE-x86_64-19-1.iso",
+                    "iso": {
+                        "volume-id": "Fedora-Live-XFCE-x86_64-19-1",
+                        "system-id": "LINUX",
+                        "volume-size": "650180608"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "_vendor": "Fedora Project",
+            "distro": "fedora",
+            "codename": "Schrödinger's Cat",
+            "release-date": "2013-07-02",
+            "eol-date": "2015-01-06",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1033/0194"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0004"
+                    }
+                ]
+            },
+            "short-id": "fedora19",
+            "version": "19",
+            "tree": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Fedora/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "19",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Fedora/x86_64/os/",
+                    "treeinfo": {
+                        "arch": "x86_64",
+                        "family": "Fedora",
+                        "version": "19"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "19"
+                    }
+                }
+            ],
+            "kernel-url-argument": "inst.repo",
+            "-id": "http://fedoraproject.org/fedora/19",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/18"
+            },
+            "firmware": [
+                {
+                    "-arch": "x86_64",
+                    "-type": "efi"
+                },
+                {
+                    "-arch": "i686",
+                    "-type": "efi"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            }
+        }
+    }
+}

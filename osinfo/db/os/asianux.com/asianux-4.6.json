@@ -1,0 +1,47 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Asianux Server 4 SP6 x86_64"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Asianux Server 4 SP6 i686"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "-id": "http://asianux.com/asianux/4.6",
+            "vendor": "Asianux Project",
+            "family": "linux",
+            "codename": "Hiranya",
+            "release-date": "2016-07-21",
+            "resources": {
+                "recommended": {
+                    "ram": "1073741824",
+                    "storage": "9663676416",
+                    "cpu": "400000000"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                }
+            },
+            "short-id": "asianux4.6",
+            "name": "Asianux Server 4 SP6",
+            "distro": "asianux"
+        }
+    }
+}

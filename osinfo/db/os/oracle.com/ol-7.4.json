@@ -1,0 +1,27 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "ol",
+            "media": {
+                "iso": {
+                    "system-id": "LINUX",
+                    "volume-id": "OL-7.4 Server.x86_64"
+                },
+                "kernel": "isolinux/vmlinuz",
+                "initrd": "isolinux/initrd.img",
+                "-arch": "x86_64"
+            },
+            "-id": "http://oracle.com/ol/7.4",
+            "short-id": "ol7.4",
+            "_name": "Oracle Linux 7.4",
+            "version": "7.4",
+            "_vendor": "Oracle America",
+            "family": "linux",
+            "clones": {
+                "-id": "http://redhat.com/rhel/7.4"
+            },
+            "release-date": "2017-08-04"
+        }
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "openSUSE",
+            "distro": "opensuse",
+            "tree": {
+                "-arch": "x86_64",
+                "url": "http://download.opensuse.org/pub/opensuse/tumbleweed/repo/oss/",
+                "treeinfo": {
+                    "family": "openSUSE Tumbleweed",
+                    "arch": "x86_64"
+                }
+            },
+            "resources": {
+                "minimum": {
+                    "cpu": "1600000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "4294967296"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480",
+                    "cpu": "2400000000"
+                },
+                "-arch": "all"
+            },
+            "-id": "http://opensuse.org/opensuse/tumbleweed",
+            "short-id": "opensusetumbleweed",
+            "version": "tumbleweed",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-i586-Current.iso",
+                    "iso": {
+                        "publisher-id": "SUSE LINUX GmbH",
+                        "volume-id": "openSUSE-Tumbleweed-DVD-i586*",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-Tumbleweed-DVD-x86_64*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                },
+                {
+                    "iso": {
+                        "volume-id": "openSUSE-Tumbleweed-NET-i586*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd",
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-i586-Current.iso"
+                },
+                {
+                    "url": "http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Current.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-Tumbleweed-NET-x86_64*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "kubic"
+                    },
+                    "url": "http://download.opensuse.org/tumbleweed/iso/openSUSE-Kubic-DVD-x86_64-Current.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-(Tumbleweed-)?Kubic-*",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                }
+            ],
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/15.0"
+            },
+            "variant": [
+                {
+                    "-id": "netinst",
+                    "_name": "openSUSE Tumbleweed"
+                },
+                {
+                    "-id": "kubic",
+                    "_name": "openSUSE Tumbleweed (Kubic)"
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://opensuse.org/opensuse/autoyast/jeos"
+                    },
+                    {
+                        "-id": "http://opensuse.org/opensuse/autoyast/desktop"
+                    }
+                ]
+            },
+            "_name": "openSUSE Tumbleweed",
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/15.0"
+            }
+        }
+    }
+}

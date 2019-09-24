@@ -1,0 +1,96 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1033/0194"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0004"
+                    }
+                ]
+            },
+            "_vendor": "openSUSE",
+            "distro": "opensuse",
+            "release-date": "2013-11-19",
+            "resources": {
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "10737418240",
+                    "cpu": "2400000000"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "3221225472"
+                }
+            },
+            "family": "linux",
+            "short-id": "opensuse13.1",
+            "_name": "openSUSE 13.1",
+            "-id": "http://opensuse.org/opensuse/13.1",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/12.3"
+            },
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/12.3"
+            },
+            "eol-date": "2016-02-03",
+            "media": [
+                {
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd",
+                    "-arch": "i686",
+                    "url": "http://download.opensuse.org/distribution/13.1/iso/openSUSE-13.1-DVD-i586.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH",
+                        "volume-id": "openSUSE-13.1-DVD"
+                    }
+                },
+                {
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "url": "http://download.opensuse.org/distribution/13.1/iso/openSUSE-13.1-DVD-x86_64.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-13.1-DVD-x86_64",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    }
+                },
+                {
+                    "url": "http://download.opensuse.org/distribution/13.1/iso/openSUSE-13.1-GNOME-Live-i686.iso",
+                    "iso": {
+                        "application-id": "(0x3a19c523|0x675aadc1)",
+                        "volume-id": "openSUSE 13.1 .* Live",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd",
+                    "-arch": "i686",
+                    "-live": "true"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://download.opensuse.org/distribution/13.1/iso/openSUSE-13.1-GNOME-Live-x86_64.iso",
+                    "iso": {
+                        "volume-id": "openSUSE 13.1 .* Live",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH",
+                        "application-id": "(0x601bf7b2|0xa893698d)"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                }
+            ],
+            "version": "13.1"
+        }
+    }
+}

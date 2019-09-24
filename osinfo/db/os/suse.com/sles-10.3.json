@@ -1,0 +1,55 @@
+{
+    "libosinfo": {
+        "os": {
+            "short-id": "sles10sp3",
+            "version": "10.3",
+            "distro": "sles",
+            "upgrades": {
+                "-id": "http://suse.com/sles/10.2"
+            },
+            "resources": {
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "1074151424"
+                },
+                "recommended": {
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "cpu": "2400000000"
+                },
+                "-arch": "all"
+            },
+            "release-date": "2009-10-12",
+            "eol-date": "2011-10-11",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "SLES-10-SP3-DVD-i586",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLES-10-SP3-DVD-x86_64"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                }
+            ],
+            "-id": "http://suse.com/sles/10.3",
+            "_name": "SUSE Linux Enterprise Server 10 SP3",
+            "_vendor": "SUSE",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://suse.com/sles/10.2"
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

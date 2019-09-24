@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "derives-from": {
+                "-id": "http://mandriva.com/mandriva/2006.0"
+            },
+            "-id": "http://mandriva.com/mandriva/2007",
+            "short-id": "mandriva2007",
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "distro": "mandriva",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandriva/2006.0"
+            },
+            "_name": "Mandriva Linux 2007",
+            "version": "2007",
+            "release-date": "2006-10-03"
+        }
+    }
+}

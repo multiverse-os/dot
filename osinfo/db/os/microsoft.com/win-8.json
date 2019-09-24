@@ -1,0 +1,392 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://microsoft.com/win/8",
+            "short-id": "win8",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1033/0194"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0004"
+                    }
+                ]
+            },
+            "version": "6.2",
+            "upgrades": {
+                "-id": "http://microsoft.com/win/7"
+            },
+            "eol-date": "2018-01-09",
+            "media": [
+                {
+                    "-installer-reboots": "2",
+                    "iso": {
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        },
+                        "volume-id": "(HB1_CCPA_X86FRE|HRM_CCSN?A_X86FRE)_"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "iso": {
+                        "volume-id": "(HB1_CCPA_X64FREE?|HRM_CCSN?A_X64FREE?)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "debug"
+                    },
+                    "iso": {
+                        "volume-id": "(HRM_CCSN?A_X86CHK)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "debug"
+                    },
+                    "iso": {
+                        "volume-id": "(HRM_CCSN?A_X64CHK)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "enterprise"
+                    },
+                    "iso": {
+                        "volume-id": "(HRM_CENN?A_X86FREV)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "enterprise"
+                    },
+                    "iso": {
+                        "volume-id": "(HRM_CENN?A_X64FREV)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "enterprise-debug"
+                    },
+                    "iso": {
+                        "volume-id": "(HRM_CENN?A_X86CHKV)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "(HRM_CENN?A_X64CHKV)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "enterprise-debug"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "professional"
+                    },
+                    "iso": {
+                        "volume-id": "(HRM_CPRN?A_X86FREV)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "-installer-reboots": "2",
+                    "variant": {
+                        "-id": "professional"
+                    },
+                    "iso": {
+                        "volume-id": "(HRM_CPRN?A_X64FREV)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9_]*_([A-Z]*-[A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/8/l10n-language"
+                        }
+                    },
+                    "-arch": "x86_64"
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/jeos"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/desktop"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/cmd/desktop"
+                    }
+                ]
+            },
+            "_vendor": "Microsoft Corporation",
+            "distro": "win",
+            "release-date": "2012-09-01",
+            "variant": [
+                {
+                    "-id": "debug",
+                    "_name": "Microsoft Windows 8 Debug Check Build"
+                },
+                {
+                    "-id": "enterprise",
+                    "_name": "Microsoft Windows 8 Enterprise"
+                },
+                {
+                    "-id": "enterprise-debug",
+                    "_name": "Microsoft Windows 8 Enterprise Debug Check Build"
+                },
+                {
+                    "-id": "professional",
+                    "_name": "Microsoft Windows 8 Professional"
+                }
+            ],
+            "_name": "Microsoft Windows 8",
+            "family": "winnt",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/7"
+            },
+            "resources": [
+                {
+                    "-arch": "i686",
+                    "minimum": {
+                        "cpu": "1000000000",
+                        "n-cpus": "1",
+                        "ram": "1073741824",
+                        "storage": "17179869184"
+                    }
+                },
+                {
+                    "minimum": {
+                        "storage": "21474836480",
+                        "cpu": "1000000000",
+                        "n-cpus": "1",
+                        "ram": "2147483648"
+                    },
+                    "maximum": {
+                        "ram": "549755813888"
+                    },
+                    "-arch": "x86_64"
+                }
+            ],
+            "driver": [
+                {
+                    "-arch": "i686",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/preinst/virtio-win/0.1.171/w8/x86",
+                    "-pre-installable": "true",
+                    "-signed": "false",
+                    "file": [
+                        "viostor.cat",
+                        "viostor.inf",
+                        "viostor.sys"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        }
+                    ]
+                },
+                {
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        }
+                    ],
+                    "-arch": "x86_64",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/preinst/virtio-win/0.1.171/w8/amd64",
+                    "-pre-installable": "true",
+                    "-signed": "false",
+                    "file": [
+                        "viostor.cat",
+                        "viostor.inf",
+                        "viostor.sys"
+                    ]
+                },
+                {
+                    "-signed": "false",
+                    "file": [
+                        "spice-guest-tools-0.141.exe",
+                        "spice-guest-tools-0.141.cmd",
+                        "qxl-0.141.cer",
+                        "virtio-0.141.cer"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1000"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1002"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1003"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1004"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1005"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1b36/0100"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1041"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1043"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1044"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1045"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1048"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1052"
+                        }
+                    ],
+                    "-arch": "i686",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/postinst/spice-guest-tools/0.141"
+                },
+                {
+                    "-signed": "false",
+                    "file": [
+                        "spice-guest-tools-0.141.exe",
+                        "spice-guest-tools-0.141.cmd",
+                        "qxl-0.141.cer",
+                        "virtio-0.141.cer"
+                    ],
+                    "device": [
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1000"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1001"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1002"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1003"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1004"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1005"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1b36/0100"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1041"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1042"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1043"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1044"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1045"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1048"
+                        },
+                        {
+                            "-id": "http://pcisig.com/pci/1af4/1052"
+                        }
+                    ],
+                    "-arch": "x86_64",
+                    "-location": "https://fedorapeople.org/groups/virt/unattended/drivers/postinst/spice-guest-tools/0.141"
+                }
+            ]
+        }
+    }
+}

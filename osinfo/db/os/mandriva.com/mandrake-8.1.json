@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "os": {
+            "_name": "Mandrake Linux 8.1",
+            "family": "linux",
+            "codename": "Vitamin",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/8.0"
+            },
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/8.0"
+            },
+            "release-date": "2001-09-27",
+            "-id": "http://mandriva.com/mandrake/8.1",
+            "short-id": "mandrake8.1",
+            "_vendor": "Mandriva",
+            "distro": "mandrake",
+            "version": "8.1"
+        },
+        "-version": "0.0.1"
+    }
+}

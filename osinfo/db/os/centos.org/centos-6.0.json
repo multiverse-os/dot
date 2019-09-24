@@ -1,0 +1,81 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "centos6.0",
+            "distro": "centos",
+            "release-date": "2011-07-10",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.0_Final"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.0_Final"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "_vendor": "CentOS",
+            "family": "linux",
+            "-id": "http://centos.org/centos/6.0",
+            "_name": "CentOS 6.0",
+            "version": "6.0",
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.0"
+            },
+            "eol-date": "2011-12-09",
+            "tree": [
+                {
+                    "treeinfo": {
+                        "arch": "x86_64",
+                        "family": "CentOS",
+                        "version": "6.0"
+                    },
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/6.0/os/x86_64/"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/6.0/os/i386/",
+                    "treeinfo": {
+                        "version": "6.0",
+                        "arch": "i386",
+                        "family": "CentOS"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                }
+            }
+        }
+    }
+}

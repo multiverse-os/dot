@@ -1,0 +1,74 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://openbsd.org/openbsd/5.9",
+            "_name": "OpenBSD 5.9",
+            "version": "5.9",
+            "distro": "openbsd",
+            "_vendor": "OpenBSD Project",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/5.8"
+            },
+            "eol-date": "2017-04-11",
+            "variant": {
+                "_name": "OpenBSD 5.9",
+                "-id": "netinst"
+            },
+            "short-id": "openbsd5.9",
+            "family": "openbsd",
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/5.8"
+            },
+            "release-date": "2016-03-29",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "https://ftp.eu.openbsd.org/pub/OpenBSD/5.9/i386/install59.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2016 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/i386    5.9 Install CD",
+                        "application-id": "OpenBSD 5.9 i386 Install CD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "https://ftp.eu.openbsd.org/pub/OpenBSD/5.9/amd64/install59.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2016 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/amd64   5.9 Install CD",
+                        "application-id": "OpenBSD 5.9 amd64 Install CD"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.9/i386/cd59.iso",
+                    "iso": {
+                        "application-id": "OpenBSD 5\\.9 i386 bootonly CD",
+                        "publisher-id": "Copyright \\(c\\) 2016 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/i386    5\\.9 boot-only CD",
+                        "system-id": "OpenBSD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.9/amd64/cd59.iso",
+                    "iso": {
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.9 amd64 bootonly CD",
+                        "publisher-id": "Copyright \\(c\\) 2016 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   5\\.9 boot-only CD"
+                    }
+                }
+            ]
+        }
+    }
+}

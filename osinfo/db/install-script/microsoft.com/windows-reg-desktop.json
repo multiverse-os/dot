@@ -1,0 +1,45 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "install-script": {
+            "template": {
+                "stylesheet": {
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform",
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    },
+                    "template": {
+                        "#content": "\"\n\"AutoAdminLogon\"=\"1\"",
+                        "-match": "/install-script-config",
+                        "value-of": [
+                            {
+                                "-select": "config/user-realname"
+                            },
+                            {
+                                "-select": "config/admin-password"
+                            }
+                        ]
+                    }
+                }
+            },
+            "-id": "http://microsoft.com/windows/reg/desktop",
+            "profile": "desktop",
+            "path-format": "dos",
+            "expected-filename": "windows.reg",
+            "config": {
+                "param": [
+                    {
+                        "-policy": "optional",
+                        "-name": "admin-password"
+                    },
+                    {
+                        "-name": "user-realname",
+                        "-policy": "required"
+                    }
+                ]
+            },
+            "injection-method": "floppy"
+        }
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2013-03-09",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "centos6.3",
+            "upgrades": {
+                "-id": "http://centos.org/centos/6.2"
+            },
+            "_vendor": "CentOS",
+            "family": "linux",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.3_Final"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.3_Final"
+                    }
+                },
+                {
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-6.3-x86_64-LiveDVD"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64"
+                }
+            ],
+            "-id": "http://centos.org/centos/6.3",
+            "_name": "CentOS 6.3",
+            "version": "6.3",
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/6.3/os/x86_64/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "6.3",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/6.3/os/i386/",
+                    "treeinfo": {
+                        "version": "6.3",
+                        "arch": "i386",
+                        "family": "CentOS"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                }
+            },
+            "distro": "centos",
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.3"
+            },
+            "release-date": "2012-07-09"
+        }
+    }
+}

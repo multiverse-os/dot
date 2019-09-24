@@ -1,0 +1,95 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2017-04-28",
+            "version": "12.04",
+            "_vendor": "Canonical Ltd",
+            "family": "linux",
+            "distro": "ubuntu",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/11.10"
+            },
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/11.10"
+            },
+            "codename": "Precise Pangolin",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "67108864",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "536870912",
+                    "storage": "5368709120"
+                }
+            },
+            "short-id": [
+                "ubuntu12.04",
+                "ubuntuprecise"
+            ],
+            "_name": "Ubuntu 12.04 LTS",
+            "-id": "http://ubuntu.com/ubuntu/12.04",
+            "release-date": "2012-04-26",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/precise/ubuntu-12.04-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 12.04(.\\d\\+?)? LTS i386"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/precise/ubuntu-12.04-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 12.04(.\\d\\+?)? LTS amd64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                        }
+                    }
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/precise/ubuntu-12.04-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 12.04(.\\d\\+?)? LTS i386"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "i686",
+                    "-live": "true"
+                },
+                {
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/precise/ubuntu-12.04-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 12.04(.\\d\\+?)? LTS amd64"
+                    }
+                }
+            ],
+            "installer": {
+                "script": {
+                    "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                }
+            }
+        }
+    }
+}

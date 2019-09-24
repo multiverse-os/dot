@@ -1,0 +1,46 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "opensuse11.1",
+            "version": "11.1",
+            "_vendor": "openSUSE",
+            "distro": "opensuse",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/11.0"
+            },
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/11.0"
+            },
+            "eol-date": "2011-01-14",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2668"
+                    }
+                ]
+            },
+            "-id": "http://opensuse.org/opensuse/11.1",
+            "_name": "openSUSE 11.1",
+            "family": "linux",
+            "release-date": "2008-12-18",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "n-cpus": "1",
+                    "ram": "268435456",
+                    "storage": "524288000"
+                },
+                "recommended": {
+                    "storage": "8589934592",
+                    "cpu": "2400000000",
+                    "ram": "536870912"
+                }
+            }
+        }
+    }
+}

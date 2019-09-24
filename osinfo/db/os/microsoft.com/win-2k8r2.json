@@ -1,0 +1,88 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/jeos"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/desktop"
+                    }
+                ]
+            },
+            "version": "6.1",
+            "family": "winnt",
+            "resources": {
+                "-arch": "x86_64",
+                "minimum": {
+                    "cpu": "1400000000",
+                    "n-cpus": "1",
+                    "ram": "536870912",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "cpu": "2000000000",
+                    "ram": "2147483648",
+                    "storage": "42949672960"
+                },
+                "maximum": {
+                    "ram": "2199023255552"
+                }
+            },
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        },
+                        "volume-id": "(GRMSXVOL|GRMSXFRER|GRMSHXVOL)_",
+                        "publisher-id": "MICROSOFT CORPORATION"
+                    }
+                },
+                {
+                    "-arch": "ia64",
+                    "iso": {
+                        "volume-id": "(GRMSIAIVOL|SRVHPCR2)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    }
+                }
+            ],
+            "-id": "http://microsoft.com/win/2k8r2",
+            "short-id": "win2k8r2",
+            "_name": "Microsoft Windows Server 2008 R2",
+            "distro": "win",
+            "release-date": "2009-10-22",
+            "eol-date": "2013-07-09",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://qemu.org/chipset/x86/q35"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/10d3"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/293e"
+                    }
+                ]
+            },
+            "_vendor": "Microsoft Corporation",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/2k8"
+            },
+            "upgrades": {
+                "-id": "http://microsoft.com/win/2k8"
+            }
+        }
+    }
+}

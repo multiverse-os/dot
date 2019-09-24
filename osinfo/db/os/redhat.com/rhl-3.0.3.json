@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "release-date": "1996-05-01",
+            "eol-date": "1996-10-03",
+            "-id": "http://redhat.com/rhl/3.0.3",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/2.1"
+            },
+            "codename": "Picasso",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/2.1"
+            },
+            "short-id": "rhl3.0.3",
+            "_name": "Red Hat Linux 3.0.3",
+            "version": "3.0.3",
+            "distro": "rhl"
+        }
+    }
+}

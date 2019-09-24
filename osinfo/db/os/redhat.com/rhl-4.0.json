@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "linux",
+            "codename": "Colgate",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/3.0.3"
+            },
+            "eol-date": "1997-12-01",
+            "version": "4.0",
+            "short-id": "rhl4.0",
+            "_name": "Red Hat Linux 4.0",
+            "_vendor": "Red Hat, Inc",
+            "distro": "rhl",
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/3.0.3"
+            },
+            "release-date": "1996-10-03",
+            "-id": "http://redhat.com/rhl/4.0"
+        }
+    }
+}

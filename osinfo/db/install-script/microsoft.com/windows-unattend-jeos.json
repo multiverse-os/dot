@@ -1,0 +1,420 @@
+{
+    "libosinfo": {
+        "install-script": {
+            "can-pre-install-drivers": "",
+            "config": {
+                "param": [
+                    {
+                        "-name": "admin-password",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "hardware-arch",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-policy": "optional",
+                        "-value-map": "http://microsoft.com/win/8/l10n-language-reverse",
+                        "-name": "l10n-language"
+                    },
+                    {
+                        "-policy": "optional",
+                        "-name": "user-login"
+                    },
+                    {
+                        "-name": "user-password",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "user-realname",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "reg-product-key",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "target-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "pre-install-drivers-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "pre-install-drivers-location",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "injection-method": [
+                "cdrom",
+                "floppy"
+            ],
+            "profile": "jeos",
+            "product-key-format": "$$$$$-$$$$$-$$$$$-$$$$$-$$$$$",
+            "expected-filename": "autounattend.xml",
+            "template": {
+                "stylesheet": {
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform",
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "xml",
+                        "-indent": "yes"
+                    },
+                    "template": [
+                        {
+                            "-name": "target-disk",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/target-disk != ''",
+                                    "value-of": {
+                                        "-select": "config/target-disk"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "C"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "arch",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/hardware-arch = 'x86_64'",
+                                        "text": "amd64"
+                                    },
+                                    {
+                                        "-test": "config/hardware-arch = 'i386'",
+                                        "text": "x86"
+                                    }
+                                ],
+                                "otherwise": {
+                                    "text": "x86"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "pre-install-drivers-disk",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/pre-install-drivers-disk != ''",
+                                        "value-of": {
+                                            "-select": "config/pre-install-drivers-disk"
+                                        }
+                                    },
+                                    {
+                                        "-test": "script/preferred-injection-method = 'cdrom'",
+                                        "text": "E"
+                                    }
+                                ],
+                                "otherwise": {
+                                    "text": "A"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "pre-install-drivers-location",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/pre-install-drivers-location != ''",
+                                    "value-of": {
+                                        "-select": "config/pre-install-drivers-location"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "\\"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "ui-language",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/l10n-language = 'EN-GB'",
+                                    "text": "EN-US"
+                                },
+                                "otherwise": {
+                                    "value-of": {
+                                        "-select": "config/l10n-language"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "-match": "/install-script-config",
+                            "unattend": {
+                                "-xmlns": "urn:schemas-microsoft-com:unattend",
+                                "settings": [
+                                    {
+                                        "component": [
+                                            {
+                                                "-publicKeyToken": "31bf3856ad364e35",
+                                                "-language": "neutral",
+                                                "-versionScope": "nonSxS",
+                                                "-wcm": "http://schemas.microsoft.com/WMIConfig/2002/State",
+                                                "-xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                                                "attribute": {
+                                                    "-name": "processorArchitecture",
+                                                    "call-template": {
+                                                        "-name": "arch"
+                                                    }
+                                                },
+                                                "DriverPaths": {
+                                                    "PathAndCredentials": {
+                                                        "-keyValue": "1",
+                                                        "-action": "add",
+                                                        "Path": {
+                                                            "#content": ":",
+                                                            "call-template": [
+                                                                {
+                                                                    "-name": "pre-install-drivers-disk"
+                                                                },
+                                                                {
+                                                                    "-name": "pre-install-drivers-location"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "-name": "Microsoft-Windows-PnpCustomizationsWinPE"
+                                            },
+                                            {
+                                                "-name": "Microsoft-Windows-Setup",
+                                                "-publicKeyToken": "31bf3856ad364e35",
+                                                "-language": "neutral",
+                                                "UserData": {
+                                                    "AcceptEula": "true",
+                                                    "ProductKey": {
+                                                        "Key": {
+                                                            "value-of": {
+                                                                "-select": "config/reg-product-key"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "-versionScope": "nonSxS",
+                                                "-wcm": "http://schemas.microsoft.com/WMIConfig/2002/State",
+                                                "-xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                                                "attribute": {
+                                                    "-name": "processorArchitecture",
+                                                    "call-template": {
+                                                        "-name": "arch"
+                                                    }
+                                                },
+                                                "DiskConfiguration": {
+                                                    "WillShowUI": "OnError",
+                                                    "Disk": {
+                                                        "CreatePartitions": {
+                                                            "CreatePartition": {
+                                                                "Order": "1",
+                                                                "Size": "1",
+                                                                "Type": "Primary"
+                                                            }
+                                                        },
+                                                        "DiskID": "0",
+                                                        "WillWipeDisk": "true",
+                                                        "ModifyPartitions": {
+                                                            "ModifyPartition": {
+                                                                "Active": "true",
+                                                                "Extend": "true",
+                                                                "Format": "NTFS",
+                                                                "Label": {
+                                                                    "#content": "drive",
+                                                                    "call-template": {
+                                                                        "-name": "target-disk"
+                                                                    }
+                                                                },
+                                                                "Letter": {
+                                                                    "call-template": {
+                                                                        "-name": "target-disk"
+                                                                    }
+                                                                },
+                                                                "Order": "1",
+                                                                "PartitionID": "1"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "ImageInstall": {
+                                                    "OSImage": {
+                                                        "InstallTo": {
+                                                            "DiskID": "0",
+                                                            "PartitionID": "1"
+                                                        },
+                                                        "WillShowUI": "OnError"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "-versionScope": "nonSxS",
+                                                "-xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                                                "SetupUILanguage": {
+                                                    "UILanguage": {
+                                                        "call-template": {
+                                                            "-name": "ui-language"
+                                                        }
+                                                    }
+                                                },
+                                                "UILanguage": {
+                                                    "call-template": {
+                                                        "-name": "ui-language"
+                                                    }
+                                                },
+                                                "SystemLocale": {
+                                                    "value-of": {
+                                                        "-select": "config/l10n-language"
+                                                    }
+                                                },
+                                                "UserLocale": {
+                                                    "value-of": {
+                                                        "-select": "config/l10n-language"
+                                                    }
+                                                },
+                                                "-name": "Microsoft-Windows-International-Core-WinPE",
+                                                "-publicKeyToken": "31bf3856ad364e35",
+                                                "-language": "neutral",
+                                                "-wcm": "http://schemas.microsoft.com/WMIConfig/2002/State",
+                                                "attribute": {
+                                                    "-name": "processorArchitecture",
+                                                    "call-template": {
+                                                        "-name": "arch"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "-pass": "windowsPE"
+                                    },
+                                    {
+                                        "component": {
+                                            "attribute": {
+                                                "call-template": {
+                                                    "-name": "arch"
+                                                },
+                                                "-name": "processorArchitecture"
+                                            },
+                                            "FirstLogonCommands": {
+                                                "SynchronousCommand": [
+                                                    {
+                                                        "-action": "add",
+                                                        "Order": "1",
+                                                        "Description": "Turn Off Network Selection pop-up",
+                                                        "CommandLine": "cmd /c reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Network\\NewNetworkWindowOff\""
+                                                    },
+                                                    {
+                                                        "-action": "add",
+                                                        "Order": "2",
+                                                        "Description": "Shutting down Windows",
+                                                        "CommandLine": "cmd /C shutdown /s /t 0"
+                                                    }
+                                                ]
+                                            },
+                                            "-name": "Microsoft-Windows-Shell-Setup",
+                                            "-publicKeyToken": "31bf3856ad364e35",
+                                            "-language": "neutral",
+                                            "-versionScope": "nonSxS",
+                                            "OOBE": {
+                                                "NetworkLocation": "Work",
+                                                "HideEULAPage": "true",
+                                                "ProtectYourPC": "3",
+                                                "SkipMachineOOBE": "true",
+                                                "SkipUserOOBE": "true"
+                                            },
+                                            "-wcm": "http://schemas.microsoft.com/WMIConfig/2002/State",
+                                            "-xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                                            "UserAccounts": {
+                                                "AdministratorPassword": {
+                                                    "PlainText": "true",
+                                                    "Value": {
+                                                        "value-of": {
+                                                            "-select": "config/admin-password"
+                                                        }
+                                                    }
+                                                },
+                                                "if": {
+                                                    "-test": "count(config/user-login) \u003e 0",
+                                                    "LocalAccounts": {
+                                                        "LocalAccount": {
+                                                            "Group": "Users",
+                                                            "-action": "add",
+                                                            "Password": {
+                                                                "Value": {
+                                                                    "value-of": {
+                                                                        "-select": "config/user-password"
+                                                                    }
+                                                                },
+                                                                "PlainText": "true"
+                                                            },
+                                                            "Name": {
+                                                                "value-of": {
+                                                                    "-select": "config/user-login"
+                                                                }
+                                                            },
+                                                            "DisplayName": {
+                                                                "value-of": {
+                                                                    "-select": "config/user-realname"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "if": {
+                                                "-test": "count(config/user-login) \u003e 0",
+                                                "AutoLogon": {
+                                                    "Password": {
+                                                        "Value": {
+                                                            "value-of": {
+                                                                "-select": "config/user-password"
+                                                            }
+                                                        },
+                                                        "PlainText": "true"
+                                                    },
+                                                    "Enabled": "true",
+                                                    "LogonCount": "5",
+                                                    "Username": {
+                                                        "value-of": {
+                                                            "-select": "config/user-login"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "-pass": "oobeSystem"
+                                    },
+                                    {
+                                        "-pass": "specialize",
+                                        "component": {
+                                            "-publicKeyToken": "31bf3856ad364e35",
+                                            "-language": "neutral",
+                                            "-versionScope": "nonSxS",
+                                            "-wcm": "http://schemas.microsoft.com/WMIConfig/2002/State",
+                                            "-xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                                            "attribute": {
+                                                "-name": "processorArchitecture",
+                                                "call-template": {
+                                                    "-name": "arch"
+                                                }
+                                            },
+                                            "ProductKey": {
+                                                "value-of": {
+                                                    "-select": "config/reg-product-key"
+                                                }
+                                            },
+                                            "-name": "Microsoft-Windows-Shell-Setup"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "-id": "http://microsoft.com/windows/unattend/jeos",
+            "path-format": "dos"
+        },
+        "-version": "0.0.1"
+    }
+}

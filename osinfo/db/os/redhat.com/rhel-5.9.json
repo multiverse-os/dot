@@ -1,0 +1,46 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/5.8"
+            },
+            "eol-date": "2020-03-31",
+            "tree": {
+                "-arch": "all",
+                "treeinfo": {
+                    "family": "Red Hat Enterprise Linux",
+                    "version": "5.9"
+                }
+            },
+            "short-id": "rhel5.9",
+            "_vendor": "Red Hat, Inc",
+            "distro": "rhel",
+            "codename": "Tikanga",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL/5.9 i386.*"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL/5.9 x86_64.*"
+                    }
+                }
+            ],
+            "_name": "Red Hat Enterprise Linux 5.9",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/5.8"
+            },
+            "release-date": "2013-01-07",
+            "-id": "http://redhat.com/rhel/5.9",
+            "version": "5.9"
+        }
+    }
+}

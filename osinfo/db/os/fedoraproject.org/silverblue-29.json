@@ -1,0 +1,62 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "derives-from": {
+                "-id": "http://fedoraproject.org/silverblue/28"
+            },
+            "media": {
+                "-arch": "x86_64",
+                "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/29/Silverblue/x86_64/iso/Fedora-Silverblue-ostree-x86_64-29-1.2.iso",
+                "iso": {
+                    "volume-id": "Fedora-SB-ostree-x86_64-29",
+                    "system-id": "LINUX"
+                },
+                "kernel": "isolinux/vmlinuz",
+                "initrd": "isolinux/initrd.img"
+            },
+            "_name": "Fedora Silverblue 29",
+            "version": "29",
+            "release-date": "2018-10-30",
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/silverblue/kickstart/desktop"
+                }
+            },
+            "short-id": "silverblue29",
+            "distro": "fedora",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/silverblue/28"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "n-cpus": "1",
+                    "cpu": "1000000000"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                },
+                "network-install": {
+                    "ram": "5368709120"
+                }
+            },
+            "family": "linux",
+            "tree": {
+                "-arch": "x86_64",
+                "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/29/Silverblue/x86_64/os",
+                "treeinfo": {
+                    "family": "Fedora",
+                    "variant": "Silverblue",
+                    "version": "29",
+                    "arch": "x86_64"
+                }
+            },
+            "-id": "http://fedoraproject.org/silverblue/29",
+            "_vendor": "Fedora Project"
+        }
+    }
+}

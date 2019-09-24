@@ -1,0 +1,34 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://scientificlinux.org/scientificlinux/7.6"
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/7-unknown"
+            },
+            "resources": {
+                "minimum": {
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "n-cpus": "1",
+                    "cpu": "1000000000"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                },
+                "-arch": "all"
+            },
+            "-id": "http://scientificlinux.org/scientificlinux/7-unknown",
+            "short-id": "scientificlinux7-unknown",
+            "version": "7-unknown",
+            "_name": "Scientific Linux 7 Unknown",
+            "_vendor": "Scientific Linux",
+            "distro": "scientificlinux"
+        }
+    }
+}

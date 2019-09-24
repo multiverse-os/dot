@@ -1,0 +1,70 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/karmic/ubuntu-9.10-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 9.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/karmic/ubuntu-9.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 9.10(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/karmic/ubuntu-9.10-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 9.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/karmic/ubuntu-9.10-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 9.10(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz"
+                }
+            ],
+            "-id": "http://ubuntu.com/ubuntu/9.10",
+            "version": "9.10",
+            "_vendor": "Canonical Ltd",
+            "distro": "ubuntu",
+            "codename": "Karmic Koala",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/9.04"
+            },
+            "short-id": [
+                "ubuntu9.10",
+                "ubuntukarmic"
+            ],
+            "_name": "Ubuntu 9.10",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/9.04"
+            },
+            "release-date": "2009-10-29",
+            "eol-date": "2011-04-30"
+        }
+    }
+}

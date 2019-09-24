@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/7.0"
+            },
+            "release-date": "2000-06-13",
+            "short-id": "mandrake7.1",
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "codename": "Helium",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/7.0"
+            },
+            "-id": "http://mandriva.com/mandrake/7.1",
+            "_name": "Mandrake Linux 7.1",
+            "distro": "mandrake",
+            "version": "7.1"
+        }
+    }
+}

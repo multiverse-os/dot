@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "os": {
+            "release-date": "2005-10-05",
+            "-id": "http://redhat.com/rhel/4.2",
+            "short-id": "rhel4.2",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "codename": "Nahant",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/4.1"
+            },
+            "_name": "Red Hat Enterprise Linux 4.2",
+            "version": "4.2",
+            "distro": "rhel",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/4.1"
+            },
+            "eol-date": "2015-02-28"
+        },
+        "-version": "0.0.1"
+    }
+}

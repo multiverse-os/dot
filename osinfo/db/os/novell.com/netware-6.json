@@ -1,0 +1,15 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "netware",
+            "distro": "netware",
+            "version": "6",
+            "release-date": "2001-10-01",
+            "-id": "http://novell.com/netware/6",
+            "short-id": "netware6",
+            "_name": "Novell Netware 6",
+            "_vendor": "Novell"
+        }
+    }
+}

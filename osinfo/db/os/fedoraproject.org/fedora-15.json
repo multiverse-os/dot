@@ -1,0 +1,144 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "Fedora 15",
+            "codename": "Lovelock",
+            "media": [
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/15/Fedora/i386/iso/Fedora-15-i386-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 15 i386 DVD",
+                        "system-id": "LINUX",
+                        "volume-size": "3650455552"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/15/Fedora/x86_64/iso/Fedora-15-x86_64-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 15 x86_64 DVD",
+                        "system-id": "LINUX",
+                        "volume-size": "3596310528"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/15/Live/i686/Fedora-15-i686-Live-Desktop.iso",
+                    "iso": {
+                        "volume-id": "Fedora-15-i686-Live-Desktop",
+                        "system-id": "LINUX",
+                        "volume-size": "592189440"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/15/Live/i686/Fedora-15-i686-Live-KDE.iso",
+                    "iso": {
+                        "volume-id": "Fedora-15-i686-Live-KDE",
+                        "system-id": "LINUX",
+                        "volume-size": "725118976"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/15/Live/x86_64/Fedora-15-x86_64-Live-Desktop.iso",
+                    "iso": {
+                        "volume-size": "593618944",
+                        "volume-id": "Fedora-15-x86_64-Live-Desktop",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora-15-x86_64-Live-KDE",
+                        "system-id": "LINUX",
+                        "volume-size": "725055488"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/15/Live/x86_64/Fedora-15-x86_64-Live-KDE.iso"
+                }
+            ],
+            "tree": [
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/15/Fedora/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "15",
+                        "arch": "i386"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/15/Fedora/x86_64/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "15",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "treeinfo": {
+                        "version": "15",
+                        "family": "Fedora"
+                    }
+                }
+            ],
+            "short-id": "fedora15",
+            "_vendor": "Fedora Project",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/14"
+            },
+            "release-date": "2011-05-24",
+            "eol-date": "2012-06-26",
+            "-id": "http://fedoraproject.org/fedora/15",
+            "distro": "fedora",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/14"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "671088640",
+                    "n-cpus": "1"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1207959552",
+                    "storage": "9663676416"
+                }
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "version": "15"
+        }
+    }
+}

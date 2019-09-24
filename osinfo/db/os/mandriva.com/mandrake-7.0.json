@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "linux",
+            "_vendor": "Mandriva",
+            "distro": "mandrake",
+            "codename": "Air",
+            "version": "7.0",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/6.1"
+            },
+            "-id": "http://mandriva.com/mandrake/7.0",
+            "short-id": "mandrake7.0",
+            "_name": "Mandrake Linux 7.0",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/6.1"
+            },
+            "release-date": "2000-01-14"
+        }
+    }
+}

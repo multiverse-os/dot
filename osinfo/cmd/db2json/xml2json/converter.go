@@ -12,7 +12,7 @@ func Convert(r io.Reader, ps ...plugin) (*bytes.Buffer, error) {
 		return nil, err
 	}
 	buffer := new(bytes.Buffer)
-	jsonBytes, err := json.MarshalIndent(&buffer, "\n", "\n\t")
+	jsonBytes, err := json.MarshalIndent(&buffer, "", "\t")
 	if err != nil {
 		fmt.Println(err)
 	}

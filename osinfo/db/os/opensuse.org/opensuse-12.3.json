@@ -1,0 +1,88 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "opensuse12.3",
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/12.2"
+            },
+            "eol-date": "2015-01-29",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/12.2"
+            },
+            "media": [
+                {
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd",
+                    "-arch": "i686",
+                    "url": "http://download.opensuse.org/distribution/12.3/iso/openSUSE-12.3-DVD-i586.iso",
+                    "iso": {
+                        "publisher-id": "SUSE LINUX GmbH",
+                        "volume-id": "openSUSE-12.3-DVD",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "initrd": "boot/x86_64/loader/initrd",
+                    "-arch": "x86_64",
+                    "url": "http://download.opensuse.org/distribution/12.3/iso/openSUSE-12.3-DVD-x86_64.iso",
+                    "iso": {
+                        "volume-id": "openSUSE-12.3-DVD-x86_64",
+                        "system-id": "LINUX",
+                        "publisher-id": "SUSE LINUX GmbH"
+                    },
+                    "kernel": "boot/x86_64/loader/linux"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "n-cpus": "1",
+                    "ram": "1073741824",
+                    "storage": "3221225472"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "2147483648",
+                    "storage": "10737418240"
+                }
+            },
+            "-id": "http://opensuse.org/opensuse/12.3",
+            "_name": "openSUSE 12.3",
+            "version": "12.3",
+            "release-date": "2013-03-13",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0100"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1002"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1003"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1004"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1005"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1009"
+                    }
+                ]
+            },
+            "_vendor": "openSUSE",
+            "family": "linux",
+            "distro": "opensuse"
+        }
+    }
+}

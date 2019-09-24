@@ -1,0 +1,96 @@
+{
+    "libosinfo": {
+        "os": {
+            "version": "6.0",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "(KRTMSVOL|KRTMSCHK|KRMWVOL|KRMSVOL)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "(KRTMSXVOL|KRTMSXCHK|KRMWXVOL|KRMSXVOL)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language",
+                            "-regex": "true"
+                        }
+                    },
+                    "-arch": "x86_64"
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/jeos"
+                    },
+                    {
+                        "-id": "http://microsoft.com/windows/unattend/desktop"
+                    }
+                ]
+            },
+            "devices": {
+                "device": {
+                    "-id": "http://pcisig.com/pci/8086/2668"
+                }
+            },
+            "resources": [
+                {
+                    "-arch": "i686",
+                    "minimum": {
+                        "storage": "10737418240",
+                        "cpu": "1000000000",
+                        "n-cpus": "1",
+                        "ram": "536870912"
+                    },
+                    "recommended": {
+                        "cpu": "2000000000",
+                        "ram": "2147483648",
+                        "storage": "42949672960"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "ram": "536870912",
+                        "storage": "10737418240",
+                        "cpu": "1400000000"
+                    },
+                    "recommended": {
+                        "cpu": "2000000000",
+                        "ram": "2147483648",
+                        "storage": "42949672960"
+                    },
+                    "maximum": {
+                        "ram": "1099511627776"
+                    }
+                }
+            ],
+            "short-id": "win2k8",
+            "distro": "win",
+            "eol-date": "2013-07-09",
+            "_name": "Microsoft Windows Server 2008",
+            "_vendor": "Microsoft Corporation",
+            "upgrades": {
+                "-id": "http://microsoft.com/win/2k3r2"
+            },
+            "release-date": "2008-02-27",
+            "-id": "http://microsoft.com/win/2k8",
+            "family": "winnt",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/2k3r2"
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

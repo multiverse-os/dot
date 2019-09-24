@@ -1,0 +1,84 @@
+{
+    "libosinfo": {
+        "os": {
+            "_name": "CentOS 6.4",
+            "release-date": "2013-03-09",
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/6.4/os/x86_64/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "6.4",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/6.4/os/i386/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "6.4",
+                        "arch": "i386"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                }
+            },
+            "version": "6.4",
+            "upgrades": {
+                "-id": "http://centos.org/centos/6.3"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "centos6.4",
+            "_vendor": "CentOS",
+            "distro": "centos",
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.4"
+            },
+            "-id": "http://centos.org/centos/6.4",
+            "family": "linux",
+            "eol-date": "2013-12-01",
+            "media": [
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.4_Final"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.4_Final"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                }
+            ]
+        },
+        "-version": "0.0.1"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "openSUSE",
+            "distro": "opensuse",
+            "release-date": "2009-11-12",
+            "eol-date": "2011-05-12",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/11.1"
+            },
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/11.1"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "n-cpus": "1",
+                    "ram": "536870912",
+                    "storage": "3221225472"
+                },
+                "recommended": {
+                    "storage": "8589934592",
+                    "cpu": "2400000000",
+                    "ram": "1073741824"
+                }
+            },
+            "-id": "http://opensuse.org/opensuse/11.2",
+            "short-id": "opensuse11.2",
+            "_name": "openSUSE 11.2",
+            "version": "11.2",
+            "family": "linux"
+        }
+    }
+}

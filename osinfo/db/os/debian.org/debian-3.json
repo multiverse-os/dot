@@ -1,0 +1,27 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": [
+                "debian3",
+                "debian3.0",
+                "debianwoody"
+            ],
+            "version": "3.0",
+            "distro": "debian",
+            "codename": "woody",
+            "upgrades": {
+                "-id": "http://debian.org/debian/2.2"
+            },
+            "release-date": "2002-07-19",
+            "eol-date": "2006-06-30",
+            "-id": "http://debian.org/debian/3",
+            "_name": "Debian GNU/Linux 3.0",
+            "_vendor": "Debian Project",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://debian.org/debian/2.2"
+            }
+        }
+    }
+}

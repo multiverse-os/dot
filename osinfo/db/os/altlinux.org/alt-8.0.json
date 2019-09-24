@@ -1,0 +1,99 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "alt8.0",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://altlinux.org/altlinux/7.0"
+            },
+            "version": "8.0",
+            "distro": "alt",
+            "release-date": "2016-06-01",
+            "eol-date": "2019-12-16",
+            "_name": "ALT 8 Education",
+            "_vendor": "BaseALT",
+            "codename": "Hypericum",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1041"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1042"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1043"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1044"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1045"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1048"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1049"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1052"
+                    },
+                    {
+                        "-id": "http://qemu.org/chipset/x86/q35"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/10d3"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/293e"
+                    }
+                ]
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "ram": "536870912",
+                    "storage": "10737418240",
+                    "n-cpus": "1"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "-id": "http://altlinux.org/alt/8.0",
+            "upgrades": {
+                "-id": "http://altlinux.org/altlinux/7.0"
+            },
+            "media": [
+                {
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "i686",
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/education/alt-education-8.2-i586.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "ALT education/i586",
+                        "publisher-id": "ALT LINUX TEAM",
+                        "application-id": "EDUCATION"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/education/alt-education-8.2-x86_64.iso",
+                    "iso": {
+                        "application-id": "EDUCATION",
+                        "system-id": "LINUX",
+                        "volume-id": "ALT education/x86_64",
+                        "publisher-id": "ALT LINUX TEAM"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz"
+                }
+            ]
+        }
+    }
+}

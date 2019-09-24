@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://mandriva.com/mandrake/6.1",
+            "_name": "Mandrake Linux 6.1",
+            "distro": "mandrake",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/6.0"
+            },
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/6.0"
+            },
+            "release-date": "1999-09-17",
+            "short-id": "mandrake6.1",
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "codename": "Helios",
+            "version": "6.1"
+        }
+    }
+}

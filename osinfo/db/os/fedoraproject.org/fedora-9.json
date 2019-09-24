@@ -1,0 +1,365 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/8"
+            },
+            "tree": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "^9$",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/x86_64/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "^9$",
+                        "arch": "x86_64"
+                    }
+                }
+            ],
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                }
+            },
+            "_name": "Fedora 9",
+            "distro": "fedora",
+            "release-date": "2008-05-13",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1002"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1003"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1009"
+                    }
+                ]
+            },
+            "short-id": "fedora9",
+            "family": "linux",
+            "-id": "http://fedoraproject.org/fedora/9",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/i386/iso/Fedora-9-i386-DVD.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "3580680192",
+                        "volume-id": "Fedora 9 i386"
+                    }
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/i386/iso/Fedora-9-i386-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 i386 Disc 1",
+                        "system-id": "LINUX",
+                        "volume-size": "638533632"
+                    }
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/i386/iso/Fedora-9-i386-disc2.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "668082176",
+                        "volume-id": "Fedora 9 i386 Disc 2"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/i386/iso/Fedora-9-i386-disc3.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 i386 Disc 3",
+                        "system-id": "LINUX",
+                        "volume-size": "652095488"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/i386/iso/Fedora-9-i386-disc4.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 i386 Disc 4",
+                        "system-id": "LINUX",
+                        "volume-size": "668047360"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora 9 i386 Disc 5",
+                        "system-id": "LINUX",
+                        "volume-size": "664877056"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/i386/iso/Fedora-9-i386-disc5.iso"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/i386/iso/Fedora-9-i386-disc6.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 i386 Disc 6",
+                        "system-id": "LINUX",
+                        "volume-size": "290463744"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/x86_64/iso/Fedora-9-x86_64-DVD.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "4163696640",
+                        "volume-id": "Fedora 9 x86_64"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/x86_64/iso/Fedora-9-x86_64-disc1.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "637575168",
+                        "volume-id": "Fedora 9 x86_64 Disc 1"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/x86_64/iso/Fedora-9-x86_64-disc2.iso",
+                    "iso": {
+                        "volume-size": "667353088",
+                        "volume-id": "Fedora 9 x86_64 Disc 2",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/x86_64/iso/Fedora-9-x86_64-disc3.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 x86_64 Disc 3",
+                        "system-id": "LINUX",
+                        "volume-size": "668954624"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/x86_64/iso/Fedora-9-x86_64-disc4.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 x86_64 Disc 4",
+                        "system-id": "LINUX",
+                        "volume-size": "668628992"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/x86_64/iso/Fedora-9-x86_64-disc5.iso",
+                    "iso": {
+                        "volume-size": "663744512",
+                        "volume-id": "Fedora 9 x86_64 Disc 5",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/x86_64/iso/Fedora-9-x86_64-disc6.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 x86_64 Disc 6",
+                        "system-id": "LINUX",
+                        "volume-size": "660492288"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/x86_64/iso/Fedora-9-x86_64-disc7.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 x86_64 Disc 7",
+                        "system-id": "LINUX",
+                        "volume-size": "197728256"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/ppc/iso/Fedora-9-ppc-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 ppc",
+                        "system-id": "PPC",
+                        "volume-size": "4417064960"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/ppc/iso/Fedora-9-ppc-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 ppc Disc 1",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "649594880"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/ppc/iso/Fedora-9-ppc-disc2.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 ppc Disc 2",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "663785472"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/ppc/iso/Fedora-9-ppc-disc3.iso",
+                    "iso": {
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "665425920",
+                        "volume-id": "Fedora 9 ppc Disc 3"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc"
+                },
+                {
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/ppc/iso/Fedora-9-ppc-disc4.iso",
+                    "iso": {
+                        "volume-id": "Fedora 9 ppc Disc 4",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "661508096"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/ppc/iso/Fedora-9-ppc-disc5.iso",
+                    "iso": {
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "667478016",
+                        "volume-id": "Fedora 9 ppc Disc 5"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora 9 ppc Disc 6",
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "655919104"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/ppc/iso/Fedora-9-ppc-disc6.iso"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Fedora/ppc/iso/Fedora-9-ppc-disc7.iso",
+                    "iso": {
+                        "system-id": "PPC|LINUX",
+                        "volume-size": "319293440",
+                        "volume-id": "Fedora 9 ppc Disc 7"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Live/i686/Fedora-9-i686-Live.iso",
+                    "iso": {
+                        "volume-id": "Fedora-9-Live-i686",
+                        "system-id": "LINUX",
+                        "volume-size": "724121600"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Live/i686/Fedora-9-i686-Live-KDE.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "724975616",
+                        "volume-id": "Fedora-9-Live-KDE-i686"
+                    }
+                },
+                {
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Live/x86_64/Fedora-9-x86_64-Live.iso",
+                    "iso": {
+                        "volume-id": "Fedora-9-Live-x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "727169024"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/9/Live/x86_64/Fedora-9-x86_64-Live-KDE.iso",
+                    "iso": {
+                        "volume-id": "Fedora-9-Live-KDE-x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "729272320"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true"
+                }
+            ],
+            "codename": "Sulphur",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/8"
+            },
+            "eol-date": "2009-07-10",
+            "version": "9",
+            "_vendor": "Fedora Project"
+        }
+    }
+}

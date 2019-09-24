@@ -1,0 +1,33 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "release-date": "2007-05-07",
+            "eol-date": "2017-03-31",
+            "version": "5.0",
+            "_vendor": "Scientific Linux",
+            "distro": "scientificlinux",
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.0"
+            },
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/obsolete/50/x86_64/",
+                    "kernel": "images/pxeboot/vmlinuz",
+                    "initrd": "images/pxeboot/initrd.img"
+                },
+                {
+                    "initrd": "images/pxeboot/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/obsolete/50/i386/",
+                    "kernel": "images/pxeboot/vmlinuz"
+                }
+            ],
+            "-id": "http://scientificlinux.org/scientificlinux/5.0",
+            "short-id": "scientificlinux5.0",
+            "_name": "Scientific Linux 5.0",
+            "family": "linux"
+        }
+    }
+}

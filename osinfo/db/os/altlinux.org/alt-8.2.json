@@ -1,0 +1,250 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://altlinux.org/alt/8.2",
+            "_vendor": "BaseALT",
+            "eol-date": "2019-12-16",
+            "variant": [
+                {
+                    "-id": "workstation",
+                    "_name": "ALT 8.2 Workstation"
+                },
+                {
+                    "-id": "kworkstation",
+                    "_name": "ALT 8.2 Workstation K"
+                },
+                {
+                    "_name": "ALT 8.2 Workstation K",
+                    "-id": "kworkstation-live"
+                },
+                {
+                    "-id": "server",
+                    "_name": "ALT 8.2 Server"
+                },
+                {
+                    "-id": "simply",
+                    "_name": "ALT 8.2 Simply"
+                },
+                {
+                    "-id": "simply-live",
+                    "_name": "ALT 8.2 Simply"
+                }
+            ],
+            "media": [
+                {
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/workstation/alt-workstation-8.2-i586.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "ALT Workstation",
+                        "publisher-id": "BASEALT LTD",
+                        "application-id": "8.2/I586"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz"
+                },
+                {
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/workstation/alt-workstation-8.2-x86_64.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "ALT Workstation",
+                        "publisher-id": "BASEALT LTD",
+                        "application-id": "8.2/X86_64"
+                    }
+                },
+                {
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "kworkstation"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/kworkstation/alt-kworkstation-8.2-install-i586.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Workstation K",
+                        "publisher-id": "BASEALT LTD",
+                        "application-id": "8.2/I586",
+                        "volume-size": "3750756352"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "kworkstation"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/kworkstation/alt-kworkstation-8.2-install-x86_64.iso",
+                    "iso": {
+                        "volume-size": "3959422976",
+                        "system-id": "LINUX",
+                        "volume-id": "Workstation K",
+                        "publisher-id": "BASEALT LTD",
+                        "application-id": "8.2/X86_64"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz"
+                },
+                {
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "kworkstation-live"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/kworkstation/alt-kworkstation-8.2-live-i586.iso",
+                    "iso": {
+                        "volume-size": "2370732032",
+                        "system-id": "LINUX",
+                        "volume-id": "Workstation K",
+                        "publisher-id": "BASEALT LTD",
+                        "application-id": "8.2/I586"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz"
+                },
+                {
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "kworkstation-live"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/kworkstation/alt-kworkstation-8.2-live-x86_64.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Workstation K",
+                        "publisher-id": "BASEALT LTD",
+                        "application-id": "8.2/X86_64",
+                        "volume-size": "2545156096"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz"
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "simply"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/simply/alt-simply-8.2.0-i586.iso",
+                    "iso": {
+                        "publisher-id": "BASEALT LTD",
+                        "application-id": "8.2.0/I586",
+                        "system-id": "LINUX",
+                        "volume-id": "Simply Linux/i586"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz"
+                },
+                {
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "simply"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/simply/alt-simply-8.2.0-x86_64.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Simply Linux/x86_64",
+                        "publisher-id": "BASEALT LTD",
+                        "application-id": "8.2.0/X86_64"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "Simply Linux live/i586",
+                        "publisher-id": "BASEALT LTD",
+                        "application-id": "8.2.0/I586",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "simply-live"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/simply/alt-simply-8.2.0-live-i586.iso"
+                },
+                {
+                    "-live": "true",
+                    "variant": {
+                        "-id": "simply-live"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/simply/alt-simply-8.2.0-live-x86_64.iso",
+                    "iso": {
+                        "volume-id": "Simply Linux live/x86_64",
+                        "publisher-id": "BASEALT LTD",
+                        "application-id": "8.2.0/X86_64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/server/alt-server-8.2-i586.iso",
+                    "iso": {
+                        "volume-size": "2327478272",
+                        "volume-id": "ISOIMAGE",
+                        "publisher-id": "ALT LINUX TEAM"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p8/images/server/alt-server-8.2-x86_64.iso",
+                    "iso": {
+                        "volume-id": "ISOIMAGE",
+                        "publisher-id": "ALT LINUX TEAM",
+                        "volume-size": "2771419136"
+                    },
+                    "kernel": "syslinux/alt0/vmlinuz",
+                    "initrd": "syslinux/alt0/full.cz"
+                }
+            ],
+            "derives-from": {
+                "-id": "http://altlinux.org/alt/8.1"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "536870912",
+                    "storage": "10737418240"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "version": "8.2",
+            "distro": "alt",
+            "upgrades": {
+                "-id": "http://altlinux.org/alt/8.1"
+            },
+            "short-id": "alt8.2",
+            "_name": "ALT 8.2",
+            "family": "linux",
+            "codename": "Hypericum",
+            "release-date": "2017-12-30"
+        }
+    }
+}

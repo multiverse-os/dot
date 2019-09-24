@@ -1,0 +1,54 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/6.10/x86_64/os/",
+                    "treeinfo": {
+                        "arch": "x86_64",
+                        "family": "Scientific Linux",
+                        "version": "6.10"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "family": "Scientific Linux",
+                        "version": "6.10",
+                        "arch": "i386"
+                    },
+                    "-arch": "i686",
+                    "url": "http://ftp1.scientificlinux.org/linux/scientific/6.10/i386/os/"
+                }
+            ],
+            "resources": {
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                },
+                "-arch": "all"
+            },
+            "-id": "http://scientificlinux.org/scientificlinux/6.10",
+            "_name": "Scientific Linux 6.10",
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.10"
+            },
+            "release-date": "2018-07-10",
+            "eol-date": "2020-11-30",
+            "upgrades": {
+                "-id": "http://scientificlinux.org/scientificlinux/6.9"
+            },
+            "short-id": "scientificlinux6.10",
+            "version": "6.10",
+            "_vendor": "Scientific Linux",
+            "family": "linux",
+            "distro": "scientificlinux"
+        }
+    }
+}

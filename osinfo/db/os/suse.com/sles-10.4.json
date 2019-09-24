@@ -1,0 +1,55 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "SUSE Linux Enterprise Server 10 SP4",
+            "_vendor": "SUSE",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://suse.com/sles/10.3"
+            },
+            "-id": "http://suse.com/sles/10.4",
+            "short-id": "sles10sp4",
+            "version": "10.4",
+            "distro": "sles",
+            "upgrades": {
+                "-id": "http://suse.com/sles/10.3"
+            },
+            "release-date": "2011-04-12",
+            "eol-date": "2013-07-31",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "SLES-10-SP4-DVD-i586"
+                    },
+                    "kernel": "boot/i386/loader/linux",
+                    "initrd": "boot/i386/loader/initrd"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "SLES-10-SP4-DVD-x86_64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "boot/x86_64/loader/linux",
+                    "initrd": "boot/x86_64/loader/initrd"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "1074151424"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            }
+        }
+    }
+}

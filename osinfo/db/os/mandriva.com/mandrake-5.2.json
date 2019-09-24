@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "os": {
+            "short-id": "mandrake5.2",
+            "_vendor": "Mandriva",
+            "distro": "mandrake",
+            "codename": "Leeloo",
+            "version": "5.2",
+            "-id": "http://mandriva.com/mandrake/5.2",
+            "_name": "Mandrake Linux 5.2",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/5.1"
+            },
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/5.1"
+            },
+            "release-date": "1998-12-01"
+        },
+        "-version": "0.0.1"
+    }
+}

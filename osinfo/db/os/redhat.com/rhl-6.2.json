@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2003-03-31",
+            "-id": "http://redhat.com/rhl/6.2",
+            "short-id": "rhl6.2",
+            "_name": "Red Hat Linux 6.2",
+            "distro": "rhl",
+            "codename": "Zoot",
+            "release-date": "2000-04-03",
+            "version": "6.2",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/6.1"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/6.1"
+            }
+        }
+    }
+}

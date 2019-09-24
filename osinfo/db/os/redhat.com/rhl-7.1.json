@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "os": {
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/7"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/7"
+            },
+            "-id": "http://redhat.com/rhl/7.1",
+            "short-id": "rhl7.1",
+            "version": "7.1",
+            "_vendor": "Red Hat, Inc",
+            "distro": "rhl",
+            "codename": "Seawolf",
+            "release-date": "2001-04-16",
+            "_name": "Red Hat Linux 7.1",
+            "family": "linux",
+            "eol-date": "2003-12-31"
+        },
+        "-version": "0.0.1"
+    }
+}

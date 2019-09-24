@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/4.7"
+            },
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/4.7"
+            },
+            "-id": "http://freebsd.org/freebsd/4.8",
+            "_name": "FreeBSD 4.8",
+            "version": "4.8",
+            "_vendor": "FreeBSD Project",
+            "family": "freebsd",
+            "short-id": "freebsd4.8",
+            "distro": "freebsd",
+            "release-date": "2003-04-03"
+        }
+    }
+}

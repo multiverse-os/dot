@@ -1,0 +1,93 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "variant": {
+                "_name": "NetBSD 8.1 Network Install",
+                "-id": "netinst"
+            },
+            "release-date": "2019-05-31",
+            "media": [
+                {
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_81",
+                        "volume-size": "757254144"
+                    },
+                    "-arch": "x86_64",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-8.1/images/NetBSD-8.1-amd64.iso"
+                },
+                {
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-8.1/amd64/installation/cdrom/boot.iso",
+                    "iso": {
+                        "volume-size": "233302016",
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_81"
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    }
+                },
+                {
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-8.1/amd64/installation/cdrom/boot-com.iso",
+                    "iso": {
+                        "volume-id": "NETBSD_81",
+                        "volume-size": "233302016",
+                        "system-id": "NetBSD"
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-8.1/images/NetBSD-8.1-i386.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_81",
+                        "volume-size": "716562432"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-8.1/i386/installation/cdrom/boot.iso",
+                    "iso": {
+                        "volume-size": "215072768",
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_81"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-8.1/i386/installation/cdrom/boot-com.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_81",
+                        "volume-size": "215072768"
+                    }
+                }
+            ],
+            "-id": "http://netbsd.org/netbsd/8.1",
+            "version": "8.1",
+            "family": "netbsd",
+            "distro": "netbsd",
+            "upgrades": {
+                "-id": "http://netbsd.org/netbsd/8.1"
+            },
+            "short-id": "netbsd8.1",
+            "_name": "NetBSD 8.1",
+            "_vendor": "NetBSD Project",
+            "derives-from": {
+                "-id": "http://netbsd.org/netbsd/8.0"
+            }
+        }
+    }
+}

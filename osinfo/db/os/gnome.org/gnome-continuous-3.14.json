@@ -1,0 +1,28 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "2",
+                    "ram": "1073741824"
+                }
+            },
+            "distro": "gnome",
+            "upgrades": {
+                "-id": "http://gnome.org/gnome-continuous/3.12"
+            },
+            "release-status": "snapshot",
+            "version": "3.14",
+            "_vendor": "GNOME Project",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://gnome.org/gnome-continuous/3.12"
+            },
+            "-id": "http://gnome.org/gnome-continuous/3.14",
+            "short-id": "gnome-continuous-3.14",
+            "_name": "GNOME 3.14"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2007-01-31",
+            "short-id": "freebsd6.0",
+            "family": "freebsd",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/5.5"
+            },
+            "release-date": "2005-11-04",
+            "distro": "freebsd",
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/5.5"
+            },
+            "devices": {
+                "device": {
+                    "-id": "http://pcisig.com/pci/10ec/8029"
+                }
+            },
+            "-id": "http://freebsd.org/freebsd/6.0",
+            "_name": "FreeBSD 6.0",
+            "version": "6.0",
+            "_vendor": "FreeBSD Project"
+        }
+    }
+}

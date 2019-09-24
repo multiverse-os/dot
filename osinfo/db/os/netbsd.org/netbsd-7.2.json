@@ -1,0 +1,77 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://netbsd.org/netbsd/7.2",
+            "_name": "NetBSD 7.2",
+            "distro": "netbsd",
+            "upgrades": {
+                "-id": "http://netbsd.org/netbsd/7.1"
+            },
+            "release-date": "2018-08-29",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.2/images/NetBSD-7.2-amd64.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_72",
+                        "volume-size": "407123968"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.2/amd64/installation/cdrom/boot.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_72",
+                        "volume-size": "95248384"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.2/amd64/installation/cdrom/boot-com.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_72",
+                        "volume-size": "95248384"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.2/images/NetBSD-7.2-i386.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_72",
+                        "volume-size": "439273472"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.2/i386/installation/cdrom/boot.iso",
+                    "iso": {
+                        "volume-size": "100042752",
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_72"
+                    }
+                },
+                {
+                    "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-7.2/i386/installation/cdrom/boot-com.iso",
+                    "iso": {
+                        "system-id": "NetBSD",
+                        "volume-id": "NETBSD_72",
+                        "volume-size": "100042752"
+                    },
+                    "-arch": "i686"
+                }
+            ],
+            "short-id": "netbsd7.2",
+            "version": "7.2",
+            "_vendor": "NetBSD Project",
+            "family": "netbsd",
+            "derives-from": {
+                "-id": "http://netbsd.org/netbsd/7.0"
+            }
+        }
+    }
+}

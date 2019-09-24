@@ -1,0 +1,72 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2016-09-01",
+            "-id": "http://openbsd.org/openbsd/5.8",
+            "short-id": "openbsd5.8",
+            "version": "5.8",
+            "distro": "openbsd",
+            "_vendor": "OpenBSD Project",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/5.7"
+            },
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/5.7"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "application-id": "OpenBSD 5.8 i386 Install CD",
+                        "publisher-id": "Copyright \\(c\\) 2015 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/i386    5.8 Install CD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2015 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/amd64   5.8 Install CD",
+                        "application-id": "OpenBSD 5.8 amd64 Install CD"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.8/i386/cd58.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2015 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/i386    5\\.8 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.8 i386 bootonly CD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.8/amd64/cd58.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2015 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   5\\.8 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.8 amd64 bootonly CD"
+                    }
+                }
+            ],
+            "_name": "OpenBSD 5.8",
+            "family": "openbsd",
+            "release-date": "2015-10-18",
+            "variant": {
+                "-id": "netinst",
+                "_name": "OpenBSD 5.8"
+            }
+        }
+    }
+}

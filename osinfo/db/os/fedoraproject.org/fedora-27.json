@@ -1,0 +1,179 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "Fedora 27",
+            "_vendor": "Fedora Project",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/26"
+            },
+            "tree": [
+                {
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "27",
+                        "arch": "x86_64"
+                    },
+                    "-arch": "x86_64",
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/27/Server/x86_64/os/"
+                },
+                {
+                    "-arch": "all",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "27"
+                    }
+                }
+            ],
+            "-id": "http://fedoraproject.org/fedora/27",
+            "version": "27",
+            "media": [
+                {
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/27/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-27-1.6.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WS-Live-27.*",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "-installer-script": "false"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "installer": {
+                        "script": {
+                            "-id": "http://fedoraproject.org/silverblue/kickstart/desktop"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "workstation-atomic"
+                    },
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/27/WorkstationOstree/x86_64/iso/Fedora-WorkstationOstree-ostree-x86_64-27-1.6.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WSOstree-ostree-x86_64-27",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "installer": {
+                        "script": {
+                            "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "workstation-netinst"
+                    },
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/27/Workstation/x86_64/iso/Fedora-Workstation-netinst-x86_64-27-1.6.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WS-dvd-x86_64-27",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/27/Server/x86_64/iso/Fedora-Server-dvd-x86_64-27-1.6.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S-dvd-x86_64-27",
+                        "system-id": "LINUX",
+                        "volume-size": "2490122240"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "installer": {
+                        "script": {
+                            "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                        }
+                    }
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "installer": {
+                        "script": {
+                            "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server-netinst"
+                    },
+                    "url": "https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/27/Server/x86_64/iso/Fedora-Server-netinst-x86_64-27-1.6.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S-dvd-x86_64-27",
+                        "system-id": "LINUX",
+                        "volume-size": "535017472"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "n-cpus": "1",
+                    "cpu": "1000000000"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/26"
+            },
+            "eol-date": "2018-11-30",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "fedora27",
+            "distro": "fedora",
+            "release-date": "2017-11-14",
+            "variant": [
+                {
+                    "-id": "workstation",
+                    "_name": "Fedora 27 Workstation"
+                },
+                {
+                    "_name": "Fedora 27 Workstation",
+                    "-id": "workstation-netinst"
+                },
+                {
+                    "-id": "workstation-atomic",
+                    "_name": "Fedora 27 Workstation"
+                },
+                {
+                    "-id": "server",
+                    "_name": "Fedora 27 Server"
+                },
+                {
+                    "-id": "server-netinst",
+                    "_name": "Fedora 27 Server"
+                }
+            ]
+        }
+    }
+}

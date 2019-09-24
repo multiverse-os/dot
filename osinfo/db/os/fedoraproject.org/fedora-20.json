@@ -1,0 +1,172 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "20",
+            "codename": "Heisenbug",
+            "release-date": "2013-12-17",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "_vendor": "Fedora Project",
+            "eol-date": "2015-06-23",
+            "_name": "Fedora 20",
+            "family": "linux",
+            "distro": "fedora",
+            "media": [
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/20/Fedora/i386/iso/Fedora-20-i386-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 20 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "4679280640"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora 20 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "4602331136"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/20/Fedora/x86_64/iso/Fedora-20-x86_64-DVD.iso"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/20/Fedora/i386/iso/Fedora-20-i386-netinst.iso",
+                    "iso": {
+                        "volume-id": "Fedora 20 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "374159360"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/20/Fedora/x86_64/iso/Fedora-20-x86_64-netinst.iso",
+                    "iso": {
+                        "volume-id": "Fedora 20 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "336367616"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "ppc64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora-secondary/releases/20/Fedora/ppc64/iso/Fedora-20-ppc64-DVD.iso",
+                    "iso": {
+                        "system-id": "PPC",
+                        "volume-size": "356321280",
+                        "volume-id": "Fedora_20_ppc64"
+                    }
+                },
+                {
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/20/Live/i386/Fedora-Live-Desktop-i686-20-1.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "966383616",
+                        "volume-id": "Fedora-Live-Desktop-i686-20"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/20/Live/x86_64/Fedora-Live-Desktop-x86_64-20-1.iso",
+                    "iso": {
+                        "volume-id": "Fedora-Live-Desktop-x86_64-20",
+                        "system-id": "LINUX",
+                        "volume-size": "998473728"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/20/Live/i386/Fedora-Live-KDE-i686-20-1.iso",
+                    "iso": {
+                        "volume-id": "Fedora-Live-KDE-i686-20",
+                        "system-id": "LINUX",
+                        "volume-size": "939143168"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686"
+                },
+                {
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/20/Live/x86_64/Fedora-Live-KDE-x86_64-20-1.iso",
+                    "iso": {
+                        "volume-size": "972208128",
+                        "volume-id": "Fedora-Live-KDE-x86_64-20",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz0"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            },
+            "-id": "http://fedoraproject.org/fedora/20",
+            "short-id": "fedora20",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/19"
+            },
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/19"
+            },
+            "tree": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/20/Fedora/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "20",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/20/Fedora/x86_64/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "20",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "20"
+                    },
+                    "-arch": "all"
+                }
+            ]
+        }
+    }
+}

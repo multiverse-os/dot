@@ -1,0 +1,49 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "alpinelinux3.6",
+            "version": "3.6",
+            "distro": "alpinelinux",
+            "upgrades": {
+                "-id": "http://alpinelinux.org/alpinelinux/3.5"
+            },
+            "derives-from": {
+                "-id": "http://alpinelinux.org/alpinelinux/3.5"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "134217728",
+                    "storage": "1073741824"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "805306368",
+                    "storage": "4294967296"
+                }
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "alpine-.* 3.6.\\d x86$"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "alpine-.* 3.6.\\d x86_64.*"
+                    }
+                }
+            ],
+            "-id": "http://alpinelinux.org/alpinelinux/3.6",
+            "_name": "Alpine Linux 3.6",
+            "_vendor": "Alpine Linux Project",
+            "family": "linux"
+        }
+    }
+}

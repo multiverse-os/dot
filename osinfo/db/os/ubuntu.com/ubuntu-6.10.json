@@ -1,0 +1,101 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://ubuntu.com/ubuntu/6.10",
+            "short-id": [
+                "ubuntu6.10",
+                "ubuntuedgy"
+            ],
+            "_name": "Ubuntu 6.10",
+            "family": "linux",
+            "codename": "Edgy Eft",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/6.06"
+            },
+            "release-date": "2006-10-26",
+            "version": "6.10",
+            "_vendor": "Canonical Ltd",
+            "distro": "ubuntu",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/6.06"
+            },
+            "eol-date": "2008-04-26",
+            "media": [
+                {
+                    "initrd": "install/initrd.gz",
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/edgy/ubuntu-6.10-server-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 6.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/edgy/ubuntu-6.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 6.10(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/edgy/ubuntu-6.10-server-powerpc.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Ubuntu-Server 6.10(.\\d\\+?)? ppc"
+                    },
+                    "kernel": "install/powerpc/vmlinux",
+                    "initrd": "install/powerpc/initrd.gz",
+                    "-arch": "ppc"
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/edgy/ubuntu-6.10-server-sparc.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 6.10(.\\d\\+?)? sparc",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "boot/sparc64",
+                    "initrd": "boot/initrd.gz",
+                    "-arch": "sparc64"
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/edgy/ubuntu-6.10-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 6.10 i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz",
+                    "-arch": "i686",
+                    "-live": "true"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/edgy/ubuntu-6.10-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 6.10 amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz",
+                    "-arch": "x86_64"
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/edgy/ubuntu-6.10-desktop-powerpc.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 6.10 ppc",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/powerpc/vmlinux",
+                    "initrd": "casper/powerpc/initrd.gz",
+                    "-arch": "ppc",
+                    "-live": "true"
+                }
+            ]
+        }
+    }
+}

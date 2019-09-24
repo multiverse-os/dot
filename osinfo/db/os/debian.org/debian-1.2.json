@@ -1,0 +1,25 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Debian Project",
+            "distro": "debian",
+            "codename": "rex",
+            "short-id": [
+                "debian1.2",
+                "debianrex"
+            ],
+            "_name": "Debian GNU/Linux 1.2",
+            "version": "1.2",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://debian.org/debian/1.1"
+            },
+            "derives-from": {
+                "-id": "http://debian.org/debian/1.1"
+            },
+            "release-date": "1996-12-12",
+            "-id": "http://debian.org/debian/1.2"
+        }
+    }
+}

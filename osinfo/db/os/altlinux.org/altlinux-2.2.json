@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "altlinux",
+            "upgrades": {
+                "-id": "http://altlinux.org/altlinux/2.0"
+            },
+            "eol-date": "2005-08-30",
+            "-id": "http://altlinux.org/altlinux/2.2",
+            "_vendor": "ALTLinux",
+            "version": "2.2",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://altlinux.org/altlinux/2.0"
+            },
+            "release-date": "2003-03-01",
+            "short-id": "altlinux2.2",
+            "_name": "ALT Linux 2.2"
+        }
+    }
+}

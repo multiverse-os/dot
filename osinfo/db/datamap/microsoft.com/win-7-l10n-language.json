@@ -1,0 +1,154 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "datamap": {
+            "-id": "http://microsoft.com/win/7/l10n-language",
+            "entry": [
+                {
+                    "-inval": "EN",
+                    "-outval": "en_US"
+                },
+                {
+                    "-inval": "AR",
+                    "-outval": "ar_SA"
+                },
+                {
+                    "-outval": "bg_BG",
+                    "-inval": "BG"
+                },
+                {
+                    "-inval": "HK",
+                    "-outval": "zh_HK"
+                },
+                {
+                    "-inval": "CN",
+                    "-outval": "zh_CN"
+                },
+                {
+                    "-inval": "TW",
+                    "-outval": "zh_TW"
+                },
+                {
+                    "-inval": "HR",
+                    "-outval": "hr_HR"
+                },
+                {
+                    "-inval": "CS",
+                    "-outval": "cs_CZ"
+                },
+                {
+                    "-inval": "DA",
+                    "-outval": "da_DK"
+                },
+                {
+                    "-inval": "NL",
+                    "-outval": "nl_NL"
+                },
+                {
+                    "-inval": "ET",
+                    "-outval": "et_EE"
+                },
+                {
+                    "-inval": "FI",
+                    "-outval": "fi_FI"
+                },
+                {
+                    "-inval": "FR",
+                    "-outval": "fr_FR"
+                },
+                {
+                    "-inval": "DE",
+                    "-outval": "de_DE"
+                },
+                {
+                    "-inval": "EL",
+                    "-outval": "el_GR"
+                },
+                {
+                    "-inval": "HE",
+                    "-outval": "he_IL"
+                },
+                {
+                    "-inval": "HU",
+                    "-outval": "hu_HU"
+                },
+                {
+                    "-inval": "IT",
+                    "-outval": "it_IT"
+                },
+                {
+                    "-inval": "JA",
+                    "-outval": "ja_JP"
+                },
+                {
+                    "-inval": "KO",
+                    "-outval": "ko_KR"
+                },
+                {
+                    "-inval": "LV",
+                    "-outval": "lv_LV"
+                },
+                {
+                    "-inval": "LT",
+                    "-outval": "lt_LT"
+                },
+                {
+                    "-inval": "NO",
+                    "-outval": "nb_NO"
+                },
+                {
+                    "-inval": "PL",
+                    "-outval": "pl_PL"
+                },
+                {
+                    "-inval": "BR",
+                    "-outval": "pt_BR"
+                },
+                {
+                    "-inval": "PT",
+                    "-outval": "pt_PT"
+                },
+                {
+                    "-inval": "RO",
+                    "-outval": "ro_RO"
+                },
+                {
+                    "-outval": "ru_RU",
+                    "-inval": "RU"
+                },
+                {
+                    "-inval": "SRL",
+                    "-outval": "sr_RS@latin"
+                },
+                {
+                    "-inval": "SK",
+                    "-outval": "sk_SK"
+                },
+                {
+                    "-inval": "SL",
+                    "-outval": "sl_SI"
+                },
+                {
+                    "-inval": "ES",
+                    "-outval": "es_ES"
+                },
+                {
+                    "-inval": "SV",
+                    "-outval": "sv_SE"
+                },
+                {
+                    "-outval": "th_TH",
+                    "-inval": "TH"
+                },
+                {
+                    "-outval": "tr_TR",
+                    "-inval": "TR"
+                },
+                {
+                    "-inval": "UK",
+                    "-outval": "uk_UA"
+                }
+            ]
+        }
+    }
+}

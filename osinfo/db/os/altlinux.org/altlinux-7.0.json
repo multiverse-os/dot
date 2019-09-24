@@ -1,0 +1,45 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "altlinux7.0",
+            "version": "7.0",
+            "_vendor": "ALTLinux",
+            "codename": "Centaurus",
+            "upgrades": {
+                "-id": "http://altlinux.org/altlinux/6.0"
+            },
+            "derives-from": {
+                "-id": "http://altlinux.org/altlinux/6.0"
+            },
+            "release-date": "2012-10-01",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p7/images/centaurus/altlinux-7.0.5-centaurus-i586-ru-install-dvd5.iso",
+                    "iso": {
+                        "volume-id": "(ALT|Simply) Linux (6.9|7.0).\\d",
+                        "publisher-id": "ALT LINUX TEAM"
+                    },
+                    "kernel": "isolinux/alt0/vmlinuz",
+                    "initrd": "isolinux/alt0/full.cz"
+                },
+                {
+                    "iso": {
+                        "volume-id": "(ALT|Simply) Linux (6.9|7.0).\\d",
+                        "publisher-id": "ALT LINUX TEAM"
+                    },
+                    "kernel": "isolinux/alt0/vmlinuz",
+                    "initrd": "isolinux/alt0/full.cz",
+                    "-arch": "x86_64",
+                    "url": "http://ftp.altlinux.org/pub/distributions/ALTLinux/p7/images/centaurus/altlinux-7.0.5-centaurus-x86_64-ru-install-dvd5.iso"
+                }
+            ],
+            "-id": "http://altlinux.org/altlinux/7.0",
+            "_name": "ALT Linux 7.0",
+            "family": "linux",
+            "distro": "altlinux",
+            "eol-date": "2015-08-30"
+        }
+    }
+}

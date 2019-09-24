@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "release-date": "2003-10-28",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/4.8"
+            },
+            "-id": "http://freebsd.org/freebsd/4.9",
+            "version": "4.9",
+            "family": "freebsd",
+            "distro": "freebsd",
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/4.8"
+            },
+            "short-id": "freebsd4.9",
+            "_name": "FreeBSD 4.9",
+            "_vendor": "FreeBSD Project"
+        }
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1033/0194"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0004"
+                    }
+                ]
+            },
+            "short-id": "win2k12",
+            "version": "6.3",
+            "family": "winnt",
+            "derives-from": {
+                "-id": "http://microsoft.com/win/2k8r2"
+            },
+            "upgrades": {
+                "-id": "http://microsoft.com/win/2k8r2"
+            },
+            "variant": [
+                {
+                    "-id": "storage",
+                    "_name": "Windows Server 2012 Storage"
+                },
+                {
+                    "-id": "hyperv",
+                    "_name": "Windows Server 2012 for HyperV"
+                },
+                {
+                    "-id": "essentials",
+                    "_name": "Windows Server 2012 Essentials"
+                },
+                {
+                    "-id": "volume-license",
+                    "_name": "Windows Server 2012 Volume License"
+                }
+            ],
+            "_vendor": "Microsoft Corporation",
+            "distro": "win",
+            "release-date": "2012-09-04",
+            "media": [
+                {
+                    "iso": {
+                        "volume-id": "(HRM_SSS_X64CHK|HRM_SSS_X64FREE?)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "iso": {
+                        "volume-id": "(HRM_SSSO_X64FREE?)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "essentials"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "hyperv"
+                    },
+                    "iso": {
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        },
+                        "volume-id": "(HRM_SHV_X64CHK|HRM_SHV_X64FREE?)_",
+                        "publisher-id": "MICROSOFT CORPORATION"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "storage"
+                    },
+                    "iso": {
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-regex": "true",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language"
+                        },
+                        "volume-id": "(HRM_SFST_X64FREO)_",
+                        "publisher-id": "MICROSOFT CORPORATION"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "volume-license"
+                    },
+                    "iso": {
+                        "volume-id": "(HRM_SSS_X64FREV)_",
+                        "publisher-id": "MICROSOFT CORPORATION",
+                        "l10n-language": {
+                            "#content": "[A-Z0-9]*_([A-Z]*)",
+                            "-l10n-language-map": "http://microsoft.com/win/7/l10n-language",
+                            "-regex": "true"
+                        }
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "x86_64",
+                "minimum": {
+                    "ram": "536870912",
+                    "storage": "34359738368",
+                    "cpu": "1400000000",
+                    "n-cpus": "1"
+                },
+                "maximum": {
+                    "ram": "4398046511104"
+                }
+            },
+            "-id": "http://microsoft.com/win/2k12",
+            "_name": "Microsoft Windows Server 2012"
+        }
+    }
+}

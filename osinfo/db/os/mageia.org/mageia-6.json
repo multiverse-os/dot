@@ -1,0 +1,47 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2019-01-16",
+            "_vendor": "Mageia",
+            "family": "linux",
+            "distro": "mageia",
+            "version": "6",
+            "derives-from": {
+                "-id": "http://mageia.org/mageia/5"
+            },
+            "-id": "http://mageia.org/mageia/6",
+            "short-id": "mageia6",
+            "_name": "Mageia 6",
+            "release-date": "2017-07-16",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "Mageia-6(.1)?(-i586)?"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "Mageia-6(.1)?(-x86_64)?"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-live": "true",
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "Mageia-6(.1)?-(GNOME|Plasma|Xfce)-LiveDVD"
+                    }
+                },
+                {
+                    "-live": "true",
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "Mageia-6(.1)?-(GNOME|Plasma|Xfce)-LiveDVD"
+                    }
+                }
+            ]
+        }
+    }
+}

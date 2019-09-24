@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "os": {
+            "-id": "http://redhat.com/rhel/3.6",
+            "family": "linux",
+            "distro": "rhel",
+            "codename": "Taroon",
+            "release-date": "2005-09-28",
+            "eol-date": "2014-01-30",
+            "short-id": "rhel3.6",
+            "_name": "Red Hat Enterprise Linux 3 Update 6",
+            "version": "3.6",
+            "_vendor": "Red Hat, Inc",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/3.5"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/3.5"
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

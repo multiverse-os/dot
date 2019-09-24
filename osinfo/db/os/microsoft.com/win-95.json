@@ -1,0 +1,46 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Microsoft Corporation",
+            "release-date": "1995-08-24",
+            "_name": "Microsoft Windows 95",
+            "version": "4.0",
+            "family": "win9x",
+            "distro": "win",
+            "upgrades": {
+                "-id": "http://microsoft.com/win/3.1"
+            },
+            "derives-from": {
+                "-id": "http://microsoft.com/win/3.1"
+            },
+            "-id": "http://microsoft.com/win/95",
+            "short-id": "win95",
+            "resources": {
+                "-arch": "i686",
+                "minimum": {
+                    "cpu": "12000000",
+                    "ram": "4194304",
+                    "storage": "41943040"
+                }
+            },
+            "eol-date": "2001-12-13",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1b36/0100"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1234/1111"
+                    },
+                    {
+                        "-id": "http://usb.org/usb/80ee/0021"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/8086/2415"
+                    }
+                ]
+            }
+        }
+    }
+}

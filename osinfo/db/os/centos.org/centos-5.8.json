@@ -1,0 +1,42 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://centos.org/centos/5.8",
+            "version": "5.8",
+            "upgrades": {
+                "-id": "http://centos.org/centos/5.7"
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.8"
+            },
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/5.8/os/x86_64/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "5.8",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/5.8/os/i386/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "5.8",
+                        "arch": "i386"
+                    }
+                }
+            ],
+            "eol-date": "2017-03-31",
+            "short-id": "centos5.8",
+            "_name": "CentOS 5.8",
+            "_vendor": "CentOS",
+            "family": "linux",
+            "distro": "centos",
+            "release-date": "2012-03-08"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "2011",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandriva/2010.2"
+            },
+            "derives-from": {
+                "-id": "http://mandriva.com/mandriva/2010.2"
+            },
+            "release-date": "2011-08-28",
+            "_name": "Mandriva Linux 2011",
+            "short-id": "mandriva2011",
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "distro": "mandriva",
+            "codename": "Hydrogen",
+            "eol-date": "2013-02-27",
+            "-id": "http://mandriva.com/mandriva/2011"
+        }
+    }
+}

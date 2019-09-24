@@ -1,0 +1,13 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "name": "mouse",
+            "bus-type": "ps2",
+            "class": "input",
+            "_vendor": "Qemu/KVM",
+            "product": "Mouse",
+            "-id": "http://ibm.com/ps2/mouse"
+        }
+    }
+}

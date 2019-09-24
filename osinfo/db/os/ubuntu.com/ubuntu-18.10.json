@@ -1,0 +1,140 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "18.10",
+            "family": "linux",
+            "codename": "Cosmic Cuttlefish",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/18.04"
+            },
+            "tree": [
+                {
+                    "url": "http://archive.ubuntu.com/ubuntu/dists/cosmic/main/installer-i386",
+                    "kernel": "current/images/netboot/ubuntu-installer/i386/linux",
+                    "initrd": "current/images/netboot/ubuntu-installer/i386/initrd.gz",
+                    "-arch": "i686"
+                },
+                {
+                    "kernel": "current/images/netboot/ubuntu-installer/amd64/linux",
+                    "initrd": "current/images/netboot/ubuntu-installer/amd64/initrd.gz",
+                    "-arch": "x86_64",
+                    "url": "http://archive.ubuntu.com/ubuntu/dists/cosmic/main/installer-amd64"
+                }
+            ],
+            "-id": "http://ubuntu.com/ubuntu/18.10",
+            "_vendor": "Canonical Ltd",
+            "distro": "ubuntu",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/18.04"
+            },
+            "_name": "Ubuntu 18.10",
+            "eol-date": "2019-07-18",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "2147483648",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "storage": "16106127360",
+                    "cpu": "1000000000",
+                    "ram": "2147483648"
+                }
+            },
+            "media": [
+                {
+                    "initrd": "install/initrd.gz",
+                    "installer": {
+                        "script": [
+                            {
+                                "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                            },
+                            {
+                                "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                            }
+                        ]
+                    },
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/18.10/ubuntu-18.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 18.10(.\\d\\+?)? amd64",
+                        "volume-size": "751828992"
+                    },
+                    "kernel": "install/vmlinuz"
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/18.10/ubuntu-18.10-live-server-amd64.iso",
+                    "iso": {
+                        "volume-size": "923795456",
+                        "volume-id": "Ubuntu-Server 18.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "-installer-script": "false"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/18.10/ubuntu-18.10-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 18.10(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd",
+                    "installer": {
+                        "script": {
+                            "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                        }
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "aarch64",
+                    "url": "http://old-releases.ubuntu.com/releases/18.10/ubuntu-18.10-server-arm64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 18.10(.\\d\\+?)? arm64"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-arch": "ppc64le",
+                    "url": "http://old-releases.ubuntu.com/releases/18.10/ubuntu-18.10-server-ppc64el.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 18.10(.\\d\\+?)? ppc64"
+                    },
+                    "kernel": "install/vmlinux",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-arch": "s390x",
+                    "url": "http://old-releases.ubuntu.com/releases/18.10/ubuntu-18.10-server-s390x.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 18.10(.\\d\\+?)? s390x"
+                    },
+                    "kernel": "boot/kernel.ubuntu",
+                    "initrd": "boot/initrd.ubuntu"
+                }
+            ],
+            "short-id": [
+                "ubuntu18.10",
+                "ubuntucosmic"
+            ],
+            "release-date": "2018-10-18",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://ubuntu.com/ubuntu/preseed/desktop"
+                    },
+                    {
+                        "-id": "http://ubuntu.com/ubuntu/preseed/jeos"
+                    }
+                ]
+            }
+        }
+    }
+}

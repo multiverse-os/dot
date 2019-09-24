@@ -1,0 +1,102 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://redhat.com/rhel/6.3",
+            "version": "6.3",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": ".*RHEL_6.3 i386.*",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL_6.3 x86_64.*"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                }
+            ],
+            "_vendor": "Red Hat, Inc",
+            "distro": "rhel",
+            "eol-date": "2023-11-30",
+            "tree": [
+                {
+                    "-arch": "ppc64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.3$",
+                        "arch": "ppc64"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.3$",
+                        "arch": "s390x"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.3$",
+                        "arch": "i386"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.3$",
+                        "arch": "x86_64"
+                    }
+                }
+            ],
+            "short-id": "rhel6.3",
+            "_name": "Red Hat Enterprise Linux 6.3",
+            "codename": "Santiago",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/6.2"
+            },
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/6.2"
+            },
+            "release-date": "2012-06-21",
+            "resources": {
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                },
+                "maximum": {
+                    "ram": "3298534883328"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                }
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            }
+        }
+    }
+}

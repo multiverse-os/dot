@@ -1,0 +1,28 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "osx",
+            "release-date": "2009-08-28",
+            "short-id": "macosx10.6",
+            "_name": "MacOS X Snow Leopard",
+            "family": "darwin",
+            "codename": "Snow Leopard",
+            "upgrades": {
+                "-id": "http://apple.com/macosx/10.5"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "storage": "7516192768",
+                    "n-cpus": "2",
+                    "cpu": "1600000000",
+                    "ram": "2147483648"
+                }
+            },
+            "-id": "http://apple.com/macosx/10.6",
+            "version": "10.6",
+            "_vendor": "Apple Inc."
+        }
+    }
+}

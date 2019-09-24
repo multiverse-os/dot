@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "os": {
+            "release-date": "2005-05-09",
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/5.3"
+            },
+            "_name": "FreeBSD 5.4",
+            "version": "5.4",
+            "_vendor": "FreeBSD Project",
+            "family": "freebsd",
+            "distro": "freebsd",
+            "eol-date": "2006-10-31",
+            "-id": "http://freebsd.org/freebsd/5.4",
+            "short-id": "freebsd5.4",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/5.3"
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

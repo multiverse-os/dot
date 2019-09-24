@@ -1,0 +1,32 @@
+{
+    "libosinfo": {
+        "os": {
+            "derives-from": {
+                "-id": "http://mandriva.com/mes/5.0"
+            },
+            "release-date": "2010-03-15",
+            "devices": {
+                "device": [
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1000"
+                    },
+                    {
+                        "-id": "http://pcisig.com/pci/1af4/1001"
+                    }
+                ]
+            },
+            "short-id": "mes5.1",
+            "_name": "Mandriva Enterprise Server 5.1",
+            "version": "5.1",
+            "family": "linux",
+            "eol-date": "2014-06-16",
+            "-id": "http://mandriva.com/mes/5.1",
+            "_vendor": "Mandriva",
+            "distro": "mes",
+            "upgrades": {
+                "-id": "http://mandriva.com/mes/5.0"
+            }
+        },
+        "-version": "0.0.1"
+    }
+}

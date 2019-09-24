@@ -1,0 +1,276 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://fedoraproject.org/fedora/30",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/29"
+            },
+            "release-date": "2019-04-30",
+            "_name": "Fedora 30",
+            "_vendor": "Fedora Project",
+            "media": [
+                {
+                    "-installer-script": "false",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-30-1.2.iso",
+                    "iso": {
+                        "volume-id": "Fedora-WS-Live-30.*"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "-live": "true"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora-WS-dvd-x86_64-30"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "installer": {
+                        "script": {
+                            "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "workstation-netinst"
+                    },
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Workstation/x86_64/iso/Fedora-Workstation-netinst-x86_64-30-1.2.iso"
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Server/x86_64/iso/Fedora-Server-dvd-x86_64-30-1.2.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S-dvd-x86_64-30",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "installer": {
+                        "script": {
+                            "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                        }
+                    }
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "installer": {
+                        "script": {
+                            "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                        }
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server-netinst"
+                    },
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Server/x86_64/iso/Fedora-Server-netinst-x86_64-30-1.2.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S-dvd-x86_64-30"
+                    }
+                },
+                {
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-30-1.2.iso",
+                    "iso": {
+                        "volume-id": "Fedora-E-dvd-x86_64-30"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "installer": {
+                        "script": [
+                            {
+                                "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                            },
+                            {
+                                "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                            }
+                        ]
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "everything-netinst"
+                    }
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "fedora30",
+            "version": "30",
+            "variant": [
+                {
+                    "_name": "Fedora 30 Workstation",
+                    "-id": "workstation"
+                },
+                {
+                    "-id": "workstation-netinst",
+                    "_name": "Fedora 30 Workstation"
+                },
+                {
+                    "-id": "server",
+                    "_name": "Fedora 30 Server"
+                },
+                {
+                    "-id": "server-netinst",
+                    "_name": "Fedora 30 Server"
+                },
+                {
+                    "-id": "everything-netinst",
+                    "_name": "Fedora 30 Everything"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240",
+                    "n-cpus": "1"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "family": "linux",
+            "distro": "fedora",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/29"
+            },
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Workstation/x86_64/os",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "30",
+                        "arch": "x86_64",
+                        "variant": "Workstation"
+                    }
+                },
+                {
+                    "-arch": "armv7l",
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Workstation/armhfp/os/",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "30",
+                        "arch": "armhfp",
+                        "variant": "Workstation"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "variant": "Server",
+                        "family": "Fedora",
+                        "version": "30",
+                        "arch": "x86_64"
+                    },
+                    "-arch": "x86_64",
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Server/x86_64/os",
+                    "variant": {
+                        "-id": "server"
+                    }
+                },
+                {
+                    "-arch": "aarch64",
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Server/aarch64/os/",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "30",
+                        "arch": "aarch64",
+                        "variant": "Server"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "variant": "Server",
+                        "family": "Fedora",
+                        "version": "30",
+                        "arch": "armhfp"
+                    },
+                    "-arch": "armv7l",
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Server/armhfp/os/",
+                    "variant": {
+                        "-id": "server"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Everything/x86_64/os",
+                    "variant": {
+                        "-id": "everything-netinst"
+                    },
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "30",
+                        "arch": "x86_64",
+                        "variant": "Everything"
+                    }
+                },
+                {
+                    "-arch": "aarch64",
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Everything/aarch64/os/",
+                    "variant": {
+                        "-id": "everything-netinst"
+                    },
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "30",
+                        "arch": "aarch64",
+                        "variant": "Everything"
+                    }
+                },
+                {
+                    "-arch": "armv7l",
+                    "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/30/Everything/armhfp/os/",
+                    "variant": {
+                        "-id": "everything-netinst"
+                    },
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "30",
+                        "arch": "armhfp",
+                        "variant": "Everything"
+                    }
+                }
+            ],
+            "image": [
+                {
+                    "-arch": "x86_64",
+                    "-format": "qcow2",
+                    "-cloud-init": "true",
+                    "url": "https://dl.fedoraproject.org/pub/fedora/linux/releases/30/Cloud/x86_64/images/Fedora-Cloud-Base-30-1.2.x86_64.qcow2"
+                },
+                {
+                    "-cloud-init": "true",
+                    "url": "https://dl.fedoraproject.org/pub/fedora/linux/releases/30/Cloud/aarch64/images/Fedora-Cloud-Base-30-1.2.aarch64.qcow2",
+                    "-arch": "aarch64",
+                    "-format": "qcow2"
+                }
+            ]
+        }
+    }
+}

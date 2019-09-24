@@ -1,0 +1,72 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "variant": {
+                "-id": "netinst",
+                "_name": "OpenBSD 4.8"
+            },
+            "-id": "http://openbsd.org/openbsd/4.8",
+            "version": "4.8",
+            "distro": "openbsd",
+            "_vendor": "OpenBSD Project",
+            "release-date": "2010-11-01",
+            "eol-date": "2011-11-01",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2010 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/i386    4.8 Install CD",
+                        "application-id": "OpenBSD 4.8 i386 Install CD"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2010 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/amd64   4.8 Install CD",
+                        "application-id": "OpenBSD 4.8 amd64 Install CD"
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/4.8/i386/cd48.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2010 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/i386    4\\.8 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 4\\.8 i386 bootonly CD"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/4.8/amd64/cd48.iso",
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2010 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   4\\.8 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 4\\.8 amd64 bootonly CD"
+                    }
+                }
+            ],
+            "short-id": "openbsd4.8",
+            "_name": "OpenBSD 4.8",
+            "family": "openbsd",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/4.5"
+            },
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/4.5"
+            }
+        }
+    }
+}

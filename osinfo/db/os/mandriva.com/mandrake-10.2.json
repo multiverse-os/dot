@@ -1,0 +1,21 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "mandrake10.2",
+            "_name": "Mandrake Linux 10.2",
+            "distro": "mandrake",
+            "-id": "http://mandriva.com/mandrake/10.2",
+            "family": "linux",
+            "version": "10.2",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/10.1"
+            },
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/10.1"
+            },
+            "release-date": "2005-04-14",
+            "_vendor": "Mandriva"
+        }
+    }
+}

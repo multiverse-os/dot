@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "rhl",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/5.1"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/5.1"
+            },
+            "release-date": "1999-04-26",
+            "eol-date": "2003-03-31",
+            "version": "6.0",
+            "short-id": "rhl6.0",
+            "_name": "Red Hat Linux 6.0",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "codename": "Hedwig",
+            "-id": "http://redhat.com/rhl/6.0"
+        }
+    }
+}

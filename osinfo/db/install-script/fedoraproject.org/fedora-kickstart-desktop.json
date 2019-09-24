@@ -1,0 +1,358 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "install-script": {
+            "template": {
+                "stylesheet": {
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    },
+                    "template": [
+                        {
+                            "-name": "target-disk",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/target-disk != ''",
+                                        "value-of": {
+                                            "-select": "config/target-disk"
+                                        }
+                                    },
+                                    {
+                                        "-test": "os/version \u003e 9",
+                                        "text": "/dev/vda"
+                                    },
+                                    {
+                                        "-test": "os/version \u003e 6",
+                                        "text": "/dev/sda"
+                                    }
+                                ],
+                                "otherwise": {
+                                    "text": "/dev/hda"
+                                }
+                            }
+                        },
+                        {
+                            "variable": {
+                                "-name": "script-disk",
+                                "choose": {
+                                    "when": [
+                                        {
+                                            "-test": "config/script-disk != ''",
+                                            "value-of": {
+                                                "-select": "config/script-disk"
+                                            }
+                                        },
+                                        {
+                                            "-test": "os/version \u003e 9",
+                                            "text": "/dev/sda"
+                                        },
+                                        {
+                                            "-test": "os/version \u003e 6",
+                                            "text": "/dev/sdb"
+                                        }
+                                    ],
+                                    "otherwise": {
+                                        "text": "/dev/hdb"
+                                    }
+                                }
+                            },
+                            "value-of": {
+                                "-select": "substring-after($script-disk, '/dev/')"
+                            },
+                            "-name": "script-disk"
+                        },
+                        {
+                            "-name": "avatar-disk",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/avatar-disk != ''",
+                                        "value-of": {
+                                            "-select": "config/avatar-disk"
+                                        }
+                                    },
+                                    {
+                                        "-test": "os/version \u003e 9",
+                                        "text": "/dev/sda"
+                                    },
+                                    {
+                                        "-test": "os/version \u003e 6",
+                                        "text": "/dev/sdb"
+                                    }
+                                ],
+                                "otherwise": {
+                                    "text": "/dev/hdb"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "keyboard",
+                            "choose": {
+                                "when": {
+                                    "-test": "os/version \u003e 17",
+                                    "value-of": {
+                                        "-select": "config/l10n-keyboard"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "us"
+                                }
+                            }
+                        },
+                        {
+                            "value-of": {
+                                "-select": "script/expected-filename"
+                            },
+                            "if": {
+                                "call-template": {
+                                    "-name": "installation-url"
+                                },
+                                "-test": "script/installation-source = 'network'",
+                                "choose": {
+                                    "when": {
+                                        "-test": "os/version \u003c 19",
+                                        "text": "method="
+                                    },
+                                    "otherwise": {
+                                        "text": "inst.repo="
+                                    }
+                                }
+                            },
+                            "-match": "/command-line",
+                            "text": "ks=",
+                            "choose": {
+                                "otherwise": {
+                                    "call-template": {
+                                        "-name": "script-disk"
+                                    },
+                                    "text": [
+                                        "hd:",
+                                        ":/"
+                                    ]
+                                },
+                                "when": {
+                                    "-test": "script/preferred-injection-method = 'initrd'",
+                                    "text": "file:/"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "installation-url",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/installation-url != ''",
+                                        "value-of": {
+                                            "-select": "config/installation-url"
+                                        }
+                                    },
+                                    {
+                                        "value-of": {
+                                            "-select": "tree/url"
+                                        },
+                                        "-test": "tree/url != ''"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "-name": "url-or-mirrorlist",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/installation-url != '' or tree/url != ''",
+                                    "text": "--url=",
+                                    "call-template": {
+                                        "-name": "installation-url"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": [
+                                        "--mirrorlist=",
+                                        "https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever\u0026arch=$basearch"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "#content": "[security]\n\n[xdmcp]\n\n[greeter]\n\n[chooser]\n\n[debug]\n\" \u003e /etc/gdm/custom.conf\n\n# Create an osinfo-install-successful file in /root\ntouch /root/osinfo-install-successful\n\n%end",
+                            "-match": "/install-script-config",
+                            "value-of": [
+                                {
+                                    "-select": "os/short-id"
+                                },
+                                {
+                                    "-select": "script/profile"
+                                },
+                                {
+                                    "-select": "config/l10n-language"
+                                },
+                                {
+                                    "-select": "config/hostname"
+                                },
+                                {
+                                    "-select": "config/l10n-timezone"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-password"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-password"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/admin-password"
+                                },
+                                {
+                                    "-select": "config/admin-password"
+                                },
+                                {
+                                    "-select": "config/avatar-location"
+                                },
+                                {
+                                    "-select": "config/avatar-location"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                }
+                            ],
+                            "if": [
+                                {
+                                    "#content": "cdrom",
+                                    "-test": "script/installation-source = 'media' and (count(media/variant) = 0 or not(contains(media/variant, 'netinst')))",
+                                    "if": {
+                                        "#content": "install",
+                                        "-test": "os/version \u003c 29"
+                                    }
+                                },
+                                {
+                                    "-test": "script/installation-source = 'network' or contains(media/variant, 'netinst')",
+                                    "call-template": {
+                                        "-name": "url-or-mirrorlist"
+                                    }
+                                },
+                                {
+                                    "#content": "spice-webdavd",
+                                    "-test": "os/version \u003e 19"
+                                }
+                            ],
+                            "call-template": [
+                                {
+                                    "-name": "keyboard"
+                                },
+                                {
+                                    "-name": "target-disk"
+                                },
+                                {
+                                    "-name": "avatar-disk"
+                                }
+                            ],
+                            "choose": [
+                                {
+                                    "when": {
+                                        "#content": "authconfig --enableshadow --enablemd5",
+                                        "-test": "os/version \u003c 28"
+                                    },
+                                    "otherwise": "authselect select sssd"
+                                },
+                                {
+                                    "when": {
+                                        "#content": "@base\n@graphical-internet\n@sound-and-video",
+                                        "-test": "os/version \u003c 18"
+                                    },
+                                    "otherwise": "@standard\n@epiphany\n@firefox\n@multimedia"
+                                },
+                                {
+                                    "when": {
+                                        "#content": "qemu-guest-agent",
+                                        "-test": "os/version \u003e 15"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform"
+                }
+            },
+            "-id": "http://fedoraproject.org/fedora/kickstart/desktop",
+            "profile": "desktop",
+            "expected-filename": "fedora.ks",
+            "config": {
+                "param": [
+                    {
+                        "-name": "l10n-keyboard",
+                        "-policy": "optional",
+                        "-value-map": "http://x.org/x11-keyboard"
+                    },
+                    {
+                        "-name": "l10n-language",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "l10n-timezone",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "hostname",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-policy": "required",
+                        "-name": "user-login"
+                    },
+                    {
+                        "-name": "user-password",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "admin-password",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "avatar-location",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "avatar-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "target-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "script-disk",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "injection-method": [
+                "cdrom",
+                "disk",
+                "floppy",
+                "initrd"
+            ],
+            "avatar-format": {
+                "mime-type": "image/png"
+            }
+        }
+    }
+}

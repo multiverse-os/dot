@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "rhl8.0",
+            "_name": "Red Hat Linux 8.0",
+            "version": "8.0",
+            "family": "linux",
+            "distro": "rhl",
+            "codename": "Psyche",
+            "-id": "http://redhat.com/rhl/8.0",
+            "_vendor": "Red Hat, Inc",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/7.3"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/7.3"
+            },
+            "release-date": "2002-09-30",
+            "eol-date": "2003-12-31"
+        }
+    }
+}

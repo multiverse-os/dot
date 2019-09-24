@@ -1,0 +1,84 @@
+{
+    "libosinfo": {
+        "os": {
+            "_vendor": "Canonical Ltd",
+            "release-date": "2010-10-10",
+            "-id": "http://ubuntu.com/ubuntu/10.10",
+            "distro": "ubuntu",
+            "codename": "Maverick Meerkat",
+            "short-id": [
+                "ubuntu10.10",
+                "ubuntumaverick"
+            ],
+            "version": "10.10",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/10.04"
+            },
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/10.04"
+            },
+            "eol-date": "2012-04-10",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "1000000000",
+                    "n-cpus": "1",
+                    "ram": "67108864",
+                    "storage": "5368709120"
+                },
+                "recommended": {
+                    "cpu": "1000000000",
+                    "ram": "536870912",
+                    "storage": "5368709120"
+                }
+            },
+            "media": [
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 10.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/maverick/ubuntu-10.10-server-i386.iso"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/maverick/ubuntu-10.10-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 10.10(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu 10.10(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/maverick/ubuntu-10.10-desktop-i386.iso"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/maverick/ubuntu-10.10-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 10.10(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.lz",
+                    "-arch": "x86_64"
+                }
+            ],
+            "_name": "Ubuntu 10.10",
+            "family": "linux"
+        },
+        "-version": "0.0.1"
+    }
+}

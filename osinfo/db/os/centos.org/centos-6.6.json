@@ -1,0 +1,126 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://centos.org/centos/6.6",
+            "family": "linux",
+            "_name": "CentOS 6.6",
+            "release-date": "2014-10-28",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "storage": "9663676416",
+                    "cpu": "400000000",
+                    "ram": "1073741824"
+                }
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "centos6.6",
+            "version": "6.6",
+            "distro": "centos",
+            "upgrades": {
+                "-id": "http://centos.org/centos/6.5"
+            },
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.6"
+            },
+            "_vendor": "CentOS",
+            "eol-date": "2015-08-07",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.6_Final",
+                        "volume-size": "4029048832"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.6_Final",
+                        "volume-size": "4631738368"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.6_Final",
+                        "volume-size": "355250176"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-size": "400891904",
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.6_Final"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS",
+                        "volume-size": "189818880"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS",
+                        "volume-size": "232714240"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/6.6/os/x86_64/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "6.6",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/6.6/os/i386/",
+                    "treeinfo": {
+                        "arch": "i386",
+                        "family": "CentOS",
+                        "version": "6.6"
+                    }
+                }
+            ]
+        }
+    }
+}

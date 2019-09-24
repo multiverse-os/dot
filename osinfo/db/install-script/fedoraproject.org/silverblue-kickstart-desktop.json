@@ -1,0 +1,245 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "install-script": {
+            "-id": "http://fedoraproject.org/silverblue/kickstart/desktop",
+            "profile": "desktop",
+            "expected-filename": "silverblue.ks",
+            "config": {
+                "param": [
+                    {
+                        "-name": "l10n-keyboard",
+                        "-policy": "optional",
+                        "-value-map": "http://x.org/x11-keyboard"
+                    },
+                    {
+                        "-name": "l10n-language",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "l10n-timezone",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "hostname",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "user-login",
+                        "-policy": "required"
+                    },
+                    {
+                        "-name": "user-password",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-policy": "optional",
+                        "-name": "admin-password"
+                    },
+                    {
+                        "-name": "target-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "script-disk",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "injection-method": [
+                "cdrom",
+                "disk",
+                "floppy",
+                "initrd"
+            ],
+            "template": {
+                "stylesheet": {
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform",
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    },
+                    "template": [
+                        {
+                            "-name": "target-disk",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/target-disk != ''",
+                                    "value-of": {
+                                        "-select": "config/target-disk"
+                                    }
+                                },
+                                "otherwise": {
+                                    "text": "/dev/vda"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "script-disk",
+                            "variable": {
+                                "choose": {
+                                    "otherwise": {
+                                        "text": "/dev/sda"
+                                    },
+                                    "when": {
+                                        "-test": "config/script-disk != ''",
+                                        "value-of": {
+                                            "-select": "config/script-disk"
+                                        }
+                                    }
+                                },
+                                "-name": "script-disk"
+                            },
+                            "value-of": {
+                                "-select": "substring-after($script-disk, '/dev/')"
+                            }
+                        },
+                        {
+                            "-match": "/command-line",
+                            "text": "ks=",
+                            "choose": {
+                                "when": {
+                                    "-test": "script/preferred-injection-method = 'initrd'",
+                                    "text": "file:/"
+                                },
+                                "otherwise": {
+                                    "text": [
+                                        "hd:",
+                                        ":/"
+                                    ],
+                                    "call-template": {
+                                        "-name": "script-disk"
+                                    }
+                                }
+                            },
+                            "value-of": {
+                                "-select": "script/expected-filename"
+                            },
+                            "if": {
+                                "-test": "script/installation-source = 'network'",
+                                "text": "inst.repo=",
+                                "call-template": {
+                                    "-name": "installation-url"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "installation-url",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/installation-url != ''",
+                                        "value-of": {
+                                            "-select": "config/installation-url"
+                                        }
+                                    },
+                                    {
+                                        "-test": "tree/url != ''",
+                                        "value-of": {
+                                            "-select": "tree/url"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "#content": "'https://dl.fedoraproject.org/atomic/repo/'\n\n# Create an osinfo-install-successful file in /root\ntouch /root/osinfo-install-successful\n\n%end",
+                            "-match": "/install-script-config",
+                            "value-of": [
+                                {
+                                    "-select": "os/short-id"
+                                },
+                                {
+                                    "-select": "script/profile"
+                                },
+                                {
+                                    "-select": "config/l10n-keyboard"
+                                },
+                                {
+                                    "-select": "config/l10n-language"
+                                },
+                                {
+                                    "-select": "config/hostname"
+                                },
+                                {
+                                    "-select": "config/l10n-timezone"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-password"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-password"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/admin-password"
+                                },
+                                {
+                                    "-select": "config/admin-password"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "os/version"
+                                },
+                                {
+                                    "-select": "os/version"
+                                },
+                                {
+                                    "-select": "os/version"
+                                }
+                            ],
+                            "if": {
+                                "#content": "install",
+                                "-test": "os/version \u003c 29"
+                            },
+                            "call-template": {
+                                "-name": "target-disk"
+                            },
+                            "choose": {
+                                "when": {
+                                    "#content": "/workstation\" --nogpg",
+                                    "-test": "os/version \u003c 29",
+                                    "value-of": [
+                                        {
+                                            "-select": "os/version"
+                                        },
+                                        {
+                                            "-select": "os/version"
+                                        },
+                                        {
+                                            "-select": "config/hardware-arch"
+                                        }
+                                    ]
+                                },
+                                "otherwise": {
+                                    "#content": "/silverblue\" --nogpg",
+                                    "value-of": [
+                                        {
+                                            "-select": "os/version"
+                                        },
+                                        {
+                                            "-select": "os/version"
+                                        },
+                                        {
+                                            "-select": "config/hardware-arch"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,254 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "Fedora 14",
+            "tree": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "14",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/x86_64/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "14",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "treeinfo": {
+                        "version": "14",
+                        "family": "Fedora"
+                    }
+                }
+            ],
+            "-id": "http://fedoraproject.org/fedora/14",
+            "distro": "fedora",
+            "codename": "Laughlin",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/13"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "_vendor": "Fedora Project",
+            "family": "linux",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/13"
+            },
+            "eol-date": "2011-12-09",
+            "short-id": "fedora14",
+            "version": "14",
+            "release-date": "2010-11-02",
+            "media": [
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/i386/iso/Fedora-14-i386-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 14 i386 DVD",
+                        "system-id": "LINUX",
+                        "volume-size": "3561752576"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/i386/iso/Fedora-14-i386-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 14 i386 Disc 1",
+                        "system-id": "LINUX",
+                        "volume-size": "705503232"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora 14 i386 Disc 2",
+                        "system-id": "LINUX",
+                        "volume-size": "728064000"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/i386/iso/Fedora-14-i386-disc2.iso"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/i386/iso/Fedora-14-i386-disc3.iso",
+                    "iso": {
+                        "volume-id": "Fedora 14 i386 Disc 3",
+                        "system-id": "LINUX",
+                        "volume-size": "728426496"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/i386/iso/Fedora-14-i386-disc4.iso",
+                    "iso": {
+                        "volume-id": "Fedora 14 i386 Disc 4",
+                        "system-id": "LINUX",
+                        "volume-size": "728170496"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/i386/iso/Fedora-14-i386-disc5.iso",
+                    "iso": {
+                        "volume-id": "Fedora 14 i386 Disc 5",
+                        "system-id": "LINUX",
+                        "volume-size": "672913408"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/x86_64/iso/Fedora-14-x86_64-DVD.iso",
+                    "iso": {
+                        "volume-size": "3520802816",
+                        "volume-id": "Fedora 14 x86_64 DVD",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/x86_64/iso/Fedora-14-x86_64-disc1.iso",
+                    "iso": {
+                        "volume-id": "Fedora 14 x86_64 Disc 1",
+                        "system-id": "LINUX",
+                        "volume-size": "726687744"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/x86_64/iso/Fedora-14-x86_64-disc2.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "728717312",
+                        "volume-id": "Fedora 14 x86_64 Disc 2"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/x86_64/iso/Fedora-14-x86_64-disc3.iso",
+                    "iso": {
+                        "volume-id": "Fedora 14 x86_64 Disc 3",
+                        "system-id": "LINUX",
+                        "volume-size": "723972096"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora 14 x86_64 Disc 4",
+                        "system-id": "LINUX",
+                        "volume-size": "721358848"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/x86_64/iso/Fedora-14-x86_64-disc4.iso"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/x86_64/iso/Fedora-14-x86_64-disc5.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "621590528",
+                        "volume-id": "Fedora 14 x86_64 Disc 5"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora-14-i686-Live-Desktop",
+                        "system-id": "LINUX",
+                        "volume-size": "718903296"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Live/i686/Fedora-14-i686-Live-Desktop.iso"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Live/i686/Fedora-14-i686-Live-KDE.iso",
+                    "iso": {
+                        "volume-id": "Fedora-14-i686-Live-KDE",
+                        "system-id": "LINUX",
+                        "volume-size": "718798848"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Live/x86_64/Fedora-14-x86_64-Live-Desktop.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "719706112",
+                        "volume-id": "Fedora-14-x86_64-Live-Desktop"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/14/Live/x86_64/Fedora-14-x86_64-Live-KDE.iso",
+                    "iso": {
+                        "volume-id": "Fedora-14-x86_64-Live-KDE",
+                        "system-id": "LINUX",
+                        "volume-size": "719327232"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "402653184"
+                },
+                "recommended": {
+                    "ram": "536870912",
+                    "storage": "9663676416",
+                    "cpu": "400000000"
+                }
+            }
+        }
+    }
+}

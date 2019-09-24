@@ -1,0 +1,28 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "SUSE Linux Enterprise Desktop 9",
+            "family": "linux",
+            "distro": "sled",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "ram": "268435456",
+                    "storage": "2147483648",
+                    "cpu": "500000000"
+                },
+                "recommended": {
+                    "cpu": "1600000000",
+                    "ram": "536870912",
+                    "storage": "4294967296"
+                }
+            },
+            "release-date": "2004-08-03",
+            "-id": "http://suse.com/sled/9",
+            "short-id": "sled9",
+            "version": "9",
+            "_vendor": "SUSE"
+        }
+    }
+}

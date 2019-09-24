@@ -1,0 +1,72 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "openbsd",
+            "distro": "openbsd",
+            "_vendor": "OpenBSD Project",
+            "upgrades": {
+                "-id": "http://openbsd.org/openbsd/5.1"
+            },
+            "derives-from": {
+                "-id": "http://openbsd.org/openbsd/5.1"
+            },
+            "variant": {
+                "-id": "netinst",
+                "_name": "OpenBSD 5.2"
+            },
+            "-id": "http://openbsd.org/openbsd/5.2",
+            "_name": "OpenBSD 5.2",
+            "release-date": "2012-11-01",
+            "eol-date": "2013-11-01",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "volume-id": "OpenBSD/i386    5.2 Install CD",
+                        "application-id": "OpenBSD 5.2 i386 Install CD",
+                        "publisher-id": "Copyright \\(c\\) 2012 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD"
+                    }
+                },
+                {
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2012 Theo de Raadt, The OpenBSD project",
+                        "system-id": "OpenBSD",
+                        "volume-id": "OpenBSD/amd64   5.2 Install CD",
+                        "application-id": "OpenBSD 5.2 amd64 Install CD"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "iso": {
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.2 i386 bootonly CD",
+                        "publisher-id": "Copyright \\(c\\) 2012 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/i386    5\\.2 boot-only CD"
+                    },
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.2/i386/cd52.iso"
+                },
+                {
+                    "iso": {
+                        "publisher-id": "Copyright \\(c\\) 2012 Theo de Raadt, The OpenBSD project",
+                        "volume-id": "OpenBSD/amd64   5\\.2 boot-only CD",
+                        "system-id": "OpenBSD",
+                        "application-id": "OpenBSD 5\\.2 amd64 bootonly CD"
+                    },
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/5.2/amd64/cd52.iso"
+                }
+            ],
+            "short-id": "openbsd5.2",
+            "version": "5.2"
+        }
+    }
+}

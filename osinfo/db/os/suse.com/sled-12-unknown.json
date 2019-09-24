@@ -1,0 +1,42 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "SUSE Linux Enterprise Desktop 12 Unknown",
+            "version": "12-unknown",
+            "derives-from": {
+                "-id": "http://suse.com/sled/12.4"
+            },
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "ram": "536870912",
+                    "storage": "1074151424"
+                },
+                "recommended": {
+                    "ram": "1073741824",
+                    "storage": "17179869184",
+                    "cpu": "2400000000"
+                }
+            },
+            "-id": "http://suse.com/sled/12-unknown",
+            "short-id": "sled12-unknown",
+            "_vendor": "SUSE",
+            "family": "linux",
+            "distro": "sled",
+            "upgrades": {
+                "-id": "http://suse.com/sled/12.4"
+            },
+            "media": {
+                "iso": {
+                    "system-id": "LINUX",
+                    "volume-id": "SLE-12-SP[5-9]-Desktop-DVD-x86_64"
+                },
+                "kernel": "boot/x86_64/loader/linux",
+                "initrd": "boot/x86_64/loader/initrd",
+                "-arch": "x86_64"
+            }
+        }
+    }
+}

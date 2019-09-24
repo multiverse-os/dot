@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "rhl",
+            "eol-date": "2003-03-31",
+            "short-id": "rhl5.2",
+            "_name": "Red Hat Linux 5.2",
+            "version": "5.2",
+            "_vendor": "Red Hat, Inc",
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/5.1"
+            },
+            "release-date": "1998-11-02",
+            "-id": "http://redhat.com/rhl/5.2",
+            "family": "linux",
+            "codename": "Apollo",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/5.1"
+            }
+        }
+    }
+}

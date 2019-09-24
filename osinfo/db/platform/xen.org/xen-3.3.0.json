@@ -1,0 +1,15 @@
+{
+    "libosinfo": {
+        "platform": {
+            "short-id": "xen-3.3.0",
+            "_name": "Xen 3.3.0",
+            "_vendor": "Citrix Systems, Inc.",
+            "version": "3.3.0",
+            "upgrades": {
+                "-id": "http://xen.org/xen/3.2.3"
+            },
+            "-id": "http://xen.org/xen/3.3.0"
+        },
+        "-version": "0.0.1"
+    }
+}

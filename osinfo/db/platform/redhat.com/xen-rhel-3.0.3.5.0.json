@@ -1,0 +1,20 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "platform": {
+            "devices": {
+                "device": {
+                    "-id": "http://xen.org/xen/vfb"
+                }
+            },
+            "-id": "http://redhat.com/xen-rhel/3.0.3.5.0",
+            "short-id": "xen-rhel-3.0.3.5.0",
+            "_name": "Xen 3.0.3 (RHEL 5.0)",
+            "_vendor": "Red Hat, Inc.",
+            "version": "3.0.3.5.0",
+            "derives-from": {
+                "-id": "http://xen.org/xen/3.0.3"
+            }
+        }
+    }
+}

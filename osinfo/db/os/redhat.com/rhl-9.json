@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/8.0"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/8.0"
+            },
+            "eol-date": "2004-05-01",
+            "-id": "http://redhat.com/rhl/9",
+            "short-id": "rhl9",
+            "_name": "Red Hat Linux 9",
+            "release-date": "2003-03-31",
+            "version": "9",
+            "distro": "rhl",
+            "codename": "Shrike"
+        }
+    }
+}

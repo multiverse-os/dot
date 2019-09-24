@@ -1,0 +1,15 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "netbsd",
+            "release-date": "1993-04-20",
+            "-id": "http://netbsd.org/netbsd/0.8",
+            "short-id": "netbsd0.8",
+            "_name": "NetBSD 0.8",
+            "version": "0.8",
+            "_vendor": "NetBSD Project",
+            "family": "netbsd"
+        }
+    }
+}

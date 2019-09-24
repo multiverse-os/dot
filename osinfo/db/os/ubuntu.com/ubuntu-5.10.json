@@ -1,0 +1,127 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "ubuntu",
+            "codename": "Breezy Badger",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/5.04"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/breezy/ubuntu-5.10-install-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 5.10 i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "initrd": "install/initrd.gz",
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/breezy/ubuntu-5.10-install-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 5.10 amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz"
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/breezy/ubuntu-5.10-install-powerpc.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 5.10 ppc",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/powerpc/vmlinux",
+                    "initrd": "install/powerpc/initrd.gz",
+                    "-arch": "ppc"
+                },
+                {
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "-installer": "false",
+                    "url": "http://old-releases.ubuntu.com/releases/breezy/ubuntu-5.10-live-i386.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Ubuntu 5.10 i386"
+                    }
+                },
+                {
+                    "url": "http://old-releases.ubuntu.com/releases/breezy/ubuntu-5.10-live-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 5.10 amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "-installer": "false"
+                },
+                {
+                    "-arch": "ppc",
+                    "-live": "true",
+                    "-installer": "false",
+                    "url": "http://old-releases.ubuntu.com/releases/breezy/ubuntu-5.10-live-powerpc.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 5.10 ppc",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/powerpc/vmlinux",
+                    "initrd": "install/powerpc/initrd.gz"
+                },
+                {
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/breezy/ubuntu-5.10-dvd-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 5.10 i386",
+                        "system-id": "LINUX"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/breezy/ubuntu-5.10-dvd-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 5.10 amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu 5.10 ppc",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/powerpc/vmlinux",
+                    "initrd": "install/powerpc/initrd.gz",
+                    "-arch": "ppc",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/breezy/ubuntu-5.10-dvd-powerpc.iso"
+                }
+            ],
+            "-id": "http://ubuntu.com/ubuntu/5.10",
+            "version": "5.10",
+            "_vendor": "Canonical Ltd",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/5.04"
+            },
+            "release-date": "2005-10-12",
+            "eol-date": "2007-04-13",
+            "short-id": [
+                "ubuntu5.10",
+                "ubuntubreezy"
+            ],
+            "_name": "Ubuntu 5.10",
+            "family": "linux"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "11",
+            "family": "solaris",
+            "upgrades": {
+                "-id": "http://sun.com/solaris/10"
+            },
+            "short-id": "solaris11",
+            "_name": "Oracle Solaris 11",
+            "_vendor": "Oracle",
+            "distro": "solaris",
+            "release-date": "2011-11-09",
+            "-id": "http://oracle.com/solaris/11"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "Mandrake Linux 7.2",
+            "_vendor": "Mandriva",
+            "codename": "Odyssey",
+            "version": "7.2",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/7.1"
+            },
+            "release-date": "2000-10-30",
+            "-id": "http://mandriva.com/mandrake/7.2",
+            "short-id": "mandrake7.2",
+            "family": "linux",
+            "distro": "mandrake",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/7.1"
+            }
+        }
+    }
+}

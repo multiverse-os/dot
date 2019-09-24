@@ -1,0 +1,150 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "CentOS 6.10",
+            "eol-date": "2020-11-30",
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.10_Final",
+                        "volume-size": "3869454336"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.10_Final",
+                        "volume-size": "3991482368"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-6.10-i386-LiveDVD",
+                        "volume-size": "2012102656"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "-installer-script": "false",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS-6.10-x86_64-LiveDVD",
+                        "volume-size": "2040971264"
+                    },
+                    "kernel": "isolinux/vmlinuz0"
+                },
+                {
+                    "iso": {
+                        "volume-size": "372772864",
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS_6.10_Final"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "volume-id": "CentOS_6.10_Final",
+                        "volume-size": "425193472",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS",
+                        "volume-size": "189581312"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "CentOS",
+                        "volume-size": "239208448"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                },
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                }
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "short-id": "centos6.10",
+            "_vendor": "CentOS",
+            "clones": {
+                "-id": "http://redhat.com/rhel/6.10"
+            },
+            "release-date": "2017-04-05",
+            "upgrades": {
+                "-id": "http://centos.org/centos/6.9"
+            },
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://mirror.centos.org/centos-6/6.10/os/x86_64/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "6.10",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://mirror.centos.org/centos-6/6.10/os/i386/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "6.10",
+                        "arch": "i386"
+                    }
+                }
+            ],
+            "-id": "http://centos.org/centos/6.10",
+            "version": "6.10",
+            "family": "linux",
+            "distro": "centos"
+        }
+    }
+}

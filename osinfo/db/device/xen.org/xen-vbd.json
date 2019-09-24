@@ -1,0 +1,13 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "device": {
+            "name": "xen-vbd",
+            "-id": "http://xen.org/xen/vbd",
+            "class": "block",
+            "bus-type": "xen",
+            "product": "Virtual Block Device",
+            "product-id": "vbd"
+        }
+    }
+}

@@ -1,0 +1,232 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://fedoraproject.org/fedora/kickstart/desktop"
+                    }
+                ]
+            },
+            "release-date": "2014-12-09",
+            "media": [
+                {
+                    "iso": {
+                        "volume-id": "Fedora-Live-WS-i686-21.*",
+                        "system-id": "LINUX",
+                        "volume-size": "1335937024"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "workstation"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Workstation/i386/iso/Fedora-Live-Workstation-i686-21-5.iso"
+                },
+                {
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Workstation/x86_64/iso/Fedora-Live-Workstation-x86_64-21-5.iso",
+                    "iso": {
+                        "volume-id": "Fedora-Live-WS-x86_64-21.*",
+                        "system-id": "LINUX",
+                        "volume-size": "1471502336"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "workstation"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora-S.*21.*-i386",
+                        "system-id": "LINUX",
+                        "volume-size": "2153469952"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Server/i386/iso/Fedora-Server-DVD-i386-21.iso"
+                },
+                {
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Server/x86_64/iso/Fedora-Server-DVD-x86_64-21.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S.*-21.*-x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "2047315968"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "server"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Server/i386/iso/Fedora-Server-netinst-i386-21.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S.*21.*-i386",
+                        "system-id": "LINUX",
+                        "volume-size": "505403392"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "variant": {
+                        "-id": "netinst"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Server/x86_64/iso/Fedora-Server-netinst-x86_64-21.iso",
+                    "iso": {
+                        "volume-id": "Fedora-S.*-21.*-x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "444067840"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Cloud/i386/iso/Fedora-Cloud-netinst-i386-21.iso",
+                    "iso": {
+                        "volume-id": "Fedora-C.*21.*-i386",
+                        "system-id": "LINUX",
+                        "volume-size": "505688064"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "cloud"
+                    }
+                },
+                {
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "variant": {
+                        "-id": "cloud"
+                    },
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Cloud/x86_64/iso/Fedora-Cloud-netinst-x86_64-21.iso",
+                    "iso": {
+                        "volume-id": "Fedora-C.*-21.*-x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "444221440"
+                    }
+                }
+            ],
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/20"
+            },
+            "eol-date": "2015-12-01",
+            "variant": [
+                {
+                    "-id": "workstation",
+                    "_name": "Fedora 21 Workstation"
+                },
+                {
+                    "-id": "server",
+                    "_name": "Fedora 21 Server"
+                },
+                {
+                    "-id": "netinst",
+                    "_name": "Fedora 21"
+                },
+                {
+                    "-id": "cloud",
+                    "_name": "Fedora 21 Cloud"
+                }
+            ],
+            "short-id": "fedora21",
+            "family": "linux",
+            "_vendor": "Fedora Project",
+            "distro": "fedora",
+            "-id": "http://fedoraproject.org/fedora/21",
+            "_name": "Fedora 21",
+            "tree": [
+                {
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Server/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "21",
+                        "arch": "i386"
+                    },
+                    "-arch": "i686",
+                    "variant": {
+                        "-id": "server"
+                    }
+                },
+                {
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Server/x86_64/os/",
+                    "variant": {
+                        "-id": "server"
+                    },
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "21",
+                        "arch": "x86_64"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "i686",
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Cloud/i386/os/",
+                    "variant": {
+                        "-id": "cloud"
+                    },
+                    "treeinfo": {
+                        "arch": "i386",
+                        "family": "Fedora-Cloud",
+                        "version": "21"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/21/Cloud/x86_64/os/",
+                    "variant": {
+                        "-id": "cloud"
+                    },
+                    "treeinfo": {
+                        "arch": "x86_64",
+                        "family": "Fedora-Cloud",
+                        "version": "21"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "21"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "1073741824",
+                    "storage": "10737418240"
+                }
+            },
+            "version": "21",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/20"
+            }
+        }
+    }
+}

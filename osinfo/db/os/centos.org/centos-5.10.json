@@ -1,0 +1,42 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "_name": "CentOS 5.10",
+            "_vendor": "CentOS",
+            "family": "linux",
+            "distro": "centos",
+            "upgrades": {
+                "-id": "http://centos.org/centos/5.9"
+            },
+            "release-date": "2013-10-19",
+            "short-id": "centos5.10",
+            "version": "5.10",
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.10"
+            },
+            "eol-date": "2017-03-31",
+            "tree": [
+                {
+                    "-arch": "x86_64",
+                    "url": "http://vault.centos.org/5.10/os/x86_64/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "5.10",
+                        "arch": "x86_64"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "url": "http://vault.centos.org/5.10/os/i386/",
+                    "treeinfo": {
+                        "family": "CentOS",
+                        "version": "5.10",
+                        "arch": "i386"
+                    }
+                }
+            ],
+            "-id": "http://centos.org/centos/5.10"
+        }
+    }
+}

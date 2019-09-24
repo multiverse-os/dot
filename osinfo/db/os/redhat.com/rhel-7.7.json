@@ -1,0 +1,155 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "rhel7.7",
+            "version": "7.7",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/7.6"
+            },
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/7.6"
+            },
+            "release-date": "2019-08-06",
+            "tree": [
+                {
+                    "-arch": "ppc64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux$",
+                        "version": "^7.7$",
+                        "arch": "ppc64$"
+                    }
+                },
+                {
+                    "-arch": "ppc64le",
+                    "treeinfo": {
+                        "arch": "ppc64le",
+                        "family": "Red Hat Enterprise Linux$",
+                        "version": "^7.7$"
+                    }
+                },
+                {
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux$",
+                        "version": "^7.7$",
+                        "arch": "s390x"
+                    },
+                    "-arch": "s390x"
+                },
+                {
+                    "-arch": "x86_64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux$",
+                        "version": "^7.7$",
+                        "arch": "x86_64"
+                    }
+                }
+            ],
+            "resources": [
+                {
+                    "recommended": {
+                        "cpu": "4000000000",
+                        "ram": "2147483648",
+                        "storage": "21474836480"
+                    },
+                    "-arch": "ppc64",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "cpu": "1000000000",
+                        "ram": "2147483648",
+                        "storage": "10737418240"
+                    }
+                },
+                {
+                    "-arch": "ppc64le",
+                    "minimum": {
+                        "ram": "2147483648",
+                        "storage": "10737418240",
+                        "n-cpus": "1",
+                        "cpu": "1000000000"
+                    },
+                    "recommended": {
+                        "cpu": "4000000000",
+                        "ram": "2147483648",
+                        "storage": "21474836480"
+                    }
+                },
+                {
+                    "recommended": {
+                        "ram": "1073741824",
+                        "storage": "10737418240",
+                        "cpu": "1000000000"
+                    },
+                    "maximum": {
+                        "ram": "13194139533312"
+                    },
+                    "network-install": {
+                        "ram": "1610612736"
+                    },
+                    "-arch": "all",
+                    "minimum": {
+                        "n-cpus": "1",
+                        "cpu": "1000000000",
+                        "ram": "1073741824",
+                        "storage": "10737418240"
+                    }
+                }
+            ],
+            "-id": "http://redhat.com/rhel/7.7",
+            "_vendor": "Red Hat, Inc",
+            "codename": "Maipo",
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "media": [
+                {
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": ".*RHEL-7.7.*x86_64.*"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "aarch64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-7.7.*aarch64$"
+                    }
+                },
+                {
+                    "-arch": "ppc64",
+                    "iso": {
+                        "system-id": "PPC",
+                        "volume-id": "RHEL[-_]7.7.*ppc64$"
+                    }
+                },
+                {
+                    "-arch": "ppc64le",
+                    "iso": {
+                        "system-id": "PPC",
+                        "volume-id": "RHEL[-_]7.7.*ppc64le$"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-7.7.*s390x$"
+                    }
+                }
+            ],
+            "_name": "Red Hat Enterprise Linux 7.7",
+            "family": "linux",
+            "distro": "rhel"
+        }
+    }
+}

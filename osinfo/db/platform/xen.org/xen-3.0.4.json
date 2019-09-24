@@ -1,0 +1,20 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "platform": {
+            "upgrades": {
+                "-id": "http://xen.org/xen/3.0.3"
+            },
+            "devices": {
+                "device": {
+                    "-id": "http://xen.org/xen/vfb"
+                }
+            },
+            "-id": "http://xen.org/xen/3.0.4",
+            "short-id": "xen-3.0.4",
+            "_name": "Xen 3.0.4",
+            "_vendor": "Citrix Systems, Inc.",
+            "version": "3.0.4"
+        }
+    }
+}

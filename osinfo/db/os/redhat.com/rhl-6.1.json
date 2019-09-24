@@ -1,0 +1,23 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://redhat.com/rhl/6.1",
+            "version": "6.1",
+            "codename": "Cartman",
+            "upgrades": {
+                "-id": "http://redhat.com/rhl/6.0"
+            },
+            "release-date": "1999-10-04",
+            "eol-date": "2003-03-31",
+            "short-id": "rhl6.1",
+            "_name": "Red Hat Linux 6.1",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "distro": "rhl",
+            "derives-from": {
+                "-id": "http://redhat.com/rhl/6.0"
+            }
+        }
+    }
+}

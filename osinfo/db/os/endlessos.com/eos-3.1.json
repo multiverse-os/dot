@@ -1,0 +1,271 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "eol-date": "2017-07-18",
+            "variant": [
+                {
+                    "-id": "ar",
+                    "_name": "Endless OS Arabic"
+                },
+                {
+                    "-id": "base",
+                    "_name": "Endless OS Basic"
+                },
+                {
+                    "-id": "bn",
+                    "_name": "Endless OS Bengali"
+                },
+                {
+                    "-id": "en",
+                    "_name": "Endless OS English"
+                },
+                {
+                    "-id": "es",
+                    "_name": "Endless OS Spanish"
+                },
+                {
+                    "-id": "es_GT",
+                    "_name": "Endless OS Spanish (Guatemala)"
+                },
+                {
+                    "-id": "es_MX",
+                    "_name": "Endless OS Spanish (Mexico)"
+                },
+                {
+                    "-id": "fr",
+                    "_name": "Endless OS French"
+                },
+                {
+                    "_name": "Endless OS Indonesian",
+                    "-id": "id"
+                },
+                {
+                    "-id": "pt_BR",
+                    "_name": "Endless OS Portuguese (Brazil)"
+                },
+                {
+                    "-id": "th",
+                    "_name": "Endless OS Thai"
+                },
+                {
+                    "-id": "vi",
+                    "_name": "Endless OS Vietnamese"
+                },
+                {
+                    "-id": "zh_CN",
+                    "_name": "Endless OS Chinese (China)"
+                },
+                {
+                    "-id": "sea",
+                    "_name": "Endless OS Southeast Asia"
+                },
+                {
+                    "-id": "other",
+                    "_name": "Endless OS (other)"
+                }
+            ],
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "ar"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/ar/eos-eos3.1-amd64-amd64.170520-060632.ar.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-ar$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "base"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/base/eos-eos3.1-amd64-amd64.170520-055517.base.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-base$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "bn"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/bn/eos-eos3.1-amd64-amd64.170520-060733.bn.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-bn$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "en"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/en/eos-eos3.1-amd64-amd64.170520-071933.en.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-en$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true"
+                },
+                {
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/es/eos-eos3.1-amd64-amd64.170520-061122.es.iso",
+                    "iso": {
+                        "publisher-id": "ENDLESS COMPUTERS",
+                        "volume-id": "Endless-OS-3-1-\\d+-es$"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "es"
+                    }
+                },
+                {
+                    "variant": {
+                        "-id": "es_GT"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/es_GT/eos-eos3.1-amd64-amd64.170520-061652.es_GT.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-es_GT$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true"
+                },
+                {
+                    "-live": "true",
+                    "variant": {
+                        "-id": "es_MX"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/es_MX/eos-eos3.1-amd64-amd64.170520-082741.es_MX.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-es_MX$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-live": "true",
+                    "variant": {
+                        "-id": "fr"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/fr/eos-eos3.1-amd64-amd64.170521-045821.fr.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-fr$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/id/eos-eos3.1-amd64-amd64.170521-050143.id.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-id$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "id"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "pt_BR"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/pt_BR/eos-eos3.1-amd64-amd64.170520-101852.pt_BR.iso",
+                    "iso": {
+                        "publisher-id": "ENDLESS COMPUTERS",
+                        "volume-id": "Endless-OS-3-1-\\d+-pt_BR$"
+                    }
+                },
+                {
+                    "-live": "true",
+                    "variant": {
+                        "-id": "th"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/th/eos-eos3.1-amd64-amd64.170521-050122.th.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-th$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/vi/eos-eos3.1-amd64-amd64.170520-090541.vi.iso",
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-vi$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "vi"
+                    }
+                },
+                {
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-zh_CN$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    },
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "zh_CN"
+                    },
+                    "url": "https://images-dl.endlessm.com/release/3.1.8/eos-amd64-amd64/zh_CN/eos-eos3.1-amd64-amd64.170520-083345.zh_CN.iso"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "sea"
+                    },
+                    "iso": {
+                        "volume-id": "Endless-OS-3-1-\\d+-sea$",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                },
+                {
+                    "-arch": "all",
+                    "-live": "true",
+                    "variant": {
+                        "-id": "other"
+                    },
+                    "iso": {
+                        "volume-id": "\\D+-3-1-\\d+",
+                        "publisher-id": "ENDLESS COMPUTERS"
+                    }
+                }
+            ],
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "cpu": "1000000000",
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                },
+                "recommended": {
+                    "ram": "2147483648",
+                    "storage": "42949672960"
+                }
+            },
+            "-id": "http://endlessos.com/eos/3.1",
+            "short-id": "eos3.1",
+            "_name": "Endless OS 3.1",
+            "distro": "eos",
+            "version": "3.1",
+            "_vendor": "Endless Mobile, Inc",
+            "family": "linux",
+            "release-date": "2017-01-17"
+        }
+    }
+}

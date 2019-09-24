@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "family": "freebsd",
+            "release-date": "2009-05-04",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/7.1"
+            },
+            "-id": "http://freebsd.org/freebsd/7.2",
+            "version": "7.2",
+            "_vendor": "FreeBSD Project",
+            "eol-date": "2010-06-30",
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/7.1"
+            },
+            "short-id": "freebsd7.2",
+            "_name": "FreeBSD 7.2",
+            "distro": "freebsd"
+        }
+    }
+}

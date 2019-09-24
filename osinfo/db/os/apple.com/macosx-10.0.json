@@ -1,0 +1,16 @@
+{
+    "libosinfo": {
+        "os": {
+            "family": "darwin",
+            "codename": "Cheetah",
+            "release-date": "2001-03-24",
+            "_name": "MacOS X Cheetah",
+            "version": "10.0",
+            "_vendor": "Apple Inc.",
+            "-id": "http://apple.com/macosx/10.0",
+            "short-id": "macosx10.0",
+            "distro": "osx"
+        },
+        "-version": "0.0.1"
+    }
+}

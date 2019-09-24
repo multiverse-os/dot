@@ -1,0 +1,358 @@
+{
+    "libosinfo": {
+        "install-script": {
+            "avatar-format": {
+                "mime-type": "image/png"
+            },
+            "template": {
+                "stylesheet": {
+                    "-xsl": "http://www.w3.org/1999/XSL/Transform",
+                    "-version": "1.0",
+                    "output": {
+                        "-method": "text"
+                    },
+                    "template": [
+                        {
+                            "-name": "target-disk",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/target-disk != ''",
+                                        "value-of": {
+                                            "-select": "config/target-disk"
+                                        }
+                                    },
+                                    {
+                                        "text": "/dev/vda",
+                                        "-test": "os/version \u003e 5.5"
+                                    }
+                                ],
+                                "otherwise": {
+                                    "text": "/dev/sda"
+                                }
+                            }
+                        },
+                        {
+                            "variable": {
+                                "-name": "script-disk",
+                                "choose": {
+                                    "when": [
+                                        {
+                                            "-test": "config/script-disk != ''",
+                                            "value-of": {
+                                                "-select": "config/script-disk"
+                                            }
+                                        },
+                                        {
+                                            "text": "/dev/sda",
+                                            "-test": "os/version \u003e 5.5"
+                                        }
+                                    ],
+                                    "otherwise": {
+                                        "text": "/dev/sdb"
+                                    }
+                                }
+                            },
+                            "value-of": {
+                                "-select": "substring-after($script-disk, '/dev/')"
+                            },
+                            "-name": "script-disk"
+                        },
+                        {
+                            "-name": "avatar-disk",
+                            "choose": {
+                                "otherwise": {
+                                    "text": "/dev/sdb"
+                                },
+                                "when": [
+                                    {
+                                        "-test": "config/avatar-disk != ''",
+                                        "value-of": {
+                                            "-select": "config/avatar-disk"
+                                        }
+                                    },
+                                    {
+                                        "-test": "os/version \u003e 5.5",
+                                        "text": "/dev/sda"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "-match": "/command-line",
+                            "text": "ks=",
+                            "choose": {
+                                "when": {
+                                    "-test": "script/preferred-injection-method = 'initrd'",
+                                    "text": "file:/"
+                                },
+                                "otherwise": {
+                                    "text": [
+                                        "hd:",
+                                        ":/"
+                                    ],
+                                    "call-template": {
+                                        "-name": "script-disk"
+                                    }
+                                }
+                            },
+                            "value-of": {
+                                "-select": "script/expected-filename"
+                            },
+                            "if": {
+                                "-test": "script/installation-source = 'network'",
+                                "choose": {
+                                    "when": {
+                                        "text": "method=",
+                                        "-test": "os/version \u003c 7"
+                                    },
+                                    "otherwise": {
+                                        "text": "inst.repo="
+                                    }
+                                },
+                                "call-template": {
+                                    "-name": "installation-url"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "version",
+                            "choose": {
+                                "when": {
+                                    "-test": "os/version \u003c 7",
+                                    "text": "6"
+                                },
+                                "otherwise": {
+                                    "text": "7"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "arch",
+                            "choose": {
+                                "when": {
+                                    "-test": "config/hardware-arch = 'x86_64'",
+                                    "text": "x86_64"
+                                },
+                                "otherwise": {
+                                    "text": "i386"
+                                }
+                            }
+                        },
+                        {
+                            "-name": "installation-url",
+                            "choose": {
+                                "when": [
+                                    {
+                                        "-test": "config/installation-url != ''",
+                                        "value-of": {
+                                            "-select": "config/installation-url"
+                                        }
+                                    },
+                                    {
+                                        "-test": "tree/url != ''",
+                                        "value-of": {
+                                            "-select": "tree/url"
+                                        }
+                                    },
+                                    {
+                                        "-test": "os/distro = 'centos'",
+                                        "text": [
+                                            "http://mirror.centos.org/centos/",
+                                            "/os/"
+                                        ],
+                                        "call-template": [
+                                            {
+                                                "-name": "version"
+                                            },
+                                            {
+                                                "-name": "arch"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "-name": "appstream-url",
+                            "variable": {
+                                "-name": "url",
+                                "call-template": {
+                                    "-name": "installation-url"
+                                }
+                            },
+                            "value-of": [
+                                {
+                                    "-select": "substring-before($url, 'BaseOS')"
+                                },
+                                {
+                                    "-select": "substring-after($url, 'BaseOS')"
+                                }
+                            ],
+                            "text": "AppStream"
+                        },
+                        {
+                            "#content": "[security]\n\n[xdmcp]\n\n[greeter]\n\n[chooser]\n\n[debug]\n\" \u003e /etc/gdm/custom.conf\n\n# Create an osinfo-install-successful file in /root\ntouch /root/osinfo-install-successful\n\n%end",
+                            "-match": "/install-script-config",
+                            "value-of": [
+                                {
+                                    "-select": "os/short-id"
+                                },
+                                {
+                                    "-select": "script/profile"
+                                },
+                                {
+                                    "-select": "config/l10n-language"
+                                },
+                                {
+                                    "-select": "config/hostname"
+                                },
+                                {
+                                    "-select": "config/l10n-timezone"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-password"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-password"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/admin-password"
+                                },
+                                {
+                                    "-select": "config/admin-password"
+                                },
+                                {
+                                    "-select": "config/avatar-location"
+                                },
+                                {
+                                    "-select": "config/avatar-location"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                },
+                                {
+                                    "-select": "config/user-login"
+                                }
+                            ],
+                            "if": [
+                                {
+                                    "#content": "cdrom",
+                                    "-test": "script/installation-source = 'media'",
+                                    "if": {
+                                        "#content": "install",
+                                        "-test": "os/version \u003c 8"
+                                    }
+                                },
+                                {
+                                    "#content": "authconfig --enableshadow --enablemd5",
+                                    "-test": "os/version \u003c 8"
+                                },
+                                {
+                                    "-test": "script/installation-source = 'network'",
+                                    "call-template": {
+                                        "-name": "installation-url"
+                                    },
+                                    "if": {
+                                        "-test": "os/version \u003e 7 or os/version = '8-unknown'",
+                                        "call-template": {
+                                            "-name": "appstream-url"
+                                        }
+                                    }
+                                }
+                            ],
+                            "call-template": [
+                                {
+                                    "-name": "target-disk"
+                                },
+                                {
+                                    "-name": "avatar-disk"
+                                }
+                            ],
+                            "choose": {
+                                "otherwise": {
+                                    "#content": "@gnome-desktop\n@multimedia",
+                                    "if": {
+                                        "#content": "@x11",
+                                        "-test": "os/version \u003c 8"
+                                    }
+                                },
+                                "when": {
+                                    "#content": "@basic-desktop\n@general-desktop\n@desktop-platform",
+                                    "-test": "os/version \u003c 7"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "-id": "http://redhat.com/rhel/kickstart/desktop",
+            "profile": "desktop",
+            "expected-filename": "rhel.ks",
+            "config": {
+                "param": [
+                    {
+                        "-name": "l10n-keyboard",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "l10n-language",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "l10n-timezone",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "hostname",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-policy": "required",
+                        "-name": "user-login"
+                    },
+                    {
+                        "-policy": "optional",
+                        "-name": "user-password"
+                    },
+                    {
+                        "-name": "admin-password",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "avatar-location",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "avatar-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "target-disk",
+                        "-policy": "optional"
+                    },
+                    {
+                        "-name": "script-disk",
+                        "-policy": "optional"
+                    }
+                ]
+            },
+            "injection-method": [
+                "cdrom",
+                "disk",
+                "floppy",
+                "initrd"
+            ]
+        },
+        "-version": "0.0.1"
+    }
+}

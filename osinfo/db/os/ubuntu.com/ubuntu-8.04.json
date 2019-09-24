@@ -1,0 +1,97 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": [
+                "ubuntu8.04",
+                "ubuntuhardy"
+            ],
+            "_name": "Ubuntu 8.04 LTS",
+            "distro": "ubuntu",
+            "upgrades": {
+                "-id": "http://ubuntu.com/ubuntu/7.10"
+            },
+            "-id": "http://ubuntu.com/ubuntu/8.04",
+            "family": "linux",
+            "release-date": "2008-04-24",
+            "eol-date": "2013-05-09",
+            "version": "8.04",
+            "derives-from": {
+                "-id": "http://ubuntu.com/ubuntu/7.10"
+            },
+            "_vendor": "Canonical Ltd",
+            "devices": {
+                "device": {
+                    "-id": "http://pcisig.com/pci/1af4/1000"
+                }
+            },
+            "media": [
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 8.04(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz",
+                    "-arch": "i686",
+                    "url": "http://old-releases.ubuntu.com/releases/hardy/ubuntu-8.04-server-i386.iso"
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://old-releases.ubuntu.com/releases/hardy/ubuntu-8.04-server-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu-Server 8.04(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "install/vmlinuz",
+                    "initrd": "install/initrd.gz"
+                },
+                {
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/hardy/ubuntu-8.04-desktop-i386.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 8.04(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz",
+                    "-arch": "i686"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/hardy/ubuntu-8.04-desktop-amd64.iso",
+                    "iso": {
+                        "volume-id": "Ubuntu 8.04(.\\d\\+?)? amd64",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Ubuntu 8.04(.\\d\\+?)? i386",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz",
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/hardy/ubuntu-8.04-dvd-i386.iso"
+                },
+                {
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://old-releases.ubuntu.com/releases/hardy/ubuntu-8.04-dvd-amd64.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "Ubuntu 8.04(.\\d\\+?)? amd64"
+                    },
+                    "kernel": "casper/vmlinuz",
+                    "initrd": "casper/initrd.gz"
+                }
+            ],
+            "codename": "Hardy Heron"
+        }
+    }
+}

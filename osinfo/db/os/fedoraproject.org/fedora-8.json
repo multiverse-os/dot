@@ -1,0 +1,141 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "fedora",
+            "derives-from": {
+                "-id": "http://fedoraproject.org/fedora/7"
+            },
+            "tree": [
+                {
+                    "-arch": "i686",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/8/Fedora/i386/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "^8$",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/8/Fedora/x86_64/os/",
+                    "treeinfo": {
+                        "family": "Fedora",
+                        "version": "^8$",
+                        "arch": "x86_64"
+                    }
+                }
+            ],
+            "version": "8",
+            "codename": "Werewolf",
+            "_vendor": "Fedora Project",
+            "upgrades": {
+                "-id": "http://fedoraproject.org/fedora/7"
+            },
+            "media": [
+                {
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/8/Fedora/i386/iso/Fedora-8-i386-DVD.iso",
+                    "iso": {
+                        "volume-id": "Fedora 8 i386",
+                        "system-id": "LINUX",
+                        "volume-size": "3424749568"
+                    },
+                    "-arch": "i686"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora 8 x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "3876407296"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "x86_64",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/8/Fedora/x86_64/iso/Fedora-8-x86_64-DVD.iso"
+                },
+                {
+                    "iso": {
+                        "volume-id": "Fedora 8 ppc",
+                        "system-id": "PPC",
+                        "volume-size": "4118646784"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/8/Fedora/ppc/iso/Fedora-8-ppc-DVD.iso"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/8/Live/i686/Fedora-8-Live-i686.iso",
+                    "iso": {
+                        "volume-id": "Fedora-8-Live-i686",
+                        "system-id": "LINUX",
+                        "volume-size": "731086848"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "-arch": "i686",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/8/Live/i686/Fedora-8-Live-KDE-i686.iso",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-size": "732188672",
+                        "volume-id": "Fedora-8-Live-KDE-i686"
+                    },
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img"
+                },
+                {
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/8/Live/x86_64/Fedora-8-Live-x86_64.iso",
+                    "iso": {
+                        "volume-id": "Fedora-8-Live-x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "803870720"
+                    }
+                },
+                {
+                    "kernel": "isolinux/vmlinuz0",
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "x86_64",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/8/Live/x86_64/Fedora-8-Live-KDE-x86_64.iso",
+                    "iso": {
+                        "volume-id": "Fedora-8-Live-KDE-x86_64",
+                        "system-id": "LINUX",
+                        "volume-size": "844269568"
+                    }
+                },
+                {
+                    "initrd": "isolinux/initrd0.img",
+                    "-arch": "ppc",
+                    "-live": "true",
+                    "url": "http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/8/Live/ppc/Fedora-8-Live-ppc.iso",
+                    "iso": {
+                        "volume-id": "Fedora-8-Live-ppc",
+                        "system-id": "LINUX",
+                        "volume-size": "732942336"
+                    },
+                    "kernel": "isolinux/vmlinuz0"
+                }
+            ],
+            "installer": {
+                "script": {
+                    "-id": "http://fedoraproject.org/fedora/kickstart/jeos"
+                }
+            },
+            "-id": "http://fedoraproject.org/fedora/8",
+            "short-id": "fedora8",
+            "_name": "Fedora 8",
+            "family": "linux",
+            "release-date": "2007-11-08",
+            "eol-date": "2009-01-07"
+        }
+    }
+}

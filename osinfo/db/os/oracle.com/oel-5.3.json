@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "short-id": "oel5.3",
+            "_name": "Oracle Enterprise Linux 5.3",
+            "family": "linux",
+            "release-date": "2009-01-30",
+            "eol-date": "2020-06-30",
+            "-id": "http://oracle.com/oel/5.3",
+            "_vendor": "Oracle America",
+            "distro": "oel",
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.3"
+            },
+            "version": "5.3"
+        }
+    }
+}

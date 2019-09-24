@@ -1,0 +1,55 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "opensuse",
+            "upgrades": {
+                "-id": "http://opensuse.org/opensuse/15.1"
+            },
+            "derives-from": {
+                "-id": "http://opensuse.org/opensuse/15.1"
+            },
+            "release-status": "prerelease",
+            "short-id": "opensuse-unknown",
+            "version": "unknown",
+            "_vendor": "openSUSE",
+            "family": "linux",
+            "resources": {
+                "-arch": "all",
+                "minimum": {
+                    "cpu": "500000000",
+                    "n-cpus": "1",
+                    "ram": "536870912",
+                    "storage": "3221225472"
+                },
+                "recommended": {
+                    "cpu": "2400000000",
+                    "ram": "2147483648",
+                    "storage": "21474836480"
+                }
+            },
+            "-id": "http://opensuse.org/opensuse/unknown",
+            "_name": "openSUSE",
+            "media": {
+                "initrd": "boot/x86_64/loader/initrd",
+                "-arch": "x86_64",
+                "iso": {
+                    "volume-id": "openSUSE-Leap-(15\\.[2-9]|(1[6-9]|[23]|[5-9])[0-9]\\.[0-9]|4[3-9]\\.[0-9])-(DVD|NET|Kubic)-x86_64*",
+                    "system-id": "LINUX",
+                    "publisher-id": "SUSE LINUX GmbH"
+                },
+                "kernel": "boot/x86_64/loader/linux"
+            },
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://opensuse.org/opensuse/autoyast/jeos"
+                    },
+                    {
+                        "-id": "http://opensuse.org/opensuse/autoyast/desktop"
+                    }
+                ]
+            }
+        }
+    }
+}

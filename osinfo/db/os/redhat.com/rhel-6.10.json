@@ -1,0 +1,120 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "resources": {
+                "recommended": {
+                    "cpu": "400000000",
+                    "ram": "1073741824",
+                    "storage": "9663676416"
+                },
+                "maximum": {
+                    "ram": "13194139533312"
+                },
+                "-arch": "all",
+                "minimum": {
+                    "n-cpus": "1",
+                    "ram": "536870912"
+                }
+            },
+            "-id": "http://redhat.com/rhel/6.10",
+            "_name": "Red Hat Enterprise Linux 6.10",
+            "derives-from": {
+                "-id": "http://redhat.com/rhel/6.9"
+            },
+            "media": [
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-6.10 .*.i386$"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "LINUX",
+                        "volume-id": "RHEL-6.10 .*.x86_64$"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                },
+                {
+                    "initrd": "isolinux/initrd.img",
+                    "-arch": "ppc",
+                    "iso": {
+                        "volume-id": "RHEL-6.10 .*.ppc64$",
+                        "system-id": "PPC"
+                    },
+                    "kernel": "isolinux/vmlinuz"
+                },
+                {
+                    "-arch": "s390x",
+                    "iso": {
+                        "volume-id": "RHEL-6.10 .*.s390x$",
+                        "system-id": "LINUX"
+                    },
+                    "kernel": "isolinux/vmlinuz",
+                    "initrd": "isolinux/initrd.img"
+                }
+            ],
+            "installer": {
+                "script": [
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/jeos"
+                    },
+                    {
+                        "-id": "http://redhat.com/rhel/kickstart/desktop"
+                    }
+                ]
+            },
+            "distro": "rhel",
+            "codename": "Santiago",
+            "release-date": "2018-05-25",
+            "short-id": "rhel6.10",
+            "version": "6.10",
+            "_vendor": "Red Hat, Inc",
+            "family": "linux",
+            "upgrades": {
+                "-id": "http://redhat.com/rhel/6.9"
+            },
+            "eol-date": "2024-06-30",
+            "tree": [
+                {
+                    "-arch": "ppc64",
+                    "treeinfo": {
+                        "version": "^6.10$",
+                        "arch": "ppc64",
+                        "family": "Red Hat Enterprise Linux"
+                    }
+                },
+                {
+                    "-arch": "s390x",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.10$",
+                        "arch": "s390x"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.10$",
+                        "arch": "i386"
+                    }
+                },
+                {
+                    "-arch": "x86_64",
+                    "treeinfo": {
+                        "family": "Red Hat Enterprise Linux",
+                        "version": "^6.10$",
+                        "arch": "x86_64"
+                    }
+                }
+            ]
+        }
+    }
+}

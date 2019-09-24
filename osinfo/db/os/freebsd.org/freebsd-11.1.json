@@ -1,0 +1,51 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "distro": "freebsd",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/11.0"
+            },
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/11.0"
+            },
+            "-id": "http://freebsd.org/freebsd/11.1",
+            "short-id": "freebsd11.1",
+            "_name": "FreeBSD 11.1",
+            "version": "11.1",
+            "family": "freebsd",
+            "release-date": "2017-07-26",
+            "_vendor": "FreeBSD Project",
+            "media": [
+                {
+                    "-arch": "x86_64",
+                    "iso": {
+                        "system-id": "FreeBSD",
+                        "volume-id": "11_1_RELEASE_AMD64_DVD"
+                    }
+                },
+                {
+                    "iso": {
+                        "system-id": "FreeBSD",
+                        "volume-id": "11_1_RELEASE_AMD64_CD"
+                    },
+                    "-arch": "x86_64"
+                },
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "FreeBSD",
+                        "volume-id": "11_1_RELEASE_I386_DVD"
+                    }
+                },
+                {
+                    "-arch": "i686",
+                    "iso": {
+                        "system-id": "FreeBSD",
+                        "volume-id": "11_1_RELEASE_I386_CD"
+                    }
+                }
+            ]
+        }
+    }
+}

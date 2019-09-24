@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "version": "5.5",
+            "release-date": "2006-05-25",
+            "derives-from": {
+                "-id": "http://freebsd.org/freebsd/5.4"
+            },
+            "distro": "freebsd",
+            "eol-date": "2008-05-31",
+            "upgrades": {
+                "-id": "http://freebsd.org/freebsd/5.4"
+            },
+            "-id": "http://freebsd.org/freebsd/5.5",
+            "short-id": "freebsd5.5",
+            "_name": "FreeBSD 5.5",
+            "_vendor": "FreeBSD Project",
+            "family": "freebsd"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "clones": {
+                "-id": "http://redhat.com/rhel/5.6"
+            },
+            "short-id": "ol5.6",
+            "version": "5.6",
+            "_vendor": "Oracle America",
+            "family": "linux",
+            "distro": "ol",
+            "release-date": "2011-01-28",
+            "eol-date": "2020-06-30",
+            "-id": "http://oracle.com/ol/5.6",
+            "_name": "Oracle Linux 5.6"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "release-date": "2019-05-20",
+            "media": {
+                "-arch": "x86_64",
+                "iso": {
+                    "system-id": "DragonFly",
+                    "volume-id": "DragonFly v5.4.3"
+                }
+            },
+            "-id": "http://dragonflybsd.org/dragonflybsd/5.4.3",
+            "_name": "DragonFlyBSD 5.4.3",
+            "version": "5.4.3",
+            "_vendor": "DragonFlyBSD Project",
+            "upgrades": {
+                "-id": "http://dragonflybsd.org/dragonflybsd/5.4.2"
+            },
+            "eol-date": "2019-06-17",
+            "short-id": "dragonflybsd5.4.3",
+            "family": "dragonflybsd",
+            "distro": "dragonflybsd"
+        }
+    }
+}

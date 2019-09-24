@@ -1,0 +1,22 @@
+{
+    "libosinfo": {
+        "-version": "0.0.1",
+        "os": {
+            "-id": "http://mandriva.com/mandrake/8.0",
+            "short-id": "mandrake8.0",
+            "_name": "Mandrake Linux 8.0",
+            "_vendor": "Mandriva",
+            "family": "linux",
+            "distro": "mandrake",
+            "derives-from": {
+                "-id": "http://mandriva.com/mandrake/7.2"
+            },
+            "release-date": "2001-04-19",
+            "codename": "Traktopel",
+            "version": "8.0",
+            "upgrades": {
+                "-id": "http://mandriva.com/mandrake/7.2"
+            }
+        }
+    }
+}
