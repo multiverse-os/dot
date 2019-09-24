@@ -17,6 +17,7 @@ const (
 	Default ProfileType = iota
 	Multiverse
 	Development
+	Production
 )
 
 func (self ProfileType) String() string {

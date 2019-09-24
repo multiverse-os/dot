@@ -28,7 +28,7 @@ func main() {
 					environment := dot.DefaultEnvironment()
 					fmt.Println("config:", environment)
 
-					osInfo := dot.LoadOSInfo("debian")
+					osInfo := dot.LoadOSInfo("Debian")
 					fmt.Println("osInfo:", osInfo)
 
 					//config.Provision()
